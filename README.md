@@ -8,3 +8,4 @@ A place for all my cheat sheets to live!
 
 - **[Yarn](yarn.md#useful-yarn-commands)**
 
+- **[Hyper](hyper.md#useful-hyper-info)**

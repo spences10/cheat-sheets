@@ -2,6 +2,8 @@
 
 ## use Git bash
 
+Windows user? Want to use commands like `ls` and `pwd` in the hyper terminal?
+
 https://github.com/zeit/hyper/issues/1252
 
 ```javascript

@@ -90,3 +90,23 @@ After trying several times to upgrade npm on Windows I found this whilst poking 
 npm-windows-upgrade
 ```
 
+## Updating global packages
+
+To update global packages individually you can use:
+
+```shell
+npm update -g <package>
+```
+
+To see which packages need updating use:
+
+```shell
+npm outdated -g --depth=0
+```
+
+To update all global packages use:
+
+```shell
+npm update -g
+```
+

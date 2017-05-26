@@ -32,6 +32,16 @@ git branch -r # shows remote branches
 git branch -a # shows all branches
 ```
 
+## Create a local branch and push it to GitHub
+
+Want to make your feature branch and get it on GitHub?
+
+Make your brance first then:
+
+```shell
+git push --set-upstream origin <branch-you-just-created>
+```
+
 ## Create a PR [[Pull Request](https://spences10.github.io/2017/01/05/git-and-github.html)]
 
 Fork other users repo in GitHub, then clone to your machine.

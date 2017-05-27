@@ -195,6 +195,14 @@ If you have `.env` files that are tracked by Git and want to ignore them so your
 git update-index --assume-unchanged <file>
 ```
 
+## Stop tracking a previously tracked folder 
+
+First add the folder to your `.gitignore` then remove the folder from your local git tracking with:
+
+```shell
+git rm -r --cached <folder>
+```
+
 ## Start tracking a previously un-tracked file
 
 ```shell

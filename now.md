@@ -1,8 +1,37 @@
 # now 
 
-Config stuff I always forget!
+The awesome now from zeit! It has a great cli with probably all of this detailed in there under `-h` somewhere 😁
+
+## Aliases
+
+Got your own domain name? You can alias your latest `now` deployment
+
+```shell
+now alias now-generated-url.now.sh your-awesome-domain-name.af 
+```
+
+## Scale your deployment 
+
+Want your site to not get frozen? And have visitors have to wait for the instance to spin up?
+
+This is straight from the CLI with `now scale -h`
+
+```shell
+# Create an deployment with 3 instances, never sleeps:
+now scale my-deployment-ntahoeato.now.sh 3
+# Create an automatically scaling deployment:
+now scale my-deployment-ntahoeato.now.sh 1 5
+# Create an automatically scaling deployment without specifying max:
+now scale my-deployment-ntahoeato.now.sh 1 auto
+# Create an automatically scaling deployment without specifying min or max:
+now scale my-deployment-ntahoeato.now.sh auto
+# Create an deployment that is always active and never "sleeps":
+now scale my-deployment-ntahoeato.now.sh 1
+```
 
 ## Environment variables
+
+Config stuff I always forget!
 
 If it's keys, then use secrets and configure them in the `package.json`:
 

@@ -56,7 +56,7 @@ Add the remote repo
 git remote add upstream https://github.com/OtherUserName/awesome-awesome-repo
 ```
 
-Create your branch 
+Create your branch
 
 ```shell
 git branch your-awesome-branch
@@ -112,12 +112,12 @@ git merge upstream/dev
 ## Sync a remote fork on Github
 
 1. Open your fork on GitHub.
-2. Click on Pull Requests.
-3. Click on New Pull Request. By default, GitHub will compare the original with your fork, and there shouldn’t be anything to compare if you didn’t make any changes.
-4. Click on Try `switching the base`. Now GitHub will compare your fork with the original, and you should see all the latest changes.
-5. Click on Click to create a pull request for this comparison and assign a predictable name to your pull request (e.g., Update from original).
-6. Click on Send pull request.
-7. Scroll down and click Merge pull request and finally Confirm merge. If your fork didn’t have any changes, you will be able to merge it automatically.
+1. Click on Pull Requests.
+1. Click on New Pull Request. By default, GitHub will compare the original with your fork, and there shouldn’t be anything to compare if you didn’t make any changes.
+1. Click on Try `switching the base`. Now GitHub will compare your fork with the original, and you should see all the latest changes.
+1. Click on Click to create a pull request for this comparison and assign a predictable name to your pull request (e.g., Update from original).
+1. Click on Send pull request.
+1. Scroll down and click Merge pull request and finally Confirm merge. If your fork didn’t have any changes, you will be able to merge it automatically.
 
 ## 2fa
 
@@ -195,7 +195,7 @@ If you have `.env` files that are tracked by Git and want to ignore them so your
 git update-index --assume-unchanged <file>
 ```
 
-## Stop tracking a previously tracked folder 
+## Stop tracking a previously tracked folder
 
 First add the folder to your `.gitignore` then remove the folder from your local git tracking with:
 
@@ -299,3 +299,16 @@ git branch -m <newname>
 ```
 
 A way to remember this, is `-m` is for "move" (or `mv`), which is how you rename files.
+
+## Git ref log
+
+Want to know what work you have done on a repo? Use `git reflog` to displpay all the commits.
+
+```shell
+# show all changes for the last 90 days
+git reflog show -a
+# show changes with a date
+git reflog --date=iso
+```
+
+https://stackoverflow.com/questions/17369254/is-there-a-way-to-cause-git-reflog-to-show-a-date-alongside-each-entry

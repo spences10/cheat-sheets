@@ -36,7 +36,7 @@ git branch -a # shows all branches
 
 Want to make your feature branch and get it on GitHub?
 
-Make your brance first then:
+Make your branch first then:
 
 ```shell
 git push --set-upstream origin <branch-you-just-created>

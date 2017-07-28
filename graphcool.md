@@ -37,3 +37,8 @@ Force local changes remotely resulting in potential data loss
 ```shell
 graphcool push --force project.graphcool
 ```
+
+How to download the GraphQL SDL (schema definition language)
+
+https://www.graph.cool/docs/faq/graphql-how-to-download-graphql-sdl-schema-maiv5eekan/
+

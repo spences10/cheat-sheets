@@ -1,6 +1,6 @@
 # Cheat Sheets 
 
-![](http://orig11.deviantart.net/af40/f/2015/056/3/e/daily79___test_cube_7___flying_by_retsamys-d8ikpzq.gif)
+![](/img/flying-cube.gif)
 
 A place for all my cheat sheets to live!
 

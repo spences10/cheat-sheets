@@ -13,3 +13,5 @@ A place for all my cheat sheets to live!
 - **[Hyper](hyper.md#useful-hyper-info)**
 
 - **[now](now.md#now)**
+
+- **[GraphCool](graphcool.md#yuseful-graphcool-commands)**

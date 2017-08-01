@@ -2,14 +2,6 @@
 
 A list of terminal commands and flags to help me use `npm` 
 
-## enable npm cache
-
-Super charge `npm`
-
-```shell
-npm config set cache-min 9999999
-```
-
 ## install package.json dependencies 
 
 ```shell
@@ -19,37 +11,43 @@ npm install
 **Shorthand**
 
 ```shell
-npm i
+# install
+npm i <package>
+# uninstall
+npm un <package>
+# update
+npm up <package>
 ```
 
-## add standard by feross
+## List globally installed packages.
 
 ```shell
-npm install standard -g
+npm list -g --depth=0
+```
+
+## list available scripts to run
+
+```shell
+npm run
 ```
 
 ## update npm
 
 ```shell
 npm install -g npm@latest
+# using windows? Then use
+npm-windows-upgrade
 ```
 
 ## flags
 
-`-S` is the same as `--save`
+`-S` is the same as `--save` not needed in npm 5
 `-D` is the same as `--save-dev`
 
 ## installed version
 
 ```shell
 npm list # for local packages 
-npm list -g # all the packages
-```
-
-Globally installed packages.
-
-```shell
-npm list -g --depth=0
 ```
 
 ## Node Version Manager `nvm`

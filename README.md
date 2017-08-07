@@ -14,4 +14,4 @@ A place for all my cheat sheets to live!
 
 - **[now](now.md#now)**
 
-- **[GraphCool](graphcool.md#yuseful-graphcool-commands)**
+- **[Graphcool](graphcool.md#yuseful-graphcool-commands)**

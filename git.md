@@ -1,6 +1,19 @@
-# Useful Git commands 
+# Useful Git commands
 
 This is just stuff that I have put down that I find I use a lot of the time for my own reference.
+
+## Add a new repo from your machine to GitHub
+
+```
+echo "# name-of-your-awesome-repo" >> README.md # add repo name to README.md
+git init # init the repository
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/spences10/name-of-your-awesome-repo.git
+git push -u origin master
+```
+
+The first four commands can be ignored if you have dome more work on the repo than adding a README.md
 
 ## Latest changes from repo to your machine
 
@@ -50,7 +63,7 @@ Fork other users repo in GitHub, then clone to your machine.
 git clone https://github.com/YourUserName/awesome-awesome-repo
 ```
 
-Add the remote repo 
+Add the remote repo
 
 ```shell
 git remote add upstream https://github.com/OtherUserName/awesome-awesome-repo
@@ -129,7 +142,7 @@ git remote set-url origin https://yourgithubuser:your-token@github.com/yourgithu
 
 ## Change `origin` url
 
-If you want to change the origin url you can use the `set-url` command 
+If you want to change the origin url you can use the `set-url` command
 
 ```shell
 git remote set-url origin https://github.com/user/new-repo-name

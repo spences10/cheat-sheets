@@ -13,7 +13,7 @@ git remote add origin https://github.com/spences10/name-of-your-awesome-repo.git
 git push -u origin master
 ```
 
-The first four commands can be ignored if you have dome more work on the repo than adding a README.md
+The first four commands can be ignored if you have done more work on the repo than adding a README.md
 
 ## Latest changes from repo to your machine
 

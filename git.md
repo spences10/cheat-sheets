@@ -256,6 +256,14 @@ upstream        https://github.com/OtherUser/OtherUserRepo (fetch)
 upstream        https://github.com/OtherUser/OtherUserRepo (push)
 ```
 
+## Remove an `upstream` repository
+
+If you no longer need a reference to a forked repository then remove it with the following:
+
+```shell
+git remote rm upstream
+```
+
 ## Clone a repo and give it a different name
 
 ```shell

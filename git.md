@@ -333,3 +333,17 @@ git reflog --date=iso
 ```
 
 https://stackoverflow.com/questions/17369254/is-there-a-way-to-cause-git-reflog-to-show-a-date-alongside-each-entry
+
+## Use SSH in place of HTTPS
+
+Get your SSH set up on your machine and add a key to GitHub, more on that here: https://egghead.io/lessons/javascript-how-to-authenticate-with-github-using-ssh
+
+You will then need to pick your **Clone with SSH** option from the **Clone or download** section on your repo page.
+
+Once you have taken the link from there you will need to set the repo remote to the SSH URL
+
+```shell
+git remote set-url origin git@github.com:username/repo-name-here.git
+```
+
+Where username is the `username` of the repo owner and `repo-name-here` is the name of that user's repository.

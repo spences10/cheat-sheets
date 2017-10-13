@@ -347,3 +347,46 @@ git remote set-url origin git@github.com:username/repo-name-here.git
 ```
 
 Where username is the `username` of the repo owner and `repo-name-here` is the name of that user's repository.
+
+## How to authenticate with GitHub using SSH
+
+Check that there are no `rsa` files here before continuing, use:
+
+```shell
+ls -al ~/.ssh
+```
+
+If there's nothing there then generate a new keygen with:
+
+```shell
+ssh-kwygen -t rsa -b 4096 -C your@email.com
+```
+
+Now using `ls -al ~/.ssh` will show our `id_rsa.pub` file.
+
+```shell
+eval "$(ssh-agent -s)" # for mac
+```
+
+```shell
+eval `ssh-agent -s`
+ssh-agent -s # for windows
+```
+
+Add it to our ssh key
+
+```shell
+ssh-add ~/.ssh/id_rsa
+```
+
+Copy your key to clipboard
+
+```shell
+clip < ~/.ssh/id_rsa.pub # windows
+```
+
+Then authenticate
+
+```shell
+ssh -T git@github.com
+```

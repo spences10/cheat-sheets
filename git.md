@@ -347,6 +347,3 @@ git remote set-url origin git@github.com:username/repo-name-here.git
 ```
 
 Where username is the `username` of the repo owner and `repo-name-here` is the name of that user's repository.
-
-## Use HTTPS in place of SSH on Linux
-

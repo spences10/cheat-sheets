@@ -1,8 +1,8 @@
 # NPM plz!
 
-A list of terminal commands and flags to help me use `npm` 
+A list of terminal commands and flags to help me use `npm`
 
-## install package.json dependencies 
+## install package.json dependencies
 
 ```shell
 npm install
@@ -47,7 +47,7 @@ npm-windows-upgrade
 ## installed version
 
 ```shell
-npm list # for local packages 
+npm list # for local packages
 ```
 
 ## Node Version Manager `nvm`
@@ -101,10 +101,3 @@ To see which packages need updating use:
 ```shell
 npm outdated -g --depth=0
 ```
-
-To update all global packages use:
-
-```shell
-npm update -g
-```
-

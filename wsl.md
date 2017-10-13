@@ -19,3 +19,10 @@ Linuxbrew is like Chocolatey for Windows or Homebrew for OSx
 ```shell
 brew install package
 ```
+
+## What version of Ubuntu is installed
+
+```shell
+lsb_release -a
+```
+

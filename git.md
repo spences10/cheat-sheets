@@ -370,16 +370,18 @@ ssh-keygen -t rsa -b 4096 -C your@email.com
 
 Now using `ls -al ~/.ssh` will show our `id_rsa.pub` file.
 
+Add the SSH key to the SSH agent:
+
 ```shell
-eval "$(ssh-agent -s)" # for mac
+eval "$(ssh-agent -s)" # for mac and Linux from bash
 ```
 
 ```shell
 eval `ssh-agent -s`
-ssh-agent -s # for windows
+ssh-agent -s # for Windows
 ```
 
-Add it to our ssh key
+Add RSA key to SHH with:
 
 ```shell
 ssh-add ~/.ssh/id_rsa
@@ -388,10 +390,14 @@ ssh-add ~/.ssh/id_rsa
 Copy your key to clipboard
 
 ```shell
-clip < ~/.ssh/id_rsa.pub # windows
+clip < ~/.ssh/id_rsa.pub # Windows
 ```
 
-Then authenticate
+```shell
+cat ~/.ssh/id_rsa.pub # Linux
+```
+
+Then authenticate with:
 
 ```shell
 ssh -T git@github.com

@@ -365,7 +365,7 @@ mkdir $HOME/.ssh
 If there's nothing there then generate a new keygen with:
 
 ```shell
-ssh-kwygen -t rsa -b 4096 -C your@email.com
+ssh-keygen -t rsa -b 4096 -C your@email.com
 ```
 
 Now using `ls -al ~/.ssh` will show our `id_rsa.pub` file.

@@ -356,6 +356,12 @@ Check that there are no `rsa` files here before continuing, use:
 ls -al ~/.ssh
 ```
 
+If there is nothing to list (i.e. `: No such file or directory`) then use:
+
+```shell
+mkdir $HOME/.ssh
+```
+
 If there's nothing there then generate a new keygen with:
 
 ```shell

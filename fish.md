@@ -21,6 +21,12 @@ To create an alias:
 alias rm=trash
 ```
 
+To save said alias:
+
+```shell
+funcsave rm
+```
+
 To remove an alias:
 
 ```shell

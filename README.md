@@ -4,22 +4,24 @@
 
 A place for all my cheat sheets to live!
 
+- **[Bash](bash.md#bash)**
+
+- **[Fish shell](fish.md#fish-shell)**
+
 - **[Git](git.md#useful-git-commands)**
 
-- **[npm](npm.md#npm-plz)**
-
-- **[Yarn](yarn.md#useful-yarn-commands)**
+- **[Graphcool](graphcool.md#yuseful-graphcool-commands)**
 
 - **[Hyper](hyper.md#useful-hyper-info)**
 
 - **[now](now.md#now)**
 
-- **[Graphcool](graphcool.md#yuseful-graphcool-commands)**
+- **[npm](npm.md#npm-plz)**
 
-- **[Bash](bash.md#bash)**
-
-- **[Fish shell](fish.md#fish-shell)**
+- **[Ubuntu](ubuntu.md#ubuntu)**
 
 - **[Windows Subsystem Linux](wsl.md#windows-subsystem-linux)**
+
+- **[Yarn](yarn.md#useful-yarn-commands)**
 
 - **[zsh](zsh.md#zsh)**

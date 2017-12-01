@@ -32,3 +32,24 @@ output:
 [ 9, 42 ]
 ```
 
+## Return one new thing only
+
+Return one new thing only: `reduce()`
+
+```js
+const originalArray = ["Alice", "Bob", "Charlie", "Bob", "Bob", "Charlie"]
+const numberOfBobs = originalArray.reduce((accumulator, item) => {
+  if (item === "Bob") {
+    return accumulator + 1;
+  } else {
+    return accumulator;
+  }
+}, 0)
+console.log(numberOfBobs)
+```
+
+output:
+
+```
+3
+```

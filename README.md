@@ -14,6 +14,8 @@ A place for all my cheat sheets to live!
 
 - **[Hyper](hyper.md#useful-hyper-info)**
 
+- **[JavaScript](javascript.md#javascript)**
+
 - **[now](now.md#now)**
 
 - **[npm](npm.md#npm-plz)**

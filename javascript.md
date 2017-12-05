@@ -1,6 +1,8 @@
 # JavaScript
 
-## New array from existing
+## Arrays
+
+### New array from existing
 
 Return one new entry for every existing entry: `map()`
 
@@ -16,7 +18,7 @@ output:
 [ 2, 4, 6 ]
 ```
 
-## Return new array filter
+### Return new array filter
 
 Return a new array with only some of the existing entries: `filter()`
 
@@ -32,7 +34,7 @@ output:
 [ 9, 42 ]
 ```
 
-## Return one new thing only
+### Return one new thing only
 
 Return one new thing only: `reduce()`
 
@@ -52,4 +54,18 @@ output:
 
 ```
 3
+```
+
+## Interview questions
+
+### Sum all even numbers from array
+
+```js
+const arr = [0, 1, 2, 3, 4, 5, null, 6, 9]
+
+function addEven() {
+  return arr.reduce((acc, cur) => (cur % 2 === 0 ? acc + cur : acc), 0)
+}
+
+addEven(arr)
 ```

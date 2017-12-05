@@ -5,9 +5,9 @@
 Return one new entry for every existing entry: `map()`
 
 ```js
-const originalArray = [1, 2, 3];
-const newArray = originalArray.map(item => item * 2);
-console.log(newArray);
+const originalArray = [1, 2, 3]
+const newArray = originalArray.map(item => item * 2)
+console.log(newArray)
 ```
 
 output:
@@ -37,12 +37,12 @@ output:
 Return one new thing only: `reduce()`
 
 ```js
-const originalArray = ["Alice", "Bob", "Charlie", "Bob", "Bob", "Charlie"]
+const originalArray = ['Alice', 'Bob', 'Charlie', 'Bob', 'Bob', 'Charlie']
 const numberOfBobs = originalArray.reduce((accumulator, item) => {
-  if (item === "Bob") {
-    return accumulator + 1;
+  if (item === 'Bob') {
+    return accumulator + 1
   } else {
-    return accumulator;
+    return accumulator
   }
 }, 0)
 console.log(numberOfBobs)

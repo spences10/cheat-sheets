@@ -69,3 +69,25 @@ function addEven() {
 
 addEven(arr)
 ```
+
+### Return the first duplicate number
+
+```js
+function firstDuplicate(arr) {
+  // empty array to use to check incoming array against
+  let checkArray = {}
+
+  // loop it
+  for (let i = 0; i < arr.length; i++) {
+    // check that array element against
+    // checkArray
+    if (checkArray[arr[i]] !== undefined)
+      // if there's no matching item then
+      return arr[i]
+    else
+      // append to the checkArray
+      checkArray[arr[i]] = i
+  }
+  return -1
+}
+```

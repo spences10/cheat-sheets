@@ -101,3 +101,13 @@ To see which packages need updating use:
 ```shell
 npm outdated -g --depth=0
 ```
+
+## npx, one off command
+
+No need to install create react app if you don't want to
+
+```shell
+npx create-react-app my-new-app
+```
+
+Will use latest create react app to make your new app

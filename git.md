@@ -192,10 +192,24 @@ git remote -v # Verifies the new remote URL
 git push origin master
 ```
 
-## Delete local branch
+## Delete branches
+
+Delete local branch.
 
 ```shell
 git branch -D use-dotenv
+```
+
+Remove local branches that are not on the `remote`.
+
+```sh
+git remote prune origin
+```
+
+Remove local branches that were created from remote branches.
+
+```sh
+git branch --merged master | grep -v '^[ *]*master$' | xargs git branch -d
 ```
 
 ## Merge two repos
@@ -290,8 +304,9 @@ git clone https://github.com/user/repoNameYouToChange NameYouWantToGiveToRepo
 If you are pushing right after a commit, you can use `git push --no-verify` to
 avoid running all the tests again.
 
-If you make a trivial change and want to commit `git commit -m 'some detailed
-message' --no-verify` will skip your `precommit` and `prepush` scripts.
+If you make a trivial change and want to commit
+`git commit -m 'some detailed message' --no-verify` will skip your `precommit`
+and `prepush` scripts.
 
 ## How to read last commit comment?
 

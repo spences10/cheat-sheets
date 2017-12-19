@@ -212,6 +212,19 @@ Remove local branches that were created from remote branches.
 git branch --merged master | grep -v '^[ *]*master$' | xargs git branch -d
 ```
 
+## Merge master branch into feature branch
+
+How to merge the master branch into the feature branch? This will come up often
+if you are workingon a team with other devs and you want to update your feature
+branch to include the latest changes.
+
+```sh
+# checkout your feature branch
+git checkout feature1
+# merge master into it
+git merge master
+```
+
 ## Merge two repos
 
 If you want to merge project-a into project-b:

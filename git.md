@@ -428,7 +428,7 @@ Now using `ls -al ~/.ssh` will show our `id_rsa.pub` file.
 Add the SSH key to the SSH agent:
 
 ```shell
-eval "$(ssh-agent -s)" # for mac and Linux from bash
+eval "$(ssh-agent -s)" # for mac and Linux from bash, also from Windows Git Bash
 ```
 
 ```shell
@@ -452,8 +452,17 @@ clip < ~/.ssh/id_rsa.pub # Windows
 cat ~/.ssh/id_rsa.pub # Linux
 ```
 
+Add a new SSH Key to your GitHub profile from the [settings] page by clicking
+the [New SSH key] button and paste in your key. Save it...
+
+[settings]: https://github.com/settings/keys
+[new ssh key]: https://github.com/settings/ssh/new
+
 Then authenticate with:
 
 ```shell
 ssh -T git@github.com
 ```
+
+If you fo back to the GitHub setting page and refresh the key icon should go
+from black to green

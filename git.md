@@ -411,12 +411,6 @@ bash if you're on Windows):
 ls -al ~/.ssh
 ```
 
-If there is nothing to list (i.e. `: No such file or directory`) then use:
-
-```shell
-mkdir $HOME/.ssh
-```
-
 If there's nothing there then generate a new keygen with:
 
 ```shell

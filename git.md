@@ -414,7 +414,7 @@ ls -al ~/.ssh
 If there's nothing there then generate a new keygen with:
 
 ```shell
-ssh-keygen -t rsa -b 4096 -C your@email.com
+ssh-keygen -t rsa -b 4096 -C your@email.com # add your email address 👍
 ```
 
 Now using `ls -al ~/.ssh` will show our `id_rsa.pub` file.
@@ -458,4 +458,4 @@ ssh -T git@github.com
 ```
 
 If you fo back to the GitHub setting page and refresh the key icon should go
-from black to green
+from black to green. 🎉

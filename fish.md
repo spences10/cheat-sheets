@@ -17,7 +17,7 @@ type functionName
 To create an alias:
 
 ```shell
-alias rm=trash
+alias rm=rmtrash
 ```
 
 To save said alias:
@@ -31,6 +31,16 @@ To remove an alias:
 ```shell
 rm ~/.config/fish/functions/aliasname.fish
 ```
+
+or use:
+
+```sh
+unalias aliasname
+/usr/bin/unalias: line 2: unalias: foo: not found
+functions -e aliasname
+type aliasname
+type: Could not find "aliasname"
+``` 
 
 ## Oh My Fish
 

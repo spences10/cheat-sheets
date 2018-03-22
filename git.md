@@ -1,11 +1,11 @@
 # Useful Git commands
 
-This is just stuff that I have put down that I find I use a lot of the time for
-my own reference.
+This is just stuff that I have put down that I find I use a lot of the
+time for my own reference.
 
 ## Add a new repo from your machine to GitHub
 
-```
+```sh
 echo "# name-of-your-awesome-repo" >> README.md # add repo name to README.md
 git init # init the repository
 git add README.md
@@ -14,8 +14,8 @@ git remote add origin https://github.com/spences10/name-of-your-awesome-repo.git
 git push -u origin master
 ```
 
-The first four commands can be ignored if you have done more work on the repo
-than adding a README.md
+The first four commands can be ignored if you have done more work on
+the repo than adding a README.md
 
 ## Latest changes from repo to your machine
 
@@ -37,8 +37,8 @@ You can set it to whatever branch you want to track changes for
 git branch --set-upstream-to=origin/<branch>
 ```
 
-This will mean you can just do `git pull` and the latest changes will be pulled
-to your `origin`
+This will mean you can just do `git pull` and the latest changes will
+be pulled to your `origin`
 
 ## What branch?
 
@@ -119,7 +119,8 @@ git checkout master
 git merge upstream/master
 ```
 
-You then use `git merge` to update any branch on the upstream repository:
+You then use `git merge` to update any branch on the upstream
+repository:
 
 ```shell
 git merge upstream/dev
@@ -127,23 +128,25 @@ git merge upstream/dev
 
 ## Sync a remote fork on Github
 
-1. Open your fork on GitHub.
-1. Click on Pull Requests.
-1. Click on New Pull Request. By default, GitHub will compare the original with
-   your fork, and there shouldn’t be anything to compare if you didn’t make any
-   changes.
-1. Click on Try `switching the base`. Now GitHub will compare your fork with the
-   original, and you should see all the latest changes.
-1. Click on Click to create a pull request for this comparison and assign a
-   predictable name to your pull request (e.g., Update from original).
-1. Click on Send pull request.
-1. Scroll down and click Merge pull request and finally Confirm merge. If your
-   fork didn’t have any changes, you will be able to merge it automatically.
+1.  Open your fork on GitHub.
+1.  Click on Pull Requests.
+1.  Click on New Pull Request. By default, GitHub will compare the
+    original with your fork, and there shouldn’t be anything to
+    compare if you didn’t make any changes.
+1.  Click on Try `switching the base`. Now GitHub will compare your
+    fork with the original, and you should see all the latest changes.
+1.  Click on Click to create a pull request for this comparison and
+    assign a predictable name to your pull request (e.g., Update from
+    original).
+1.  Click on Send pull request.
+1.  Scroll down and click Merge pull request and finally Confirm
+    merge. If your fork didn’t have any changes, you will be able to
+    merge it automatically.
 
 ## 2fa
 
-Using two factor authentication? Then use the following so you're not adding in
-your auth token each time you want to `push` your code.
+Using two factor authentication? Then use the following so you're not
+adding in your auth token each time you want to `push` your code.
 
 ```shell
 git remote set-url origin https://yourgithubuser:your-token@github.com/yourgithubuser/yourrepo.git
@@ -214,9 +217,9 @@ git branch --merged master | grep -v '^[ *]*master$' | xargs git branch -d
 
 ## Merge master branch into feature branch
 
-How to merge the master branch into the feature branch? This will come up often
-if you are workingon a team with other devs and you want to update your feature
-branch to include the latest changes.
+How to merge the master branch into the feature branch? This will come
+up often if you are workingon a team with other devs and you want to
+update your feature branch to include the latest changes.
 
 ```sh
 # checkout your feature branch
@@ -239,8 +242,8 @@ git remote remove project-a
 
 ## Stop tracking a file
 
-If you have `.env` files that are tracked by Git and want to ignore them so your
-API keys don't get added to GitHub use:
+If you have `.env` files that are tracked by Git and want to ignore
+them so your API keys don't get added to GitHub use:
 
 ```shell
 git update-index --assume-unchanged <file>
@@ -248,8 +251,8 @@ git update-index --assume-unchanged <file>
 
 ## Stop tracking a previously tracked folder
 
-First add the folder to your `.gitignore` then remove the folder from your local
-git tracking with:
+First add the folder to your `.gitignore` then remove the folder from
+your local git tracking with:
 
 ```shell
 git rm -r --cached <folder>
@@ -263,8 +266,8 @@ git update-index --no-assume-unchanged <file>
 
 ## Cloning a repo from someone else's GitHub and pushing it to a repo on my GitHub
 
-So you make a clone, make some changes then realise that you need to add it to
-your GitHub account before making a pull
+So you make a clone, make some changes then realise that you need to
+add it to your GitHub account before making a pull
 
 ```shell
 git remote -v
@@ -272,8 +275,8 @@ origin  https://github.com/OtherUser/OtherUserRepo (fetch)
 origin  https://github.com/OtherUser/OtherUserRepo (push)
 ```
 
-You just need to set the `origin` to yours then add the `upstream` as the
-original `origin` make sense?
+You just need to set the `origin` to yours then add the `upstream` as
+the original `origin` make sense?
 
 So change `origin` to yours:
 
@@ -299,8 +302,8 @@ upstream        https://github.com/OtherUser/OtherUserRepo (push)
 
 ## Remove an `upstream` repository
 
-If you no longer need a reference to a forked repository then remove it with the
-following:
+If you no longer need a reference to a forked repository then remove
+it with the following:
 
 ```shell
 git remote rm upstream
@@ -314,12 +317,12 @@ git clone https://github.com/user/repoNameYouToChange NameYouWantToGiveToRepo
 
 ## Using Husky?
 
-If you are pushing right after a commit, you can use `git push --no-verify` to
-avoid running all the tests again.
+If you are pushing right after a commit, you can use
+`git push --no-verify` to avoid running all the tests again.
 
 If you make a trivial change and want to commit
-`git commit -m 'some detailed message' --no-verify` will skip your `precommit`
-and `prepush` scripts.
+`git commit -m 'some detailed message' --no-verify` will skip your
+`precommit` and `prepush` scripts.
 
 ## How to read last commit comment?
 
@@ -346,8 +349,8 @@ git revert <commit>
 git push origin <branch>
 ```
 
-Rather than use the last part I unstaged the changes in VSCode which I think did
-the same thing.
+Rather than use the last part I unstaged the changes in VSCode which I
+think did the same thing.
 
 ## Show `.gitconfig` details
 
@@ -367,13 +370,13 @@ If you want to rename the current branch, you can do:
 git branch -m <newname>
 ```
 
-A way to remember this, is `-m` is for "move" (or `mv`), which is how you rename
-files.
+A way to remember this, is `-m` is for "move" (or `mv`), which is how
+you rename files.
 
 ## Git ref log
 
-Want to know what work you have done on a repo? Use `git reflog` to displpay all
-the commits.
+Want to know what work you have done on a repo? Use `git reflog` to
+displpay all the commits.
 
 ```shell
 # show all changes for the last 90 days
@@ -386,26 +389,27 @@ https://stackoverflow.com/questions/17369254/is-there-a-way-to-cause-git-reflog-
 
 ## Use SSH in place of HTTPS
 
-Get your SSH set up on your machine and add a key to GitHub, more on that here:
+Get your SSH set up on your machine and add a key to GitHub, more on
+that here:
 https://egghead.io/lessons/javascript-how-to-authenticate-with-github-using-ssh
 
-You will then need to pick your **Clone with SSH** option from the **Clone or
-download** section on your repo page.
+You will then need to pick your **Clone with SSH** option from the
+**Clone or download** section on your repo page.
 
-Once you have taken the link from there you will need to set the repo remote to
-the SSH URL
+Once you have taken the link from there you will need to set the repo
+remote to the SSH URL
 
 ```shell
 git remote set-url origin git@github.com:username/repo-name-here.git
 ```
 
-Where username is the `username` of the repo owner and `repo-name-here` is the
-name of that user's repository.
+Where username is the `username` of the repo owner and
+`repo-name-here` is the name of that user's repository.
 
 ## How to authenticate with GitHub using SSH
 
-Check that there are no `rsa` files here before continuing, use (bash or Git
-bash if you're on Windows):
+Check that there are no `rsa` files here before continuing, use (bash
+or Git bash if you're on Windows):
 
 ```shell
 ls -al ~/.ssh
@@ -445,8 +449,8 @@ clip < ~/.ssh/id_rsa.pub # Windows
 cat ~/.ssh/id_rsa.pub # Linux
 ```
 
-Add a new SSH Key to your GitHub profile from the [settings] page by clicking
-the [New SSH key] button and paste in your key. Save it...
+Add a new SSH Key to your GitHub profile from the [settings] page by
+clicking the [New SSH key] button and paste in your key. Save it...
 
 [settings]: https://github.com/settings/keys
 [new ssh key]: https://github.com/settings/ssh/new
@@ -457,5 +461,5 @@ Then authenticate with:
 ssh -T git@github.com
 ```
 
-If you fo back to the GitHub setting page and refresh the key icon should go
-from black to green. 🎉
+If you fo back to the GitHub setting page and refresh the key icon
+should go from black to green. 🎉

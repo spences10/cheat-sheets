@@ -439,14 +439,12 @@ Add RSA key to SHH with:
 ssh-add ~/.ssh/id_rsa
 ```
 
-Copy your key to clipboard
+Copy your key to clipboard with one of the following:
 
-```shell
+```sh
 clip < ~/.ssh/id_rsa.pub # Windows
-```
-
-```shell
 cat ~/.ssh/id_rsa.pub # Linux
+pbcopy < ~/.ssh/id_github.pub # Mac
 ```
 
 Add a new SSH Key to your GitHub profile from the [settings] page by

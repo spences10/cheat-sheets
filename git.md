@@ -19,7 +19,7 @@ the repo than adding a README.md
 
 ## Latest changes from repo to your machine
 
-```shell
+```sh
 git pull
 ```
 
@@ -27,13 +27,13 @@ git pull
 
 Assuming that you are working on the master branch then
 
-```shell
+```sh
 git branch --set-upstream-to=origin/master
 ```
 
 You can set it to whatever branch you want to track changes for
 
-```shell
+```sh
 git branch --set-upstream-to=origin/<branch>
 ```
 
@@ -42,7 +42,7 @@ be pulled to your `origin`
 
 ## What branch?
 
-```shell
+```sh
 git branch # shows what branch you're on
 git branch -r # shows remote branches
 git branch -a # shows all branches
@@ -54,7 +54,7 @@ Want to make your feature branch and get it on GitHub?
 
 Make your branch first then:
 
-```shell
+```sh
 git push --set-upstream origin <branch-you-just-created>
 ```
 
@@ -62,37 +62,37 @@ git push --set-upstream origin <branch-you-just-created>
 
 Fork other users repo in GitHub, then clone to your machine.
 
-```shell
+```sh
 git clone https://github.com/YourUserName/awesome-awesome-repo
 ```
 
 Add the remote repo
 
-```shell
+```sh
 git remote add upstream https://github.com/OtherUserName/awesome-awesome-repo
 ```
 
 Create your branch
 
-```shell
+```sh
 git branch your-awesome-branch
 ```
 
 Check it out
 
-```shell
+```sh
 git checkout your-awesome-branch
 ```
 
 If adding a folder use.
 
-```shell
+```sh
 git add nameOfFolder/\\*
 ```
 
 Make your commit and push to your new branch.
 
-```shell
+```sh
 git add .
 git commit -m 'initial commit'
 git push origin your-awesome-branch
@@ -102,7 +102,7 @@ Manage the rest of the PR via GitHub
 
 ## Check remotes
 
-```shell
+```sh
 git remote -v
 ```
 
@@ -110,7 +110,7 @@ git remote -v
 
 First configure the local to point to the remote upstream
 
-```shell
+```sh
 git remote -v
 git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git
 git remote -v
@@ -122,7 +122,7 @@ git merge upstream/master
 You then use `git merge` to update any branch on the upstream
 repository:
 
-```shell
+```sh
 git merge upstream/dev
 ```
 
@@ -148,7 +148,7 @@ git merge upstream/dev
 Using two factor authentication? Then use the following so you're not
 adding in your auth token each time you want to `push` your code.
 
-```shell
+```sh
 git remote set-url origin https://yourgithubuser:your-token@github.com/yourgithubuser/yourrepo.git
 ```
 
@@ -156,7 +156,7 @@ git remote set-url origin https://yourgithubuser:your-token@github.com/yourgithu
 
 If you want to change the origin url you can use the `set-url` command
 
-```shell
+```sh
 git remote set-url origin https://github.com/user/new-repo-name
 ```
 
@@ -164,32 +164,32 @@ git remote set-url origin https://github.com/user/new-repo-name
 
 Via terminal navigate to your code folder.
 
-```shell
+```sh
 git init
 ```
 
 Add your files.
 
-```shell
+```sh
 git add .
 ```
 
 Adding a folder use the following syntax or it'll get added as a BLOB.
 
-```shell
+```sh
 git add nameOfFolder/\\*
 ```
 
 Commit to local repo.
 
-```shell
+```sh
 git commit -m 'some detailed message'
 ```
 
 To add your files to the remote repo,
 [first add your remote repo](https://help.github.com/articles/adding-a-remote/)
 
-```shell
+```sh
 git remote add origin [remote repository URL] # Sets the new remote
 git remote -v # Verifies the new remote URL
 git push origin master
@@ -199,7 +199,7 @@ git push origin master
 
 Delete local branch.
 
-```shell
+```sh
 git branch -D use-dotenv
 ```
 
@@ -232,7 +232,7 @@ git merge master
 
 If you want to merge project-a into project-b:
 
-```shell
+```sh
 cd path/to/project-b
 git remote add project-a path/to/project-a
 git fetch project-a
@@ -245,7 +245,7 @@ git remote remove project-a
 If you have `.env` files that are tracked by Git and want to ignore
 them so your API keys don't get added to GitHub use:
 
-```shell
+```sh
 git update-index --assume-unchanged <file>
 ```
 
@@ -254,13 +254,13 @@ git update-index --assume-unchanged <file>
 First add the folder to your `.gitignore` then remove the folder from
 your local git tracking with:
 
-```shell
+```sh
 git rm -r --cached <folder>
 ```
 
 ## Start tracking a previously un-tracked file
 
-```shell
+```sh
 git update-index --no-assume-unchanged <file>
 ```
 
@@ -269,7 +269,7 @@ git update-index --no-assume-unchanged <file>
 So you make a clone, make some changes then realise that you need to
 add it to your GitHub account before making a pull
 
-```shell
+```sh
 git remote -v
 origin  https://github.com/OtherUser/OtherUserRepo (fetch)
 origin  https://github.com/OtherUser/OtherUserRepo (push)
@@ -280,19 +280,19 @@ the original `origin` make sense?
 
 So change `origin` to yours:
 
-```shell
+```sh
 git remote set-url origin http://github.com/YourUser/YourRepo
 ```
 
 Then add `upsrtream` as theirs:
 
-```shell
+```sh
 git remote add upstream https://github.com/OtherUser/OtherUserRepo
 ```
 
 Now it should look something like this:
 
-```shell
+```sh
 git remote -v
 origin  http://github.com/YourUser/YourRepo (fetch)
 origin  http://github.com/YourUser/YourRepo (push)
@@ -305,13 +305,13 @@ upstream        https://github.com/OtherUser/OtherUserRepo (push)
 If you no longer need a reference to a forked repository then remove
 it with the following:
 
-```shell
+```sh
 git remote rm upstream
 ```
 
 ## Clone a repo and give it a different name
 
-```shell
+```sh
 git clone https://github.com/user/repoNameYouToChange NameYouWantToGiveToRepo
 ```
 
@@ -326,7 +326,7 @@ If you make a trivial change and want to commit
 
 ## How to read last commit comment?
 
-```shell
+```sh
 git show # is the fastest to type, but shows you the diff as well.
 git log -1 # is fast and simple.
 git log -1 --pretty=%B # if you need just the commit message and nothing else.
@@ -340,7 +340,7 @@ for more detail on how to revert.
 
 This was the simplest approach I found:
 
-```shell
+```sh
 # Checkout the desired branch
 git checkout <branch>
 # Undo the desired commit
@@ -354,19 +354,19 @@ think did the same thing.
 
 ## Show `.gitconfig` details
 
-```shell
+```sh
 git config --list --show-origin
 ```
 
 ## If you want to rename a branch while pointed to any branch, do:
 
-```shell
+```sh
 git branch -m <oldname> <newname>
 ```
 
 If you want to rename the current branch, you can do:
 
-```shell
+```sh
 git branch -m <newname>
 ```
 
@@ -378,7 +378,7 @@ you rename files.
 Want to know what work you have done on a repo? Use `git reflog` to
 displpay all the commits.
 
-```shell
+```sh
 # show all changes for the last 90 days
 git reflog show -a
 # show changes with a date
@@ -399,7 +399,7 @@ You will then need to pick your **Clone with SSH** option from the
 Once you have taken the link from there you will need to set the repo
 remote to the SSH URL
 
-```shell
+```sh
 git remote set-url origin git@github.com:username/repo-name-here.git
 ```
 
@@ -411,13 +411,13 @@ Where username is the `username` of the repo owner and
 Check that there are no `rsa` files here before continuing, use (bash
 or Git bash if you're on Windows):
 
-```shell
+```sh
 ls -al ~/.ssh
 ```
 
 If there's nothing there then generate a new keygen with:
 
-```shell
+```sh
 ssh-keygen -t rsa -b 4096 -C your@email.com # add your email address 👍
 ```
 
@@ -425,17 +425,17 @@ Now using `ls -al ~/.ssh` will show our `id_rsa.pub` file.
 
 Add the SSH key to the SSH agent:
 
-```shell
+```sh
 eval "$(ssh-agent -s)" # for mac and Linux from bash, also from Windows Git Bash
 ```
 
-```shell
+```sh
 eval `ssh-agent -s` # for Git Bash on Windows
 ```
 
 Add RSA key to SHH with:
 
-```shell
+```sh
 ssh-add ~/.ssh/id_rsa
 ```
 
@@ -455,7 +455,7 @@ clicking the [New SSH key] button and paste in your key. Save it...
 
 Then authenticate with:
 
-```shell
+```sh
 ssh -T git@github.com
 ```
 

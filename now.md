@@ -1,22 +1,24 @@
-# now 
+# now
 
-The awesome now from zeit! It has a great cli with probably all of this detailed in there under `-h` somewhere 😁
+The awesome now from zeit! It has a great cli with probably all of
+this detailed in there under `-h` somewhere 😁
 
 ## Aliases
 
 Got your own domain name? You can alias your latest `now` deployment
 
-```shell
-now alias now-generated-url.now.sh your-awesome-domain-name.af 
+```sh
+now alias now-generated-url.now.sh your-awesome-domain-name.af
 ```
 
-## Scale your deployment 
+## Scale your deployment
 
-Want your site to not get frozen? And have visitors have to wait for the instance to spin up?
+Want your site to not get frozen? And have visitors have to wait for
+the instance to spin up?
 
 This is straight from the CLI with `now scale -h`
 
-```shell
+```sh
 # Create an deployment with 3 instances, never sleeps:
 now scale my-deployment-ntahoeato.now.sh 3
 # Create an automatically scaling deployment:
@@ -33,7 +35,8 @@ now scale my-deployment-ntahoeato.now.sh 1
 
 Config stuff I always forget!
 
-If it's keys, then use secrets and configure them in the `package.json`:
+If it's keys, then use secrets and configure them in the
+`package.json`:
 
 ```json
  "now": {
@@ -48,12 +51,14 @@ If it's keys, then use secrets and configure them in the `package.json`:
   },
 ```
 
-If you have a lot of configuration variables and you dont want to make a mess in the `package.json`:
+If you have a lot of configuration variables and you dont want to make
+a mess in the `package.json`:
 
-```shell
+```sh
 now -E
 ```
 
-That will pull your `.env` file and use that in place of adding individual vars via `now -e var`. I have always used `dotenv` and I understand that `now` uses `dotenv` for this and using without is untested by me?
-
-
+That will pull your `.env` file and use that in place of adding
+individual vars via `now -e var`. I have always used `dotenv` and I
+understand that `now` uses `dotenv` for this and using without is
+untested by me?

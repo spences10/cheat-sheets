@@ -4,13 +4,13 @@ A list of terminal commands and flags to help me use `npm`
 
 ## install package.json dependencies
 
-```shell
+```sh
 npm install
 ```
 
 **Shorthand**
 
-```shell
+```sh
 # install
 npm i <package>
 # uninstall
@@ -21,19 +21,19 @@ npm up <package>
 
 ## List globally installed packages.
 
-```shell
+```sh
 npm list -g --depth=0
 ```
 
 ## list available scripts to run
 
-```shell
+```sh
 npm run
 ```
 
 ## update npm
 
-```shell
+```sh
 npm install -g npm@latest
 # using windows? Then use
 npm-windows-upgrade
@@ -41,12 +41,12 @@ npm-windows-upgrade
 
 ## flags
 
-`-S` is the same as `--save` not needed in npm 5
-`-D` is the same as `--save-dev`
+`-S` is the same as `--save` not needed in npm 5 `-D` is the same as
+`--save-dev`
 
 ## installed version
 
-```shell
+```sh
 npm list # for local packages
 ```
 
@@ -54,21 +54,23 @@ npm list # for local packages
 
 Say you want to install Node v6.9.1 you would write on the terminal:
 
-```shell
+```sh
 nvm install 6
 ```
 
-If you have multiple versions of Node.js installed on your workspace, you can switch to a specific version by writing:
+If you have multiple versions of Node.js installed on your workspace,
+you can switch to a specific version by writing:
 
-```shell
+```sh
 nvm use 0.10.40
 ```
 
 Making a node version default
 
-In order to set a default version of node for your workspace, just type:
+In order to set a default version of node for your workspace, just
+type:
 
-```shell
+```sh
 nvm alias default 6
 ```
 
@@ -76,15 +78,16 @@ Where 6 was the version you wanted to be used as default.
 
 ## Uninstall global package
 
-```shell
+```sh
 npm -g uninstall <name> --save
 ```
 
 ## Upgrade NPM on Windows
 
-After trying several times to upgrade npm on Windows I found this whilst poking around.
+After trying several times to upgrade npm on Windows I found this
+whilst poking around.
 
-```shell
+```sh
 npm-windows-upgrade
 ```
 
@@ -92,13 +95,13 @@ npm-windows-upgrade
 
 To update global packages individually you can use:
 
-```shell
+```sh
 npm update -g <package>
 ```
 
 To see which packages need updating use:
 
-```shell
+```sh
 npm outdated -g --depth=0
 ```
 
@@ -106,7 +109,7 @@ npm outdated -g --depth=0
 
 No need to install create react app if you don't want to
 
-```shell
+```sh
 npx create-react-app my-new-app
 ```
 

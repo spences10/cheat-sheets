@@ -4,41 +4,40 @@ CLI
 
 Open Console for current project in browser
 
-```shell
+```sh
 graphcool console
 ```
 
 Open Playground for current project in browser
 
-```shell
+```sh
 graphcool playground
 ```
 
 Get a project ID/Auth token
 
-```shell
+```sh
 graphcool status
 ```
 
 Get endpoints
 
-```shell
+```sh
 graphcool endpoints
 ```
 
 Apply local changes also remotely
 
-```shell
+```sh
 graphcool push project.graphcool
 ```
 
 Force local changes remotely resulting in potential data loss
 
-```shell
+```sh
 graphcool push --force project.graphcool
 ```
 
 How to download the GraphQL SDL (schema definition language)
 
 https://www.graph.cool/docs/faq/graphql-how-to-download-graphql-sdl-schema-maiv5eekan/
-

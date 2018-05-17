@@ -2,6 +2,22 @@
 
 ## Aliases
 
+Quick list for aliasing:
+
+```sh
+functions aliasname
+# Displays function contents
+
+functions -n
+# Displays a list of currently-defined functions
+
+functions -c foo bar
+# Copies the 'foo' function to a new function called 'bar'
+
+functions -e bar
+# Erases the function `bar`
+```
+
 To list what aliases you have already defined:
 
 ```sh
@@ -17,7 +33,7 @@ type functionName
 To create an alias:
 
 ```sh
-alias rm=rmtrash
+alias rm 'rmtrash'
 ```
 
 To save said alias:

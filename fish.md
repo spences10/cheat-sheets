@@ -11,11 +11,11 @@ functions aliasname
 functions -n
 # Displays a list of currently-defined functions
 
-functions -c foo bar
-# Copies the 'foo' function to a new function called 'bar'
+functions -c newalias aliasname
+# Copies the 'aliasname' function to a new function called 'newalias'
 
-functions -e bar
-# Erases the function `bar`
+functions -e aliasname
+# Erases the function `aliasname`
 ```
 
 To list what aliases you have already defined:
@@ -52,7 +52,7 @@ or use:
 
 ```sh
 unalias aliasname
-/usr/bin/unalias: line 2: unalias: foo: not found
+/usr/bin/unalias: line 2: unalias: aliasname: not found
 functions -e aliasname
 type aliasname
 type: Could not find "aliasname"

@@ -2,37 +2,38 @@
 
 <!-- TOC -->
 
-* [Useful Git commands](#useful-git-commands)
-  * [Add a new repo from your machine to GitHub](#add-a-new-repo-from-your-machine-to-github)
-  * [Latest changes from repo to your machine](#latest-changes-from-repo-to-your-machine)
-  * [Add tracking information to your work](#add-tracking-information-to-your-work)
-  * [What branch?](#what-branch)
-  * [Create a local branch and push it to GitHub](#create-a-local-branch-and-push-it-to-github)
-  * [Create a PR [[Pull Request](https://spences10.github.io/2017/01/05/git-and-github.html)]](#create-a-pr-pull-requesthttpsspences10githubio20170105git-and-githubhtml)
-  * [Check remotes](#check-remotes)
-  * [[Sync a remote fork](https://help.github.com/articles/syncing-a-fork/) on your machine](#sync-a-remote-forkhttpshelpgithubcomarticlessyncing-a-fork-on-your-machine)
-  * [Sync a remote fork on Github](#sync-a-remote-fork-on-github)
-  * [2fa](#2fa)
-  * [Change `origin` url](#change-origin-url)
-  * [[Add code on your machine to new repo](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/)](#add-code-on-your-machine-to-new-repohttpshelpgithubcomarticlesadding-an-existing-project-to-github-using-the-command-line)
-  * [Delete branches](#delete-branches)
-  * [Merge master branch into feature branch](#merge-master-branch-into-feature-branch)
-  * [Merge two repos](#merge-two-repos)
-  * [Stop tracking a file](#stop-tracking-a-file)
-  * [Stop tracking a previously tracked folder](#stop-tracking-a-previously-tracked-folder)
-  * [Start tracking a previously un-tracked file](#start-tracking-a-previously-un-tracked-file)
-  * [Cloning a repo from someone else's GitHub and pushing it to a repo on my GitHub](#cloning-a-repo-from-someone-elses-github-and-pushing-it-to-a-repo-on-my-github)
-  * [Remove an `upstream` repository](#remove-an-upstream-repository)
-  * [Clone a repo and give it a different name](#clone-a-repo-and-give-it-a-different-name)
-  * [Using Husky?](#using-husky)
-  * [How to read last commit comment?](#how-to-read-last-commit-comment)
-  * [Remove commit from pull request](#remove-commit-from-pull-request)
-  * [Show `.gitconfig` details](#show-gitconfig-details)
-  * [If you want to rename a branch while pointed to any branch, do:](#if-you-want-to-rename-a-branch-while-pointed-to-any-branch-do)
-  * [Git ref log](#git-ref-log)
-  * [Use SSH in place of HTTPS](#use-ssh-in-place-of-https)
-  * [How to authenticate with GitHub using SSH](#how-to-authenticate-with-github-using-ssh)
-  * [Specify multiple users for myself in .gitconfig?](#specify-multiple-users-for-myself-in-gitconfig)
+- [Useful Git commands](#useful-git-commands)
+  - [Add a new repo from your machine to GitHub](#add-a-new-repo-from-your-machine-to-github)
+  - [Latest changes from repo to your machine](#latest-changes-from-repo-to-your-machine)
+  - [Add tracking information to your work](#add-tracking-information-to-your-work)
+  - [What branch?](#what-branch)
+  - [Create a local branch and push it to GitHub](#create-a-local-branch-and-push-it-to-github)
+  - [Create a PR [[Pull Request](https://spences10.github.io/2017/01/05/git-and-github.html)]](#create-a-pr-pull-requesthttpsspences10githubio20170105git-and-githubhtml)
+  - [Check remotes](#check-remotes)
+  - [[Sync a remote fork](https://help.github.com/articles/syncing-a-fork/) on your machine](#sync-a-remote-forkhttpshelpgithubcomarticlessyncing-a-fork-on-your-machine)
+  - [Sync a remote fork on Github](#sync-a-remote-fork-on-github)
+  - [2fa](#2fa)
+  - [Change `origin` url](#change-origin-url)
+  - [[Add code on your machine to new repo](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/)](#add-code-on-your-machine-to-new-repohttpshelpgithubcomarticlesadding-an-existing-project-to-github-using-the-command-line)
+  - [Delete branches](#delete-branches)
+  - [Merge master branch into feature branch](#merge-master-branch-into-feature-branch)
+  - [Merge two repos](#merge-two-repos)
+  - [Stop tracking a file](#stop-tracking-a-file)
+  - [Stop tracking a previously tracked folder](#stop-tracking-a-previously-tracked-folder)
+  - [Start tracking a previously un-tracked file](#start-tracking-a-previously-un-tracked-file)
+  - [Cloning a repo from someone else's GitHub and pushing it to a repo on my GitHub](#cloning-a-repo-from-someone-elses-github-and-pushing-it-to-a-repo-on-my-github)
+  - [Remove an `upstream` repository](#remove-an-upstream-repository)
+  - [Clone a repo and give it a different name](#clone-a-repo-and-give-it-a-different-name)
+  - [Using Husky?](#using-husky)
+  - [How to read last commit comment?](#how-to-read-last-commit-comment)
+  - [Remove commit from pull request](#remove-commit-from-pull-request)
+  - [Show `.gitconfig` details](#show-gitconfig-details)
+  - [If you want to rename a branch while pointed to any branch, do:](#if-you-want-to-rename-a-branch-while-pointed-to-any-branch-do)
+  - [Git ref log](#git-ref-log)
+  - [Use SSH in place of HTTPS](#use-ssh-in-place-of-https)
+  - [How to authenticate with GitHub using SSH](#how-to-authenticate-with-github-using-ssh)
+  - [Specify multiple users for myself in .gitconfig?](#specify-multiple-users-for-myself-in-gitconfig)
+  - [Cant remember what your last git commit said?](#cant-remember-what-your-last-git-commit-said)
 
 <!-- /TOC -->
 
@@ -517,6 +518,12 @@ Whereas the default user / email is configured in your `~/.gitconfig`
 ```sh
 git config --global user.name 'Your Name'
 git config --global user.email 'your@email.com'
+```
+
+## Cant remember what your last git commit said?
+
+```sh
+git show
 ```
 
 <!-- Links -->

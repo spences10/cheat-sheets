@@ -28,18 +28,32 @@ To see what is contained in the functions, use:
 
 ```sh
 type functionName
+# or use functions
+functions functionName
 ```
 
 To create an alias:
 
 ```sh
-alias rm 'rmtrash'
+# Sort alphabetically 👌
+alias lss 'ls -lart | sort -k9,9'
 ```
 
 To save said alias:
 
 ```sh
-funcsave rm
+funcsave lss
+```
+
+View the contents of the function:
+
+```sh
+functions lss
+# output
+# Defined in /home/scott/.config/fish/functions/lss.fish @ line 2
+function lss --description 'alias lss ls -lart | sort -k9,9'
+        ls -lart | sort -k9,9 $argv;
+end
 ```
 
 To remove an alias:
@@ -51,11 +65,7 @@ rm ~/.config/fish/functions/aliasname.fish
 or use:
 
 ```sh
-unalias aliasname
-/usr/bin/unalias: line 2: unalias: aliasname: not found
 functions -e aliasname
-type aliasname
-type: Could not find "aliasname"
 ```
 
 ## Oh My Fish

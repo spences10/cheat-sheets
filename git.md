@@ -6,15 +6,15 @@
   - [Add a new repo from your machine to GitHub](#add-a-new-repo-from-your-machine-to-github)
   - [Latest changes from repo to your machine](#latest-changes-from-repo-to-your-machine)
   - [Add tracking information to your work](#add-tracking-information-to-your-work)
-  - [What branch?](#what-branch)
+  - [What branch](#what-branch)
   - [Create a local branch and push it to GitHub](#create-a-local-branch-and-push-it-to-github)
-  - [Create a PR [[Pull Request](https://spences10.github.io/2017/01/05/git-and-github.html)]](#create-a-pr-pull-requesthttpsspences10githubio20170105git-and-githubhtml)
+  - [Create a PR [Pull Request]](#create-a-pr-pull-request)
   - [Check remotes](#check-remotes)
-  - [[Sync a remote fork](https://help.github.com/articles/syncing-a-fork/) on your machine](#sync-a-remote-forkhttpshelpgithubcomarticlessyncing-a-fork-on-your-machine)
+  - [Sync a remote fork on your machine](#sync-a-remote-fork-on-your-machine)
   - [Sync a remote fork on Github](#sync-a-remote-fork-on-github)
   - [2fa](#2fa)
   - [Change `origin` url](#change-origin-url)
-  - [[Add code on your machine to new repo](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/)](#add-code-on-your-machine-to-new-repohttpshelpgithubcomarticlesadding-an-existing-project-to-github-using-the-command-line)
+  - [Add code on your machine to new repo](#add-code-on-your-machine-to-new-repo)
   - [Delete branches](#delete-branches)
   - [Merge master branch into feature branch](#merge-master-branch-into-feature-branch)
   - [Merge two repos](#merge-two-repos)
@@ -77,7 +77,7 @@ git branch --set-upstream-to=origin/<branch>
 This will mean you can just do `git pull` and the latest changes will
 be pulled to your `origin`
 
-## What branch?
+## What branch
 
 ```sh
 git branch # shows what branch you're on
@@ -95,7 +95,7 @@ Make your branch first then:
 git push --set-upstream origin <branch-you-just-created>
 ```
 
-## Create a PR [[Pull Request](https://spences10.github.io/2017/01/05/git-and-github.html)]
+## Create a PR [Pull Request]
 
 Fork other users repo in GitHub, then clone to your machine.
 
@@ -103,19 +103,19 @@ Fork other users repo in GitHub, then clone to your machine.
 git clone https://github.com/YourUserName/awesome-awesome-repo
 ```
 
-Add the remote repo
+Add the remote repo:
 
 ```sh
 git remote add upstream https://github.com/OtherUserName/awesome-awesome-repo
 ```
 
-Create your branch
+Create your branch:
 
 ```sh
 git branch your-awesome-branch
 ```
 
-Check it out
+Check it out:
 
 ```sh
 git checkout your-awesome-branch
@@ -143,7 +143,7 @@ Manage the rest of the PR via GitHub
 git remote -v
 ```
 
-## [Sync a remote fork](https://help.github.com/articles/syncing-a-fork/) on your machine
+## Sync a remote fork on your machine
 
 First configure the local to point to the remote upstream
 
@@ -163,13 +163,15 @@ repository:
 git merge upstream/dev
 ```
 
+Take a look at [syncing a fork] for more details.
+
 ## Sync a remote fork on Github
 
 1.  Open your fork on GitHub.
 1.  Click on Pull Requests.
 1.  Click on New Pull Request. By default, GitHub will compare the
-    original with your fork, and there shouldn’t be anything to
-    compare if you didn’t make any changes.
+    original with your fork, and there shouldn't be anything to
+    compare if you didn't make any changes.
 1.  Click on Try `switching the base`. Now GitHub will compare your
     fork with the original, and you should see all the latest changes.
 1.  Click on Click to create a pull request for this comparison and
@@ -177,7 +179,7 @@ git merge upstream/dev
     original).
 1.  Click on Send pull request.
 1.  Scroll down and click Merge pull request and finally Confirm
-    merge. If your fork didn’t have any changes, you will be able to
+    merge. If your fork didn't have any changes, you will be able to
     merge it automatically.
 
 ## 2fa
@@ -197,7 +199,7 @@ If you want to change the origin url you can use the `set-url` command
 git remote set-url origin https://github.com/user/new-repo-name
 ```
 
-## [Add code on your machine to new repo](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/)
+## Add code on your machine to new repo
 
 Via terminal navigate to your code folder.
 
@@ -232,12 +234,15 @@ git remote -v # Verifies the new remote URL
 git push origin master
 ```
 
+For more info check out: [adding an existing project to github using
+the command line]
+
 ## Delete branches
 
 Delete local branch.
 
 ```sh
-git branch -D use-dotenv
+git branch -D branch-name
 ```
 
 Remove local branches that are not on the `remote`.
@@ -527,3 +532,7 @@ git show
 ```
 
 <!-- Links -->
+
+[syncing a fork]: https://help.github.com/articles/syncing-a-fork/
+[adding an existing project to github using the command line]:
+  https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/

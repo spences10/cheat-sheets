@@ -1,4 +1,18 @@
-# Ubuntu
+# Useful Linux commands
+
+## Install a binary
+
+If you're working on a local machine with administrator permissions,
+you may want to add downloaded-binary to your PATH, so that you can
+access it directly from any project folder. You could do this by
+extracting it to a directory that is already on your PATH. (For
+example, `/usr/local/bin` is a common choice for Mac and Linux.).
+
+```sh
+# navigate to download location of .tar.gz
+sudo mv downloaded-binary.tar.gz /usr/local/bin/downloaded-binary.tar.gz
+sudo tar zxf downloaded-binary.tar.gz
+```
 
 ## Get build info
 

@@ -14,6 +14,8 @@ sudo mv downloaded-binary.tar.gz /usr/local/bin/downloaded-binary.tar.gz
 sudo tar zxf downloaded-binary.tar.gz
 ```
 
+See further details on [how to install a binary].
+
 ## Get build info
 
 ```sh
@@ -45,3 +47,8 @@ cat /etc/issue
 
 Nuclear option:
 https://askubuntu.com/questions/525088/how-to-delete-broken-packages-in-ubuntu
+
+<!-- Links -->
+
+[how to install a binary]:
+  https://www.cyberciti.biz/faq/install-tarballs/

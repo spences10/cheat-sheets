@@ -34,6 +34,7 @@
   - [How to authenticate with GitHub using SSH](#how-to-authenticate-with-github-using-ssh)
   - [Specify multiple users for myself in .gitconfig?](#specify-multiple-users-for-myself-in-gitconfig)
   - [Cant remember what your last git commit said?](#cant-remember-what-your-last-git-commit-said)
+  - [Rebase changes](#rebase-changes)
 
 <!-- /TOC -->
 
@@ -536,3 +537,35 @@ git show
 [syncing a fork]: https://help.github.com/articles/syncing-a-fork/
 [adding an existing project to github using the command line]:
   https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/
+
+## Rebase changes
+
+If you're working on a team and there have been changes to the main
+branch you want to push your changes to, you can rebase before
+submitting a PR.
+
+In this scenario we're going to rebase our `feature` branch off of the
+`develop` branch
+
+```sh
+# switch from your feature to get latest develop changes
+git checkout develop
+git pull
+# checkout the feature branch and rebase
+git checkout feature
+git rebase develop
+```
+
+Then use the prompts from there in conjunction with your text editor
+to add in the changes.
+
+```sh
+# add a change
+git add
+# continue the rebase
+git rebase --continue
+# have an unrelated change, nothing to correct
+git rebase --skip
+# oh DERP! Want to start over?
+git rebase --abort
+```

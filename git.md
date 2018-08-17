@@ -32,6 +32,7 @@
   - [Git ref log](#git-ref-log)
   - [Use SSH in place of HTTPS](#use-ssh-in-place-of-https)
   - [How to authenticate with GitHub using SSH](#how-to-authenticate-with-github-using-ssh)
+  - [Use multiple SSH keys](#use-multiple-ssh-keys)
   - [Specify multiple users for myself in .gitconfig?](#specify-multiple-users-for-myself-in-gitconfig)
   - [Cant remember what your last git commit said?](#cant-remember-what-your-last-git-commit-said)
   - [Rebase changes](#rebase-changes)
@@ -504,6 +505,82 @@ ssh -T git@github.com
 
 If you fo back to the GitHub setting page and refresh the key icon
 should go from black to green. 🎉
+
+## Use multiple SSH keys
+
+If you have more than one GitHub account or if you have AWS code
+commit account then you will need to set up a `config` file, add your
+SSH key the same as detailed in
+[How to authenticate with GitHub using SSH](#how-to-authenticate-with-github-using-ssh)
+and give the key a different name:
+
+```sh
+# ls ~/.ssh
+~/.ssh/id_rsa_github_1
+~/.ssh/id_rsa_github_2
+~/.ssh/id_rsa_git_aws
+```
+
+You can delete all cached keys before, with:
+
+```sh
+ssh-add -D
+```
+
+You can check your saved keys, with:
+
+```sh
+ssh-add -l
+```
+
+Set up the SSH config file, check to see if you haven't got a `config`
+file already set up with:
+
+```sh
+ls -al ~/.ssh/
+```
+
+If you haven't got a `config` file there then:
+
+```sh
+cd ~/.ssh/
+touch config
+```
+
+Use your text editor of choice, in this example we'll use `nano`:
+
+```sh
+nano config
+```
+
+Add your configuration:
+
+```sh
+# github_1 account
+Host github.com-github_1
+	HostName github.com
+	User git
+	IdentityFile ~/.ssh/id_rsa_github_1
+
+# github_2 account
+Host github.com-github_2
+	HostName github.com
+	User git
+	IdentityFile ~/.ssh/id_rsa_github_2
+
+# AWS code commit account
+Host git-codecommit.*.amazonaws.com
+	User AWSUSERNAME
+	IdentityFile ~/.ssh/id_rsa_git_aws
+```
+
+Clone your repo and modify the config file of the repo as detailed
+here:
+[Specify multiple users for myself in .gitconfig?](#specify-multiple-users-for-myself-in-gitconfig)
+
+There's a great Gist detailing this
+[here](https://gist.github.com/jexchan/2351996) for more detail if
+needed.
 
 ## Specify multiple users for myself in .gitconfig?
 

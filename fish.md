@@ -74,8 +74,8 @@ https://github.com/oh-my-fish/oh-my-fish
 
 ## List out added aliases
 
-I found this handy function on Stack Overflow which will list out your
-functions:
+I found this [handy function] on Stack Overflow which will list out
+your functions:
 
 ```sh
 function aliases --description "list all fish aliases";for f in (functions);functions $f | grep \'alias;end;end;
@@ -102,3 +102,7 @@ function nug --description 'alias nug npm -g un'
 function nun --description 'alias nun npm un'
 function r --description 'alias r cd /mnt/d/repos/'
 ```
+
+<!-- Links -->
+
+[handy function]: https://stackoverflow.com/a/50803805/1138354

@@ -99,8 +99,14 @@ function nrd --description 'alias nrd npm run dev'
 function nrf --description 'alias nrf npm run format'
 function nrs --description 'alias nrs npm run start'
 function nug --description 'alias nug npm -g un'
-function nun --description 'alias nun npm un'
+function nun --description 'alias nu npm un'
 function r --description 'alias r cd /mnt/d/repos/'
+```
+
+The following you can copy pate into fish:
+
+```sh
+alias c 'code .';funcsave c;alias g 'git';funcsave g;alias lss 'ls -lart | sort -k9,9';funcsave lss;alias ni 'npm i';funcsave ni;alias nid 'npm i -D';funcsave nid;alias nig 'npm i -g';funcsave nig;alias no 'npm outdated';funcsave no;alias nog 'npm outdated -g --depth=0';funcsave nog;alias nr 'npm run';funcsave nr;alias nrb 'npm run build';funcsave nrb;alias nrd 'npm run dev';funcsave nrd;alias nrf 'npm run format';funcsave nrf;alias nrs 'npm run start';funcsave nrs;alias nug 'npm -g un';funcsave nug;alias nu 'npm un';funcsave nu;alias r 'cd /mnt/d/repos/';funcsave r;
 ```
 
 <!-- Links -->

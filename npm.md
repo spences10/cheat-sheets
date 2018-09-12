@@ -114,3 +114,11 @@ npx create-react-app my-new-app
 ```
 
 Will use latest create react app to make your new app
+
+## update all project dependencies
+
+Update dependencies with `npm-check`
+
+```bash
+npx npm-check -u
+```

@@ -6,8 +6,10 @@
   "description": "Cheat sheets",
   "dependencies": {
     "gatsby": "2.0.19",
+    "gatsby-plugin-react-helmet": "3.0.0",
     "react": "16.5.2",
     "react-dom": "16.5.2",
+    "react-helmet": "5.2.0",
     "styled-components": "4.0.0-beta.11"
   },
   "devDependencies": {

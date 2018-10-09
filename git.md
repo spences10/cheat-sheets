@@ -646,3 +646,20 @@ git rebase --skip
 # oh DERP! Want to start over?
 git rebase --abort
 ```
+
+# Rebase accept incoming in bulk
+
+If you have a large file (like a `package-lock.json`) that you want to
+accept all the incoming changes from then.
+
+Whilst you're in rebase you'll need to check out the file from your
+incoming branch then add it as the new file.
+
+```bash
+# checkout the file
+git checkout temp-branch -- package-lock.json
+# add the file whilst in rebase
+git add package-lock.json
+# continue with the things
+git rebase --continue
+```

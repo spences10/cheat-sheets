@@ -1,0 +1,19 @@
+{
+  "name": "cheat-sheets",
+  "version": "1.0.0",
+  "author": "Scott Spence <spences10apps@gmail.com>(https://scottspence.me/)",
+  "license": "MIT",
+  "description": "Cheat sheets",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spences10/cheat-sheets.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/spences10/cheat-sheets/issues"
+  },
+  "homepage": "https://github.com/spences10/cheat-sheets#readme"
+}

@@ -4,6 +4,11 @@
   "author": "Scott Spence <spences10apps@gmail.com>(https://scottspence.me/)",
   "license": "MIT",
   "description": "Cheat sheets",
+  "dependencies": {
+    "gatsby": "2.0.19",
+    "react": "16.5.2",
+    "react-dom": "16.5.2"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

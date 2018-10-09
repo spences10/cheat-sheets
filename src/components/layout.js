@@ -1,11 +1,26 @@
 import React from 'react'
+import { StaticQuery, graphql } from 'gatsby'
 
-const Layout = props => {
+const Layout = ({ children, data }) => {
   return (
     <React.Fragment>
-      <p>jsx goes here</p>
+      Site Title {data.site.siteMetadata.title}
+      {children}
     </React.Fragment>
   )
 }
 
-export default Layout
+export default props => (
+  <StaticQuery
+    query={graphql`
+      query LayoutData {
+        site {
+          siteMetadata {
+            title
+          }
+        }
+      }
+    `}
+    render={data => <Layout data={data} {...props} />}
+  />
+)

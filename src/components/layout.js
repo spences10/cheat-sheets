@@ -1,10 +1,11 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
 const Layout = ({ children, data }) => {
   return (
     <React.Fragment>
-      Site Title {data.site.siteMetadata.title}
+      <Header title={data.site.siteMetadata.title} />
       {children}
     </React.Fragment>
   )

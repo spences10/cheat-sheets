@@ -10,8 +10,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/posts`,
-        name: 'posts'
+        path: `${__dirname}/sheets`,
+        name: 'sheets'
       }
     },
     'gatsby-plugin-sharp',

@@ -1,3 +1,12 @@
+---
+templateKey: wsl
+title: 'Windows Subsystem Linux (WSL)'
+path: '/wsl-things'
+createdDate: '2018-07-05'
+updatedDate: '2018-07-05'
+description: wsl things
+---
+
 # Windows Subsystem Linux (WSL)
 
 There's a few config options as part of the WSL I always forget

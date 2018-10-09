@@ -1,3 +1,12 @@
+---
+templateKey: linux
+title: 'Useful Linux commands'
+path: '/useful-linux-commands'
+createdDate: '2018-07-05'
+updatedDate: '2018-07-05'
+description: linux things
+---
+
 # Useful Linux commands
 
 ## Install a binary

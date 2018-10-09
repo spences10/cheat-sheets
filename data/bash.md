@@ -1,3 +1,12 @@
+---
+templateKey: bash
+title: 'Bash'
+path: '/bash'
+createdDate: '2018-07-05'
+updatedDate: '2018-07-05'
+description: bash things
+---
+
 # Bash
 
 Add an alias

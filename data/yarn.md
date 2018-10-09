@@ -1,3 +1,12 @@
+---
+templateKey: yarn
+title: 'Useful Yarn commands'
+path: '/useful-yarn-commands'
+createdDate: '2018-07-05'
+updatedDate: '2018-07-05'
+description: yarn things
+---
+
 # Useful Yarn commands
 
 This is just stuff that I have put down that I find I use a lot of the

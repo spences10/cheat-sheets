@@ -1,3 +1,12 @@
+---
+templateKey: npm
+title: 'NPM useful commands'
+path: '/npm-useful-commands'
+createdDate: '2018-07-05'
+updatedDate: '2018-07-05'
+description: npm things
+---
+
 # NPM plz!
 
 A list of terminal commands and flags to help me use `npm`

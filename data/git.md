@@ -1,3 +1,12 @@
+---
+templateKey: git
+title: 'Useful Git commands'
+path: '/useful-git-commands'
+createdDate: '2018-07-05'
+updatedDate: '2018-07-05'
+description: git things
+---
+
 # Useful Git commands
 
 <!-- TOC -->

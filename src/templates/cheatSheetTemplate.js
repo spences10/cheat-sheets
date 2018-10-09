@@ -23,10 +23,10 @@ export const query = graphql`
   query($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
-      excerpt(pruneLength: 250)
       frontmatter {
         title
         path
+        description
         createdDate(formatString: "YYYY MMMM Do")
         updatedDate(formatString: "YYYY MMMM Do")
       }

@@ -656,7 +656,7 @@ git rebase --skip
 git rebase --abort
 ```
 
-# Rebase accept incoming in bulk
+## Rebase accept incoming in bulk
 
 If you have a large file (like a `package-lock.json`) that you want to
 accept all the incoming changes from then.

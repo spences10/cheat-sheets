@@ -663,3 +663,21 @@ git add package-lock.json
 # continue with the things
 git rebase --continue
 ```
+
+## See differences between two branches
+
+If you want to see the difference between two branches then use the
+git built in diff tool.
+
+```bash
+git diff branch1..branch2
+```
+
+## See differences between two files
+
+If you want to see the difference between two file across different
+branches then use.
+
+```bash
+git diff branch1..branch2 package.json
+```

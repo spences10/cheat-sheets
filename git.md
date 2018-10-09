@@ -503,7 +503,7 @@ Then authenticate with:
 ssh -T git@github.com
 ```
 
-If you fo back to the GitHub setting page and refresh the key icon
+If you go back to the GitHub setting page and refresh the key icon
 should go from black to green. 🎉
 
 ## Use multiple SSH keys

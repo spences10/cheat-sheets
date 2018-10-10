@@ -4,7 +4,7 @@ title: 'JavaScript'
 path: '/javascript'
 createdDate: '2018-07-05'
 updatedDate: '2018-07-05'
-description: JavaScript things
+excerpt: ''
 ---
 
 # JavaScript

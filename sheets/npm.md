@@ -4,7 +4,7 @@ title: 'NPM useful commands'
 path: '/npm-useful-commands'
 createdDate: '2018-07-05'
 updatedDate: '2018-07-05'
-description: npm things
+excerpt: ''
 ---
 
 # NPM plz!

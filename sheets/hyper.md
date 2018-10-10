@@ -4,7 +4,7 @@ title: 'Useful Hyper info'
 path: '/useful-hyper-info'
 createdDate: '2018-07-05'
 updatedDate: '2018-07-05'
-description: hyper things
+excerpt: ''
 ---
 
 # Useful hyper info

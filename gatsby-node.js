@@ -22,7 +22,7 @@ exports.createPages = ({ actions, graphql }) => {
               updatedDate
               path
               title
-              description
+              excerpt
             }
           }
         }

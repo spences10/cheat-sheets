@@ -4,7 +4,7 @@ title: 'Useful Git commands'
 path: '/useful-git-commands'
 createdDate: '2018-07-05'
 updatedDate: '2018-07-05'
-description: git things
+excerpt: ''
 ---
 
 # Useful Git commands
@@ -45,6 +45,9 @@ description: git things
   - [Specify multiple users for myself in .gitconfig?](#specify-multiple-users-for-myself-in-gitconfig)
   - [Cant remember what your last git commit said?](#cant-remember-what-your-last-git-commit-said)
   - [Rebase changes](#rebase-changes)
+  - [Rebase accept incoming in bulk](#rebase-accept-incoming-in-bulk)
+  - [See differences between two branches](#see-differences-between-two-branches)
+  - [See differences between two files](#see-differences-between-two-files)
 
 <!-- /TOC -->
 

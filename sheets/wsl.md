@@ -4,7 +4,7 @@ title: 'Windows Subsystem Linux (WSL)'
 path: '/wsl-things'
 createdDate: '2018-07-05'
 updatedDate: '2018-07-05'
-description: wsl things
+excerpt: ''
 ---
 
 # Windows Subsystem Linux (WSL)

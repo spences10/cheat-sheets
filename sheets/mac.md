@@ -4,7 +4,7 @@ title: 'Useful macOS things'
 path: '/useful-macos-things'
 createdDate: '2018-07-05'
 updatedDate: '2018-07-05'
-description: macOS things
+excerpt: ''
 ---
 
 # macOS

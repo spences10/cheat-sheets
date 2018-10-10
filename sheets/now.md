@@ -4,7 +4,7 @@ title: 'Zeit Now'
 path: '/zeit-now'
 createdDate: '2018-07-05'
 updatedDate: '2018-07-05'
-description: now things
+excerpt: ''
 ---
 
 # now

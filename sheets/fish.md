@@ -4,7 +4,7 @@ title: 'Fish Shell'
 path: '/fish-shell'
 createdDate: '2018-07-05'
 updatedDate: '2018-07-05'
-description: fish shell things
+excerpt: ''
 ---
 
 # Fish shell

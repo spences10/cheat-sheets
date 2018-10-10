@@ -4,7 +4,7 @@ title: 'Graphcool'
 path: '/graphcool'
 createdDate: '2018-07-05'
 updatedDate: '2018-07-05'
-description: graphcool things
+excerpt: ''
 ---
 
 # Useful graphcool commands

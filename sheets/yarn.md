@@ -4,7 +4,7 @@ title: 'Useful Yarn commands'
 path: '/useful-yarn-commands'
 createdDate: '2018-07-05'
 updatedDate: '2018-07-05'
-description: yarn things
+excerpt: ''
 ---
 
 # Useful Yarn commands

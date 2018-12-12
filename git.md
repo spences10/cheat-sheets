@@ -400,9 +400,44 @@ think did the same thing.
 
 ## Show `.gitconfig` details
 
+There are there are three leves for Git config:
+
+**System level**
+
+```bash
+# to view
+git config --list --system
+# to set
+git config --system color.ui true
+```
+
+**Global level**
+
+```bash
+# to view
+git config --list --global
+# to set
+git config --global user.name xyz
+```
+
+**Repository level**
+
+```bash
+# to view
+git config --list --local
+# to set
+git config --local core.ignorecase true # (--local optional)
+# to edit repository config file
+git config --edit --local # (--local optional)
+```
+
+**View All Settings**
+
 ```sh
 git config --list --show-origin
 ```
+
+[info](https://stackoverflow.com/a/46986031/1138354)
 
 ## If you want to rename a branch while pointed to any branch, do:
 

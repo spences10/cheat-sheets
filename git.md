@@ -33,9 +33,11 @@
   - [Use SSH in place of HTTPS](#use-ssh-in-place-of-https)
   - [How to authenticate with GitHub using SSH](#how-to-authenticate-with-github-using-ssh)
   - [Use multiple SSH keys](#use-multiple-ssh-keys)
+  - [Reuse SSH keys, from one machine to another](#reuse-ssh-keys-from-one-machine-to-another)
   - [Specify multiple users for myself in .gitconfig?](#specify-multiple-users-for-myself-in-gitconfig)
   - [Cant remember what your last git commit said?](#cant-remember-what-your-last-git-commit-said)
   - [Rebase changes](#rebase-changes)
+  - [Rebase accept incoming in bulk](#rebase-accept-incoming-in-bulk)
 
 <!-- /TOC -->
 
@@ -582,6 +584,51 @@ There's a great Gist detailing this
 [here](https://gist.github.com/jexchan/2351996) for more detail if
 needed.
 
+## Reuse SSH keys, from one machine to another
+
+If you want to avoid creating multiple SSH keys for different
+environments and move your `.ssh` folder from one machine to another
+then you can do the following:
+
+Copy your `.ssh` and `.gitconfig` files:
+
+Copy from Linux to Windows
+
+```bash
+cp ~/.ssh/* /c/Users/Scott.Spence/.linuxFiles/.ssh/
+cp ~/.gitconfig /c/Users/Scott.Spence/.linuxFiles/
+```
+
+Copy from Windows to Linux
+
+```bash
+cp /mnt/c/Users/Scott.Spence/.linuxFiles/.ssh/* ~/.ssh/
+chmod 700 ~/.ssh/id_rsa.pub
+cp /mnt/c/Users/Scott.Spence/.linuxFiles/.* ~/
+chmod 644 ~/.gitconfig
+```
+
+Start the SSH agent with:
+
+```bash
+eval "$(ssh-agent -s)" # for mac and Linux from bash, also from Windows Git Bash
+```
+
+Add your SSH key to the `ssh-agent` with:
+
+```bash
+ssh-add ~/.ssh/id_rsa
+```
+
+Then authenticate with:
+
+```bash
+# GitHub
+ssh -T git@github.com
+# Bitbucket
+ssh -T git@bitbucket.org
+```
+
 ## Specify multiple users for myself in .gitconfig?
 
 Want to have different git credentials for one specific repository?
@@ -647,7 +694,7 @@ git rebase --skip
 git rebase --abort
 ```
 
-# Rebase accept incoming in bulk
+## Rebase accept incoming in bulk
 
 If you have a large file (like a `package-lock.json`) that you want to
 accept all the incoming changes from then.

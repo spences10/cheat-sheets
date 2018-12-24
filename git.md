@@ -514,7 +514,7 @@ eval "$(ssh-agent -s)" # for mac and Linux from bash, also from Windows Git Bash
 eval `ssh-agent -s` # for Git Bash on Windows
 ```
 
-Add RSA key to SHH with:
+Add RSA key to SSH with:
 
 ```sh
 ssh-add ~/.ssh/id_rsa

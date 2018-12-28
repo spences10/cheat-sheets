@@ -638,7 +638,9 @@ Copy from Windows to Linux
 
 ```bash
 cp /mnt/c/Users/Scott.Spence/.linuxFiles/.ssh/* ~/.ssh/
-chmod 700 ~/.ssh/id_rsa.pub
+# Reset the permissions back to default:
+sudo chmod 600 ~/.ssh/id_rsa
+sudo chmod 600 ~/.ssh/id_rsa.pub
 cp /mnt/c/Users/Scott.Spence/.linuxFiles/.* ~/
 chmod 644 ~/.gitconfig
 ```

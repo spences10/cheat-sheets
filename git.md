@@ -33,7 +33,7 @@
   - [Use SSH in place of HTTPS](#use-ssh-in-place-of-https)
   - [How to authenticate with GitHub using SSH](#how-to-authenticate-with-github-using-ssh)
   - [Use multiple SSH keys](#use-multiple-ssh-keys)
-  - [Reuse SSH keys, from one machine to another](#reuse-ssh-keys-from-one-machine-to-another)
+  - [Re-use SSH keys, from one machine to another](#re-use-ssh-keys-from-one-machine-to-another)
   - [Specify multiple users for myself in .gitconfig?](#specify-multiple-users-for-myself-in-gitconfig)
   - [Cant remember what your last git commit said?](#cant-remember-what-your-last-git-commit-said)
   - [Rebase changes](#rebase-changes)
@@ -619,7 +619,7 @@ There's a great Gist detailing this
 [here](https://gist.github.com/jexchan/2351996) for more detail if
 needed.
 
-## Reuse SSH keys, from one machine to another
+## Re-use SSH keys, from one machine to another
 
 If you want to avoid creating multiple SSH keys for different
 environments and move your `.ssh` folder from one machine to another

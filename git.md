@@ -28,6 +28,7 @@
   - [How to read last commit comment?](#how-to-read-last-commit-comment)
   - [Remove commit from pull request](#remove-commit-from-pull-request)
   - [Show `.gitconfig` details](#show-gitconfig-details)
+  - [Conflicts between Windows Git and WSL Git?](#conflicts-between-windows-git-and-wsl-git)
   - [If you want to rename a branch while pointed to any branch, do:](#if-you-want-to-rename-a-branch-while-pointed-to-any-branch-do)
   - [Git ref log](#git-ref-log)
   - [Use SSH in place of HTTPS](#use-ssh-in-place-of-https)
@@ -38,6 +39,8 @@
   - [Cant remember what your last git commit said?](#cant-remember-what-your-last-git-commit-said)
   - [Rebase changes](#rebase-changes)
   - [Rebase accept incoming in bulk](#rebase-accept-incoming-in-bulk)
+  - [See differences between two branches](#see-differences-between-two-branches)
+  - [See differences between two files](#see-differences-between-two-files)
 
 <!-- /TOC -->
 
@@ -438,6 +441,18 @@ git config --list --show-origin
 ```
 
 [info](https://stackoverflow.com/a/46986031/1138354)
+
+## Conflicts between Windows Git and WSL Git?
+
+If you are having issues with changes showing in Windows Git and not
+Windows Subsystem Linux Git (For a Windows WSL Dev set-up) then check
+the settings of each environment by using:
+
+```sh
+git config --list --show-origin
+```
+
+Remove any conflicting settings then try again.
 
 ## If you want to rename a branch while pointed to any branch, do:
 

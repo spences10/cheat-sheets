@@ -33,9 +33,11 @@
   - [Use SSH in place of HTTPS](#use-ssh-in-place-of-https)
   - [How to authenticate with GitHub using SSH](#how-to-authenticate-with-github-using-ssh)
   - [Use multiple SSH keys](#use-multiple-ssh-keys)
+  - [Re-use SSH keys, from one machine to another](#re-use-ssh-keys-from-one-machine-to-another)
   - [Specify multiple users for myself in .gitconfig?](#specify-multiple-users-for-myself-in-gitconfig)
   - [Cant remember what your last git commit said?](#cant-remember-what-your-last-git-commit-said)
   - [Rebase changes](#rebase-changes)
+  - [Rebase accept incoming in bulk](#rebase-accept-incoming-in-bulk)
 
 <!-- /TOC -->
 
@@ -398,9 +400,44 @@ think did the same thing.
 
 ## Show `.gitconfig` details
 
+There are there are three leves for Git config:
+
+**System level**
+
+```bash
+# to view
+git config --list --system
+# to set
+git config --system color.ui true
+```
+
+**Global level**
+
+```bash
+# to view
+git config --list --global
+# to set
+git config --global user.name xyz
+```
+
+**Repository level**
+
+```bash
+# to view
+git config --list --local
+# to set
+git config --local core.ignorecase true # (--local optional)
+# to edit repository config file
+git config --edit --local # (--local optional)
+```
+
+**View All Settings**
+
 ```sh
 git config --list --show-origin
 ```
+
+[info](https://stackoverflow.com/a/46986031/1138354)
 
 ## If you want to rename a branch while pointed to any branch, do:
 
@@ -477,7 +514,7 @@ eval "$(ssh-agent -s)" # for mac and Linux from bash, also from Windows Git Bash
 eval `ssh-agent -s` # for Git Bash on Windows
 ```
 
-Add RSA key to SHH with:
+Add RSA key to SSH with:
 
 ```sh
 ssh-add ~/.ssh/id_rsa
@@ -582,6 +619,53 @@ There's a great Gist detailing this
 [here](https://gist.github.com/jexchan/2351996) for more detail if
 needed.
 
+## Re-use SSH keys, from one machine to another
+
+If you want to avoid creating multiple SSH keys for different
+environments and move your `.ssh` folder from one machine to another
+then you can do the following:
+
+Copy your `.ssh` and `.gitconfig` files:
+
+Copy from Linux to Windows
+
+```bash
+cp ~/.ssh/* /c/Users/Scott.Spence/.linuxFiles/.ssh/
+cp ~/.gitconfig /c/Users/Scott.Spence/.linuxFiles/
+```
+
+Copy from Windows to Linux
+
+```bash
+cp /mnt/c/Users/Scott.Spence/.linuxFiles/.ssh/* ~/.ssh/
+# Reset the permissions back to default:
+sudo chmod 600 ~/.ssh/id_rsa
+sudo chmod 600 ~/.ssh/id_rsa.pub
+cp /mnt/c/Users/Scott.Spence/.linuxFiles/.* ~/
+chmod 644 ~/.gitconfig
+```
+
+Start the SSH agent with:
+
+```bash
+eval "$(ssh-agent -s)" # for mac and Linux from bash, also from Windows Git Bash
+```
+
+Add your SSH key to the `ssh-agent` with:
+
+```bash
+ssh-add ~/.ssh/id_rsa
+```
+
+Then authenticate with:
+
+```bash
+# GitHub
+ssh -T git@github.com
+# Bitbucket
+ssh -T git@bitbucket.org
+```
+
 ## Specify multiple users for myself in .gitconfig?
 
 Want to have different git credentials for one specific repository?
@@ -647,7 +731,7 @@ git rebase --skip
 git rebase --abort
 ```
 
-# Rebase accept incoming in bulk
+## Rebase accept incoming in bulk
 
 If you have a large file (like a `package-lock.json`) that you want to
 accept all the incoming changes from then.

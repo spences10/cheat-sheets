@@ -35,6 +35,7 @@
   - [How to authenticate with GitHub using SSH](#how-to-authenticate-with-github-using-ssh)
   - [Use multiple SSH keys](#use-multiple-ssh-keys)
   - [Re-use SSH keys, from one machine to another](#re-use-ssh-keys-from-one-machine-to-another)
+  - [Using SSH over the HTTPS port](#using-ssh-over-the-https-port)
   - [Specify multiple users for myself in .gitconfig?](#specify-multiple-users-for-myself-in-gitconfig)
   - [Cant remember what your last git commit said?](#cant-remember-what-your-last-git-commit-said)
   - [Rebase changes](#rebase-changes)
@@ -679,6 +680,32 @@ Then authenticate with:
 ssh -T git@github.com
 # Bitbucket
 ssh -T git@bitbucket.org
+```
+
+## Using SSH over the HTTPS port
+
+SSH can be tunnelled over HTTPS if the network you are on blocks the
+SSH port.
+
+Test if SSH over HTTPS is possible with:
+
+```bash
+ssh -T -p 443 git@ssh.github.com
+```
+
+If you get a response then, edit your `~/.ssh/config` file and add
+this section:
+
+```bash
+Host github.com
+  Hostname ssh.github.com
+  Port 443
+```
+
+Test that is has worked with:
+
+```bash
+ssh -T git@github.com
 ```
 
 ## Specify multiple users for myself in .gitconfig?

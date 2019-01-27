@@ -715,6 +715,12 @@ Want to have different git credentials for one specific repository?
 You can configure an individual git repo to use a specific user/email
 address which overrides the global configuration.
 
+To list out the config for the repo:
+
+```bash
+g config --list  
+```
+
 From the root of the repo, run:
 
 ```sh

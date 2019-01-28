@@ -610,6 +610,8 @@ nano config
 Add your configuration:
 
 ```sh
+AddKeysToAgent yes
+
 # github_1 account
 Host github.com-github_1
 	HostName github.com

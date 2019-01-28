@@ -523,11 +523,12 @@ Now using `ls -al ~/.ssh` will show our `id_rsa.pub` file.
 Add the SSH key to the SSH agent:
 
 ```sh
-eval "$(ssh-agent -s)" # for mac and Linux from bash, also from Windows Git Bash
-```
-
-```sh
-eval `ssh-agent -s` # for Git Bash on Windows
+# for mac and Linux from bash, also from Windows Git Bash
+eval "$(ssh-agent -s)" 
+# for Git Bash on Windows
+eval `ssh-agent -s`
+# fir Fish shell
+eval (ssh-agent -c)
 ```
 
 Add RSA key to SSH with:

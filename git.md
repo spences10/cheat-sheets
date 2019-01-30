@@ -744,6 +744,18 @@ Host github.com
   Port 443
 ```
 
+Check that you have a key already added with:
+
+```bash
+ssh-add -l
+```
+
+If nothing is listed then add in your key with:
+
+```bash
+ssh-add ~/.ssh/id_rsa
+```
+
 Test that is has worked with:
 
 ```bash

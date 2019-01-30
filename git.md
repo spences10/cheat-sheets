@@ -33,6 +33,7 @@
   - [Git ref log](#git-ref-log)
   - [Use SSH in place of HTTPS](#use-ssh-in-place-of-https)
   - [How to authenticate with GitHub using SSH](#how-to-authenticate-with-github-using-ssh)
+    - [SSH Keys With Passwords](#ssh-keys-with-passwords)
   - [Use multiple SSH keys](#use-multiple-ssh-keys)
   - [Re-use SSH keys, from one machine to another](#re-use-ssh-keys-from-one-machine-to-another)
   - [Using SSH over the HTTPS port](#using-ssh-over-the-https-port)
@@ -518,6 +519,8 @@ If there's nothing there then generate a new keygen with:
 ssh-keygen -t rsa -b 4096 -C your@email.com # add your email address 👍
 ```
 
+> If you decide to use a password for your SSH key see [SSH Keys With Passwords](#ssh-keys-with-passwords)
+
 Now using `ls -al ~/.ssh` will show our `id_rsa.pub` file.
 
 Add the SSH key to the SSH agent:
@@ -558,6 +561,10 @@ ssh -T git@github.com
 
 If you go back to the GitHub setting page and refresh the key icon
 should go from black to green. 🎉
+
+### SSH Keys With Passwords
+
+IF you add a password to your SSH key you will find yourself entering the password to authenticate on each operation 
 
 ## Use multiple SSH keys
 

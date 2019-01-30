@@ -519,7 +519,8 @@ If there's nothing there then generate a new keygen with:
 ssh-keygen -t rsa -b 4096 -C your@email.com # add your email address 👍
 ```
 
-> If you decide to use a password for your SSH key see [SSH Keys With Passwords](#ssh-keys-with-passwords)
+> If you decide to use a password for your SSH key see
+> [SSH Keys With Passwords](#ssh-keys-with-passwords)
 
 Now using `ls -al ~/.ssh` will show our `id_rsa.pub` file.
 
@@ -564,7 +565,22 @@ should go from black to green. 🎉
 
 ### SSH Keys With Passwords
 
-IF you add a password to your SSH key you will find yourself entering the password to authenticate on each operation 
+IF you add a password to your SSH key you will find yourself entering
+the password to authenticate on each [pull, push] operation. This can
+get tedious, especially if you have a long password in your keys.
+
+Add the following line to your `~/.ssh/config/` file:
+
+```bash
+AddKeysToAgent yes
+```
+
+open or create the file with:
+
+```bash
+nano ~/.ssh/config
+```
+
 
 ## Use multiple SSH keys
 

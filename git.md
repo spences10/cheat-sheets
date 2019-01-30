@@ -575,7 +575,7 @@ Add the following line to your `~/.ssh/config/` file:
 AddKeysToAgent yes
 ```
 
-Open or create the file with:
+Open or create the `~/.ssh/config` file with:
 
 ```bash
 nano ~/.ssh/config
@@ -588,7 +588,7 @@ now to store the keys in, add the follwowinf to your `~/.bashrc` file:
 [ -z "$SSH_AUTH_SOCK" ] && eval "$(ssh-agent -s)"
 ```
 
-Open or create the file with:
+Open the `~/.bashrc` file with:
 
 ```bash
 nano ~/.ssh/config

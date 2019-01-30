@@ -594,8 +594,9 @@ Open the `~/.bashrc` file with:
 nano ~/.ssh/config
 ```
 
-Now you will be prompted for the password at the beginning of each
-terminal session rather than on each git `pull`, `push` operation.
+Now the SSH agent will start on each terminal session and you will
+only be prompted for the password on the first `pull`, `push`
+operation.
 
 ## Use multiple SSH keys
 

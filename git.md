@@ -575,12 +575,27 @@ Add the following line to your `~/.ssh/config/` file:
 AddKeysToAgent yes
 ```
 
-open or create the file with:
+Open or create the file with:
 
 ```bash
 nano ~/.ssh/config
 ```
 
+The SSH agent will also need to be started on each terminal session
+now to store the keys in, add the follwowinf to your `~/.bashrc` file:
+
+```bash
+[ -z "$SSH_AUTH_SOCK" ] && eval "$(ssh-agent -s)"
+```
+
+Open or create the file with:
+
+```bash
+nano ~/.ssh/config
+```
+
+Now you will be prompted for the password at the beginning of each
+terminal session rather than on each git `pull`, `push` operation.
 
 ## Use multiple SSH keys
 

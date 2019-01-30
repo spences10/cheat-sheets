@@ -527,11 +527,12 @@ Now using `ls -al ~/.ssh` will show our `id_rsa.pub` file.
 Add the SSH key to the SSH agent:
 
 ```sh
-eval "$(ssh-agent -s)" # for mac and Linux from bash, also from Windows Git Bash
-```
-
-```sh
-eval `ssh-agent -s` # for Git Bash on Windows
+# for mac and Linux from bash, also from Windows Git Bash
+eval "$(ssh-agent -s)" 
+# for Git Bash on Windows
+eval `ssh-agent -s`
+# fir Fish shell
+eval (ssh-agent -c)
 ```
 
 Add RSA key to SSH with:
@@ -648,6 +649,8 @@ nano config
 Add your configuration:
 
 ```sh
+AddKeysToAgent yes
+
 # github_1 account
 Host github.com-github_1
 	HostName github.com
@@ -753,6 +756,12 @@ Want to have different git credentials for one specific repository?
 
 You can configure an individual git repo to use a specific user/email
 address which overrides the global configuration.
+
+To list out the config for the repo:
+
+```bash
+g config --list  
+```
 
 From the root of the repo, run:
 

@@ -528,7 +528,7 @@ Add the SSH key to the SSH agent:
 
 ```sh
 # for mac and Linux from bash, also from Windows Git Bash
-eval "$(ssh-agent -s)" 
+eval "$(ssh-agent -s)"
 # for Git Bash on Windows
 eval `ssh-agent -s`
 # fir Fish shell
@@ -744,6 +744,18 @@ Host github.com
   Port 443
 ```
 
+Check that you have a key already added with:
+
+```bash
+ssh-add -l
+```
+
+If nothing is listed then add in your key with:
+
+```bash
+ssh-add ~/.ssh/id_rsa
+```
+
 Test that is has worked with:
 
 ```bash
@@ -760,7 +772,7 @@ address which overrides the global configuration.
 To list out the config for the repo:
 
 ```bash
-g config --list  
+g config --list
 ```
 
 From the root of the repo, run:

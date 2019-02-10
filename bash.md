@@ -18,3 +18,14 @@ if not then add the following as an alias:
 ```sh
 ls -lart | sort -k9,9
 ```
+
+## See file permissions
+
+If you need to set the permission on a file (with `chmod`) but don't
+know what the permissions of similar files are like you can use
+`stat`, the following command displays the permissions of the contents
+of the `.ssh/` folder:
+
+```sh
+stat -c "%a %n" ~/.ssh/*
+```

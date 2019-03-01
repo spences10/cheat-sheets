@@ -122,3 +122,14 @@ Update dependencies with `npm-check`
 ```bash
 npx npm-check -u
 ```
+
+## dont `rm -rf node_modules; npm install`
+
+Instead use:
+
+```bash
+npm ci 
+```
+
+It will have the same effect but be 2-3x faster 👌
+

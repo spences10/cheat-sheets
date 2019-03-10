@@ -29,3 +29,15 @@ of the `.ssh/` folder:
 ```sh
 stat -c "%a %n" ~/.ssh/*
 ```
+
+## Open the SSH agent each time you open a new terminal.
+
+Tired of having to enter your SSH password each time you want to do a
+git operation?
+
+Add the following to your `~/.bashrc` file.
+
+```sh
+# nano ~/.bashrc
+[ -z "$SSH_AUTH_SOCK" ] && eval "\$(ssh-agent -s)"
+```

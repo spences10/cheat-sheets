@@ -48,6 +48,18 @@ cat /etc/issue
 Nuclear option:
 https://askubuntu.com/questions/525088/how-to-delete-broken-packages-in-ubuntu
 
+## see what services are available
+
+```sh
+ll /etc/systemd/system
+```
+
+## see what services are running
+
+```sh
+journalctl -ef
+```
+
 <!-- Links -->
 
 [how to install a binary]:

@@ -772,7 +772,7 @@ address which overrides the global configuration.
 To list out the config for the repo:
 
 ```bash
-g config --list
+git config --list --local
 ```
 
 From the root of the repo, run:

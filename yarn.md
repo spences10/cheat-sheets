@@ -41,3 +41,11 @@ yarn flow
 
 ☝️ will run `node_modules/.bin/flow` without you having to add it as
 a package.json script.
+
+## npm ci
+
+The equivalent to `npm ci` for yarn: 
+
+```sh
+yarn install --frozen-lockfile
+```

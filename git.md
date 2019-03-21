@@ -882,3 +882,5 @@ Then reset to the branch on the otigin:
 # if I wanted to push back to the develop branch on GitHub say
 git reset --soft origin/develop
 ```
+
+Reference: https://stackoverflow.com/questions/11829911/push-changes-without-pull

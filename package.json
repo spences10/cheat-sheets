@@ -4,6 +4,16 @@
   "author": "Scott Spence <spences10apps@gmail.com>(https://scottspence.me/)",
   "license": "MIT",
   "description": "Cheat sheets",
+  "scripts": {
+    "clean": "rm -rf .cache/ && rm -rf public/",
+    "build": "gatsby build",
+    "serve": "gatsby serve --verbose",
+    "buildAndServe": "npm run build && npm run serve",
+    "dev": "gatsby develop --verbose",
+    "format": "pretty-quick",
+    "precommit": "pretty-quick --staged",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
     "babel-plugin-styled-components": "1.8.0",
     "gatsby": "2.0.19",
@@ -23,16 +33,6 @@
   "devDependencies": {
     "prettier": "1.14.3",
     "pretty-quick": "1.7.0"
-  },
-  "scripts": {
-    "clean": "rm -rf .cache/ && rm -rf public/",
-    "build": "gatsby build",
-    "serve": "gatsby serve --verbose",
-    "buildAndServe": "npm run build && npm run serve",
-    "dev": "gatsby develop --verbose",
-    "format": "pretty-quick",
-    "precommit": "pretty-quick --staged",
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",

@@ -37,6 +37,7 @@
   - [Use multiple SSH keys](#use-multiple-ssh-keys)
   - [Re-use SSH keys, from one machine to another](#re-use-ssh-keys-from-one-machine-to-another)
   - [Using SSH over the HTTPS port](#using-ssh-over-the-https-port)
+  - [Change SSH key password](#change-ssh-key-password)
   - [Specify multiple users for myself in .gitconfig?](#specify-multiple-users-for-myself-in-gitconfig)
   - [Cant remember what your last git commit said?](#cant-remember-what-your-last-git-commit-said)
   - [Rebase changes](#rebase-changes)
@@ -760,6 +761,19 @@ Test that is has worked with:
 
 ```bash
 ssh -T git@github.com
+```
+
+## Change SSH key password
+
+Tired of typing your SSH key password because you made it a 32
+characters and can't stand the manotoney anymore?
+
+Still want to have a SSH key password on your existing SSH key?
+
+Use:
+
+```bash
+ssh-keygen -p -f ~/.ssh/id_dsa
 ```
 
 ## Specify multiple users for myself in .gitconfig?

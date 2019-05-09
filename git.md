@@ -773,7 +773,7 @@ Still want to have a SSH key password on your existing SSH key?
 Use:
 
 ```bash
-ssh-keygen -p -f ~/.ssh/id_dsa
+ssh-keygen -p -f ~/.ssh/id_rsa
 ```
 
 ## Specify multiple users for myself in .gitconfig?

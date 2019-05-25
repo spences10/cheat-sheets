@@ -1,6 +1,6 @@
 {
   "name": "cheat-sheets",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Scott Spence <spences10apps@gmail.com>(https://scottspence.me/)",
   "license": "MIT",
   "description": "Cheat sheets",
@@ -29,7 +29,7 @@
     "prism-react-renderer": "0.1.6",
     "react": "16.8.6",
     "react-dom": "16.8.6",
-    "react-helmet": "5.2.0",
+    "react-helmet": "5.2.1",
     "react-live": "2.1.2",
     "styled-components": "4.2.0"
   },

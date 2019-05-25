@@ -1,28 +1,23 @@
-const path = require('path')
+const path = require("path");
+const { createFilePath } = require(`gatsby-source-filesystem`);
 
 exports.createPages = ({ actions, graphql }) => {
-  const { createPage } = actions
+  const { createPage } = actions;
   const cheatSheetTemplate = path.resolve(
-    'src/templates/cheatSheetTemplate.js'
-  )
+    "src/templates/cheatSheetTemplate.js"
+  );
 
   // returns promise that will start with this graphql query
   return graphql(`
     {
-      allMarkdownRemark(
-        sort: { order: ASC, fields: [frontmatter___updatedDate] }
-        limit: 1000
-      ) {
+      allMdx {
         edges {
           node {
-            html
-            id
+            fields {
+              slug
+            }
             frontmatter {
-              createdDate
-              updatedDate
-              path
               title
-              excerpt
             }
           }
         }
@@ -30,26 +25,41 @@ exports.createPages = ({ actions, graphql }) => {
     }
   `).then(result => {
     if (result.errors) {
-      return Promise.reject(result.errors)
+      throw result.errors;
     }
 
-    const sheets = result.data.allMarkdownRemark.edges
+    const sheets = result.data.allMdx.edges;
 
     // Create pages for each markdown file.
-    sheets.forEach(({ node }, index) => {
-      const prev = index === 0 ? null : sheets[index - 1].node
-      const next =
-        index === sheets.length - 1 ? null : sheets[index + 1].node
+    sheets.forEach((post, index) => {
+      const previous =
+        index === sheets.length - 1 ? null : sheets[index + 1].node;
+      const next = index === 0 ? null : sheets[index - 1].node;
+
       createPage({
-        path: node.frontmatter.path,
+        path: post.node.fields.slug,
         component: cheatSheetTemplate,
         context: {
-          prev,
+          slug: post.node.fields.slug,
+          previous,
           next
         }
-      })
-    })
+      });
+    });
 
-    return sheets
-  })
-}
+    return null;
+  });
+};
+
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions;
+
+  if (node.internal.type === `Mdx`) {
+    const value = createFilePath({ node, getNode });
+    createNodeField({
+      name: `slug`,
+      node,
+      value
+    });
+  }
+};

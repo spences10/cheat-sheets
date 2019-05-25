@@ -1,10 +1,9 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-
-import Layout from '../components/layout'
+import { graphql } from "gatsby";
+import React from "react";
+import Layout from "../components/layout";
 
 const cheatSheetPage = ({ data /*, pageContext */ }) => {
-  const post = data.markdownRemark
+  const post = data.markdownRemark;
   // const { prev, next } = pageContext
   // const { imageLink } = data.site.siteMetadata
   return (
@@ -14,14 +13,14 @@ const cheatSheetPage = ({ data /*, pageContext */ }) => {
       <p>{post.frontmatter.updatedDate}</p>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
     </Layout>
-  )
-}
+  );
+};
 
-export default cheatSheetPage
+export default cheatSheetPage;
 
 export const query = graphql`
   query($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+    mdx(frontmatter: { path: { eq: $path } }) {
       html
       excerpt(pruneLength: 250)
       frontmatter {
@@ -32,4 +31,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

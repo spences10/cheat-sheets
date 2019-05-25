@@ -1,37 +1,28 @@
 const siteMetadata = {
-  title: 'Cheat Sheets'
-}
+  title: "Cheat Sheets"
+};
 
 module.exports = {
   siteMetadata: siteMetadata,
   plugins: [
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-styled-components',
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: `gatsby-mdx`,
       options: {
-        path: `${__dirname}/sheets`,
-        name: 'sheets'
+        extensions: [`.mdx`, `.md`],
+        plugins: [
+          { resolve: `gatsby-remark-smartypants` },
+          { resolve: `gatsby-remark-autolink-headers` }
+        ]
       }
     },
-    'gatsby-plugin-sharp',
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-styled-components",
     {
-      resolve: 'gatsby-transformer-remark',
+      resolve: "gatsby-source-filesystem",
       options: {
-        plugins: [
-          {
-            resolve: 'gatsby-remark-images',
-            options: {
-              // It's important to specify the maxWidth (in pixels) of
-              // the content container as this plugin uses this as the
-              // base for generating different widths of each image.
-              maxWidth: 590
-            }
-          },
-          'gatsby-remark-autolink-headers'
-          // 'gatsby-remark-prismjs'
-        ]
+        path: `${__dirname}/sheets`,
+        name: "sheets"
       }
     }
   ]
-}
+};

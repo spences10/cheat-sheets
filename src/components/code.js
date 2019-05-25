@@ -1,8 +1,13 @@
-import Highlight, { defaultProps } from "prism-react-renderer";
-import theme from "prism-react-renderer/themes/nightOwl";
-import React from "react";
-import { LiveEditor, LiveError, LivePreview, LiveProvider } from "react-live";
-import styled from "styled-components";
+import Highlight, { defaultProps } from 'prism-react-renderer';
+import theme from 'prism-react-renderer/themes/nightOwl';
+import React from 'react';
+import {
+  LiveEditor,
+  LiveError,
+  LivePreview,
+  LiveProvider,
+} from 'react-live';
+import styled from 'styled-components';
 // import { Dump } from '../utils/helpers'
 
 export const Pre = styled.pre`
@@ -25,7 +30,7 @@ export const LineNo = styled.span`
 `;
 
 const Code = ({ codeString, language, ...props }) => {
-  if (props["react-live"]) {
+  if (props['react-live']) {
     return (
       <LiveProvider code={codeString} noInline={true}>
         <LiveEditor />
@@ -40,9 +45,14 @@ const Code = ({ codeString, language, ...props }) => {
         {...defaultProps}
         code={codeString}
         language={language}
-        theme={theme}
-      >
-        {({ className, style, tokens, getLineProps, getTokenProps }) => (
+        theme={theme}>
+        {({
+          className,
+          style,
+          tokens,
+          getLineProps,
+          getTokenProps,
+        }) => (
           <Pre className={className} style={style}>
             {tokens.map((line, i) => (
               <div {...getLineProps({ line, key: i })}>

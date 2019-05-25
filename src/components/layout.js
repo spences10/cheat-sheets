@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 // import Helmet from 'react-helmet'
-import { StaticQuery, graphql } from 'gatsby'
+import { StaticQuery, graphql } from 'gatsby';
 
-import Header from '../components/header'
+import Header from '../components/header';
 
 const Layout = ({ children, data }) => {
   return (
@@ -10,8 +10,8 @@ const Layout = ({ children, data }) => {
       <Header title={data.site.siteMetadata.title} />
       {children}
     </React.Fragment>
-  )
-}
+  );
+};
 
 export default props => (
   <StaticQuery
@@ -26,4 +26,4 @@ export default props => (
     `}
     render={data => <Layout data={data} {...props} />}
   />
-)
+);

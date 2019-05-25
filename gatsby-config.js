@@ -1,5 +1,5 @@
 const siteMetadata = {
-  title: `Cheat Sheets`
+  title: `Cheat Sheets`,
 };
 
 module.exports = {
@@ -11,9 +11,12 @@ module.exports = {
         extensions: [`.mdx`, `.md`],
         plugins: [
           { resolve: `gatsby-remark-smartypants` },
-          { resolve: `gatsby-remark-autolink-headers` }
-        ]
-      }
+          { resolve: `gatsby-remark-autolink-headers` },
+          {
+            resolve: `gatsby-remark-autolink-headers`,
+          },
+        ],
+      },
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
@@ -21,15 +24,15 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/sheets`,
-        name: `sheets`
-      }
+        name: `sheets`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`
-      }
-    }
-  ]
+        path: `${__dirname}/src/images`,
+      },
+    },
+  ],
 };

@@ -1,10 +1,10 @@
-const path = require("path");
+const path = require('path');
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
   const cheatSheetTemplate = path.resolve(
-    "src/templates/cheatSheetTemplate.js"
+    'src/templates/cheatSheetTemplate.js'
   );
 
   // returns promise that will start with this graphql query
@@ -42,8 +42,8 @@ exports.createPages = ({ actions, graphql }) => {
         context: {
           slug: post.node.fields.slug,
           previous,
-          next
-        }
+          next,
+        },
       });
     });
 
@@ -59,7 +59,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField({
       name: `slug`,
       node,
-      value
+      value,
     });
   }
 };

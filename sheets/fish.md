@@ -1,10 +1,9 @@
 ---
-templateKey: fish-shell
-title: 'Fish Shell'
-path: '/fish-shell'
-createdDate: '2018-07-05'
-updatedDate: '2018-07-05'
-excerpt: ''
+title: "Fish Shell"
+createdDate: "2018-07-05"
+updatedDate: "2018-07-05"
+excerpt: ""
+published: true
 ---
 
 # Fish shell

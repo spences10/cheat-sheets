@@ -1,5 +1,7 @@
 const siteMetadata = {
   title: `Cheat Sheets`,
+  siteUrl: `https://cheat-sheets.ss10.dev`,
+  siteTitle: `Cheat Sheets`,
 };
 
 module.exports = {

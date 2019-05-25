@@ -10,8 +10,8 @@ const cheatSheetPage = ({ data, pageContext }) => {
   return (
     <Layout>
       <h1>{frontmatter.title}</h1>
-      <p>{frontmatter.createdDate}</p>
-      <p>{frontmatter.updatedDate}</p>
+      <p>Created: {frontmatter.createdDate}</p>
+      <p>Updated: {frontmatter.updatedDate}</p>
       <MDXRenderer>{code.body}</MDXRenderer>
     </Layout>
   );

@@ -1,5 +1,7 @@
 const siteMetadata = {
   title: `Cheat Sheets`,
+  siteUrl: `https://cheat-sheets.ss10.dev`,
+  siteTitle: `Cheat Sheets`,
 };
 
 module.exports = {
@@ -10,8 +12,12 @@ module.exports = {
       options: {
         extensions: [`.mdx`, `.md`],
         plugins: [
-          { resolve: `gatsby-remark-smartypants` },
-          { resolve: `gatsby-remark-autolink-headers` },
+          {
+            resolve: `gatsby-remark-smartypants`,
+          },
+          {
+            resolve: `gatsby-remark-autolink-headers`,
+          },
           {
             resolve: `gatsby-remark-autolink-headers`,
           },

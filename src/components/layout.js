@@ -1,29 +1,29 @@
 import React from 'react';
-// import Helmet from 'react-helmet'
-import { StaticQuery, graphql } from 'gatsby';
+import styled from 'styled-components';
+// import { Dump } from '../components/dump';
+import { Header } from '../components/header';
+import { useSiteMetadata } from '../hooks/useSiteMetadata';
 
-import Header from '../components/header';
+const AppLayout = styled.main`
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    'h h h h h h h h h h h h'
+    '. . . m m m m m m . . .'
+    'f f f f f f f f f f f f';
+`;
 
-const Layout = ({ children, data }) => {
+const Wrapper = styled.div`
+  grid-area: m;
+`;
+
+export const Layout = ({ children }) => {
+  const { title } = useSiteMetadata();
   return (
-    <React.Fragment>
-      <Header title={data.site.siteMetadata.title} />
-      {children}
-    </React.Fragment>
+    <AppLayout>
+      <Header title={title} />
+      <Wrapper>{children}</Wrapper>
+    </AppLayout>
   );
 };
-
-export default props => (
-  <StaticQuery
-    query={graphql`
-      query LayoutData {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-      }
-    `}
-    render={data => <Layout data={data} {...props} />}
-  />
-);

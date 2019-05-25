@@ -1,10 +1,8 @@
 ---
-templateKey: macos
-title: 'Useful macOS things'
-path: '/useful-macos-things'
-createdDate: '2018-07-05'
-updatedDate: '2018-07-05'
-excerpt: ''
+title: macOS
+createdDate: 2018-04-05
+updatedDate: 2018-04-05
+published: true
 ---
 
 # macOS

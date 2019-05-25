@@ -1,10 +1,8 @@
 ---
-templateKey: hyperterm
-title: 'Useful Hyper info'
-path: '/useful-hyper-info'
-createdDate: '2018-07-05'
-updatedDate: '2018-07-05'
-excerpt: ''
+title: Hyperterm
+createdDate: 2017-05-19
+updatedDate: 2017-10-13
+published: true
 ---
 
 # Useful hyper info

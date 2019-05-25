@@ -1,10 +1,8 @@
 ---
-templateKey: graphcool
-title: 'Graphcool'
-path: '/graphcool'
-createdDate: '2018-07-05'
-updatedDate: '2018-07-05'
-excerpt: ''
+title: Graphcool
+createdDate: 2017-07-24
+updatedDate: 2018-04-27
+published: true
 ---
 
 # Useful graphcool commands

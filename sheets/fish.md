@@ -1,8 +1,7 @@
 ---
-title: "Fish Shell"
-createdDate: "2018-07-05"
-updatedDate: "2018-07-05"
-excerpt: ""
+title: Fish Shell
+createdDate: 2017-10-11
+updatedDate: 2019-03-12
 published: true
 ---
 

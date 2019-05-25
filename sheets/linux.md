@@ -1,10 +1,8 @@
 ---
-templateKey: linux
-title: 'Useful Linux commands'
-path: '/useful-linux-commands'
-createdDate: '2018-07-05'
-updatedDate: '2018-07-05'
-excerpt: ''
+title: Linux
+createdDate: 2018-03-22
+updatedDate: 2019-02-11
+published: true
 ---
 
 # Useful Linux commands
@@ -56,6 +54,18 @@ cat /etc/issue
 
 Nuclear option:
 https://askubuntu.com/questions/525088/how-to-delete-broken-packages-in-ubuntu
+
+## see what services are available
+
+```sh
+ll /etc/systemd/system
+```
+
+## see what services are running
+
+```sh
+journalctl -ef
+```
 
 <!-- Links -->
 

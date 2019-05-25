@@ -1,10 +1,8 @@
 ---
-templateKey: javascript
-title: 'JavaScript'
-path: '/javascript'
-createdDate: '2018-07-05'
-updatedDate: '2018-07-05'
-excerpt: ''
+title: JavaScript
+createdDate: 2017-12-01
+updatedDate: 2017-12-11
+published: true
 ---
 
 # JavaScript
@@ -16,9 +14,9 @@ excerpt: ''
 Return one new entry for every existing entry: `map()`
 
 ```js
-const originalArray = [1, 2, 3]
-const newArray = originalArray.map(item => item * 2)
-console.log(newArray)
+const originalArray = [1, 2, 3];
+const newArray = originalArray.map(item => item * 2);
+console.log(newArray);
 ```
 
 output:
@@ -32,9 +30,9 @@ output:
 Return a new array with only some of the existing entries: `filter()`
 
 ```js
-const originalArray = [1, 9, 4, 2, 42]
-const newArray = originalArray.filter(item => item > 5)
-console.log(newArray)
+const originalArray = [1, 9, 4, 2, 42];
+const newArray = originalArray.filter(item => item > 5);
+console.log(newArray);
 ```
 
 output:
@@ -54,16 +52,16 @@ const originalArray = [
   'Charlie',
   'Bob',
   'Bob',
-  'Charlie'
-]
+  'Charlie',
+];
 const numberOfBobs = originalArray.reduce((accumulator, item) => {
   if (item === 'Bob') {
-    return accumulator + 1
+    return accumulator + 1;
   } else {
-    return accumulator
+    return accumulator;
   }
-}, 0)
-console.log(numberOfBobs)
+}, 0);
+console.log(numberOfBobs);
 ```
 
 output:
@@ -77,16 +75,16 @@ output:
 ### Sum all even numbers from array
 
 ```js
-const arr = [0, 1, 2, 3, 4, 5, null, 6, 9]
+const arr = [0, 1, 2, 3, 4, 5, null, 6, 9];
 
 function addEven() {
   return arr.reduce(
     (acc, cur) => (cur % 2 === 0 ? acc + cur : acc),
     0
-  )
+  );
 }
 
-addEven(arr)
+addEven(arr);
 ```
 
 ### Return the first duplicate number
@@ -94,7 +92,7 @@ addEven(arr)
 ```js
 function firstDuplicate(arr) {
   // empty array to use to check incoming array against
-  let checkArray = {}
+  let checkArray = {};
 
   // loop it
   for (let i = 0; i < arr.length; i++) {
@@ -102,10 +100,10 @@ function firstDuplicate(arr) {
     // checkArray
     if (checkArray[arr[i]] !== undefined)
       // if there's no matching item then
-      return arr[i]
+      return arr[i];
     // append to the checkArray
-    else checkArray[arr[i]] = i
+    else checkArray[arr[i]] = i;
   }
-  return -1
+  return -1;
 }
 ```

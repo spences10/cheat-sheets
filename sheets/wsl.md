@@ -1,10 +1,8 @@
 ---
-templateKey: wsl
-title: 'Windows Subsystem Linux (WSL)'
-path: '/wsl-things'
-createdDate: '2018-07-05'
-updatedDate: '2018-07-05'
-excerpt: ''
+title: Windows Subsystem Linux (WSL)
+createdDate: 2017-10-11
+updatedDate: 2018-01-27
+published: true
 ---
 
 # Windows Subsystem Linux (WSL)

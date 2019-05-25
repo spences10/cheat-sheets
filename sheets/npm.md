@@ -1,13 +1,11 @@
 ---
-templateKey: npm
-title: 'NPM useful commands'
-path: '/npm-useful-commands'
-createdDate: '2018-07-05'
-updatedDate: '2018-07-05'
-excerpt: ''
+title: npm
+createdDate: 2017-05-19
+updatedDate: 2019-03-01
+published: true
 ---
 
-# NPM plz!
+# npm plz!
 
 A list of terminal commands and flags to help me use `npm`
 
@@ -131,3 +129,13 @@ Update dependencies with `npm-check`
 ```bash
 npx npm-check -u
 ```
+
+## dont `rm -rf node_modules; npm install`
+
+Instead use:
+
+```bash
+npm ci
+```
+
+It will have the same effect but be 2-3x faster 👌

@@ -1,10 +1,8 @@
 ---
-templateKey: yarn
-title: 'Useful Yarn commands'
-path: '/useful-yarn-commands'
-createdDate: '2018-07-05'
-updatedDate: '2018-07-05'
-excerpt: ''
+title: Yarn
+createdDate: 2017-05-19
+updatedDate: 2019-03-12
+published: true
 ---
 
 # Useful Yarn commands
@@ -48,5 +46,13 @@ similarly named pkgs
 yarn flow
 ```
 
-☝️ will run `node_modules/.bin/flow` without you having to add it as
-a package.json script.
+☝️ will run `node_modules/.bin/flow` without you having to add it as a
+package.json script.
+
+## npm ci
+
+The equivalent to `npm ci` for yarn:
+
+```sh
+yarn install --frozen-lockfile
+```

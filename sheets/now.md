@@ -1,10 +1,8 @@
 ---
-templateKey: now
-title: 'Zeit Now'
-path: '/zeit-now'
-createdDate: '2018-07-05'
-updatedDate: '2018-07-05'
-excerpt: ''
+title: now
+createdDate: 2017-05-30
+updatedDate: 2018-04-27
+published: true
 ---
 
 # now

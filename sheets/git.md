@@ -1,55 +1,11 @@
 ---
-templateKey: git
-title: 'Useful Git commands'
-path: '/useful-git-commands'
-createdDate: '2018-07-05'
-updatedDate: '2018-07-05'
-excerpt: ''
+title: Git
+createdDate: 2017-05-19
+updatedDate: 2019-05-09
+published: true
 ---
 
 # Useful Git commands
-
-<!-- TOC -->
-
-- [Useful Git commands](#useful-git-commands)
-  - [Add a new repo from your machine to GitHub](#add-a-new-repo-from-your-machine-to-github)
-  - [Latest changes from repo to your machine](#latest-changes-from-repo-to-your-machine)
-  - [Add tracking information to your work](#add-tracking-information-to-your-work)
-  - [What branch](#what-branch)
-  - [Create a local branch and push it to GitHub](#create-a-local-branch-and-push-it-to-github)
-  - [Create a PR [Pull Request]](#create-a-pr-pull-request)
-  - [Check remotes](#check-remotes)
-  - [Sync a remote fork on your machine](#sync-a-remote-fork-on-your-machine)
-  - [Sync a remote fork on Github](#sync-a-remote-fork-on-github)
-  - [2fa](#2fa)
-  - [Change `origin` url](#change-origin-url)
-  - [Add code on your machine to new repo](#add-code-on-your-machine-to-new-repo)
-  - [Delete branches](#delete-branches)
-  - [Merge master branch into feature branch](#merge-master-branch-into-feature-branch)
-  - [Merge two repos](#merge-two-repos)
-  - [Stop tracking a file](#stop-tracking-a-file)
-  - [Stop tracking a previously tracked folder](#stop-tracking-a-previously-tracked-folder)
-  - [Start tracking a previously un-tracked file](#start-tracking-a-previously-un-tracked-file)
-  - [Cloning a repo from someone else's GitHub and pushing it to a repo on my GitHub](#cloning-a-repo-from-someone-elses-github-and-pushing-it-to-a-repo-on-my-github)
-  - [Remove an `upstream` repository](#remove-an-upstream-repository)
-  - [Clone a repo and give it a different name](#clone-a-repo-and-give-it-a-different-name)
-  - [Using Husky?](#using-husky)
-  - [How to read last commit comment?](#how-to-read-last-commit-comment)
-  - [Remove commit from pull request](#remove-commit-from-pull-request)
-  - [Show `.gitconfig` details](#show-gitconfig-details)
-  - [If you want to rename a branch while pointed to any branch, do:](#if-you-want-to-rename-a-branch-while-pointed-to-any-branch-do)
-  - [Git ref log](#git-ref-log)
-  - [Use SSH in place of HTTPS](#use-ssh-in-place-of-https)
-  - [How to authenticate with GitHub using SSH](#how-to-authenticate-with-github-using-ssh)
-  - [Use multiple SSH keys](#use-multiple-ssh-keys)
-  - [Specify multiple users for myself in .gitconfig?](#specify-multiple-users-for-myself-in-gitconfig)
-  - [Cant remember what your last git commit said?](#cant-remember-what-your-last-git-commit-said)
-  - [Rebase changes](#rebase-changes)
-  - [Rebase accept incoming in bulk](#rebase-accept-incoming-in-bulk)
-  - [See differences between two branches](#see-differences-between-two-branches)
-  - [See differences between two files](#see-differences-between-two-files)
-
-<!-- /TOC -->
 
 This is just stuff that I have put down that I find I use a lot of the
 time for my own reference.
@@ -410,9 +366,56 @@ think did the same thing.
 
 ## Show `.gitconfig` details
 
+There are there are three leves for Git config:
+
+**System level**
+
+```bash
+# to view
+git config --list --system
+# to set
+git config --system color.ui true
+```
+
+**Global level**
+
+```bash
+# to view
+git config --list --global
+# to set
+git config --global user.name xyz
+```
+
+**Repository level**
+
+```bash
+# to view
+git config --list --local
+# to set
+git config --local core.ignorecase true # (--local optional)
+# to edit repository config file
+git config --edit --local # (--local optional)
+```
+
+**View All Settings**
+
 ```sh
 git config --list --show-origin
 ```
+
+[info](https://stackoverflow.com/a/46986031/1138354)
+
+## Conflicts between Windows Git and WSL Git?
+
+If you are having issues with changes showing in Windows Git and not
+Windows Subsystem Linux Git (For a Windows WSL Dev set-up) then check
+the settings of each environment by using:
+
+```sh
+git config --list --show-origin
+```
+
+Remove any conflicting settings then try again.
 
 ## If you want to rename a branch while pointed to any branch, do:
 
@@ -477,19 +480,23 @@ If there's nothing there then generate a new keygen with:
 ssh-keygen -t rsa -b 4096 -C your@email.com # add your email address 👍
 ```
 
+> If you decide to use a password for your SSH key see
+> [SSH Keys With Passwords](#ssh-keys-with-passwords)
+
 Now using `ls -al ~/.ssh` will show our `id_rsa.pub` file.
 
 Add the SSH key to the SSH agent:
 
 ```sh
-eval "$(ssh-agent -s)" # for mac and Linux from bash, also from Windows Git Bash
+# for mac and Linux from bash, also from Windows Git Bash
+eval "$(ssh-agent -s)"
+# for Git Bash on Windows
+eval `ssh-agent -s`
+# fir Fish shell
+eval (ssh-agent -c)
 ```
 
-```sh
-eval `ssh-agent -s` # for Git Bash on Windows
-```
-
-Add RSA key to SHH with:
+Add RSA key to SSH with:
 
 ```sh
 ssh-add ~/.ssh/id_rsa
@@ -517,6 +524,41 @@ ssh -T git@github.com
 
 If you go back to the GitHub setting page and refresh the key icon
 should go from black to green. 🎉
+
+### SSH Keys With Passwords
+
+IF you add a password to your SSH key you will find yourself entering
+the password to authenticate on each [pull, push] operation. This can
+get tedious, especially if you have a long password in your keys.
+
+Add the following line to your `~/.ssh/config/` file:
+
+```bash
+AddKeysToAgent yes
+```
+
+Open or create the `~/.ssh/config` file with:
+
+```bash
+nano ~/.ssh/config
+```
+
+The SSH agent will also need to be started on each terminal session
+now to store the keys in, add the follwowinf to your `~/.bashrc` file:
+
+```bash
+[ -z "$SSH_AUTH_SOCK" ] && eval "$(ssh-agent -s)"
+```
+
+Open the `~/.bashrc` file with:
+
+```bash
+nano ~/.ssh/config
+```
+
+Now the SSH agent will start on each terminal session and you will
+only be prompted for the password on the first `pull`, `push`
+operation.
 
 ## Use multiple SSH keys
 
@@ -568,6 +610,8 @@ nano config
 Add your configuration:
 
 ```sh
+AddKeysToAgent yes
+
 # github_1 account
 Host github.com-github_1
 	HostName github.com
@@ -594,12 +638,116 @@ There's a great Gist detailing this
 [here](https://gist.github.com/jexchan/2351996) for more detail if
 needed.
 
+## Re-use SSH keys, from one machine to another
+
+If you want to avoid creating multiple SSH keys for different
+environments and move your `.ssh` folder from one machine to another
+then you can do the following:
+
+Copy your `.ssh` and `.gitconfig` files:
+
+Copy from Linux to Windows
+
+```bash
+cp ~/.ssh/* /c/Users/Scott.Spence/.linuxFiles/.ssh/
+cp ~/.gitconfig /c/Users/Scott.Spence/.linuxFiles/
+```
+
+Copy from Windows to Linux
+
+```bash
+cp /mnt/c/Users/Scott.Spence/.linuxFiles/.ssh/* ~/.ssh/
+# Reset the permissions back to default:
+sudo chmod 600 ~/.ssh/id_rsa
+sudo chmod 600 ~/.ssh/id_rsa.pub
+cp /mnt/c/Users/Scott.Spence/.linuxFiles/.* ~/
+chmod 644 ~/.gitconfig
+```
+
+Start the SSH agent with:
+
+```bash
+eval "$(ssh-agent -s)" # for mac and Linux from bash, also from Windows Git Bash
+```
+
+Add your SSH key to the `ssh-agent` with:
+
+```bash
+ssh-add ~/.ssh/id_rsa
+```
+
+Then authenticate with:
+
+```bash
+# GitHub
+ssh -T git@github.com
+# Bitbucket
+ssh -T git@bitbucket.org
+```
+
+## Using SSH over the HTTPS port
+
+SSH can be tunnelled over HTTPS if the network you are on blocks the
+SSH port.
+
+Test if SSH over HTTPS is possible with:
+
+```bash
+ssh -T -p 443 git@ssh.github.com
+```
+
+If you get a response then, edit your `~/.ssh/config` file and add
+this section:
+
+```bash
+Host github.com
+  Hostname ssh.github.com
+  Port 443
+```
+
+Check that you have a key already added with:
+
+```bash
+ssh-add -l
+```
+
+If nothing is listed then add in your key with:
+
+```bash
+ssh-add ~/.ssh/id_rsa
+```
+
+Test that is has worked with:
+
+```bash
+ssh -T git@github.com
+```
+
+## Change SSH key password
+
+Tired of typing your SSH key password because you made it a 32
+characters and can't stand the manotoney anymore?
+
+Still want to have a SSH key password on your existing SSH key?
+
+Use:
+
+```bash
+ssh-keygen -p -f ~/.ssh/id_rsa
+```
+
 ## Specify multiple users for myself in .gitconfig?
 
 Want to have different git credentials for one specific repository?
 
 You can configure an individual git repo to use a specific user/email
 address which overrides the global configuration.
+
+To list out the config for the repo:
+
+```bash
+git config --list --local
+```
 
 From the root of the repo, run:
 

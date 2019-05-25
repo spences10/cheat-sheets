@@ -1,7 +1,7 @@
 import { graphql } from 'gatsby';
 import MDXRenderer from 'gatsby-mdx/mdx-renderer';
 import React from 'react';
-import Layout from '../components/layout';
+import { Layout } from '../components/layout';
 
 const cheatSheetPage = ({ data, pageContext }) => {
   const { frontmatter, code } = data.mdx;

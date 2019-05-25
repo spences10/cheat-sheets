@@ -4,26 +4,26 @@
 
 A place for all my cheat sheets to live!
 
-- **[Bash](bash.md#bash)**
+- **[Bash](/sheets/bash.md#bash)**
 
-- **[Fish shell](fish.md#fish-shell)**
+- **[Fish shell](/sheets/fish.md#fish-shell)**
 
-- **[Git](git.md#useful-git-commands)**
+- **[Git](/sheets/git.md#useful-git-commands)**
 
-- **[Graphcool](graphcool.md#yuseful-graphcool-commands)**
+- **[Graphcool](/sheets/graphcool.md#yuseful-graphcool-commands)**
 
-- **[Hyper](hyper.md#useful-hyper-info)**
+- **[Hyper](/sheets/hyper.md#useful-hyper-info)**
 
-- **[JavaScript](javascript.md#javascript)**
+- **[JavaScript](j/sheets/avascript.md#javascript)**
 
-- **[now](now.md#now)**
+- **[now](n/sheets/ow.md#now)**
 
-- **[npm](npm.md#npm-plz)**
+- **[npm](/sheets/npm.md#npm-plz)**
 
-- **[Ubuntu](ubuntu.md#ubuntu)**
+- **[Ubuntu](/sheets/ubuntu.md#ubuntu)**
 
-- **[Windows Subsystem Linux](wsl.md#windows-subsystem-linux)**
+- **[Windows Subsystem Linux](/sheets/wsl.md#windows-subsystem-linux)**
 
-- **[Yarn](yarn.md#useful-yarn-commands)**
+- **[Yarn](/sheets/yarn.md#useful-yarn-commands)**
 
-- **[zsh](zsh.md#zsh)**
+- **[zsh](/sheets/zsh.md#zsh)**

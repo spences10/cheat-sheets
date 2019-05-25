@@ -1,6 +1,6 @@
 # Cheat Sheets
 
-![](/img/flying-cube.gif)
+![](/src/images/flying-cube.gif)
 
 A place for all my cheat sheets to live!
 

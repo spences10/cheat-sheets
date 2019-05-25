@@ -1,17 +1,18 @@
 import { graphql } from "gatsby";
+import MDXRenderer from "gatsby-mdx/mdx-renderer";
 import React from "react";
 import Layout from "../components/layout";
 
-const cheatSheetPage = ({ data /*, pageContext */ }) => {
-  const post = data.markdownRemark;
+const cheatSheetPage = ({ data, pageContext }) => {
+  const { frontmatter, code } = data.mdx;
   // const { prev, next } = pageContext
   // const { imageLink } = data.site.siteMetadata
   return (
     <Layout>
-      <h1>{post.frontmatter.title}</h1>
-      <p>{post.frontmatter.createdDate}</p>
-      <p>{post.frontmatter.updatedDate}</p>
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      <h1>{frontmatter.title}</h1>
+      <p>{frontmatter.createdDate}</p>
+      <p>{frontmatter.updatedDate}</p>
+      <MDXRenderer>{code.body}</MDXRenderer>
     </Layout>
   );
 };
@@ -19,13 +20,14 @@ const cheatSheetPage = ({ data /*, pageContext */ }) => {
 export default cheatSheetPage;
 
 export const query = graphql`
-  query($path: String!) {
-    mdx(frontmatter: { path: { eq: $path } }) {
-      html
+  query SheetsBySlug($slug: String!) {
+    mdx(fields: { slug: { eq: $slug } }) {
       excerpt(pruneLength: 250)
+      code {
+        body
+      }
       frontmatter {
         title
-        path
         createdDate(formatString: "YYYY MMMM Do")
         updatedDate(formatString: "YYYY MMMM Do")
       }

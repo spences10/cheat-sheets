@@ -2,6 +2,8 @@
 
 ![](/src/images/flying-cube.gif)
 
+###### Image Credit [ccbyplz](https://www.deviantart.com/ccbyplz)
+
 A place for all my cheat sheets to live!
 
 - **[Bash](/sheets/bash.md#bash)**

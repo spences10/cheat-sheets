@@ -1,51 +1,11 @@
+---
+title: Git
+createdDate: 2017-05-19
+updatedDate: 2019-05-09
+published: true
+---
+
 # Useful Git commands
-
-<!-- TOC -->
-
-- [Useful Git commands](#useful-git-commands)
-  - [Add a new repo from your machine to GitHub](#add-a-new-repo-from-your-machine-to-github)
-  - [Latest changes from repo to your machine](#latest-changes-from-repo-to-your-machine)
-  - [Add tracking information to your work](#add-tracking-information-to-your-work)
-  - [What branch](#what-branch)
-  - [Create a local branch and push it to GitHub](#create-a-local-branch-and-push-it-to-github)
-  - [Create a PR [Pull Request]](#create-a-pr-pull-request)
-  - [Check remotes](#check-remotes)
-  - [Sync a remote fork on your machine](#sync-a-remote-fork-on-your-machine)
-  - [Sync a remote fork on Github](#sync-a-remote-fork-on-github)
-  - [2fa](#2fa)
-  - [Change `origin` url](#change-origin-url)
-  - [Add code on your machine to new repo](#add-code-on-your-machine-to-new-repo)
-  - [Delete branches](#delete-branches)
-  - [Merge master branch into feature branch](#merge-master-branch-into-feature-branch)
-  - [Merge two repos](#merge-two-repos)
-  - [Stop tracking a file](#stop-tracking-a-file)
-  - [Stop tracking a previously tracked folder](#stop-tracking-a-previously-tracked-folder)
-  - [Start tracking a previously un-tracked file](#start-tracking-a-previously-un-tracked-file)
-  - [Cloning a repo from someone else's GitHub and pushing it to a repo on my GitHub](#cloning-a-repo-from-someone-elses-github-and-pushing-it-to-a-repo-on-my-github)
-  - [Remove an `upstream` repository](#remove-an-upstream-repository)
-  - [Clone a repo and give it a different name](#clone-a-repo-and-give-it-a-different-name)
-  - [Using Husky?](#using-husky)
-  - [How to read last commit comment?](#how-to-read-last-commit-comment)
-  - [Remove commit from pull request](#remove-commit-from-pull-request)
-  - [Show `.gitconfig` details](#show-gitconfig-details)
-  - [Conflicts between Windows Git and WSL Git?](#conflicts-between-windows-git-and-wsl-git)
-  - [If you want to rename a branch while pointed to any branch, do:](#if-you-want-to-rename-a-branch-while-pointed-to-any-branch-do)
-  - [Git ref log](#git-ref-log)
-  - [Use SSH in place of HTTPS](#use-ssh-in-place-of-https)
-  - [How to authenticate with GitHub using SSH](#how-to-authenticate-with-github-using-ssh)
-    - [SSH Keys With Passwords](#ssh-keys-with-passwords)
-  - [Use multiple SSH keys](#use-multiple-ssh-keys)
-  - [Re-use SSH keys, from one machine to another](#re-use-ssh-keys-from-one-machine-to-another)
-  - [Using SSH over the HTTPS port](#using-ssh-over-the-https-port)
-  - [Change SSH key password](#change-ssh-key-password)
-  - [Specify multiple users for myself in .gitconfig?](#specify-multiple-users-for-myself-in-gitconfig)
-  - [Cant remember what your last git commit said?](#cant-remember-what-your-last-git-commit-said)
-  - [Rebase changes](#rebase-changes)
-  - [Rebase accept incoming in bulk](#rebase-accept-incoming-in-bulk)
-  - [See differences between two branches](#see-differences-between-two-branches)
-  - [See differences between two files](#see-differences-between-two-files)
-
-<!-- /TOC -->
 
 This is just stuff that I have put down that I find I use a lot of the
 time for my own reference.

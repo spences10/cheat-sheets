@@ -1,4 +1,11 @@
-# NPM plz!
+---
+title: npm
+createdDate: 2017-05-19
+updatedDate: 2019-03-01
+published: true
+---
+
+# npm plz!
 
 A list of terminal commands and flags to help me use `npm`
 
@@ -128,8 +135,7 @@ npx npm-check -u
 Instead use:
 
 ```bash
-npm ci 
+npm ci
 ```
 
 It will have the same effect but be 2-3x faster 👌
-

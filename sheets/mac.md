@@ -1,3 +1,10 @@
+---
+title: macOS
+createdDate: 2018-04-05
+updatedDate: 2018-04-05
+published: true
+---
+
 # macOS
 
 ## Screen snip

@@ -1,3 +1,10 @@
+---
+title: Yarn
+createdDate: 2017-05-19
+updatedDate: 2019-03-12
+published: true
+---
+
 # Useful Yarn commands
 
 This is just stuff that I have put down that I find I use a lot of the
@@ -39,12 +46,12 @@ similarly named pkgs
 yarn flow
 ```
 
-☝️ will run `node_modules/.bin/flow` without you having to add it as
-a package.json script.
+☝️ will run `node_modules/.bin/flow` without you having to add it as a
+package.json script.
 
 ## npm ci
 
-The equivalent to `npm ci` for yarn: 
+The equivalent to `npm ci` for yarn:
 
 ```sh
 yarn install --frozen-lockfile

@@ -7,9 +7,7 @@
   "scripts": {
     "clean": "rm -rf .cache/ && rm -rf public/",
     "build": "gatsby build",
-    "serve": "gatsby serve --verbose",
-    "buildAndServe": "npm run build && npm run serve",
-    "dev": "gatsby develop --verbose",
+    "dev": "gatsby develop -p 4488 -o",
     "format": "pretty-quick"
   },
   "husky": {

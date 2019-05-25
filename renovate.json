@@ -1,5 +1,14 @@
 {
-  "extends": [
-    "config:base"
-  ]
+  "extends": ["config:base"],
+  "reviewers": ["spences10"],
+  "bumpVersion": "patch",
+  "baseBranches": ["patch"],
+  "automerge": true,
+  "major": {
+    "automerge": false
+  },
+  "lockFileMaintenance": {
+    "enabled": true,
+    "extends": "schedule:weekly"
+  }
 }

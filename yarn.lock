@@ -4327,7 +4327,7 @@ functional-red-black-tree@^1.0.1:
   resolved "https://registry.yarnpkg.com/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
   integrity sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
 
-gatsby-cli@^2.6.0:
+gatsby-cli@^2.6.2:
   version "2.6.2"
   resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.6.2.tgz#d3c74e324afdc604e86caab8ab6c62c33d4a4df4"
   integrity sha512-ihTDocclnshQP0RY05esU/FqCBbEiVW/UGL/4nP58E+UPWo3IezWSheLka20fCdOld5SckcKupdPgEE8OeN7nA==
@@ -4489,7 +4489,7 @@ gatsby-source-filesystem@2.0.37:
     valid-url "^1.0.9"
     xstate "^3.1.0"
 
-gatsby-telemetry@^1.0.10, gatsby-telemetry@^1.0.9:
+gatsby-telemetry@^1.0.10:
   version "1.0.10"
   resolved "https://registry.yarnpkg.com/gatsby-telemetry/-/gatsby-telemetry-1.0.10.tgz#c472210ffd7363f329fa853097274c2a2ed62135"
   integrity sha512-9Iy+1DqPaFpzMWOQCMiMHrVrdyUlZor6tcymkKBNe5FfbpYUvA4qbo9Ow98bfAuEJ+VtT9Wl0zBfDqOalEJ56A==
@@ -4510,10 +4510,10 @@ gatsby-telemetry@^1.0.10, gatsby-telemetry@^1.0.9:
     stack-utils "1.0.2"
     uuid "3.3.2"
 
-gatsby@2.6.0:
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.6.0.tgz#deae99b6db0d6a7860ee15c17871b1c9f5fe69b7"
-  integrity sha512-233n1sfZGjqfmF9KJQSIMRyfU4XJP6bKVGgR6g9FSJ+iME2nERklLLeV6A+v5F8Gvio6NAkTV3ME1NtwgAQlqA==
+gatsby@2.7.1:
+  version "2.7.1"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.7.1.tgz#39ca2e9c57f6fec794fbd2bec1e230b5b48b247c"
+  integrity sha512-IDCiRW30pFCYM7o2plrTjO51gNEXTQ890LMJC7jml30W7ZswaTmacVbEfI2xKA8dWNik9+6S9zoyktuTFyE+zw==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/core" "^7.0.0"
@@ -4571,11 +4571,11 @@ gatsby@2.6.0:
     flat "^4.0.0"
     fs-exists-cached "1.0.0"
     fs-extra "^5.0.0"
-    gatsby-cli "^2.6.0"
+    gatsby-cli "^2.6.2"
     gatsby-link "^2.1.1"
     gatsby-plugin-page-creator "^2.0.13"
     gatsby-react-router-scroll "^2.0.7"
-    gatsby-telemetry "^1.0.9"
+    gatsby-telemetry "^1.0.10"
     glob "^7.1.1"
     got "8.0.0"
     graphql "^14.1.1"

@@ -1,7 +1,8 @@
 import { MDXProvider } from '@mdx-js/react';
 import React from 'react';
+import { AnchorTag } from './src/components/anchorTag';
+import { Code } from './src/components/code';
 // import { ThemeProvider } from 'styled-components'
-import Code from './src/components/code';
 // import { themes } from './src/style/globalStyle'
 
 // const theme = themes['theme1']
@@ -27,6 +28,7 @@ const components = {
     // it's possible to have a pre without a code in it
     return <pre />;
   },
+  a: AnchorTag,
 };
 
 export const wrapRootElement = ({ element }) => (

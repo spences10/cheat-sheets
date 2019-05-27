@@ -29,7 +29,7 @@ export const LineNo = styled.span`
   opacity: 0.3;
 `;
 
-const Code = ({ codeString, language, ...props }) => {
+export const Code = ({ codeString, language, ...props }) => {
   if (props['react-live']) {
     return (
       <LiveProvider code={codeString} noInline={true}>
@@ -68,5 +68,3 @@ const Code = ({ codeString, language, ...props }) => {
     </>
   );
 };
-
-export default Code;

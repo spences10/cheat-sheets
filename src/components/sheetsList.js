@@ -1,6 +1,13 @@
 import { Link } from 'gatsby';
 import React from 'react';
+import styled from 'styled-components';
 import { useSiteSheets } from '../hooks/useSiteSheets';
+
+const SheetsListWrapper = styled.section`
+  li {
+    list-style: none;
+  }
+`;
 
 export const SheetsList = () => {
   const { edges } = useSiteSheets();

@@ -7,7 +7,7 @@ export const SheetsList = () => {
   return (
     <>
       {edges.map(({ node }, index) => (
-        <ul key={index}>
+        <li key={index}>
           <Link to={node.fields.slug}>
             <h1>{node.frontmatter.title}</h1>
             <span style={{ display: 'flex' }}>
@@ -15,7 +15,7 @@ export const SheetsList = () => {
               <p>Updated: {node.frontmatter.updatedDate}</p>
             </span>
           </Link>
-        </ul>
+        </li>
       ))}
     </>
   );

@@ -1,3 +1,4 @@
+import { Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -8,7 +9,9 @@ const HeaderWrapper = styled.header`
 export const Header = ({ title }) => {
   return (
     <HeaderWrapper>
-      <h1>{title}</h1>
+      <Link to="/">
+        <h1>{title}</h1>
+      </Link>
     </HeaderWrapper>
   );
 };

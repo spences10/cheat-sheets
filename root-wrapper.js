@@ -1,7 +1,8 @@
 import { MDXProvider } from '@mdx-js/react';
 import React from 'react';
 import { AnchorTag } from './src/components/anchorTag';
-import { Code } from './src/components/code';
+import { Code as CodeBlock } from './src/components/code';
+import { Code, StyledP } from './src/components/styles';
 // import { ThemeProvider } from 'styled-components'
 // import { themes } from './src/style/globalStyle'
 
@@ -15,7 +16,7 @@ const components = {
     // if there's a codeString and some props, we passed the test
     if (props.mdxType === 'code') {
       return (
-        <Code
+        <CodeBlock
           codeString={props.children.trim()}
           language={
             props.className &&
@@ -29,6 +30,8 @@ const components = {
     return <pre />;
   },
   a: AnchorTag,
+  p: StyledP,
+  code: Code,
 };
 
 export const wrapRootElement = ({ element }) => (

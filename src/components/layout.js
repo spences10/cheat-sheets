@@ -3,6 +3,7 @@ import styled from 'styled-components';
 // import { Dump } from '../components/dump';
 import { Header } from '../components/header';
 import { useSiteMetadata } from '../hooks/useSiteMetadata';
+import { GlobalStyle } from '../theme/globalStyle';
 
 const AppLayout = styled.main`
   display: grid;
@@ -22,6 +23,7 @@ export const Layout = ({ children }) => {
   const { title } = useSiteMetadata();
   return (
     <AppLayout>
+      <GlobalStyle />
       <Header title={title} />
       <Wrapper>{children}</Wrapper>
     </AppLayout>

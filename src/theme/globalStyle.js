@@ -1,17 +1,20 @@
 import { createGlobalStyle } from 'styled-components';
 
-const fonts = [
-  'Nunito:400,700|',
-  'Poppins:400,700|',
-  'Trirong:400,700|',
-  'Rubik:400,700|',
-  'Eczar:400,700|',
-  'Taviraj:400,700|',
-];
+const fonts = () => {
+  const list = [
+    'Nunito:400,700|',
+    'Poppins:400,700|',
+    'Trirong:400,700|',
+    'Rubik:400,700|',
+    'Eczar:400,700|',
+    'Taviraj:400,700|',
+  ];
+  return list.join('');
+};
 
 export const GlobalStyle = createGlobalStyle`
 
-  @import url('https://fonts.googleapis.com/css?family=${fonts.join()}');
+  @import url('https://fonts.googleapis.com/css?family=${fonts}');
   @import url('https://fonts-for-the-font-god.netlify.com/dank-mono.css?family=dm');
 
   html, body {
@@ -24,7 +27,7 @@ export const GlobalStyle = createGlobalStyle`
 
   html {
     box-sizing: border-box;
-    font-family: Nunito, sans-serif;
+    font-family: Poppins, sans-serif;
     font-size: 15px;
   }
 `;

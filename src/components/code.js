@@ -20,6 +20,7 @@ export const Pre = styled.pre`
     line-height: 1.3em;
     height: 1.3em;
   }
+  font-family: dm;
 `;
 
 export const LineNo = styled.span`
@@ -32,7 +33,7 @@ export const LineNo = styled.span`
 export const Code = ({ codeString, language, ...props }) => {
   if (props['react-live']) {
     return (
-      <LiveProvider code={codeString} noInline={true}>
+      <LiveProvider code={codeString} noInline={true} theme={theme}>
         <LiveEditor />
         <LiveError />
         <LivePreview />

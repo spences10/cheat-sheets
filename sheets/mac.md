@@ -11,13 +11,13 @@ published: true
 
 Select an area to save to a file
 
-```sh
+```bash
 cmd + shift + 4
 ```
 
 Screen snip to clipboard
 
-```sh
+```bash
 cmd + shift + ctrl + 4
 ```
 
@@ -25,13 +25,13 @@ cmd + shift + ctrl + 4
 
 Window screenshot
 
-```sh
+```bash
 cmd + shift + 4 #then spacebar
 ```
 
 Window screenshot to clipboard
 
-```sh
+```bash
 cmd + shift + cmd + 4 #then spacebar
 ```
 
@@ -39,7 +39,7 @@ cmd + shift + cmd + 4 #then spacebar
 
 ## # character
 
-```sh
+```bash
 alt + 3
 ```
 
@@ -47,6 +47,6 @@ alt + 3
 
 Show hidden files
 
-```sh
+```bash
 shift + cmd + .
 ```

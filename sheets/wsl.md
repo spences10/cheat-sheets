@@ -25,13 +25,13 @@ https://www.google.co.uk/url?sa=t&rct=j&q=&esrc=s&source=web&cd=3&cad=rja&uact=8
 
 Linuxbrew is like Chocolatey for Windows or Homebrew for OSx
 
-```sh
+```bash
 brew install package
 ```
 
 ## What version of Ubuntu is installed
 
-```sh
+```bash
 lsb_release -a
 ```
 
@@ -41,6 +41,6 @@ Use `lxrun.exe` to interact with the WSL from the CMD prompt
 
 Burn it all 🔥:
 
-```sh
+```bash
 lxrun /uninstall /full
 ```

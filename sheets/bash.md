@@ -9,7 +9,7 @@ published: true
 
 ## Add an alias
 
-```sh
+```bash
 # open your bash_profile with nano
 nano ~/.bash_profile
 # add your alias
@@ -22,7 +22,7 @@ alias f='fish'
 You may find that commands like `ll` are under your `~/.bashrc` file,
 if not then add the following as an alias:
 
-```sh
+```bash
 ls -lart | sort -k9,9
 ```
 
@@ -33,7 +33,7 @@ know what the permissions of similar files are like you can use
 `stat`, the following command displays the permissions of the contents
 of the `.ssh/` folder:
 
-```sh
+```bash
 stat -c "%a %n" ~/.ssh/*
 ```
 
@@ -44,7 +44,7 @@ git operation?
 
 Add the following to your `~/.bashrc` file.
 
-```sh
+```bash
 # nano ~/.bashrc
 [ -z "$SSH_AUTH_SOCK" ] && eval "\$(ssh-agent -s)"
 ```

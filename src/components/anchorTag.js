@@ -1,8 +1,7 @@
-import { Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
 
-const StyledLink = styled(Link)`
+const StyledLink = styled.a`
   &:hover {
     text-decoration: underline;
   }
@@ -30,7 +29,7 @@ const StyledLink = styled(Link)`
 `;
 
 export const AnchorTag = ({ href, children }) => (
-  <StyledLink to={href}>
+  <StyledLink rel={'noopener'} target={'_blank'} href={href}>
     {children.split(' ').map((word, i) => (
       <span key={i}>{word}</span>
     ))}

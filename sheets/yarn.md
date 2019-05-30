@@ -5,8 +5,6 @@ updatedDate: 2019-03-12
 published: true
 ---
 
-# Useful Yarn commands
-
 This is just stuff that I have put down that I find I use a lot of the
 time for my own reference.
 

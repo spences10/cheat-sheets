@@ -5,8 +5,6 @@ updatedDate: 2017-10-13
 published: true
 ---
 
-# Useful hyper info
-
 ## use Git bash
 
 Windows user? Want to use commands like `ls` and `pwd` in the hyper

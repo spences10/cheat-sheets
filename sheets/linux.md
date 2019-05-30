@@ -5,8 +5,6 @@ updatedDate: 2019-02-11
 published: true
 ---
 
-# Useful Linux commands
-
 ## Install a binary
 
 If you're working on a local machine with administrator permissions,

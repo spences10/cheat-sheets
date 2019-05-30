@@ -5,8 +5,6 @@ updatedDate: 2019-05-09
 published: true
 ---
 
-# Useful Git commands
-
 This is just stuff that I have put down that I find I use a lot of the
 time for my own reference.
 

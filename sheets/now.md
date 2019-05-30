@@ -14,7 +14,7 @@ this detailed in there under `-h` somewhere 😁
 
 Got your own domain name? You can alias your latest `now` deployment
 
-```sh
+```bash
 now alias now-generated-url.now.sh your-awesome-domain-name.af
 ```
 
@@ -25,7 +25,7 @@ the instance to spin up?
 
 This is straight from the CLI with `now scale -h`
 
-```sh
+```bash
 # Create an deployment with 3 instances, never sleeps:
 now scale my-deployment-ntahoeato.now.sh 3
 # Create an automatically scaling deployment:
@@ -61,7 +61,7 @@ If it's keys, then use secrets and configure them in the
 If you have a lot of configuration variables and you dont want to make
 a mess in the `package.json`:
 
-```sh
+```bash
 now -E
 ```
 

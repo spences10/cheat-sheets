@@ -11,7 +11,7 @@ published: true
 
 Quick list for aliasing:
 
-```sh
+```bash
 functions aliasname
 # Displays function contents
 
@@ -27,13 +27,13 @@ functions -e aliasname
 
 To list what aliases you have already defined:
 
-```sh
+```bash
 ls -la ~/.config/fish/functions/
 ```
 
 To see what is contained in the functions, use:
 
-```sh
+```bash
 type functionName
 # or use functions
 functions functionName
@@ -41,20 +41,20 @@ functions functionName
 
 To create an alias:
 
-```sh
+```bash
 # Sort alphabetically 👌
 alias lss 'ls -lart | sort -k9,9'
 ```
 
 To save said alias:
 
-```sh
+```bash
 funcsave lss
 ```
 
 View the contents of the function:
 
-```sh
+```bash
 functions lss
 # output
 # Defined in /home/scott/.config/fish/functions/lss.fish @ line 2
@@ -65,13 +65,13 @@ end
 
 To remove an alias:
 
-```sh
+```bash
 rm ~/.config/fish/functions/aliasname.fish
 ```
 
 or use:
 
-```sh
+```bash
 functions -e aliasname
 ```
 
@@ -84,13 +84,13 @@ https://github.com/oh-my-fish/oh-my-fish
 I found this [handy function] on Stack Overflow which will list out
 your functions:
 
-```sh
+```bash
 function aliases --description "list all fish aliases";for f in (functions);functions $f | grep \'alias;end;end;
 ```
 
 Then you save it `funcsave aliases` and use it:
 
-```sh
+```bash
 aliases
 function c --description 'alias c code .'
 function g --description 'alias g git'
@@ -115,7 +115,7 @@ function ys --description 'alias ys yarn start'
 
 The following you can copy pate into fish:
 
-```sh
+```bash
 alias c 'code .';funcsave c;alias g 'git';funcsave g;alias lss 'ls -lart | sort -k9,9';funcsave lss;alias ni 'npm i';funcsave ni;alias nid 'npm i -D';funcsave nid;alias nig 'npm i -g';funcsave nig;alias no 'npm outdated';funcsave no;alias nog 'npm outdated -g --depth=0';funcsave nog;alias nr 'npm run';funcsave nr;alias nrb 'npm run build';funcsave nrb;alias nrd 'npm run dev';funcsave nrd;alias nrf 'npm run format';funcsave nrf;alias nrs 'npm run start';funcsave nrs;alias nug 'npm -g un';funcsave nug;alias nu 'npm un';funcsave nu;alias r 'cd /mnt/d/repos/';funcsave r;alias yd 'yarn dev';funcsave yd;alias yg 'yarn go';funcsave yg;alias ys 'yarn start';funcsave ys;
 ```
 

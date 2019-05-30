@@ -12,19 +12,19 @@ time for my own reference.
 
 ## Update dependencies
 
-```
+```bash
 yarn upgrade
 ```
 
 ## displays the location of the yarn bin folder.
 
-```
+```bash
 yarn bin
 ```
 
 ## list installed packages.
 
-```
+```bash
 yarn ls
 ```
 
@@ -33,7 +33,7 @@ yarn ls
 Couple of good one here from
 [@beedesignllc](https://twitter.com/beedesignllc) 👌
 
-```sh
+```bash
 yarn create react-app my-app-name
 ```
 
@@ -42,7 +42,7 @@ similarly named pkgs
 
 ## flow
 
-```sh
+```bash
 yarn flow
 ```
 
@@ -53,6 +53,6 @@ package.json script.
 
 The equivalent to `npm ci` for yarn:
 
-```sh
+```bash
 yarn install --frozen-lockfile
 ```

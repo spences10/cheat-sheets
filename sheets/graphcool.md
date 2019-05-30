@@ -5,43 +5,41 @@ updatedDate: 2018-04-27
 published: true
 ---
 
-# Useful graphcool commands
-
 CLI
 
 Open Console for current project in browser
 
-```sh
+```bash
 graphcool console
 ```
 
 Open Playground for current project in browser
 
-```sh
+```bash
 graphcool playground
 ```
 
 Get a project ID/Auth token
 
-```sh
+```bash
 graphcool status
 ```
 
 Get endpoints
 
-```sh
+```bash
 graphcool endpoints
 ```
 
 Apply local changes also remotely
 
-```sh
+```bash
 graphcool push project.graphcool
 ```
 
 Force local changes remotely resulting in potential data loss
 
-```sh
+```bash
 graphcool push --force project.graphcool
 ```
 

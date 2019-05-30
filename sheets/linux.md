@@ -5,8 +5,6 @@ updatedDate: 2019-02-11
 published: true
 ---
 
-# Useful Linux commands
-
 ## Install a binary
 
 If you're working on a local machine with administrator permissions,
@@ -15,7 +13,7 @@ access it directly from any project folder. You could do this by
 extracting it to a directory that is already on your PATH. (For
 example, `/usr/local/bin` is a common choice for Mac and Linux.).
 
-```sh
+```bash
 # navigate to download location of .tar.gz
 sudo mv downloaded-binary.tar.gz /usr/local/bin/downloaded-binary.tar.gz
 sudo tar zxf downloaded-binary.tar.gz
@@ -25,7 +23,7 @@ See further details on [how to install a binary].
 
 ## Get build info
 
-```sh
+```bash
 uname -a
 # Linux DESKTOP-KCGTGRV 4.4.0-43-Microsoft
 # 1-Microsoft Wed Dec 31 14:42:53 PST 2014 x86_64 x86_64 x86_64 GNU/Linux
@@ -33,20 +31,20 @@ uname -a
 
 ## Get kernel version
 
-```sh
+```bash
 uname -r
 ```
 
 ## Get architecture
 
-```sh
+```bash
 dpkg --print-architecture
 # amd64
 ```
 
 ## See what Linux version
 
-```sh
+```bash
 cat /etc/issue
 # Debian GNU/Linux 9 \n \l
 ```
@@ -58,13 +56,13 @@ https://askubuntu.com/questions/525088/how-to-delete-broken-packages-in-ubuntu
 
 ## see what services are available
 
-```sh
+```bash
 ll /etc/systemd/system
 ```
 
 ## see what services are running
 
-```sh
+```bash
 journalctl -ef
 ```
 

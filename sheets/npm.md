@@ -5,8 +5,6 @@ updatedDate: 2019-03-01
 published: true
 ---
 
-# npm plz!
-
 A list of terminal commands and flags to help me use `npm`
 
 ## install package.json dependencies

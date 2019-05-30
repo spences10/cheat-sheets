@@ -7,6 +7,11 @@ import { GlobalStyle } from '../theme/globalStyle';
 import { media } from '../theme/sizes';
 
 const AppLayout = styled.main`
+  font-family: Poppins;
+  pre,
+  div {
+    width: 100%;
+  }
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto;

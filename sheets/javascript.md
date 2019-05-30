@@ -5,8 +5,6 @@ updatedDate: 2017-12-11
 published: true
 ---
 
-# JavaScript
-
 ## Arrays
 
 ### New array from existing

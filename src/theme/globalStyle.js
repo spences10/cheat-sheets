@@ -64,17 +64,18 @@ export const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=${fonts}');
   @import url('https://fonts-for-the-font-god.netlify.com/dank-mono.css?family=dm');
 
-  html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    min-height: 100%;
-    line-height: 1;
-  }
-
-  html {
-    box-sizing: border-box;
-    font-family: Poppins, sans-serif;
-    font-size: 15px;
-  }
+    *, *:before, *:after {
+      box-sizing: border-box;
+    }
+    /* use for debugging only!! */
+    /* * {
+      outline: 1px solid red !important;
+    } */
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      min-height: 100%;
+      line-height: 1.3125;
+    }  
 `;

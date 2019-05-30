@@ -5,8 +5,6 @@ updatedDate: 2019-03-12
 published: true
 ---
 
-# Fish shell
-
 ## Aliases
 
 Quick list for aliasing:

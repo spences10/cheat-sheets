@@ -5,8 +5,6 @@ updatedDate: 2019-05-27
 published: true
 ---
 
-# VS Code
-
 Want to list out what extensions you have installed?
 
 Say that you are moving from VS Code to VS Code Insiders and you want

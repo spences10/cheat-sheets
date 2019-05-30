@@ -5,8 +5,6 @@ updatedDate: 2019-03-10
 published: true
 ---
 
-# Bash
-
 ## Add an alias
 
 ```bash

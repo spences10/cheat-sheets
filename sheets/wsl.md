@@ -5,8 +5,6 @@ updatedDate: 2018-01-27
 published: true
 ---
 
-# Windows Subsystem Linux (WSL)
-
 There's a few config options as part of the WSL I always forget
 
 Links for getting Linux programs running in mixed mode:

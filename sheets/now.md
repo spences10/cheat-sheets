@@ -5,8 +5,6 @@ updatedDate: 2018-04-27
 published: true
 ---
 
-# now
-
 The awesome now from zeit! It has a great cli with probably all of
 this detailed in there under `-h` somewhere 😁
 

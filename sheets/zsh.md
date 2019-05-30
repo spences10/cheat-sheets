@@ -5,7 +5,5 @@ updatedDate: 2017-10-11
 published: true
 ---
 
-# ZSH
-
 - include aliases
 - oh my zsh

@@ -5,8 +5,6 @@ updatedDate: 2018-04-27
 published: true
 ---
 
-# Useful graphcool commands
-
 CLI
 
 Open Console for current project in browser

@@ -8,8 +8,9 @@ import { media } from '../theme/sizes';
 
 const AppLayout = styled.main`
   font-family: Poppins;
-  pre {
-    /* max-width: 10vw; */
+  pre,
+  div {
+    width: 100%;
   }
   display: grid;
   grid-template-columns: repeat(12, 1fr);

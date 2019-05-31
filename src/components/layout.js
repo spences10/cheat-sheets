@@ -53,7 +53,6 @@ const AppLayout = styled.main`
 
 const Wrapper = styled.div`
   grid-area: m;
-  height: 100vh;
 `;
 
 export const Layout = ({ children }) => {

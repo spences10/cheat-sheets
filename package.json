@@ -1,6 +1,6 @@
 {
   "name": "cheat-sheets",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "author": "Scott Spence <spences10apps@gmail.com>(https://scottspence.me/)",
   "license": "MIT",
   "description": "Cheat sheets",
@@ -19,7 +19,7 @@
     "@mdx-js/mdx": "1.0.20",
     "@mdx-js/react": "1.0.20",
     "babel-plugin-styled-components": "1.10.0",
-    "gatsby": "2.7.5",
+    "gatsby": "2.8.0",
     "gatsby-mdx": "0.6.3",
     "gatsby-plugin-react-helmet": "3.0.12",
     "gatsby-plugin-styled-components": "3.0.7",

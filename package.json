@@ -1,6 +1,6 @@
 {
   "name": "cheat-sheets",
-  "version": "1.0.14",
+  "version": "1.0.19",
   "author": "Scott Spence <spences10apps@gmail.com>(https://scottspence.me/)",
   "license": "MIT",
   "description": "Cheat sheets",
@@ -19,7 +19,7 @@
     "@mdx-js/mdx": "1.0.20",
     "@mdx-js/react": "1.0.20",
     "babel-plugin-styled-components": "1.10.0",
-    "gatsby": "2.8.2",
+    "gatsby": "2.8.5",
     "gatsby-mdx": "0.6.3",
     "gatsby-plugin-google-analytics": "2.0.20",
     "gatsby-plugin-react-helmet": "3.0.12",
@@ -32,10 +32,10 @@
     "react-dom": "16.8.6",
     "react-helmet": "5.2.1",
     "react-live": "2.1.2",
-    "styled-components": "4.2.1"
+    "styled-components": "4.3.0"
   },
   "devDependencies": {
-    "husky": "2.3.0",
+    "husky": "2.4.0",
     "prettier": "1.17.1",
     "pretty-quick": "1.11.0"
   },

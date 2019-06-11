@@ -29,9 +29,12 @@ const components = {
     // it's possible to have a pre without a code in it
     return <pre />;
   },
-  a: AnchorTag,
+  a: ({ children }) => {
+    return <AnchorTag>{children}</AnchorTag>;
+  },
   p: StyledP,
   code: Code,
+  wrapper: ({ children }) => <>{children}</>,
 };
 
 export const wrapRootElement = ({ element }) => (

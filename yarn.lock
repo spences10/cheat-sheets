@@ -4474,10 +4474,10 @@ gatsby-react-router-scroll@^2.0.7:
     scroll-behavior "^0.9.9"
     warning "^3.0.0"
 
-gatsby-remark-autolink-headers@2.0.16:
-  version "2.0.16"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-autolink-headers/-/gatsby-remark-autolink-headers-2.0.16.tgz#90060b04eab9788f63cfeab9559f88ff0bab4474"
-  integrity sha512-8y79jScAcPk8eZqCFTtrDsDy0c9VAy/jYPgfW4w+bvD4iOf/39RGT3RVlRiM9S8223sQkil/TA9xwYkTHjeGTQ==
+gatsby-remark-autolink-headers@2.0.17:
+  version "2.0.17"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-autolink-headers/-/gatsby-remark-autolink-headers-2.0.17.tgz#9b9bc15731cccd1961769fd6d05b53e2d478e8c2"
+  integrity sha512-HEmQg/TxJJZQtrouAjoMlbAbI/mI0DxBqPRw4gZIEDvnL4f/EuekoyjiMvG8jaLr1PmCa7ysNS4S5DXdq2L5FA==
   dependencies:
     "@babel/runtime" "^7.0.0"
     github-slugger "^1.1.1"
@@ -4536,10 +4536,10 @@ gatsby-telemetry@^1.0.11:
     stack-utils "1.0.2"
     uuid "3.3.2"
 
-gatsby@2.9.2:
-  version "2.9.2"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.9.2.tgz#caab8b601a2e3e2ba47c486b39ea9a1079060cda"
-  integrity sha512-lAxfwxBYXO380ZJFN9ygHzjAMw+9GDuRbQer7E6xMbjPB856agnPnbqBuasGAezocsYMRqg3rhaAnIOhnWcOtw==
+gatsby@2.9.3:
+  version "2.9.3"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.9.3.tgz#92c1781fa92ecd5fcc4d954f13305fe052397bfa"
+  integrity sha512-5LfXNX3bXANXeg2w6R3DZTAbJKd8tVESMqAjclCMOXlAabM3MfHEhnGeHkR7m+HLemzx926roh2cL1/Nhf9lwA==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/core" "^7.0.0"

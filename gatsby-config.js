@@ -11,9 +11,12 @@ module.exports = {
       resolve: `gatsby-mdx`,
       options: {
         extensions: [`.mdx`, `.md`],
-        plugins: [
+        gatsbyRemarkPlugins: [
           {
             resolve: `gatsby-remark-smartypants`,
+          },
+          {
+            resolve: `gatsby-remark-autolink-headers`,
           },
           {
             resolve: `gatsby-remark-autolink-headers`,

@@ -1,8 +1,8 @@
 import { MDXProvider } from '@mdx-js/react';
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
-import { AnchorTag } from './src/components/anchorTag';
 import { Code as CodeBlock } from './src/components/code';
+import { StyledH2 } from './src/components/H2';
 import { Code, StyledP } from './src/components/styles';
 import { themes } from './src/theme/globalStyle';
 
@@ -12,6 +12,7 @@ const theme = themes['theme1'];
 // components is its own object outside of render so that the references to
 // components are stable
 const components = {
+  h2: StyledH2,
   pre: ({ children: { props } }) => {
     // if there's a codeString and some props, we passed the test
     if (props.mdxType === 'code') {
@@ -28,9 +29,6 @@ const components = {
     }
     // it's possible to have a pre without a code in it
     return <pre />;
-  },
-  a: ({ children }) => {
-    return <AnchorTag>{children}</AnchorTag>;
   },
   p: StyledP,
   code: Code,

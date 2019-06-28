@@ -1583,10 +1583,10 @@ babel-plugin-remove-graphql-queries@^2.7.0:
   resolved "https://registry.yarnpkg.com/babel-plugin-remove-graphql-queries/-/babel-plugin-remove-graphql-queries-2.7.0.tgz#dd5b1201cb90f1197e4588761af602f2e180f60a"
   integrity sha512-mV+OTw3GPGJnS2fOB8jafJQi4H273EJtd73MWTpbwm2HgDENRBbt5m2BOa66XuplaW36qsUdV8zj0f0MNlY9sA==
 
-babel-plugin-styled-components@1.10.2:
-  version "1.10.2"
-  resolved "https://registry.yarnpkg.com/babel-plugin-styled-components/-/babel-plugin-styled-components-1.10.2.tgz#0d9af9521ec99cf8e14182685162e09b119de176"
-  integrity sha512-gA67BkMbddFPkTjD2bBe7zE6NNEUNK/7A4uDxwSigA3h1+sL2b6mWhxPu9a5DKf+3TvmdoxvtJ4me2NE7k66Ng==
+babel-plugin-styled-components@1.10.4:
+  version "1.10.4"
+  resolved "https://registry.yarnpkg.com/babel-plugin-styled-components/-/babel-plugin-styled-components-1.10.4.tgz#c9a01d7992e41dc45338792be5ce2cd805e4d868"
+  integrity sha512-LI4xaSF//yp9+CWG+TkAIbH1Xt50ptMY04WQgzi27184JyHVt4D3biCfDppJg+FJ4cOAtuuvdLXpFNoOWSEpQQ==
   dependencies:
     "@babel/helper-annotate-as-pure" "^7.0.0"
     "@babel/helper-module-imports" "^7.0.0"

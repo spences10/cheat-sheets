@@ -4389,10 +4389,10 @@ functional-red-black-tree@^1.0.1:
   resolved "https://registry.yarnpkg.com/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
   integrity sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
 
-gatsby-cli@^2.7.13:
-  version "2.7.13"
-  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.7.13.tgz#d1789da963ccc1ad2b0143a05abe869cf6997206"
-  integrity sha512-Wb1+yS0XKejFrZAIrCPYnKHUAU5LIzijOoamRRaBx2K7bbrpI9hzvZFehHoKR1L32DDfmpTgpYs4gKl+EPcTpg==
+gatsby-cli@^2.7.14:
+  version "2.7.14"
+  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-2.7.14.tgz#859b655b8b27ff3a0d829f3fdfbbdd8a1098bb17"
+  integrity sha512-9dCepYJx5HzLQAIqD7xi7I4qJ4fUq7X3e0/0YcIr7y9lt1YBAmQvA6XslazEpaASxY8Cegb3+rsI9L3cAup72Q==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/runtime" "^7.0.0"
@@ -4410,10 +4410,10 @@ gatsby-cli@^2.7.13:
     execa "^0.8.0"
     fs-exists-cached "^1.0.0"
     fs-extra "^4.0.1"
-    gatsby-telemetry "^1.1.5"
+    gatsby-telemetry "^1.1.6"
     hosted-git-info "^2.6.0"
     is-valid-path "^0.1.1"
-    lodash "^4.17.10"
+    lodash "^4.17.14"
     meant "^1.0.1"
     node-fetch "^2.6.0"
     object.entries "^1.1.0"
@@ -4482,17 +4482,17 @@ gatsby-mdx@0.6.3:
     unist-util-remove "^1.0.1"
     unist-util-visit "^1.4.0"
 
-gatsby-page-utils@^0.0.4:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/gatsby-page-utils/-/gatsby-page-utils-0.0.4.tgz#52e5096d6f3f651eafdbb8bce2d96226c8a166a7"
-  integrity sha512-N1cSLsHyKSunEGIEcPQK0/YtR8EFebaD8Gt990t/c6RfvO8G3ZCkuy+f1SVFzynI3OGmW/0PH04tp1j1P4q46Q==
+gatsby-page-utils@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/gatsby-page-utils/-/gatsby-page-utils-0.0.5.tgz#faefc2ece9f14bfd161ddd0104d1e12b54ef7a70"
+  integrity sha512-yHL4OKgVEOWOuTUCO2ZPPmWyA1bAtSUPrf+W5w3p24pUwqMkz2Yu2hii/PhgQs+2ap6BkpSwBjBSYS2YLRmTNg==
   dependencies:
     "@babel/runtime" "^7.0.0"
     bluebird "^3.5.0"
     chokidar "2.1.2"
     fs-exists-cached "^1.0.0"
     glob "^7.1.1"
-    lodash "^4.17.10"
+    lodash "^4.17.14"
     micromatch "^3.1.10"
     slash "^1.0.0"
 
@@ -4503,17 +4503,17 @@ gatsby-plugin-google-analytics@2.1.4:
   dependencies:
     "@babel/runtime" "^7.0.0"
 
-gatsby-plugin-page-creator@^2.1.4:
-  version "2.1.4"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-page-creator/-/gatsby-plugin-page-creator-2.1.4.tgz#64024bd85a6ae566314fd7b6529073063138965f"
-  integrity sha512-UpEwWNzLuZuOwoJKD4dGJP1I5qk+4lnHOrWWvqG3apKaNYLbLtJrFdo3UfkbphebHxeAS1SH06FzttT214nkvg==
+gatsby-plugin-page-creator@^2.1.5:
+  version "2.1.5"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-page-creator/-/gatsby-plugin-page-creator-2.1.5.tgz#723fc0392a67978cab649a402ad88f6f06b74e4c"
+  integrity sha512-nUcsaJAaMy9UQS66QY0Dys6Xx+2CGG2EVyvDQ4NQ713la62jicOU764Bmi5G7sE2QGgpNoBtUQCW+aE6UMGpLQ==
   dependencies:
     "@babel/runtime" "^7.0.0"
     bluebird "^3.5.0"
     fs-exists-cached "^1.0.0"
-    gatsby-page-utils "^0.0.4"
+    gatsby-page-utils "^0.0.5"
     glob "^7.1.1"
-    lodash "^4.17.10"
+    lodash "^4.17.14"
     micromatch "^3.1.10"
 
 gatsby-plugin-react-helmet@3.1.2:
@@ -4539,14 +4539,14 @@ gatsby-react-router-scroll@^2.1.3:
     scroll-behavior "^0.9.9"
     warning "^3.0.0"
 
-gatsby-remark-autolink-headers@2.1.2:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-autolink-headers/-/gatsby-remark-autolink-headers-2.1.2.tgz#69f6a8e706a30fbdf417c3f5f0a963e267093b73"
-  integrity sha512-6MB2BRDlsZvsqfT2uqzBGpnck4ZYygjCvAnRejGYJg+G7EP5Vk7VkRICDeYkDz9S/MfRGccCIO1QsgXlMEB54A==
+gatsby-remark-autolink-headers@2.1.3:
+  version "2.1.3"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-autolink-headers/-/gatsby-remark-autolink-headers-2.1.3.tgz#035f5501febf7592efa61bd38cd8210c7415af60"
+  integrity sha512-pMce69OrUnUKf/QALBw8MxMYG+aBuLR/Sh2Q3178Gb6KIk7q0TR/UAO7djqnuQqgrZKtyWe9lqxDXkciIrLD1w==
   dependencies:
     "@babel/runtime" "^7.0.0"
     github-slugger "^1.1.1"
-    lodash "^4.17.11"
+    lodash "^4.17.14"
     mdast-util-to-string "^1.0.2"
     unist-util-visit "^1.3.0"
 
@@ -4580,10 +4580,10 @@ gatsby-source-filesystem@2.1.5:
     valid-url "^1.0.9"
     xstate "^3.1.0"
 
-gatsby-telemetry@^1.1.5:
-  version "1.1.5"
-  resolved "https://registry.yarnpkg.com/gatsby-telemetry/-/gatsby-telemetry-1.1.5.tgz#a9f67fe94a0c20c41a50844ca02d5c228dac9a1a"
-  integrity sha512-gSl5uQoq11z1w2AmPwZT8gBrXGYorNxwJ21iQD0lxFqpfjvGbZfJMURtBWwIla8y29HgRy1M4c4wptMGrSMagw==
+gatsby-telemetry@^1.1.6:
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/gatsby-telemetry/-/gatsby-telemetry-1.1.6.tgz#957c95e1eefcfdfb5a82b4cb85d13e88e429bdd7"
+  integrity sha512-b0uIxlz8mjW/x45VbzDL3Rs5mrVVmJGMko87ldhCgFhrj2CyyxljUBC+C2daVfyrMhvHIWagFSygZ4BrijLjlA==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/runtime" "^7.0.0"
@@ -4595,7 +4595,7 @@ gatsby-telemetry@^1.1.5:
     fs-extra "^7.0.1"
     git-up "4.0.1"
     is-docker "1.1.0"
-    lodash "^4.17.10"
+    lodash "^4.17.14"
     node-fetch "2.3.0"
     resolve-cwd "^2.0.0"
     source-map "^0.5.7"
@@ -4603,10 +4603,10 @@ gatsby-telemetry@^1.1.5:
     stack-utils "1.0.2"
     uuid "3.3.2"
 
-gatsby@2.13.19:
-  version "2.13.19"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.13.19.tgz#e5fb47aef0177373c9300146080152211e4d5789"
-  integrity sha512-244+AiXjAP/IDviahxouwxp26JMurP0453F6swb1pLgZgqesmZWnb2jEfJBtn6k9rfr82GHhu2ocC6fw5y0M8Q==
+gatsby@2.13.20:
+  version "2.13.20"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.13.20.tgz#dcc4b8a387b98cf30283c2f8d520d3c67d41b6d5"
+  integrity sha512-1XrcTXpc3EHn0XuA6iVYqfm5lnMbfspYQ4KvJwbYKMVQytETFe0XYCd5XSbC2gI1RWQqNaTDEPyKfKwBbwpB9Q==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/core" "^7.0.0"
@@ -4665,12 +4665,12 @@ gatsby@2.13.19:
     flat "^4.0.0"
     fs-exists-cached "1.0.0"
     fs-extra "^5.0.0"
-    gatsby-cli "^2.7.13"
+    gatsby-cli "^2.7.14"
     gatsby-graphiql-explorer "^0.2.3"
     gatsby-link "^2.2.2"
-    gatsby-plugin-page-creator "^2.1.4"
+    gatsby-plugin-page-creator "^2.1.5"
     gatsby-react-router-scroll "^2.1.3"
-    gatsby-telemetry "^1.1.5"
+    gatsby-telemetry "^1.1.6"
     glob "^7.1.1"
     got "8.0.0"
     graphql "^14.1.1"
@@ -4683,7 +4683,7 @@ gatsby@2.13.19:
     jest-worker "^23.2.0"
     json-loader "^0.5.7"
     json-stringify-safe "^5.0.1"
-    lodash "^4.17.10"
+    lodash "^4.17.14"
     md5 "^2.2.1"
     md5-file "^3.1.1"
     micromatch "^3.1.10"
@@ -6453,6 +6453,11 @@ lodash@^4.11.1, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.4, lodash@^4.17.5
   version "4.17.11"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
   integrity sha512-cQKh8igo5QUhZ7lg38DYWAxMvjSAKG0A8wGSVimP07SIUEK2UO+arSRKbRZWtelMtN5V0Hkwh5ryOto/SshYIg==
+
+lodash@^4.17.14:
+  version "4.17.14"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.14.tgz#9ce487ae66c96254fe20b599f21b6816028078ba"
+  integrity sha512-mmKYbW3GLuJeX+iGP+Y7Gp1AiGHGbXHCOh/jZmrawMmsE7MS4znI3RL2FsjbqOyMayHInjOeykW7PEajUk1/xw==
 
 log-update@^3.0.0:
   version "3.2.0"

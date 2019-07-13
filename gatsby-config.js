@@ -8,22 +8,12 @@ module.exports = {
   siteMetadata: siteMetadata,
   plugins: [
     {
-      resolve: `gatsby-mdx`,
+      resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.mdx`, `.md`],
         gatsbyRemarkPlugins: [
-          {
-            resolve: `gatsby-remark-smartypants`,
-          },
-          {
-            resolve: `gatsby-remark-autolink-headers`,
-          },
-          {
-            resolve: `gatsby-remark-autolink-headers`,
-          },
-          {
-            resolve: `gatsby-remark-autolink-headers`,
-          },
+          `gatsby-remark-smartypants`,
+          `gatsby-remark-autolink-headers`,
         ],
       },
     },

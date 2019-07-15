@@ -839,3 +839,20 @@ branches then use.
 ```bash
 git diff branch1..branch2 package.json
 ```
+
+## Revert to a previous commit
+
+Find the commit you want to revert to, then:
+
+```bash
+git reset hashOfCommit
+```
+
+Then reset to the branch on the otigin:
+
+```bash
+# if I wanted to push back to the develop branch on GitHub say
+git reset --soft origin/develop
+```
+
+Reference: https://stackoverflow.com/questions/11829911/push-changes-without-pull

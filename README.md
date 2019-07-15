@@ -16,9 +16,9 @@ A place for all my cheat sheets to live!
 
 - **[Hyper](/sheets/hyper.md#useful-hyper-info)**
 
-- **[JavaScript](j/sheets/avascript.md#javascript)**
+- **[JavaScript](/sheets/javascript.md#javascript)**
 
-- **[now](n/sheets/ow.md#now)**
+- **[now](/sheets/now.md#now)**
 
 - **[npm](/sheets/npm.md#npm-plz)**
 

@@ -1,7 +1,19 @@
 import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import React from 'react';
+import styled from 'styled-components';
 import { Layout } from '../components/layout';
+
+const StyledTitle = styled.h1`
+  color: ${props => props.theme.fontDark};
+  font-family: ${props => props.theme.fontHeader};
+`;
+
+const StyledDate = styled.p`
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  color: ${props => props.theme.fontLight};
+`;
 
 const cheatSheetPage = ({ data, pageContext }) => {
   const { frontmatter, body } = data.mdx;
@@ -9,9 +21,9 @@ const cheatSheetPage = ({ data, pageContext }) => {
   // const { imageLink } = data.site.siteMetadata
   return (
     <Layout>
-      <h1>{frontmatter.title}</h1>
-      <p>Created: {frontmatter.createdDate}</p>
-      <p>Updated: {frontmatter.updatedDate}</p>
+      <StyledTitle>{frontmatter.title}</StyledTitle>
+      <StyledDate>Created: {frontmatter.createdDate}</StyledDate>
+      <StyledDate>Updated: {frontmatter.updatedDate}</StyledDate>
       <MDXRenderer>{body}</MDXRenderer>
     </Layout>
   );

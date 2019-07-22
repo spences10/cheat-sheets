@@ -12,7 +12,7 @@ export const themes = {
     fontDark: '#202124',
     fontLight: '#5f6368',
     fontWhite: '#ffffff',
-    fontHeader: 'Nunito, sans, sans-serif',
+    fontHeader: '"Josefin Sans", sans, sans-serif',
     fontBody: 'Poppins, sans-serif',
   },
 
@@ -49,7 +49,7 @@ export const themes = {
 
 const fonts = () => {
   const list = [
-    'Nunito:400,700|',
+    'Josefin+Sans:400,700|',
     'Poppins:400,700|',
     'Trirong:400,700|',
     'Rubik:400,700|',

@@ -551,7 +551,7 @@ now to store the keys in, add the follwowinf to your `~/.bashrc` file:
 Open the `~/.bashrc` file with:
 
 ```bash
-nano ~/.ssh/config
+nano ~/.bashrc
 ```
 
 Now the SSH agent will start on each terminal session and you will
@@ -855,4 +855,5 @@ Then reset to the branch on the otigin:
 git reset --soft origin/develop
 ```
 
-Reference: https://stackoverflow.com/questions/11829911/push-changes-without-pull
+Reference:
+https://stackoverflow.com/questions/11829911/push-changes-without-pull

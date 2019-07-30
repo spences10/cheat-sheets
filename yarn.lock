@@ -4603,10 +4603,10 @@ gatsby-telemetry@^1.1.7:
     stack-utils "1.0.2"
     uuid "3.3.2"
 
-gatsby@2.13.43:
-  version "2.13.43"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.13.43.tgz#2ced6d1d8c14a6de59c69dfeeea3641327a9bd2f"
-  integrity sha512-6YK4HzcPFkxP1822Rg4BnfU0mOMdfM0bH+6FnAaeoVFOcXVzjl/2d2h0BWYLkY38TnldnDqHi28Bsv5xhEB4Jw==
+gatsby@2.13.44:
+  version "2.13.44"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.13.44.tgz#37782acb3dab87f090d89367b9cba756853b8f7e"
+  integrity sha512-FS3w+SLKRegmLcJfSK0MQOitvU0mgpKb0QoHGr7KPO7/Zps6a0qcaK0rQCMySA/a3ZyUnrWyl5Lk1AOrRhqUAA==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/core" "^7.0.0"

@@ -7,6 +7,24 @@ published: true
 
 ## Search homebrew
 
+Search homebrew for apps, cli's, tools
+
+```bash
+brew search keychain
+```
+
+## Install
+
+```bash
+brew install keychain
+```
+
+If the item you're looking for is part of a cask:
+
+```bash
+brew cask install visual-studio-code-insiders
+```
+
 ## Install multiple items in one command
 
 ```bash

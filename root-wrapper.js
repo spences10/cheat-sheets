@@ -4,7 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import { Code as CodeBlock } from './src/components/code';
 import { StyledH2 } from './src/components/H2';
 import { StyledH3 } from './src/components/H3';
-import { Code, StyledP } from './src/components/styles';
+import { InlineCode } from './src/components/styles';
 import { themes } from './src/theme/globalStyle';
 
 const theme = themes['theme1'];
@@ -32,8 +32,8 @@ const components = {
     // it's possible to have a pre without a code in it
     return <pre />;
   },
-  p: StyledP,
-  code: Code,
+  'p.inlineCode': InlineCode,
+  code: InlineCode,
   wrapper: ({ children }) => <>{children}</>,
 };
 

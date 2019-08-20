@@ -4676,12 +4676,6 @@ gatsby-plugin-mdx@1.0.33:
   resolved "https://registry.yarnpkg.com/gatsby-plugin-mdx/-/gatsby-plugin-mdx-1.0.33.tgz#a0046b17aa1174bcaf0c140e60b35573f523061c"
   integrity sha512-b7eKMIRqFIBZR9OTCzwKgsBiDAkyTP1cjQyCwQqIdXB4V+d/3rKO1sXNDzGUswKLDURtOgwnV63wNUjE/FuIyg==
   dependencies:
-    "@babel/core" "^7.5.5"
-    "@babel/generator" "^7.5.5"
-    "@babel/helper-plugin-utils" "^7.0.0"
-    "@babel/plugin-proposal-object-rest-spread" "^7.5.5"
-    "@babel/preset-env" "^7.5.5"
-    "@babel/preset-react" "^7.0.0"
     "@babel/types" "^7.5.5"
     camelcase-css "^2.0.1"
     change-case "^3.1.0"
@@ -4813,45 +4807,23 @@ gatsby-telemetry@^1.1.19:
     stack-utils "1.0.2"
     uuid "3.3.3"
 
-<<<<<<< HEAD
 gatsby@2.14.2:
   version "2.14.2"
   resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.14.2.tgz#d9ec4c1b3935a67f38a950724f75c9d620a91817"
   integrity sha512-SI1pqc87Qpy9Y2awAp4dxBQcY9X0WX4ksMleNtsnp5zlO0IXINDdo6Oz4BV9LcHxaZuqs5XNclApeJJLSW3tJw==
-=======
-gatsby@2.13.68:
-  version "2.13.68"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.13.68.tgz#74ba4f8e85402ebb49e95d1d93a737698f1dedfb"
-  integrity sha512-uGwcECZADv52k/BYkS7UKuIT3HWogdTsZKm51HjKQ6R8j1jPcc9dAmXgzImln4rmcdcDgOrUAZCYMDvwrPrJnA==
->>>>>>> Update dependency gatsby to v2.13.68
   dependencies:
-    "@babel/code-frame" "^7.5.5"
-    "@babel/core" "^7.5.5"
-    "@babel/parser" "^7.5.5"
-    "@babel/polyfill" "^7.4.4"
-    "@babel/runtime" "^7.5.5"
-    "@babel/traverse" "^7.5.5"
-    "@gatsbyjs/relay-compiler" "2.0.0-printer-fix.4"
-    "@hapi/joi" "^15.1.1"
-    "@mikaelkristiansson/domready" "^1.0.9"
-    "@pieh/friendly-errors-webpack-plugin" "1.7.0-chalk-2"
-    "@reach/router" "^1.2.1"
-    "@typescript-eslint/eslint-plugin" "^1.13.0"
-    "@typescript-eslint/parser" "^1.13.0"
-    address "1.1.2"
-    autoprefixer "^9.6.1"
-    axios "^0.19.0"
-    babel-core "7.0.0-bridge.0"
-    babel-eslint "^10.0.3"
+    "@babel/code-frame" "^7.0.0"
+    "@babel/core" "^7.0.0"
+    "@babel/parser" "^7.0.0"
+    "@babel/polyfill" "^7.0.0"
+    "@babel/runtime" "^7.0.0"
+    "@babel/traverse" "^7.0.0"
     babel-loader "^8.0.6"
     babel-plugin-add-module-exports "^0.3.3"
     babel-plugin-dynamic-import-node "^1.2.0"
-    babel-plugin-remove-graphql-queries "^2.7.5"
-    babel-preset-gatsby "^0.2.11"
+    babel-plugin-remove-graphql-queries "^2.7.4"
     better-opn "0.1.4"
     better-queue "^3.8.10"
-    bluebird "^3.5.5"
-    browserslist "3.2.8"
     cache-manager "^2.10.0"
     cache-manager-fs-hash "^0.0.7"
     chalk "^2.4.2"
@@ -4877,11 +4849,12 @@ gatsby@2.13.68:
     eslint-plugin-jsx-a11y "^6.2.3"
     eslint-plugin-react "^7.14.3"
     eslint-plugin-react-hooks "^1.7.0"
-    event-source-polyfill "^1.0.8"
-    express "^4.17.1"
     express-graphql "^0.9.0"
     fast-levenshtein "^2.0.6"
     file-loader "^1.1.11"
+    gatsby-graphiql-explorer "^0.2.6"
+    graphql "^14.4.2"
+    graphql-playground-middleware-express "^1.7.12"
     flat "^4.1.0"
     fs-exists-cached "1.0.0"
     fs-extra "^8.1.0"
@@ -4903,6 +4876,7 @@ gatsby@2.13.68:
     is-wsl "^2.1.0"
     jest-worker "^24.9.0"
     json-loader "^0.5.7"
+>>>>>>> Update gatsby monorepo
     json-stringify-safe "^5.0.1"
     lodash "^4.17.15"
     lokijs "^1.5.7"
@@ -4933,19 +4907,10 @@ gatsby@2.13.68:
     redux "^4.0.4"
     redux-thunk "^2.3.0"
     semver "^5.7.1"
-    shallow-compare "^1.2.2"
     sift "^5.1.0"
     signal-exit "^3.0.2"
     slash "^3.0.0"
     socket.io "^2.2.0"
-    stack-trace "^0.0.10"
-    string-similarity "^1.2.2"
-    style-loader "^0.23.1"
-    terser-webpack-plugin "1.4.1"
-    "true-case-path" "^2.2.1"
-    type-of "^2.0.1"
-    url-loader "^1.1.2"
-    util.promisify "^1.0.0"
     uuid "^3.3.3"
     v8-compile-cache "^1.1.2"
     webpack "~4.39.2"
@@ -4966,16 +4931,11 @@ gauge@~2.7.3:
     console-control-strings "^1.0.0"
     has-unicode "^2.0.0"
     object-assign "^4.1.0"
-    signal-exit "^3.0.0"
     string-width "^1.0.1"
-    strip-ansi "^3.0.1"
-    wide-align "^1.1.0"
-
 get-caller-file@^1.0.1:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/get-caller-file/-/get-caller-file-1.0.3.tgz#f978fa4c90d1dfe7ff2d6beda2a515e713bdcf4a"
   integrity sha512-3t6rVToeoZfYSGd8YoLFR2DJkiQrIiUrGcjvFX2mDw3bn6k2OtwHN0TNCLbBO+w8qTvimhDkv+LSscbJY1vE6w==
-
 get-port@^3.0.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/get-port/-/get-port-3.2.0.tgz#dd7ce7de187c06c8bf353796ac71e099f0980ebc"
@@ -4988,20 +4948,6 @@ get-stdin@^7.0.0:
 
 get-stream@3.0.0, get-stream@^3.0.0:
   version "3.0.0"
-  resolved "https://registry.yarnpkg.com/get-stream/-/get-stream-3.0.0.tgz#8e943d1358dc37555054ecbe2edb05aa174ede14"
-  integrity sha1-jpQ9E1jcN1VQVOy+LtsFqhdO3hQ=
-
-get-stream@^4.0.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/get-stream/-/get-stream-4.1.0.tgz#c1b255575f3dc21d59bfc79cd3d2b46b1c3a54b5"
-  integrity sha512-GMat4EJ5161kIy2HevLlr4luNjBgvmj413KaQA7jt4V8B4RDsfpHk7WQ9GVqfYyyx8OS/L66Kox+rJRNklLK7w==
-  dependencies:
-    pump "^3.0.0"
-
-get-value@^2.0.3, get-value@^2.0.6:
-  version "2.0.6"
-  resolved "https://registry.yarnpkg.com/get-value/-/get-value-2.0.6.tgz#dc15ca1c672387ca76bd37ac0a395ba2042a2c28"
-  integrity sha1-3BXKHGcjh8p2vTesCjlbogQqLCg=
 
 git-up@4.0.1:
   version "4.0.1"

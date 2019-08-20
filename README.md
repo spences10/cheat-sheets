@@ -26,7 +26,7 @@ A place for all my cheat sheets to live!
 
 - **[Prism](/sheets/prisma.md#prism)**
 
--**[VSCode](sheets/vscode.md#vscode)**
+- **[VSCode](sheets/vscode.md#vscode)**
 
 - **[Windows Subsystem Linux](/sheets/wsl.md#windows-subsystem-linux)**
 

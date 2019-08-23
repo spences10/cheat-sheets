@@ -780,10 +780,10 @@
   resolved "https://registry.yarnpkg.com/@emotion/unitless/-/unitless-0.7.4.tgz#a87b4b04e5ae14a88d48ebef15015f6b7d1f5677"
   integrity sha512-kBa+cDHOR9jpRJ+kcGMsysrls0leukrm68DmFQoMIWQcXdr2cZvyvypWuGYT7U+9kAExUE7+T7r6G3C3A6L8MQ==
 
-"@gatsbyjs/relay-compiler@2.0.0-printer-fix.2":
-  version "2.0.0-printer-fix.2"
-  resolved "https://registry.yarnpkg.com/@gatsbyjs/relay-compiler/-/relay-compiler-2.0.0-printer-fix.2.tgz#214db0e6072d40ea78ad5fabdb49d56bc95f4e99"
-  integrity sha512-7GeCCEQ7O15lMTT/SXy9HuRde4cv5vs465ZnLK2QCajSDLior+20yrMqHn1PGsJYK6nNZH7p3lw9qTCpqmuc7Q==
+"@gatsbyjs/relay-compiler@2.0.0-printer-fix.4":
+  version "2.0.0-printer-fix.4"
+  resolved "https://registry.yarnpkg.com/@gatsbyjs/relay-compiler/-/relay-compiler-2.0.0-printer-fix.4.tgz#4b06aeb4f2ceea5878b5832a2ced1bff9abb62bd"
+  integrity sha512-S2fYb2aBoBviXdtGRefBSYCuvGi2C/MmY75+XF4Ed9AzbeqEnmaKjYASbag4vagZ2n1cSQ+LMs0p0GiRDjKF0Q==
   dependencies:
     "@babel/generator" "^7.0.0"
     "@babel/parser" "^7.0.0"
@@ -4780,10 +4780,10 @@ gatsby-telemetry@^1.1.18:
     stack-utils "1.0.2"
     uuid "3.3.3"
 
-gatsby@2.13.79:
-  version "2.13.79"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.13.79.tgz#d1ec9e590443eb665046b5e695400100aa4d8e38"
-  integrity sha512-eqmObwm1/iL6oIJbJmn5f478klUwYZDHiZ6S1OwzOza3Qhe/z4PDnSsqaW6aVYrJLGhQi+/CjiSpYf7GjzSbUg==
+gatsby@2.13.80:
+  version "2.13.80"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.13.80.tgz#4ccb563da9c059fd328ce9dfffe3a1bec32a3f66"
+  integrity sha512-nPsp8jcFnCF5pmSs9dmJik7jVFa4+mdrxiEKa9guhj7bo7taByPP82u2fZ8Y9CjDLUz58KbHqTeMRotc3/gpww==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/core" "^7.0.0"

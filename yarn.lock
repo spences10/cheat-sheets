@@ -4782,10 +4782,10 @@ gatsby-react-router-scroll@^2.1.6:
     scroll-behavior "^0.9.10"
     warning "^3.0.0"
 
-gatsby-remark-autolink-headers@2.1.7:
-  version "2.1.7"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-autolink-headers/-/gatsby-remark-autolink-headers-2.1.7.tgz#796cb33eae9b81ef92b0b2490cfeeb88ea2b3299"
-  integrity sha512-k5d+1p6KpNLslR8Fu8OV8T1/o3faC76k2O3GfN16eSO1LjdkvCIS7xT619qnb6M7dZlWwLtVfH2OMf0y4BT+YA==
+gatsby-remark-autolink-headers@2.1.8:
+  version "2.1.8"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-autolink-headers/-/gatsby-remark-autolink-headers-2.1.8.tgz#38f6cf86dbc39d5d8b7030372a7d023af268700a"
+  integrity sha512-3zeZTZamEkOxxZB504tmC7NKt/iCDyBd6tpwsrQZWbf1AKT4YjEtvNkjCpBhQx97ZNQunhRbndQFhrz6Cd3bKw==
   dependencies:
     "@babel/runtime" "^7.5.5"
     github-slugger "^1.2.1"
@@ -4803,10 +4803,10 @@ gatsby-remark-smartypants@2.1.5:
     retext-smartypants "^3.0.3"
     unist-util-visit "^1.4.1"
 
-gatsby-source-filesystem@2.1.17:
-  version "2.1.17"
-  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.1.17.tgz#160a4ad106a24466cf9db8232eac2cfc4efe4569"
-  integrity sha512-pi/Tteg7zhc98D4noJEkPcgM0nHH0McCPSucycJS4Sw3dVCj2upBwWxaqUIaia5avYoklndMry4LViTUkr0YUg==
+gatsby-source-filesystem@2.1.18:
+  version "2.1.18"
+  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.1.18.tgz#fcf80c62f243f4bfdb5ff4b17e8b0a79ace3730d"
+  integrity sha512-+LHqeDsK61F1BKiH1QGUNhZBH33tQVqB/iRw4AfKf/IlhfsJo5TzpzouAQv3aZXVj+5L05MSLmP9negHPGerag==
   dependencies:
     "@babel/runtime" "^7.5.5"
     better-queue "^3.8.10"

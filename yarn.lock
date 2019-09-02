@@ -4668,10 +4668,10 @@ gatsby-plugin-google-analytics@2.1.13:
   dependencies:
     "@babel/runtime" "^7.5.5"
 
-gatsby-plugin-mdx@1.0.34:
-  version "1.0.34"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-mdx/-/gatsby-plugin-mdx-1.0.34.tgz#d89d4ede750e9cb2d4f966c01525b51241044499"
-  integrity sha512-W1y7e+aSKBkfF+3XrI34oI/8WmWDIL5vLGoi6S7Q/3/366sve+1r6K9LQG6mWzOylDrcpNoVXHFX2ICW4I6NFg==
+gatsby-plugin-mdx@1.0.35:
+  version "1.0.35"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-mdx/-/gatsby-plugin-mdx-1.0.35.tgz#74ec184a5f1532f4533b1815c5745d6f49ba203e"
+  integrity sha512-PBA7+LX08DXAVLez0ngVfZvUm65gtzXdfNPuTUknqYhHTBdOcyysCowwMifknGraGrr68xfgyQaTT7XJvvEifg==
   dependencies:
     "@babel/core" "^7.5.5"
     "@babel/generator" "^7.5.5"

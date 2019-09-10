@@ -4686,10 +4686,10 @@ gatsby-plugin-google-analytics@2.1.16:
   dependencies:
     "@babel/runtime" "^7.6.0"
 
-gatsby-plugin-mdx@1.0.40:
-  version "1.0.40"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-mdx/-/gatsby-plugin-mdx-1.0.40.tgz#be4e6f291c570ebff483d01f54f8d68b31a0b5b4"
-  integrity sha512-3pWNbqvywXsWpXTmUvK7FXfRhRnuKNgbxLB0gyLq1KbiyyDjuNuPmLGgOL4bVbXdKtSRedXtOGTiY5y6GM70Fg==
+gatsby-plugin-mdx@1.0.41:
+  version "1.0.41"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-mdx/-/gatsby-plugin-mdx-1.0.41.tgz#f3a4b390504461fb927faa122396a68a0eee7c26"
+  integrity sha512-V5VYyBWDyVO+rs71KbVgZmhiZkHgQIcgu1KC3cuJqMDgO5e1Xqhc7yBvfv75+GCN72fotDMeVdOC3FJic4HXQw==
   dependencies:
     "@babel/core" "^7.6.0"
     "@babel/generator" "^7.6.0"
@@ -4828,10 +4828,10 @@ gatsby-telemetry@^1.1.23:
     stack-utils "1.0.2"
     uuid "3.3.3"
 
-gatsby@2.15.13:
-  version "2.15.13"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.15.13.tgz#3de3f2a83ea26f7fdf3bf03f123d29c1acf0225c"
-  integrity sha512-tkAx+inFLRDq8ZeXkUTyJvjL0l+q0s7gpSQzs/98pHrl8OCUz0FPSdmwpMjlAjlfzH9P6+Yf7poxgMWZ4TQEQg==
+gatsby@2.15.14:
+  version "2.15.14"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.15.14.tgz#d72444feee88e1da4bfc6f2d45f3e57b03857dc7"
+  integrity sha512-/kSYUldRaVxD1e6WEQYfu1Gj8GMyYAt+Apw2Dm6HVanotf30mLmQulQSZKVd4ObBeXSHJWGaUn1kx7tbEZ+tHQ==
   dependencies:
     "@babel/code-frame" "^7.5.5"
     "@babel/core" "^7.6.0"

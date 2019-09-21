@@ -855,4 +855,38 @@ Then reset to the branch on the otigin:
 git reset --soft origin/develop
 ```
 
-Reference: https://stackoverflow.com/questions/11829911/push-changes-without-pull
+Reference:
+https://stackoverflow.com/questions/11829911/push-changes-without-pull
+
+## Gitignore
+
+You can automate the creation of your projects `gitignore` file using
+the [gitignore API](https://docs.gitignore.io/install/command-line).
+
+Setup the API:
+
+```
+git config --global alias.ignore \
+'!gi() { curl -sL https://www.gitignore.io/api/$@ ;}; gi'
+```
+
+Add to your shell configuration:
+
+Bash
+
+```
+echo "function gi() { curl -sL https://www.gitignore.io/api/\$@ ;}" >> \
+~/.bashrc && source ~/.bashrc
+```
+
+checkout `gi list` for the languages and editors supported. You can
+issue the following command inside your project
+
+```
+gi linux,visualstudiocode,node >> ./.gitignore
+```
+
+If you find yourself usign the same `.gitignore` on your projects you
+can create a global file (i.e. `.gitignore_global`), and copy to your new project. 
+
+Reference: https://docs.gitignore.io/install/command-line

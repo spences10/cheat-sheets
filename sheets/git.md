@@ -525,7 +525,7 @@ should go from black to green. 🎉
 
 ### SSH Keys With Passwords
 
-IF you add a password to your SSH key you will find yourself entering
+If you add a password to your SSH key you will find yourself entering
 the password to authenticate on each [pull, push] operation. This can
 get tedious, especially if you have a long password in your keys.
 
@@ -551,7 +551,7 @@ now to store the keys in, add the follwowinf to your `~/.bashrc` file:
 Open the `~/.bashrc` file with:
 
 ```bash
-nano ~/.ssh/config
+nano ~/.bashrc
 ```
 
 Now the SSH agent will start on each terminal session and you will

@@ -1,7 +1,7 @@
 ---
-title: MacOS
+title: macOS
 createdDate: 2018-04-05
-updatedDate: 2018-04-05
+updatedDate: 2019-08-16
 published: true
 ---
 
@@ -35,7 +35,7 @@ cmd + shift + cmd + 4 #then spacebar
 
 ## Keys
 
-## # character
+# character
 
 ```bash
 alt + 3

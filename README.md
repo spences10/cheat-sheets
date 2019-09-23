@@ -12,17 +12,21 @@ A place for all my cheat sheets to live!
 
 - **[Git](/sheets/git.md#useful-git-commands)**
 
-- **[Graphcool](/sheets/graphcool.md#yuseful-graphcool-commands)**
-
 - **[Hyper](/sheets/hyper.md#useful-hyper-info)**
 
 - **[JavaScript](/sheets/javascript.md#javascript)**
+
+- **[Linux](/sheets/linux.md#linux)**
+
+- **[Mac](/sheets/mac.md#mac)**
 
 - **[now](/sheets/now.md#now)**
 
 - **[npm](/sheets/npm.md#npm-plz)**
 
-- **[Ubuntu](/sheets/ubuntu.md#ubuntu)**
+- **[Prism](/sheets/prisma.md#prism)**
+
+- **[VSCode](sheets/vscode.md#vscode)**
 
 - **[Windows Subsystem Linux](/sheets/wsl.md#windows-subsystem-linux)**
 

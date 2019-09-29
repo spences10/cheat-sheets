@@ -35,7 +35,7 @@ cmd + shift + cmd + 4 #then spacebar
 
 ## Keys
 
-# character
+The '#' character
 
 ```bash
 alt + 3
@@ -47,4 +47,13 @@ Show hidden files
 
 ```bash
 shift + cmd + .
+```
+
+## Enable "Allow apps downloaded from:"
+
+You may notice that the option to "Allow apps downloaded from:
+Anywhere" is disabled, to enable it use:
+
+```bash
+sudo spctl --master-disable
 ```

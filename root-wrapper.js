@@ -2,8 +2,8 @@ import { MDXProvider } from '@mdx-js/react';
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { Code as CodeBlock } from './src/components/code';
-import { StyledH2 } from './src/components/H2';
-import { StyledH3 } from './src/components/H3';
+import { StyledH2 } from './src/components/h2';
+import { StyledH3 } from './src/components/h3';
 import { InlineCode } from './src/components/styles';
 import { themes } from './src/theme/globalStyle';
 

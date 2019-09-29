@@ -3,7 +3,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const HeaderWrapper = styled.header`
-  grid-area: h;
+  position: relative;
+  margin: 30px;
 `;
 
 export const Header = ({ title }) => {

@@ -8850,10 +8850,10 @@ pretty-quick@1.11.1:
     mri "^1.1.0"
     multimatch "^3.0.0"
 
-prism-react-renderer@0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/prism-react-renderer/-/prism-react-renderer-0.2.0.tgz#2267a67eccabc707018c762cfc8569550bd9bd59"
-  integrity sha512-VZBw7M+4Bz1/heKtshHItITwaYGG3AoZNVZm5KP+NeiKYm7ZA2XuTRuLt091fcoJSUNNSikwR3LkW1cdubkEXw==
+prism-react-renderer@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/prism-react-renderer/-/prism-react-renderer-1.0.1.tgz#98a437b01a5e48f140ae2321a95fa6693d4fe9de"
+  integrity sha512-EDdbBEoG9xD1zhN3pKYxTc10ifpTV2rqJBKpCTKRVAxNE3YP1XVp6Ewa+ydTnYALQOmHWsNVVJC0zzA9fafbew==
 
 prism-react-renderer@^0.1.0:
   version "0.1.7"

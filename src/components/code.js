@@ -8,18 +8,16 @@ import {
   LiveProvider,
 } from 'react-live';
 import styled from 'styled-components';
+import { copyToClipboard } from '../util/copy-to-clipboard';
 // import { Dump } from '../utils/helpers'
 
 export const Pre = styled.pre`
+  position: relative;
   text-align: left;
   margin: 1em 0;
   padding: 0.5em;
   overflow-x: auto;
   border-radius: 3px;
-  & .token-line {
-    line-height: 1.3em;
-    height: 1.3em;
-  }
   font-family: dm;
 `;
 
@@ -28,6 +26,18 @@ export const LineNo = styled.span`
   width: 2em;
   user-select: none;
   opacity: 0.3;
+`;
+
+const CopyCode = styled.button`
+  position: absolute;
+  right: 0.25rem;
+  border: 0;
+  border-radius: 3px;
+  margin: 0.25em;
+  opacity: 0.3;
+  &:hover {
+    opacity: 1;
+  }
 `;
 
 export const Code = ({ codeString, language, ...props }) => {
@@ -40,6 +50,11 @@ export const Code = ({ codeString, language, ...props }) => {
       </LiveProvider>
     );
   }
+
+  const handleClick = () => {
+    copyToClipboard(codeString);
+  };
+
   return (
     <>
       <Highlight
@@ -55,6 +70,7 @@ export const Code = ({ codeString, language, ...props }) => {
           getTokenProps,
         }) => (
           <Pre className={className} style={style}>
+            <CopyCode onClick={handleClick}>Copy</CopyCode>
             {tokens.map((line, i) => (
               <div {...getLineProps({ line, key: i })}>
                 <LineNo>{i + 1}</LineNo>

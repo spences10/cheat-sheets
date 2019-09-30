@@ -5,9 +5,7 @@ import { Code as CodeBlock } from './src/components/code';
 import { StyledH2 } from './src/components/h2';
 import { StyledH3 } from './src/components/h3';
 import { InlineCode } from './src/components/styles';
-import { themes } from './src/theme/globalStyle';
-
-const theme = themes['theme1'];
+import { theme } from './src/theme/globalStyle';
 
 // import { Dump } from './src/utils/helpers';
 // components is its own object outside of render so that the references to

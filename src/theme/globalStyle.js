@@ -71,10 +71,13 @@ export const GlobalStyle = createGlobalStyle`
   /* * {
     outline: 1px solid red !important;
   } */
+  html {
+    min-height: 100%;
+    background: linear-gradient(#fff, #f2f2f2);
+  }
   body {
     margin: 0;
     padding: 0;
-    height: 100%;
     min-height: 100%;
     line-height: 1.3125;
   }

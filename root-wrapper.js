@@ -1,25 +1,22 @@
 import { MDXProvider } from '@mdx-js/react';
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
-import { Code as CodeBlock } from './src/components/code';
-import { StyledH2 } from './src/components/H2';
-import { StyledH3 } from './src/components/H3';
-import { InlineCode } from './src/components/styles';
-import { themes } from './src/theme/globalStyle';
-
-const theme = themes['theme1'];
+import { Code, H1, H2, H3 } from './src/components/page-elements';
+import { InlineCode } from './src/components/page-elements/styles';
+import { theme } from './src/theme/globalStyle';
 
 // import { Dump } from './src/utils/helpers';
 // components is its own object outside of render so that the references to
 // components are stable
 const components = {
-  h2: StyledH2,
-  h3: StyledH3,
+  h1: H1,
+  h2: H2,
+  h3: H3,
   pre: ({ children: { props } }) => {
     // if there's a codeString and some props, we passed the test
     if (props.mdxType === 'code') {
       return (
-        <CodeBlock
+        <Code
           codeString={props.children.trim()}
           language={
             props.className &&

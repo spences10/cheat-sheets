@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { HeaderLink } from './LinkedHeaders';
+import { HeaderLink } from './linked-headers';
 
-export const StyledH3 = styled.h3`
+export const H2 = styled.h2`
   font-family: ${props => props.theme.fontBody};
   color: ${props => props.theme.fontDark};
   ${() => HeaderLink}

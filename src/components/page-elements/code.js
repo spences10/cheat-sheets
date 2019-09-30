@@ -8,7 +8,7 @@ import {
   LiveProvider,
 } from 'react-live';
 import styled from 'styled-components';
-import { copyToClipboard } from '../util/copy-to-clipboard';
+import { copyToClipboard } from '../../util/copy-to-clipboard';
 // import { Dump } from '../utils/helpers'
 
 export const Pre = styled.pre`

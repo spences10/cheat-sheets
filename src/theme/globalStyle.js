@@ -16,14 +16,7 @@ export const theme = {
 };
 
 const fonts = () => {
-  const list = [
-    'Josefin+Sans:400,700|',
-    'Poppins:400,700|',
-    'Trirong:400,700|',
-    'Rubik:400,700|',
-    'Eczar:400,700|',
-    'Taviraj:400,700|',
-  ];
+  const list = ['Josefin+Sans:400,700|', 'Poppins:400,700|'];
   return list.join('');
 };
 

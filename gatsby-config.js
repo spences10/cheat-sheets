@@ -41,5 +41,18 @@ module.exports = {
         anonymize: false,
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Cheat Sheets`,
+        short_name: `Cheat Sheets`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#a2466c`,
+        display: `standalone`,
+        icon: `./static/favicon.png`,
+      },
+    },
+    `gatsby-plugin-offline`,
   ],
 };

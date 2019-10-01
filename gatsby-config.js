@@ -44,8 +44,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `GatsbyJS`,
-        short_name: `GatsbyJS`,
+        name: `Cheat Sheets`,
+        short_name: `Cheat Sheets`,
         start_url: `/`,
         background_color: `#f7f0eb`,
         theme_color: `#a2466c`,

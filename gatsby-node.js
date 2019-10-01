@@ -4,7 +4,7 @@ const { createFilePath } = require(`gatsby-source-filesystem`);
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
   const cheatSheetTemplate = path.resolve(
-    'src/templates/cheatSheetTemplate.js'
+    'src/templates/cheat-sheet-template.js'
   );
 
   // returns promise that will start with this graphql query

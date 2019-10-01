@@ -1,6 +1,6 @@
 {
   "name": "cheat-sheets",
-  "version": "1.0.203",
+  "version": "1.0.204",
   "author": "Scott Spence <spences10apps@gmail.com>(https://scottspence.me/)",
   "license": "MIT",
   "description": "Cheat sheets",
@@ -33,7 +33,7 @@
     "react": "16.10.1",
     "react-dom": "16.10.1",
     "react-helmet": "5.2.1",
-    "react-live": "2.2.0",
+    "react-live": "2.2.1",
     "styled-components": "4.4.0"
   },
   "devDependencies": {

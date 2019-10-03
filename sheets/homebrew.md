@@ -30,3 +30,12 @@ brew cask install visual-studio-code-insiders
 ```bash
 brew cask install firefox firefox-developer-edition
 ```
+
+## Check for and install updates
+
+Check for updates on installed apps and upgrade anything that is
+outdated.
+
+```bash
+brew update --verbose && brew upgrade `brew outdated`
+```

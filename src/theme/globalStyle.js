@@ -11,12 +11,17 @@ export const theme = {
   fontDark: '#202124',
   fontLight: '#5f6368',
   fontWhite: '#ffffff',
-  fontHeader: '"Josefin Sans", sans, sans-serif',
-  fontBody: 'Poppins, sans-serif',
+  h1: '"Josefin Slab", sans, sans-serif',
+  h2: '"Pontano Sans", sans, sans-serif',
+  p: 'Maitree, sans-serif',
 };
 
 const fonts = () => {
-  const list = ['Josefin+Sans:400,700|', 'Poppins:400,700|'];
+  const list = [
+    'Josefin+Slab:400,700|',
+    'Maitree:400,700|',
+    'Pontano+Sans:400:700|',
+  ];
   return list.join('');
 };
 

@@ -6,7 +6,7 @@ import { Layout } from '../components/layout';
 
 const StyledTitle = styled.h1`
   color: ${props => props.theme.fontDark};
-  font-family: ${props => props.theme.fontHeader};
+  font-family: ${props => props.theme.h1};
 `;
 
 const StyledDate = styled.p`

@@ -19,7 +19,7 @@ export const SheetPreview = ({ hit }) => {
         />
       </H1>
       <p>
-        <Highlight hit={hit} attribute={headings} tagName="mark" />
+        <Highlight hit={hit} attribute="excerpt" tagName="mark" />
       </p>
     </Link>
   );

@@ -1,6 +1,6 @@
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
-  // path: `.env.production`,
+  // path: `.env.development`,
 });
 
 const siteMetadata = {
@@ -28,6 +28,7 @@ const sheetsQuery = `
       fields {
         slug
       }
+      excerpt(pruneLength:1000)
     }
   }
 }

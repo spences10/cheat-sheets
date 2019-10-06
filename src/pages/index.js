@@ -10,8 +10,8 @@ import { Layout } from '../components/layout';
 import { SheetPreview } from '../components/sheet-preview';
 
 const searchClient = algoliasearch(
-  process.env.ALGOLIA_APP_ID,
-  process.env.ALGOLIA_SEARCH_ONLY_KEY
+  process.env.GATSBY_ALGOLIA_APP_ID,
+  process.env.GATSBY_ALGOLIA_SEARCH_ONLY_KEY
 );
 
 const StyledHits = styled(Hits)`
@@ -40,7 +40,7 @@ export default () => (
   <Layout>
     <InstantSearch
       searchClient={searchClient}
-      indexName={process.env.ALGOLIA_INDEX_NAME}>
+      indexName={process.env.GATSBY_ALGOLIA_INDEX_NAME}>
       <Box />
       <StyledHits hitComponent={SheetPreview} />
     </InstantSearch>

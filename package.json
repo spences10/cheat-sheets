@@ -7,7 +7,7 @@
   "scripts": {
     "clean": "rm -rf .cache/ && rm -rf public/",
     "build": "gatsby build",
-    "dev": "gatsby develop -p 4488 -o",
+    "dev": "gatsby develop -p 8488 -o",
     "format": "pretty-quick"
   },
   "husky": {

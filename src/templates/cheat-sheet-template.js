@@ -3,6 +3,8 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import React from 'react';
 import styled from 'styled-components';
 import { Layout } from '../components/layout';
+import { SEO } from '../components/seo';
+import { useSiteMetadata } from '../hooks/useSiteMetadata';
 
 const StyledTitle = styled.h1`
   color: ${props => props.theme.fontDark};
@@ -15,12 +17,27 @@ const StyledDate = styled.p`
   color: ${props => props.theme.fontLight};
 `;
 
-const cheatSheetPage = ({ data, pageContext }) => {
-  const { frontmatter, body } = data.mdx;
+export default ({ data, pageContext }) => {
+  const { frontmatter, body, fields, headings } = data.mdx;
+  const { image: defaultImage } = useSiteMetadata();
   // const { prev, next } = pageContext
   // const { imageLink } = data.site.siteMetadata
+  const headingsList =
+    headings
+      .map(h => {
+        return h.value;
+      })
+      .join(', ') || 'noting yo!';
   return (
     <Layout>
+      <SEO
+        title={frontmatter.title}
+        description={headingsList}
+        image={defaultImage}
+        pathname={fields.slug}
+        // keywords={headingsList}
+        article
+      />
       <StyledTitle>{frontmatter.title}</StyledTitle>
       <StyledDate>Created: {frontmatter.createdDate}</StyledDate>
       <StyledDate>Updated: {frontmatter.updatedDate}</StyledDate>
@@ -28,8 +45,6 @@ const cheatSheetPage = ({ data, pageContext }) => {
     </Layout>
   );
 };
-
-export default cheatSheetPage;
 
 export const query = graphql`
   query SheetsBySlug($slug: String!) {
@@ -40,6 +55,13 @@ export const query = graphql`
         title
         createdDate(formatString: "YYYY MMMM Do")
         updatedDate(formatString: "YYYY MMMM Do")
+      }
+      fields {
+        slug
+      }
+      headings {
+        value
+        depth
       }
     }
   }

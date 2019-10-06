@@ -52,13 +52,13 @@ const AlgoliaLogo = styled.div`
 `;
 
 export default () => {
-  const { description, imageLink, title } = useSiteMetadata();
+  const { description, image, title } = useSiteMetadata();
   return (
     <Layout>
       <SEO
         title={title}
         description={description || 'nothin’'}
-        image={imageLink}
+        image={image}
         keywords={[
           `cheat sheets`,
           `bash`,

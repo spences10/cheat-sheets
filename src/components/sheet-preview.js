@@ -4,11 +4,6 @@ import { Highlight } from 'react-instantsearch-dom';
 import { H1 } from './page-elements';
 
 export const SheetPreview = ({ hit }) => {
-  const headings = hit.headings
-    .map(h => {
-      return h.value;
-    })
-    .join(', ');
   return (
     <Link to={hit.fields.slug}>
       <H1>
@@ -18,8 +13,43 @@ export const SheetPreview = ({ hit }) => {
           tagName="mark"
         />
       </H1>
-      <p>
+      {/* <p>
         <Highlight hit={hit} attribute="excerpt" tagName="mark" />
+      </p> */}
+      <p>
+        <Highlight
+          hit={hit}
+          attribute="headings[0].value"
+          tagName="mark"
+        />
+      </p>
+      <p>
+        <Highlight
+          hit={hit}
+          attribute="headings[1].value"
+          tagName="mark"
+        />
+      </p>
+      <p>
+        <Highlight
+          hit={hit}
+          attribute="headings[2].value"
+          tagName="mark"
+        />
+      </p>
+      <p>
+        <Highlight
+          hit={hit}
+          attribute="headings[3].value"
+          tagName="mark"
+        />
+      </p>
+      <p>
+        <Highlight
+          hit={hit}
+          attribute="headings[4].value"
+          tagName="mark"
+        />
       </p>
     </Link>
   );

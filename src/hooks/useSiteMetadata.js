@@ -9,6 +9,15 @@ export const useSiteMetadata = () => {
             title
             siteUrl
             siteTitle
+            titleTemplate
+            description
+            image
+            twitterUsername
+            faviconPng
+            backgroundColour
+            themeColour
+            siteLanguage
+            siteLocale
           }
         }
       }

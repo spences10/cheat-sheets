@@ -5,11 +5,10 @@ require('dotenv').config({
 
 const siteMetadata = {
   title: `Cheat Sheets`,
-  siteUrl: `https://cheat-sheets.ss10.dev`,
+  siteUrl: process.env.DEPLOY_URL || `http://localhost:9000/`,
   siteTitle: `Cheat Sheets`,
   titleTemplate: `%s · Modern web development hints and tips.`,
   description: `Every day commands and config used for modern web development.`,
-  siteUrl: process.env.DEPLOY_URL || `http://localhost:9000/`,
   image: `/favicon.png`,
   twitterUsername: `@spences10`,
   faviconPng: `./static/favicon.png`,
@@ -23,22 +22,18 @@ const sheetsQuery = `
 {
   allMdx {
     nodes {
-      fileAbsolutePath
       frontmatter {
         title
         createdDate
         updatedDate
-        published
       }
       headings {
         value
         depth
       }
-      tableOfContents
       fields {
         slug
       }
-      excerpt(pruneLength:1000)
     }
   }
 }

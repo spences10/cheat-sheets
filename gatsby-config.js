@@ -1,6 +1,7 @@
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
   // path: `.env.development`,
+  // path: `.env.production`,
 });
 
 const siteMetadata = {
@@ -27,10 +28,7 @@ const sheetsQuery = `
         createdDate
         updatedDate
       }
-      headings {
-        value
-        depth
-      }
+      tableOfContents
       fields {
         slug
       }

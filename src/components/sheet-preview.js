@@ -4,53 +4,68 @@ import { Highlight } from 'react-instantsearch-dom';
 import { H1 } from './page-elements';
 
 export const SheetPreview = ({ hit }) => {
+  const hrefsArr = [];
+  hit.tableOfContents.items.map(i => {
+    return hrefsArr.push(i.url);
+  });
+
   return (
-    <Link to={hit.fields.slug}>
-      <H1>
-        <Highlight
-          hit={hit}
-          attribute="frontmatter.title"
-          tagName="mark"
-        />
-      </H1>
-      {/* <p>
-        <Highlight hit={hit} attribute="excerpt" tagName="mark" />
-      </p> */}
+    <>
+      <Link to={hit.fields.slug}>
+        <H1>
+          <Highlight
+            hit={hit}
+            attribute="frontmatter.title"
+            tagName="mark"
+          />
+        </H1>
+      </Link>
+
       <p>
-        <Highlight
-          hit={hit}
-          attribute="headings[0].value"
-          tagName="mark"
-        />
+        <Link to={hit.fields.slug + hrefsArr[0]}>
+          <Highlight
+            hit={hit}
+            attribute="tableOfContents.items[0].title"
+            tagName="mark"
+          />
+        </Link>
       </p>
       <p>
-        <Highlight
-          hit={hit}
-          attribute="headings[1].value"
-          tagName="mark"
-        />
+        <Link to={hit.fields.slug + hrefsArr[1]}>
+          <Highlight
+            hit={hit}
+            attribute="tableOfContents.items[1].title"
+            tagName="mark"
+          />
+        </Link>
       </p>
       <p>
-        <Highlight
-          hit={hit}
-          attribute="headings[2].value"
-          tagName="mark"
-        />
+        <Link to={hit.fields.slug + hrefsArr[2]}>
+          <Highlight
+            hit={hit}
+            attribute="tableOfContents.items[2].title"
+            tagName="mark"
+          />
+        </Link>
       </p>
       <p>
-        <Highlight
-          hit={hit}
-          attribute="headings[3].value"
-          tagName="mark"
-        />
+        <Link to={hit.fields.slug + hrefsArr[3]}>
+          <Highlight
+            hit={hit}
+            attribute="tableOfContents.items[3].title"
+            tagName="mark"
+          />
+        </Link>
       </p>
       <p>
-        <Highlight
-          hit={hit}
-          attribute="headings[4].value"
-          tagName="mark"
-        />
+        <Link to={hit.fields.slug + hrefsArr[4]}>
+          <Highlight
+            hit={hit}
+            attribute="tableOfContents.items[4].title"
+            tagName="mark"
+          />
+        </Link>
       </p>
-    </Link>
+    </>
   );
 };

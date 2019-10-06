@@ -1,12 +1,59 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+  // path: `.env.development`,
+});
+
 const siteMetadata = {
   title: `Cheat Sheets`,
   siteUrl: `https://cheat-sheets.ss10.dev`,
   siteTitle: `Cheat Sheets`,
 };
 
+const sheetsQuery = `
+{
+  allMdx {
+    nodes {
+      fileAbsolutePath
+      frontmatter {
+        title
+        createdDate
+        updatedDate
+        published
+      }
+      headings {
+        value
+        depth
+      }
+      tableOfContents
+      fields {
+        slug
+      }
+      excerpt(pruneLength:1000)
+    }
+  }
+}
+`;
+
+const queries = [
+  {
+    query: sheetsQuery,
+    transformer: ({ data }) => data.allMdx.nodes,
+  },
+];
+
 module.exports = {
   siteMetadata: siteMetadata,
   plugins: [
+    {
+      resolve: `gatsby-plugin-algolia`,
+      options: {
+        appId: process.env.GATSBY_ALGOLIA_APP_ID,
+        apiKey: process.env.GATSBY_ALGOLIA_API_KEY,
+        indexName: process.env.GATSBY_ALGOLIA_INDEX_NAME, // for all queries
+        queries,
+        chunkSize: 10000, // default: 1000
+      },
+    },
     {
       resolve: `gatsby-plugin-mdx`,
       options: {

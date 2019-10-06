@@ -13,6 +13,9 @@ const AppLayout = styled.main`
 
 const Wrapper = styled.div`
   margin: 30px;
+  ul {
+    padding: 0;
+  }
 `;
 
 export const Layout = ({ children }) => {

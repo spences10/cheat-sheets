@@ -6,6 +6,7 @@ import {
   SearchBox,
 } from 'react-instantsearch-dom';
 import styled from 'styled-components';
+import algoliaLogo from '../../static/search-by-algolia-light-background.svg';
 import { Layout } from '../components/layout';
 import { SheetPreview } from '../components/sheet-preview';
 
@@ -23,6 +24,7 @@ const StyledHits = styled(Hits)`
 `;
 
 const Box = styled(SearchBox)`
+  position: relative;
   input {
     width: 100%;
     height: 50px;
@@ -36,12 +38,24 @@ const Box = styled(SearchBox)`
   }
 `;
 
+const AlgoliaLogo = styled.div`
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 30px;
+  width: 100%;
+  background-image: url(${algoliaLogo});
+  background-repeat: no-repeat;
+  background-position: right;
+`;
+
 export default () => (
   <Layout>
     <InstantSearch
       searchClient={searchClient}
       indexName={process.env.GATSBY_ALGOLIA_INDEX_NAME}>
       <Box />
+      <AlgoliaLogo />
       <StyledHits hitComponent={SheetPreview} />
     </InstantSearch>
 

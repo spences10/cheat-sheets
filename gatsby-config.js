@@ -5,30 +5,35 @@ require('dotenv').config({
 
 const siteMetadata = {
   title: `Cheat Sheets`,
-  siteUrl: `https://cheat-sheets.ss10.dev`,
+  siteUrl: process.env.DEPLOY_URL || `http://localhost:9000/`,
   siteTitle: `Cheat Sheets`,
+  titleTemplate: `%s · Modern web development hints and tips.`,
+  description: `Every day commands and config used for modern web development.`,
+  image: `/favicon.png`,
+  twitterUsername: `@spences10`,
+  faviconPng: `./static/favicon.png`,
+  backgroundColour: `#f7f0eb`,
+  themeColour: `#a2466c`,
+  siteLanguage: `en-GB`,
+  siteLocale: `en_gb`,
 };
 
 const sheetsQuery = `
 {
   allMdx {
     nodes {
-      fileAbsolutePath
       frontmatter {
         title
         createdDate
         updatedDate
-        published
       }
       headings {
         value
         depth
       }
-      tableOfContents
       fields {
         slug
       }
-      excerpt(pruneLength:1000)
     }
   }
 }
@@ -44,6 +49,7 @@ const queries = [
 module.exports = {
   siteMetadata: siteMetadata,
   plugins: [
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-algolia`,
       options: {
@@ -94,10 +100,10 @@ module.exports = {
         name: `Cheat Sheets`,
         short_name: `Cheat Sheets`,
         start_url: `/`,
-        background_color: `#f7f0eb`,
-        theme_color: `#a2466c`,
+        background_color: siteMetadata.backgroundColour,
+        theme_color: siteMetadata.themeColour,
         display: `standalone`,
-        icon: `./static/favicon.png`,
+        icon: siteMetadata.faviconPng,
       },
     },
     `gatsby-plugin-offline`,

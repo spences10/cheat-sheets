@@ -31,7 +31,7 @@ export const SEO = ({
 
   return (
     <>
-      <Helmet title={title}>
+      <Helmet title={title} titleTemplate={titleTemplate}>
         <meta name="description" content={seo.description} />
         <meta name="image" content={seo.image} />
         <html lang={siteLanguage || 'en-gb'} />

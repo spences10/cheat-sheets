@@ -8,7 +8,9 @@ import {
 import styled from 'styled-components';
 import algoliaLogo from '../../static/search-by-algolia-light-background.svg';
 import { Layout } from '../components/layout';
+import { SEO } from '../components/seo';
 import { SheetPreview } from '../components/sheet-preview';
+import { useSiteMetadata } from '../hooks/useSiteMetadata';
 
 const searchClient = algoliasearch(
   process.env.GATSBY_ALGOLIA_APP_ID,
@@ -49,16 +51,37 @@ const AlgoliaLogo = styled.div`
   background-position: right;
 `;
 
-export default () => (
-  <Layout>
-    <InstantSearch
-      searchClient={searchClient}
-      indexName={process.env.GATSBY_ALGOLIA_INDEX_NAME}>
-      <Box />
-      <AlgoliaLogo />
-      <StyledHits hitComponent={SheetPreview} />
-    </InstantSearch>
-
-    {/* <SheetsList /> */}
-  </Layout>
-);
+export default () => {
+  const { description, imageLink, title } = useSiteMetadata();
+  return (
+    <Layout>
+      <SEO
+        title={title}
+        description={description || 'nothin’'}
+        image={imageLink}
+        keywords={[
+          `cheat sheets`,
+          `bash`,
+          `fish`,
+          `zsh`,
+          `git`,
+          `javascript`,
+          `linux`,
+          `macOS`,
+          `graphql`,
+          `vscode`,
+          `wsl`,
+          `yarn`,
+          `npm`,
+        ]}
+      />
+      <InstantSearch
+        searchClient={searchClient}
+        indexName={process.env.GATSBY_ALGOLIA_INDEX_NAME}>
+        <Box />
+        <AlgoliaLogo />
+        <StyledHits hitComponent={SheetPreview} />
+      </InstantSearch>
+    </Layout>
+  );
+};

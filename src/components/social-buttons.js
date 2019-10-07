@@ -1,9 +1,14 @@
 import React from 'react';
 import GitHubButton from 'react-github-btn';
+import styled from 'styled-components';
+
+const Wrapper = styled.div`
+  margin: 20px 0;
+`;
 
 export const SocialButtons = () => {
   return (
-    <>
+    <Wrapper>
       <GitHubButton
         href="https://github.com/spences10/cheat-sheets"
         data-icon="octicon-star"
@@ -50,6 +55,6 @@ export const SocialButtons = () => {
         aria-label="Download spences10/cheat-sheets on GitHub">
         Download
       </GitHubButton>
-    </>
+    </Wrapper>
   );
 };

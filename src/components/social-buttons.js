@@ -23,6 +23,10 @@ const Button = ({
   );
 };
 
+const Wrapper = styled.div`
+  margin-top: 20px;
+`;
+
 const ButtonWrapper = styled.div`
   display: inline-block;
   margin-right: 5px;
@@ -30,7 +34,7 @@ const ButtonWrapper = styled.div`
 
 export const SocialButtons = () => {
   return (
-    <>
+    <Wrapper>
       <ButtonWrapper>
         <Button
           ariaLabel={'Star spences10/cheat-sheets on GitHub'}
@@ -81,6 +85,6 @@ export const SocialButtons = () => {
           Download
         </Button>
       </ButtonWrapper>
-    </>
+    </Wrapper>
   );
 };

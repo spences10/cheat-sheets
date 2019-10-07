@@ -98,7 +98,8 @@ export default () => {
       <SocialButtons />
       <InstantSearch
         searchClient={searchClient}
-        indexName={process.env.GATSBY_ALGOLIA_INDEX_NAME}>
+        indexName={process.env.GATSBY_ALGOLIA_INDEX_NAME}
+      >
         <Box />
         <AlgoliaLogo />
         <StyledHits hitComponent={SheetPreview} />

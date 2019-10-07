@@ -11,6 +11,7 @@ import algoliaLogo from '../../static/search-by-algolia-light-background.svg';
 import { Layout } from '../components/layout';
 import { SEO } from '../components/seo';
 import { SheetPreview } from '../components/sheet-preview';
+import { SocialButtons } from '../components/social-buttons';
 import { useSiteMetadata } from '../hooks/useSiteMetadata';
 
 const searchClient = algoliasearch(
@@ -94,6 +95,7 @@ export default () => {
         target="_blank"
         rel="noopener"
       />
+      <SocialButtons />
       <InstantSearch
         searchClient={searchClient}
         indexName={process.env.GATSBY_ALGOLIA_INDEX_NAME}>

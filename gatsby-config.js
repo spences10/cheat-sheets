@@ -6,7 +6,8 @@ require('dotenv').config({
 
 const siteMetadata = {
   title: `Cheat Sheets`,
-  siteUrl: process.env.DEPLOY_URL || `http://localhost:9000/`,
+  siteUrl: `https://cheat-sheets.ss10.dev`,
+  gitHubUrl: `https://github.com/spences10/cheat-sheets`,
   siteTitle: `Cheat Sheets`,
   titleTemplate: `%s · Modern web development hints and tips.`,
   description: `Every day commands and config used for modern web development.`,

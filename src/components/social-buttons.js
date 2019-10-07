@@ -2,59 +2,85 @@ import React from 'react';
 import GitHubButton from 'react-github-btn';
 import styled from 'styled-components';
 
-const Wrapper = styled.div`
-  margin: 20px 0;
+const Button = ({
+  ariaLabel,
+  dataIcon,
+  count,
+  size,
+  route,
+  children,
+}) => {
+  return (
+    <GitHubButton
+      aria-label={ariaLabel}
+      data-icon={dataIcon}
+      data-show-count={true}
+      data-size={null}
+      href={`https://github.com/spences10/${route || ''}`}
+    >
+      {children}
+    </GitHubButton>
+  );
+};
+
+const ButtonWrapper = styled.div`
+  display: inline-block;
+  margin-right: 5px;
 `;
 
 export const SocialButtons = () => {
   return (
-    <Wrapper>
-      <GitHubButton
-        href="https://github.com/spences10/cheat-sheets"
-        data-icon="octicon-star"
-        data-size="large"
-        data-show-count="true"
-        aria-label="Star spences10/cheat-sheets on GitHub">
-        Star
-      </GitHubButton>
-      <GitHubButton
-        href="https://github.com/spences10"
-        data-size="large"
-        data-show-count="true"
-        aria-label="Follow @spences10 on GitHub">
-        Follow @spences10
-      </GitHubButton>
-      <GitHubButton
-        href="https://github.com/spences10/cheat-sheets/subscription"
-        data-icon="octicon-eye"
-        data-size="large"
-        data-show-count="true"
-        aria-label="Watch spences10/cheat-sheets on GitHub">
-        Watch
-      </GitHubButton>
-      <GitHubButton
-        href="https://github.com/spences10/cheat-sheets/fork"
-        data-icon="octicon-repo-forked"
-        data-size="large"
-        data-show-count="true"
-        aria-label="Fork spences10/cheat-sheets on GitHub">
-        Fork
-      </GitHubButton>
-      <GitHubButton
-        href="https://github.com/spences10/cheat-sheets/issues"
-        data-icon="octicon-issue-opened"
-        data-size="large"
-        data-show-count="true"
-        aria-label="Issue spences10/cheat-sheets on GitHub">
-        Issue
-      </GitHubButton>
-      <GitHubButton
-        href="https://github.com/spences10/cheat-sheets/archive/master.zip"
-        data-icon="octicon-cloud-download"
-        data-size="large"
-        aria-label="Download spences10/cheat-sheets on GitHub">
-        Download
-      </GitHubButton>
-    </Wrapper>
+    <>
+      <ButtonWrapper>
+        <Button
+          ariaLabel={'Star spences10/cheat-sheets on GitHub'}
+          dataIcon={'octicon-star'}
+          route={'cheat-sheets/'}
+        >
+          Star
+        </Button>
+      </ButtonWrapper>
+      <ButtonWrapper>
+        <Button ariaLabel={'Follow @spences10 on GitHub'}>
+          Follow @spences10
+        </Button>
+      </ButtonWrapper>
+      <ButtonWrapper>
+        <Button
+          ariaLabel={'Watch spences10/cheat-sheets on GitHub'}
+          dataIcon={'octicon-eye'}
+          route={'cheat-sheets/subscription/'}
+        >
+          Watch
+        </Button>
+      </ButtonWrapper>
+      <ButtonWrapper>
+        <Button
+          ariaLabel={'Fork spences10/cheat-sheets on GitHub'}
+          dataIcon={'octicon-repo-forked'}
+          route={'cheat-sheets/fork'}
+        >
+          Fork
+        </Button>
+      </ButtonWrapper>
+      <ButtonWrapper>
+        <Button
+          ariaLabel={'Issue spences10/cheat-sheets on GitHub'}
+          dataIcon={'octicon-issue-opened'}
+          route={'cheat-sheets/issues'}
+        >
+          Issue
+        </Button>
+      </ButtonWrapper>
+      <ButtonWrapper>
+        <Button
+          ariaLabel={'Download spences10/cheat-sheets on GitHub'}
+          dataIcon={'octicon-cloud-download'}
+          route={'cheat-sheets/archive/master.zip'}
+        >
+          Download
+        </Button>
+      </ButtonWrapper>
+    </>
   );
 };

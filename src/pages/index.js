@@ -6,6 +6,7 @@ import {
   SearchBox,
 } from 'react-instantsearch-dom';
 import styled from 'styled-components';
+import gitHubCorner from '../../static/github-corner-right.svg';
 import algoliaLogo from '../../static/search-by-algolia-light-background.svg';
 import { Layout } from '../components/layout';
 import { SEO } from '../components/seo';
@@ -51,8 +52,19 @@ const AlgoliaLogo = styled.div`
   background-position: right;
 `;
 
+const GitHubCorner = styled.a`
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 80px;
+  width: 80px;
+  background-image: url(${gitHubCorner});
+  /* background-repeat: no-repeat; */
+  /* background-position: right; */
+`;
+
 export default () => {
-  const { description, image, title } = useSiteMetadata();
+  const { description, image, title, gitHubUrl } = useSiteMetadata();
   return (
     <Layout>
       <SEO
@@ -74,6 +86,13 @@ export default () => {
           `yarn`,
           `npm`,
         ]}
+      />
+      <GitHubCorner
+        role="link"
+        aria-label="github repo link"
+        href={gitHubUrl}
+        target="_blank"
+        rel="noopener"
       />
       <InstantSearch
         searchClient={searchClient}

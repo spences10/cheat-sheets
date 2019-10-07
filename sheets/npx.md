@@ -28,5 +28,5 @@ npx npm-check -u
 ## browsers list
 
 ```bash
-npx browserslist "last 2 versions"
+npx browserslist "last 2 versions, not dead, not < 2%"
 ```

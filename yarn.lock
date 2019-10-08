@@ -4901,10 +4901,10 @@ gatsby-plugin-manifest@2.2.20:
     semver "^5.7.1"
     sharp "^0.23.1"
 
-gatsby-plugin-mdx@1.0.48:
-  version "1.0.48"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-mdx/-/gatsby-plugin-mdx-1.0.48.tgz#d19fc62a4487f6cd9aa33275248e5607e881e7fa"
-  integrity sha512-rrk/PhLkYrnyzdCuHWJnIob+PY9ihk07TtiboFpHQJcu4HnGtPFnxuCRhG76PaWzocGOMv2tVvDJEVTSwD4j5g==
+gatsby-plugin-mdx@1.0.49:
+  version "1.0.49"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-mdx/-/gatsby-plugin-mdx-1.0.49.tgz#03ff15182a31f9e94f297218da14ca5827714c14"
+  integrity sha512-8xea+eI/e50vMwnzBCTuadKfL6Ab1m0RpPksbd8ckSmMIb+/mhw4vEt/ObLw4MDkMPM2a3b6FbMBhHJCuGhJgQ==
   dependencies:
     "@babel/core" "^7.6.2"
     "@babel/generator" "^7.6.2"
@@ -5012,10 +5012,10 @@ gatsby-remark-smartypants@2.1.11:
     retext-smartypants "^3.0.3"
     unist-util-visit "^1.4.1"
 
-gatsby-source-filesystem@2.1.29:
-  version "2.1.29"
-  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.1.29.tgz#ca4dd77c850152b1a57d91b6535930b67b35fe73"
-  integrity sha512-MRJ3jkGhxJDztXzw0oeh4hizLzs5hGIc/Jq5gwUi5NcrKCR5HDbOFvVVE8irfkoNh7TuvHf6sjWFzDgzlUADgw==
+gatsby-source-filesystem@2.1.30:
+  version "2.1.30"
+  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.1.30.tgz#274457b9ce1352026191a56af74bce4b1342aa94"
+  integrity sha512-k40elbvuzaOuMG2SdflCp38DoF82iv7rtZo9bHJ/jlvQUq4NQEQze4psD11aAAiH8Yxzifv/1nutxNyI/m1Ztg==
   dependencies:
     "@babel/runtime" "^7.6.2"
     better-queue "^3.8.10"
@@ -5056,10 +5056,10 @@ gatsby-telemetry@^1.1.29:
     stack-utils "1.0.2"
     uuid "3.3.3"
 
-gatsby@2.15.31:
-  version "2.15.31"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.15.31.tgz#a9c4118b3859b3e1757d5022ff4dd8381554c325"
-  integrity sha512-YwcTb46vuMDzF2ugT07/ZV9FulECOBNwMJLm+tu1NY4RFqQz0A5PJTi3A70y+yv0Kml6JWaCUX3VhMwB7RXy3g==
+gatsby@2.15.32:
+  version "2.15.32"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.15.32.tgz#85eb426d1db9720451bec92a4aef215466656c21"
+  integrity sha512-es8ulSkdrfJzsecKuBVW4ljRoZXXt8fC1PP2cMIPc2q/FVx+5Kp+sZ0fW5PZ8fbbdXmqty7YFQe4vYNiLoDUUQ==
   dependencies:
     "@babel/code-frame" "^7.5.5"
     "@babel/core" "^7.6.2"

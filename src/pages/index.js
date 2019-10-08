@@ -9,8 +9,10 @@ import styled from 'styled-components';
 import gitHubCorner from '../../static/github-corner-right.svg';
 import algoliaLogo from '../../static/search-by-algolia-light-background.svg';
 import { Layout } from '../components/layout';
+import { H3 } from '../components/page-elements';
 import { SEO } from '../components/seo';
 import { SheetPreview } from '../components/sheet-preview';
+import { SocialButtons } from '../components/social-buttons';
 import { useSiteMetadata } from '../hooks/useSiteMetadata';
 
 const searchClient = algoliasearch(
@@ -94,9 +96,12 @@ export default () => {
         target="_blank"
         rel="noopener"
       />
+      <SocialButtons />
+      <H3>{description}</H3>
       <InstantSearch
         searchClient={searchClient}
-        indexName={process.env.GATSBY_ALGOLIA_INDEX_NAME}>
+        indexName={process.env.GATSBY_ALGOLIA_INDEX_NAME}
+      >
         <Box />
         <AlgoliaLogo />
         <StyledHits hitComponent={SheetPreview} />

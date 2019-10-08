@@ -51,38 +51,11 @@ export const SocialButtons = () => {
       </ButtonWrapper>
       <ButtonWrapper>
         <Button
-          ariaLabel={'Watch spences10/cheat-sheets on GitHub'}
-          dataIcon={'octicon-eye'}
-          route={'cheat-sheets/subscription/'}
-        >
-          Watch
-        </Button>
-      </ButtonWrapper>
-      <ButtonWrapper>
-        <Button
           ariaLabel={'Fork spences10/cheat-sheets on GitHub'}
           dataIcon={'octicon-repo-forked'}
           route={'cheat-sheets/fork'}
         >
           Fork
-        </Button>
-      </ButtonWrapper>
-      <ButtonWrapper>
-        <Button
-          ariaLabel={'Issue spences10/cheat-sheets on GitHub'}
-          dataIcon={'octicon-issue-opened'}
-          route={'cheat-sheets/issues'}
-        >
-          Issue
-        </Button>
-      </ButtonWrapper>
-      <ButtonWrapper>
-        <Button
-          ariaLabel={'Download spences10/cheat-sheets on GitHub'}
-          dataIcon={'octicon-cloud-download'}
-          route={'cheat-sheets/archive/master.zip'}
-        >
-          Download
         </Button>
       </ButtonWrapper>
     </Wrapper>

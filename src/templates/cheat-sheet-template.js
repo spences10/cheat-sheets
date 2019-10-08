@@ -18,24 +18,24 @@ const StyledDate = styled.p`
 `;
 
 export default ({ data, pageContext }) => {
-  const { frontmatter, body, fields, headings } = data.mdx;
+  const { frontmatter, body, fields, tableOfContents } = data.mdx;
   const { image: defaultImage } = useSiteMetadata();
   // const { prev, next } = pageContext
   // const { imageLink } = data.site.siteMetadata
-  const headingsList =
-    headings
+  const tOCList =
+    tableOfContents.items
       .map(h => {
-        return h.value;
+        return h.title;
       })
       .join(', ') || 'noting yo!';
   return (
     <Layout>
       <SEO
         title={frontmatter.title}
-        description={headingsList}
+        description={tOCList}
         image={defaultImage}
         pathname={fields.slug}
-        // keywords={headingsList}
+        keywords={tableOfContents.items}
         article
       />
       <StyledTitle>{frontmatter.title}</StyledTitle>
@@ -56,12 +56,9 @@ export const query = graphql`
         createdDate(formatString: "YYYY MMMM Do")
         updatedDate(formatString: "YYYY MMMM Do")
       }
+      tableOfContents
       fields {
         slug
-      }
-      headings {
-        value
-        depth
       }
     }
   }

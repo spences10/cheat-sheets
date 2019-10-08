@@ -10,7 +10,7 @@ const siteMetadata = {
   gitHubUrl: `https://github.com/spences10/cheat-sheets`,
   siteTitle: `Cheat Sheets`,
   titleTemplate: `%s · Modern web development hints and tips.`,
-  description: `Every day commands and config used for modern web development.`,
+  description: `Everyday commands, config, hints and tips used for modern web development.`,
   image: `/favicon.png`,
   twitterUsername: `@spences10`,
   faviconPng: `./static/favicon.png`,

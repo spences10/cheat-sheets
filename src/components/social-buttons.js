@@ -45,17 +45,17 @@ export const SocialButtons = () => {
         </Button>
       </ButtonWrapper>
       <ButtonWrapper>
-        <Button ariaLabel={'Follow @spences10 on GitHub'}>
-          Follow @spences10
-        </Button>
-      </ButtonWrapper>
-      <ButtonWrapper>
         <Button
           ariaLabel={'Fork spences10/cheat-sheets on GitHub'}
           dataIcon={'octicon-repo-forked'}
           route={'cheat-sheets/fork'}
         >
           Fork
+        </Button>
+      </ButtonWrapper>
+      <ButtonWrapper>
+        <Button ariaLabel={'Follow @spences10 on GitHub'}>
+          Follow @spences10
         </Button>
       </ButtonWrapper>
     </Wrapper>

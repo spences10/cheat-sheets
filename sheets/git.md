@@ -848,7 +848,7 @@ Find the commit you want to revert to, then:
 git reset hashOfCommit
 ```
 
-Then reset to the branch on the otigin:
+Then reset to the branch on the origin:
 
 ```bash
 # if I wanted to push back to the develop branch on GitHub say
@@ -886,7 +886,7 @@ issue the following command inside your project
 gi linux,visualstudiocode,node >> ./.gitignore
 ```
 
-If you find yourself usign the same `.gitignore` on your projects you
+If you find yourself using the same `.gitignore` on your projects you
 can create a global file (i.e. `.gitignore_global`), and copy to your new project. 
 
 Reference: https://docs.gitignore.io/install/command-line

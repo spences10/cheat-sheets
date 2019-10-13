@@ -1,7 +1,7 @@
 ---
 title: Yarn
 createdDate: 2017-05-19
-updatedDate: 2019-03-12
+updatedDate: 2019-10-13
 published: true
 ---
 
@@ -12,6 +12,12 @@ time for my own reference.
 
 ```bash
 yarn upgrade
+```
+
+## Globally add a package
+
+```bash
+yarn global add netlify-cli
 ```
 
 ## displays the location of the yarn bin folder.

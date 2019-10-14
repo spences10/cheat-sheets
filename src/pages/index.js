@@ -73,21 +73,6 @@ export default () => {
         title={title}
         description={description || 'nothin’'}
         image={image}
-        keywords={[
-          `cheat sheets`,
-          `bash`,
-          `fish`,
-          `zsh`,
-          `git`,
-          `javascript`,
-          `linux`,
-          `macOS`,
-          `graphql`,
-          `vscode`,
-          `wsl`,
-          `yarn`,
-          `npm`,
-        ]}
       />
       <GitHubCorner
         role="link"

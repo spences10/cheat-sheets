@@ -12,6 +12,7 @@ export const SEO = ({
   image,
   pathname,
   publishedDate,
+  modifiedDate,
 }) => {
   const {
     description: defaultDescription,
@@ -117,7 +118,7 @@ export const SEO = ({
         },
       },
       datePublished: publishedDate,
-      dateModified: publishedDate,
+      dateModified: modifiedDate,
       description: seo.description,
       headline: seo.title,
       inLanguage: siteLanguage,

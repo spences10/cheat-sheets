@@ -10,7 +10,7 @@ import gitHubCorner from '../../static/github-corner-right.svg';
 import algoliaLogo from '../../static/search-by-algolia-light-background.svg';
 import { Layout } from '../components/layout';
 import { H3 } from '../components/page-elements';
-import { SEO } from '../components/seo';
+import SEO from '../components/seo';
 import { SheetPreview } from '../components/sheet-preview';
 import { SocialButtons } from '../components/social-buttons';
 import { useSiteMetadata } from '../hooks/useSiteMetadata';
@@ -73,21 +73,6 @@ export default () => {
         title={title}
         description={description || 'nothin’'}
         image={image}
-        keywords={[
-          `cheat sheets`,
-          `bash`,
-          `fish`,
-          `zsh`,
-          `git`,
-          `javascript`,
-          `linux`,
-          `macOS`,
-          `graphql`,
-          `vscode`,
-          `wsl`,
-          `yarn`,
-          `npm`,
-        ]}
       />
       <GitHubCorner
         role="link"

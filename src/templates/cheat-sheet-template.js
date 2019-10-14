@@ -3,7 +3,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import React from 'react';
 import styled from 'styled-components';
 import { Layout } from '../components/layout';
-import { SEO } from '../components/seo';
+import SEO from '../components/seo';
 import { useSiteMetadata } from '../hooks/useSiteMetadata';
 
 const StyledTitle = styled.h1`

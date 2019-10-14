@@ -3,7 +3,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import React from 'react';
 import styled from 'styled-components';
 import { Layout } from '../components/layout';
-import { SEO } from '../components/seo';
+import SEO from '../components/seo';
 import { useSiteMetadata } from '../hooks/useSiteMetadata';
 
 const StyledTitle = styled.h1`
@@ -27,7 +27,7 @@ export default ({ data, pageContext }) => {
       .map(h => {
         return h.title;
       })
-      .join(', ') || 'noting yo!';
+      .join(', ') || 'nothing yo!';
   return (
     <Layout>
       <SEO
@@ -36,7 +36,9 @@ export default ({ data, pageContext }) => {
         image={defaultImage}
         pathname={fields.slug}
         keywords={tableOfContents.items}
-        article
+        article={true}
+        publishedDate={frontmatter.createdDate}
+        modifiedDate={frontmatter.updatedDate}
       />
       <StyledTitle>{frontmatter.title}</StyledTitle>
       <StyledDate>Created: {frontmatter.createdDate}</StyledDate>

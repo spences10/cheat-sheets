@@ -10,8 +10,10 @@ time for my own reference.
 
 ## Update dependencies
 
+Update all project dependencies to lates versions.
+
 ```bash
-yarn upgrade
+yarn upgrade --latest
 ```
 
 ## Globally add a package

@@ -48,6 +48,8 @@ const queries = [
 module.exports = {
   siteMetadata: siteMetadata,
   plugins: [
+    `gatsby-plugin-robots-txt`,
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-algolia`,
@@ -76,13 +78,6 @@ module.exports = {
       options: {
         path: `${__dirname}/sheets`,
         name: `sheets`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
       },
     },
     {

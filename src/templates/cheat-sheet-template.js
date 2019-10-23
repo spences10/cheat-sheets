@@ -1,9 +1,9 @@
 import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import React from 'react';
+import SEO from 'react-seo-component';
 import styled from 'styled-components';
 import { Layout } from '../components/layout';
-import SEO from '../components/seo';
 import { useSiteMetadata } from '../hooks/useSiteMetadata';
 
 const StyledTitle = styled.h1`
@@ -19,7 +19,7 @@ const StyledDate = styled.p`
 
 export default ({ data, pageContext }) => {
   const { frontmatter, body, fields, tableOfContents } = data.mdx;
-  const { image: defaultImage } = useSiteMetadata();
+  const { siteUrl, image } = useSiteMetadata();
   // const { prev, next } = pageContext
   // const { imageLink } = data.site.siteMetadata
   const tOCList =
@@ -33,9 +33,8 @@ export default ({ data, pageContext }) => {
       <SEO
         title={frontmatter.title}
         description={tOCList}
-        image={defaultImage}
-        pathname={fields.slug}
-        keywords={tableOfContents.items}
+        image={image}
+        pathname={`${siteUrl}${fields.slug}`}
         article={true}
         publishedDate={frontmatter.createdDate}
         modifiedDate={frontmatter.updatedDate}

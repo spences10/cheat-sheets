@@ -5,12 +5,12 @@ import {
   InstantSearch,
   SearchBox,
 } from 'react-instantsearch-dom';
+import SEO from 'react-seo-component';
 import styled from 'styled-components';
 import gitHubCorner from '../../static/github-corner-right.svg';
 import algoliaLogo from '../../static/search-by-algolia-light-background.svg';
 import { Layout } from '../components/layout';
 import { H3 } from '../components/page-elements';
-import SEO from '../components/seo';
 import { SheetPreview } from '../components/sheet-preview';
 import { SocialButtons } from '../components/social-buttons';
 import { useSiteMetadata } from '../hooks/useSiteMetadata';
@@ -66,13 +66,26 @@ const GitHubCorner = styled.a`
 `;
 
 export default () => {
-  const { description, image, title, gitHubUrl } = useSiteMetadata();
+  const {
+    description,
+    image,
+    title,
+    gitHubUrl,
+    siteUrl,
+    siteLanguage,
+    siteLocale,
+    twitterUsername,
+  } = useSiteMetadata();
   return (
     <Layout>
       <SEO
         title={title}
         description={description || 'nothin’'}
         image={image}
+        pathname={siteUrl}
+        siteLanguage={siteLanguage}
+        siteLocale={siteLocale}
+        twitterUsername={twitterUsername}
       />
       <GitHubCorner
         role="link"

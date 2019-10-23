@@ -51,6 +51,7 @@ module.exports = {
     `gatsby-plugin-robots-txt`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-algolia`,
       options: {
@@ -71,8 +72,6 @@ module.exports = {
         ],
       },
     },
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

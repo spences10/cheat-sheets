@@ -40,7 +40,7 @@
     "react-helmet": "5.2.1",
     "react-instantsearch-dom": "5.7.0",
     "react-live": "2.2.1",
-    "react-seo-component": "0.1.2",
+    "react-seo-component": "0.1.5",
     "styled-components": "4.4.0"
   },
   "devDependencies": {

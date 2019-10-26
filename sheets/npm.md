@@ -47,7 +47,7 @@ npm-windows-upgrade
 
 ## flags
 
-`-S` is the same as `--save` not needed in npm 5 `-D` is the same as
+`-S` is the same as `--save` not needed in npm 5+ `-D` is the same as
 `--save-dev`
 
 ## installed version
@@ -55,32 +55,6 @@ npm-windows-upgrade
 ```bash
 npm list # for local packages
 ```
-
-## Node Version Manager `nvm`
-
-Say you want to install Node v6.9.1 you would write on the terminal:
-
-```bash
-nvm install 6
-```
-
-If you have multiple versions of Node.js installed on your workspace,
-you can switch to a specific version by writing:
-
-```bash
-nvm use 0.10.40
-```
-
-Making a node version default
-
-In order to set a default version of node for your workspace, just
-type:
-
-```bash
-nvm alias default 6
-```
-
-Where 6 was the version you wanted to be used as default.
 
 ## Uninstall global package
 
@@ -120,3 +94,10 @@ npm ci
 ```
 
 It will have the same effect but be 2-3x faster 👌
+
+## Bump version number
+
+```bash
+npm version patch
+# also | major | minor | patch
+```

@@ -1,6 +1,6 @@
 {
   "name": "cheat-sheets",
-  "version": "1.0.230",
+  "version": "1.0.234",
   "author": "Scott Spence <spences10apps@gmail.com>(https://scottspence.me/)",
   "license": "MIT",
   "description": "Cheat sheets",
@@ -20,7 +20,7 @@
     "@mdx-js/react": "1.5.1",
     "algoliasearch": "3.35.1",
     "babel-plugin-styled-components": "1.10.6",
-    "gatsby": "2.17.2",
+    "gatsby": "2.17.4",
     "gatsby-plugin-algolia": "0.3.4",
     "gatsby-plugin-google-analytics": "2.1.23",
     "gatsby-plugin-manifest": "2.2.23",
@@ -36,11 +36,11 @@
     "prism-react-renderer": "1.0.1",
     "react": "16.10.2",
     "react-dom": "16.10.2",
-    "react-github-btn": "1.1.0",
+    "react-github-btn": "1.1.1",
     "react-helmet": "5.2.1",
     "react-instantsearch-dom": "5.7.0",
     "react-live": "2.2.1",
-    "react-seo-component": "0.1.5",
+    "react-seo-component": "0.1.6",
     "styled-components": "4.4.0"
   },
   "devDependencies": {

@@ -3,7 +3,7 @@ title: npm
 createdDate: 2017-05-19
 updatedDate: 2019-03-01
 published: true
-cover: ./cover-npm.png
+cover: cover-npm.png
 ---
 
 A list of terminal commands and flags to help me use `npm`

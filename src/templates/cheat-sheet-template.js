@@ -19,6 +19,7 @@ const StyledDate = styled.p`
 
 export default ({ data, pageContext }) => {
   const { frontmatter, body, fields, tableOfContents } = data.mdx;
+  const { title, createdDate, updatedDate, cover } = frontmatter;
   const { siteUrl, image } = useSiteMetadata();
   // const { prev, next } = pageContext
   // const { imageLink } = data.site.siteMetadata
@@ -31,17 +32,17 @@ export default ({ data, pageContext }) => {
   return (
     <Layout>
       <SEO
-        title={frontmatter.title}
+        title={title}
         description={tOCList}
-        image={image}
+        image={cover || image}
         pathname={`${siteUrl}${fields.slug}`}
         article={true}
-        publishedDate={frontmatter.createdDate}
-        modifiedDate={frontmatter.updatedDate}
+        publishedDate={createdDate}
+        modifiedDate={updatedDate}
       />
-      <StyledTitle>{frontmatter.title}</StyledTitle>
-      <StyledDate>Created: {frontmatter.createdDate}</StyledDate>
-      <StyledDate>Updated: {frontmatter.updatedDate}</StyledDate>
+      <StyledTitle>{title}</StyledTitle>
+      <StyledDate>Created: {createdDate}</StyledDate>
+      <StyledDate>Updated: {updatedDate}</StyledDate>
       <MDXRenderer>{body}</MDXRenderer>
     </Layout>
   );
@@ -56,6 +57,7 @@ export const query = graphql`
         title
         createdDate(formatString: "YYYY MMMM Do")
         updatedDate(formatString: "YYYY MMMM Do")
+        cover
       }
       tableOfContents
       fields {

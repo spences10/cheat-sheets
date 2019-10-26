@@ -3,7 +3,7 @@ title: macOS
 createdDate: 2018-04-05
 updatedDate: 2019-08-16
 published: true
-cover: ../static/cover-macos.png
+cover: ./cover-macos.png
 ---
 
 ## Screen snip

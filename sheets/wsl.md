@@ -3,7 +3,7 @@ title: Windows Subsystem Linux (WSL)
 createdDate: 2017-10-11
 updatedDate: 2018-01-27
 published: true
-cover: ../static/cover-wsl.png
+cover: ./cover-wsl.png
 ---
 
 There's a few config options as part of the WSL I always forget

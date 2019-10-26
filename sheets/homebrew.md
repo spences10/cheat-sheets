@@ -3,7 +3,7 @@ title: Homebrew
 createdDate: 2019-08-16
 updatedDate: 2019-08-16
 published: true
-cover: ../static/cover-homebrew.png
+cover: ./cover-homebrew.png
 ---
 
 ## Search homebrew

@@ -3,6 +3,7 @@ title: now
 createdDate: 2017-05-30
 updatedDate: 2018-04-27
 published: true
+cover: ../static/cover-now.png
 ---
 
 The awesome now from zeit! It has a great cli with probably all of

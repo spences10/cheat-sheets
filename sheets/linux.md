@@ -3,6 +3,7 @@ title: Linux
 createdDate: 2018-03-22
 updatedDate: 2019-02-11
 published: true
+cover: cover-linux.png
 ---
 
 ## Install a binary

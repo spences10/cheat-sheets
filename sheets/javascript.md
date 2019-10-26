@@ -3,6 +3,7 @@ title: JavaScript
 createdDate: 2017-12-01
 updatedDate: 2017-12-11
 published: true
+cover: cover-javascript.png
 ---
 
 ## Arrays

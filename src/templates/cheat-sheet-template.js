@@ -34,7 +34,7 @@ export default ({ data, pageContext }) => {
       <SEO
         title={title}
         description={tOCList}
-        image={cover || image}
+        image={`${siteUrl}${cover.publicUrl}` || image}
         pathname={`${siteUrl}${fields.slug}`}
         article={true}
         publishedDate={createdDate}

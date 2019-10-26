@@ -9720,10 +9720,10 @@ react-reconciler@^0.21.0:
     prop-types "^15.6.2"
     scheduler "^0.15.0"
 
-react-seo-component@0.1.5:
-  version "0.1.5"
-  resolved "https://registry.yarnpkg.com/react-seo-component/-/react-seo-component-0.1.5.tgz#d0c6268814074324e663958d41270b36f3ac3f2b"
-  integrity sha512-9SFGbAXx8HTQCv/A+RtY3EH30SJLJX2Og9cI+JP7DL8jXPGCl3PdmV7lLhInjcXPxpMEHIQ7Otj76+iMjLcPXA==
+react-seo-component@0.1.6:
+  version "0.1.6"
+  resolved "https://registry.yarnpkg.com/react-seo-component/-/react-seo-component-0.1.6.tgz#f518884ee9e0fb497b53af789a4d0acde9a3576f"
+  integrity sha512-CGPIhIZZDF6smN6bvIgPWQX/wlDiILe3tIQfL3oAkiYBVCmoDAz/PSa5Xkbd5SFB9mGN3TB/idp3VR7pNZSZ+Q==
   dependencies:
     prop-types "15.7.2"
     react "16.11.0"

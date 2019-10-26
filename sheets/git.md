@@ -3,6 +3,7 @@ title: Git
 createdDate: 2017-05-19
 updatedDate: 2019-05-09
 published: true
+cover: cover-git.png
 ---
 
 This is just stuff that I have put down that I find I use a lot of the
@@ -887,6 +888,7 @@ gi linux,visualstudiocode,node >> ./.gitignore
 ```
 
 If you find yourself using the same `.gitignore` on your projects you
-can create a global file (i.e. `.gitignore_global`), and copy to your new project. 
+can create a global file (i.e. `.gitignore_global`), and copy to your
+new project.
 
 Reference: https://docs.gitignore.io/install/command-line

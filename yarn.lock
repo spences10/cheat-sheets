@@ -5166,10 +5166,10 @@ gatsby-telemetry@^1.1.33:
     stack-utils "1.0.2"
     uuid "3.3.3"
 
-gatsby@2.17.2:
-  version "2.17.2"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.17.2.tgz#848498adaf8f470ff63e8d60e78f176cf8c7da0c"
-  integrity sha512-ox9oXvtMdbttphs0f+2lAp33ktAUrzTcxnsJ0Y/MAiwhhnS8cD3DnA5eN+TqKfczVrxh/HdUxR07Nf4XU81WuQ==
+gatsby@2.17.4:
+  version "2.17.4"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.17.4.tgz#0f23ed27dfdd7ae9904e631835e0910a574db0cc"
+  integrity sha512-U5DMlIn1MM7n187LF5lFVcSxQyBq+p9QU+fj/xInLBlnT4uIyl1/2hPhG/26tLn0FKulJbYOu8U0HgAK7UmSyw==
   dependencies:
     "@babel/code-frame" "^7.5.5"
     "@babel/core" "^7.6.4"
@@ -9632,10 +9632,10 @@ react-fast-compare@^2.0.2:
   resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-2.0.4.tgz#e84b4d455b0fec113e0402c329352715196f81f9"
   integrity sha512-suNP+J1VU1MWFKcyt7RtjiSWUjvidmQSlqu+eHslq+342xCbGTYmC0mEhPCOHxlW0CywylOC1u2DFAT+bv4dBw==
 
-react-github-btn@1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/react-github-btn/-/react-github-btn-1.1.0.tgz#0e6c3cd52df19e266a794138f84a4219fd3b2902"
-  integrity sha512-/dRZ6AXYR5KP+QqLXYyJIdtCqAdcuGVZAFJiNi3062peoUwNwpCj+JEQ9neRyBQc5hx00b3kcjUHb6/2uJg+Pw==
+react-github-btn@1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/react-github-btn/-/react-github-btn-1.1.1.tgz#d08f6da1683a7994c54163af240d88ba5efa7057"
+  integrity sha512-haORkaENCh9DD953dle49aI/WWAxGauaA2xjbBgmPPvPY0KMvRslswl6TBTiZ8u6pRhLN4k+mXfaKWYnS/o7BQ==
   dependencies:
     github-buttons "^2.3.0"
 
@@ -9720,10 +9720,10 @@ react-reconciler@^0.21.0:
     prop-types "^15.6.2"
     scheduler "^0.15.0"
 
-react-seo-component@0.1.5:
-  version "0.1.5"
-  resolved "https://registry.yarnpkg.com/react-seo-component/-/react-seo-component-0.1.5.tgz#d0c6268814074324e663958d41270b36f3ac3f2b"
-  integrity sha512-9SFGbAXx8HTQCv/A+RtY3EH30SJLJX2Og9cI+JP7DL8jXPGCl3PdmV7lLhInjcXPxpMEHIQ7Otj76+iMjLcPXA==
+react-seo-component@0.1.6:
+  version "0.1.6"
+  resolved "https://registry.yarnpkg.com/react-seo-component/-/react-seo-component-0.1.6.tgz#f518884ee9e0fb497b53af789a4d0acde9a3576f"
+  integrity sha512-CGPIhIZZDF6smN6bvIgPWQX/wlDiILe3tIQfL3oAkiYBVCmoDAz/PSa5Xkbd5SFB9mGN3TB/idp3VR7pNZSZ+Q==
   dependencies:
     prop-types "15.7.2"
     react "16.11.0"

@@ -2,7 +2,7 @@
   "build": {
     "env": {
       "GATSBY_ALGOLIA_APP_ID": "@gatsby_algolia_app_id",
-      "GATSBY_ALGOLIA_API_KEY": "@gatsby_algolia_app_key",
+      "GATSBY_ALGOLIA_API_KEY": "@gatsby_algolia_api_key",
       "GATSBY_ALGOLIA_INDEX_NAME": "@gatsby_algolia_index_name",
       "GATSBY_ALGOLIA_SEARCH_ONLY_KEY": "@gatsby_algolia_search_only_key"
     }

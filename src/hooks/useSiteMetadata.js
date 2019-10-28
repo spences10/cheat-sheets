@@ -14,6 +14,7 @@ export const useSiteMetadata = () => {
             description
             image
             twitterUsername
+            authorName
             faviconPng
             backgroundColour
             themeColour

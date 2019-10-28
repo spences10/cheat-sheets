@@ -13,6 +13,7 @@ const siteMetadata = {
   description: `Everyday commands, config, hints and tips used for modern web development.`,
   image: `/favicon.png`,
   twitterUsername: `@spences10`,
+  authorName: `Scott Spence`,
   faviconPng: `./static/favicon.png`,
   backgroundColour: `#f7f0eb`,
   themeColour: `#a2466c`,

@@ -20,7 +20,12 @@ const StyledDate = styled.p`
 export default ({ data, pageContext }) => {
   const { frontmatter, body, fields, tableOfContents } = data.mdx;
   const { title, createdDate, updatedDate, cover } = frontmatter;
-  const { siteUrl, image, twitterUsername } = useSiteMetadata();
+  const {
+    siteUrl,
+    image,
+    twitterUsername,
+    authorName,
+  } = useSiteMetadata();
   // const { prev, next } = pageContext
   // const { imageLink } = data.site.siteMetadata
   const tOCList =
@@ -40,6 +45,7 @@ export default ({ data, pageContext }) => {
         publishedDate={createdDate}
         modifiedDate={updatedDate}
         twitterUsername={twitterUsername}
+        author={authorName}
       />
       <StyledTitle>{title}</StyledTitle>
       <StyledDate>Created: {createdDate}</StyledDate>

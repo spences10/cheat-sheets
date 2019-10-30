@@ -1,6 +1,6 @@
 {
   "name": "cheat-sheets",
-  "version": "1.0.240",
+  "version": "1.0.241",
   "author": "Scott Spence <spences10apps@gmail.com>(https://scottspence.me/)",
   "license": "MIT",
   "description": "Cheat sheets",
@@ -41,7 +41,7 @@
     "react-instantsearch-dom": "6.0.0",
     "react-live": "2.2.1",
     "react-seo-component": "0.1.8",
-    "styled-components": "4.4.0"
+    "styled-components": "4.4.1"
   },
   "devDependencies": {
     "husky": "3.0.9",

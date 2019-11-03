@@ -54,10 +54,32 @@ const withoutTom = [
 ];
 ```
 
+Tom is left out of the new array party, sorry Tom
+
 output:
 
 ```bash
 ["Darcy", "Leo", "Boris", "Scott", "Islem", "George"]
+```
+
+## Reverse an array
+
+So, `.reverse()` will mutate the original array so it's a good idea to
+make a new array.
+
+```js
+const cats = [`Darcy`, `Leo`, `Boris`];
+// reverse array
+const reverseCatNames = [...cats].reverse();
+```
+
+output:
+
+```bash
+# cats
+["Darcy", "Leo", "Boris"]
+# reverseCatNames
+["Boris", "Leo", "Darcy"]
 ```
 
 ## New array from existing

@@ -15,6 +15,12 @@ const cats = [`Darcy`, `Leo`, `Boris`];
 const copyCats = [...cats];
 ```
 
+output:
+
+```bash
+["Darcy", "Leo", "Boris"]
+```
+
 ## Combine two arrays
 
 ```js
@@ -24,6 +30,12 @@ const cats = [`Darcy`, `Leo`, `Boris`];
 const people = [`Scott`, `Islem`, `Tom`, `George`];
 // all
 const catsAndPeople = [...cats, ...people];
+```
+
+output:
+
+```bash
+["Darcy", "Leo", "Boris", "Scott", "Islem", "Tom", "George"]
 ```
 
 ## Remove item without mutating
@@ -40,6 +52,12 @@ const withoutTom = [
   ...catsAndPeople.slice(0, 5),
   ...catsAndPeople.slice(6),
 ];
+```
+
+output:
+
+```bash
+["Darcy", "Leo", "Boris", "Scott", "Islem", "George"]
 ```
 
 ## New array from existing

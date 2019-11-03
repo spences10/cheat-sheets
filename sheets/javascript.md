@@ -1,14 +1,88 @@
 ---
 title: JavaScript
 createdDate: 2017-12-01
-updatedDate: 2017-12-11
+updatedDate: 2017-11-03
 published: true
 cover: cover-javascript.png
 ---
 
-## Arrays
+## Copy an array
 
-### New array from existing
+```js
+// initial array
+const cats = [`Darcy`, `Leo`, `Boris`];
+// copy array
+const copyCats = [...cats];
+```
+
+output:
+
+```bash
+["Darcy", "Leo", "Boris"]
+```
+
+## Combine two arrays
+
+```js
+// array 1
+const cats = [`Darcy`, `Leo`, `Boris`];
+// array 2
+const people = [`Scott`, `Islem`, `Tom`, `George`];
+// all
+const catsAndPeople = [...cats, ...people];
+```
+
+output:
+
+```bash
+["Darcy", "Leo", "Boris", "Scott", "Islem", "Tom", "George"]
+```
+
+## Remove item without mutating
+
+```js
+// array 1
+const cats = [`Darcy`, `Leo`, `Boris`];
+// array 2
+const people = [`Scott`, `Islem`, `Tom`, `George`];
+// all
+const catsAndPeople = [...cats, ...people];
+// remove Tom
+const withoutTom = [
+  ...catsAndPeople.slice(0, 5),
+  ...catsAndPeople.slice(6),
+];
+```
+
+Tom is left out of the new array party, sorry Tom
+
+output:
+
+```bash
+["Darcy", "Leo", "Boris", "Scott", "Islem", "George"]
+```
+
+## Reverse an array
+
+So, `.reverse()` will mutate the original array so it's a good idea to
+make a new array.
+
+```js
+const cats = [`Darcy`, `Leo`, `Boris`];
+// reverse array
+const reverseCatNames = [...cats].reverse();
+```
+
+output:
+
+```bash
+# cats
+["Darcy", "Leo", "Boris"]
+# reverseCatNames
+["Boris", "Leo", "Darcy"]
+```
+
+## New array from existing
 
 Return one new entry for every existing entry: `map()`
 
@@ -24,7 +98,7 @@ output:
 [ 2, 4, 6 ]
 ```
 
-### Return new array filter
+## Return new array filter
 
 Return a new array with only some of the existing entries: `filter()`
 
@@ -40,7 +114,7 @@ output:
 [ 9, 42 ]
 ```
 
-### Return one new thing only
+## Return one new thing only
 
 Return one new thing only: `reduce()`
 
@@ -69,9 +143,7 @@ output:
 3
 ```
 
-## Interview questions
-
-### Sum all even numbers from array
+## Sum all even numbers from array
 
 ```js
 const arr = [0, 1, 2, 3, 4, 5, null, 6, 9];
@@ -86,7 +158,7 @@ function addEven() {
 addEven(arr);
 ```
 
-### Return the first duplicate number
+## Return the first duplicate number
 
 ```js
 function firstDuplicate(arr) {

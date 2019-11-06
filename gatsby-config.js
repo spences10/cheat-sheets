@@ -6,7 +6,7 @@ require('dotenv').config({
 
 const siteMetadata = {
   title: `Cheat Sheets`,
-  siteUrl: `https://cheat-sheets.ss10.dev`,
+  siteUrl: `https://cheatsheets.xyz`,
   gitHubUrl: `https://github.com/spences10/cheat-sheets`,
   siteTitle: `Cheat Sheets`,
   titleTemplate: `%s · Modern web development hints and tips.`,

@@ -178,3 +178,31 @@ function firstDuplicate(arr) {
   return -1;
 }
 ```
+
+## Async await with axios and GraphQL
+
+```js
+const axios = require('axios');
+
+axios({
+  url: 'https://spotify-graphql-server.herokuapp.com/graphql',
+  method: 'post',
+  data: {
+    query: `
+      {
+        queryArtists(byName:"Andy C") {
+          name
+          id
+          image
+          albums {
+            name
+            image
+          }
+        }
+      }
+      `,
+  },
+}).then(result => {
+  console.log(result.data);
+});
+```

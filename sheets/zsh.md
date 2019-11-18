@@ -1,11 +1,36 @@
 ---
 title: ZSH
 createdDate: 2017-10-11
-updatedDate: 2017-10-11
+updatedDate: 2019-11-18
 published: true
 cover: cover-zsh.png
 ---
 
+## Use nvm with zsh
+
+If you are using Oh My ZSH! then you can install the `zsh-nvm` plugin.
+
+Clone the plugin into your zsh plugins folder:
+
+```bash
+git clone https://github.com/lukechilds/zsh-nvm ~/.oh-my-zsh/custom/plugins/zsh-nvm
+```
+
+Then load as a plugin in your `.zshrc`
+
+```bash
+plugins+=(zsh-nvm)
+```
+
+Take a look a the [Permission denied when trying to install the
+plugin] issue on GitHub for permission errors.
+
 ## include aliases
 
 ## oh my zsh
+
+<!-- Links -->
+
+[`zsh-nvm`]: https://github.com/lukechilds/zsh-nvm
+[permission denied when trying to install the plugin]:
+  https://github.com/lukechilds/zsh-nvm/issues/14

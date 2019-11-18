@@ -78,6 +78,31 @@ functions -e aliasname
 
 https://github.com/oh-my-fish/oh-my-fish
 
+## Use nvm with fish
+
+If you have Oh My Fish installed then install the `bass` plugin:
+
+```bash
+omf install bass
+```
+
+Then add the following to your `config.fish` file:
+
+```bash
+function nvm
+   bass source (brew --prefix nvm)/nvm.sh --no-use ';' nvm $argv
+end
+
+set -x NVM_DIR ~/.nvm
+nvm use default --silent
+```
+
+Then `source` the `config.fish` file:
+
+```bash
+source ~/.config/fish/config.fish
+```
+
 ## List out added aliases
 
 I found this [handy function] on Stack Overflow which will list out

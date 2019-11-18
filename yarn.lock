@@ -5011,10 +5011,10 @@ gatsby-page-utils@^0.0.30:
     micromatch "^3.1.10"
     slash "^3.0.0"
 
-gatsby-plugin-algolia@0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-algolia/-/gatsby-plugin-algolia-0.4.0.tgz#115f9986bbaf2fc1ad615ce111ec20eb088b5e91"
-  integrity sha512-GFMIvvrYVrbgKY/iqXfhyh72ckoPrAPTjau2dJ/Hu06t+NvCwXbSaTdGHw33qvo+Yw1OoTNdRFIeezmnaKu2+w==
+gatsby-plugin-algolia@0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-algolia/-/gatsby-plugin-algolia-0.5.0.tgz#a2bc40113f670f9d3bafc8dc50c5905e656e70d1"
+  integrity sha512-EsbFtGHUOfHQmXnK50PAkBA9vOkDDuikAv4JaT261NmVmlt9ReZtRM+BL+bTopJ/lJarXZbLdlnTjfE5LfSOyQ==
   dependencies:
     algoliasearch "^3.24.5"
     gatsby-cli "^1.1.58"

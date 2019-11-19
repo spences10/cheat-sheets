@@ -36,3 +36,5 @@ To add a your preferred search to Alfred.
    or select one of your 'Custom Search' options.
 
 1. Drag your preferred search to the top of the list.
+
+1. Click 'Save'

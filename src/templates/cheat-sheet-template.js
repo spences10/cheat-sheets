@@ -1,8 +1,8 @@
 import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import React from 'react';
+import SEO from 'react-seo-component';
 import styled from 'styled-components';
-import { Dump } from '../components/dump';
 import { Layout } from '../components/layout';
 import { useSiteMetadata } from '../hooks/useSiteMetadata';
 
@@ -36,7 +36,7 @@ export default ({ data, pageContext }) => {
       .join(', ') || 'nothing yo!';
   return (
     <Layout>
-      <Dump
+      <SEO
         title={title}
         description={tOCList}
         image={cover ? `${siteUrl}/${cover}` : `${siteUrl}${image}`}

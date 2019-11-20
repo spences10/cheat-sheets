@@ -26,7 +26,6 @@ export default ({ data, pageContext }) => {
     image,
     twitterUsername,
     authorName,
-    gitHubUrl,
   } = useSiteMetadata();
   // const { prev, next } = pageContext
   // const { imageLink } = data.site.siteMetadata

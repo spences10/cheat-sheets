@@ -3,7 +3,7 @@ title: Alfred
 createdDate: 2019-11-19
 updatedDate: 2019-11-19
 published: true
-cover:
+cover: cover-alfred.png
 ---
 
 ## Add custom search

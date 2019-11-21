@@ -1,7 +1,6 @@
 import { graphql } from 'gatsby';
 import React, { useState } from 'react';
 import SEO from 'react-seo-component';
-import { Dump } from '../components/dump';
 import { GitHubCorner } from '../components/github-corner';
 import { Layout } from '../components/layout';
 import { H3 } from '../components/page-elements';
@@ -26,8 +25,12 @@ export default ({ data }) => {
 
   function filterBy(data, searchTerm) {
     return data.filter(
-      ({ frontmatter: { title }, headings, fields: { slug } }) => {
-        const headingValues = headings.map(({ value }) => value);
+      ({
+        frontmatter: { title },
+        tableOfContents: { items },
+        fields: { slug },
+      }) => {
+        const headingValues = items.map(({ title }) => title);
         return [title, ...headingValues, slug].some(value =>
           value.toLowerCase().includes(searchTerm)
         );
@@ -57,18 +60,27 @@ export default ({ data }) => {
         value={searchTerm}
         onChange={handleChange}
       />
-      <ul>
+      <div>
         {result.map(item => {
-          console.log(item);
+          // console.log(item);
           return (
-            <ul>
-              <li>{item.frontmatter.title}</li>
+            <div>
+              <h1>{item.frontmatter.title}</h1>
               <li>{item.fields.slug}</li>
-            </ul>
+              {item.tableOfContents.items.map(h => {
+                return (
+                  <h2>
+                    <a href={`${item.fields.slug}${h.url}`}>
+                      {h.title}
+                    </a>
+                  </h2>
+                );
+              })}
+            </div>
           );
         })}
-      </ul>
-      <Dump result={result} />
+      </div>
+      {/* <Dump result={result} /> */}
       {/* <Dump data={data} /> */}
     </Layout>
   );
@@ -85,10 +97,7 @@ export const indexQuery = graphql`
           published
           cover
         }
-        headings {
-          value
-          depth
-        }
+        tableOfContents
         fields {
           slug
         }

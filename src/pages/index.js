@@ -24,43 +24,18 @@ export default ({ data }) => {
     setSearchTerm(event.target.value);
   };
 
-  function filterBy(data, filters = {}) {
-    // Set up the specific defaults that will show everything:
-    const defaults = {
-      fields: { slug: null },
-      frontmatter: { title: null },
-      headings: [],
-    };
-
-    // Merge any filters with the defaults
-    filters = Object.assign({}, defaults, filters);
-
-    // Filter based on that filters object:
-    return data.filter(sheet => {
-      return (
-        // sheet.fields.slug
-        //   .toLowerCase()
-        //   .includes(filters.fields.slug) &&
-        // sheet.frontmatter.title
-        //   .toLowerCase()
-        //   .includes(filters.frontmatter.title)
-        // ||
-        console.log(
-          sheet.headings.filter(heading =>
-            heading.value.toLowerCase().includes(filters.headings)
-              ? true
-              : false
-          )
-        )
-      );
-    });
+  function filterBy(data, searchTerm) {
+    return data.filter(
+      ({ frontmatter: { title }, headings, fields: { slug } }) => {
+        const headingValues = headings.map(({ value }) => value);
+        return [title, ...headingValues, slug].some(value =>
+          value.toLowerCase().includes(searchTerm)
+        );
+      }
+    );
   }
 
-  const result = filterBy(nodes, {
-    fields: { slug: searchTerm },
-    frontmatter: { title: searchTerm },
-    headings: [searchTerm],
-  });
+  const result = filterBy(nodes, searchTerm);
 
   return (
     <Layout>
@@ -88,7 +63,7 @@ export default ({ data }) => {
         ))}
       </ul> */}
       <Dump result={result} />
-      {/* <Dump data={data} /> */}
+      <Dump data={data} />
     </Layout>
   );
 };
@@ -115,3 +90,73 @@ export const indexQuery = graphql`
     }
   }
 `;
+
+const dataArr = [
+  {
+    frontmatter: {
+      title: 'Alfred',
+    },
+    headings: [
+      {
+        value: 'Add custom search',
+        depth: 2,
+      },
+      {
+        value: 'Change the default search in Alfred',
+        depth: 2,
+      },
+    ],
+    fields: {
+      slug: '/alfred/',
+    },
+  },
+  {
+    frontmatter: {
+      title: 'Fish Shell',
+    },
+    headings: [
+      {
+        value: 'Aliases',
+        depth: 2,
+      },
+      {
+        value: 'Oh My Fish',
+        depth: 2,
+      },
+      {
+        value: 'Use nvm with fish',
+        depth: 2,
+      },
+      {
+        value: 'List out added aliases',
+        depth: 2,
+      },
+    ],
+    fields: {
+      slug: '/fish/',
+    },
+  },
+  {
+    frontmatter: {
+      title: 'Bash',
+    },
+    headings: [
+      {
+        value: 'Add an alias',
+        depth: 2,
+      },
+      {
+        value: 'Sort alphabetically 👌',
+        depth: 2,
+      },
+      {
+        value:
+          'Open the SSH agent each time you open a new terminal.',
+        depth: 2,
+      },
+    ],
+    fields: {
+      slug: '/bash/',
+    },
+  },
+];

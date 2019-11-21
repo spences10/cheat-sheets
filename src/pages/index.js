@@ -1,5 +1,5 @@
 import { graphql } from 'gatsby';
-import React from 'react';
+import React, { useState } from 'react';
 import SEO from 'react-seo-component';
 import { Dump } from '../components/dump';
 import { GitHubCorner } from '../components/github-corner';
@@ -18,6 +18,26 @@ export default ({ data }) => {
     siteLocale,
     twitterUsername,
   } = useSiteMetadata();
+  const { nodes } = data.allMdx;
+  const [searchTerm, setSearchTerm] = useState('');
+  const handleChange = event => {
+    setSearchTerm(event.target.value);
+  };
+
+  const results = !searchTerm
+    ? nodes
+    : nodes.filter(sheet => {
+        // console.log('=====================');
+        // console.log(
+        sheet.frontmatter.title
+          .toLowerCase()
+          .includes(searchTerm.toLocaleLowerCase());
+        // );
+        // console.log(sheet.headings);
+        // console.log(sheet.fields);
+        // // sheet.toLowerCase().includes(searchTerm.toLocaleLowerCase())
+        // console.log('=====================');
+      });
   return (
     <Layout>
       <SEO
@@ -32,7 +52,19 @@ export default ({ data }) => {
       <GitHubCorner />
       <SocialButtons />
       <H3>{description}</H3>
-      <Dump datas={data} />
+      <input
+        type="text"
+        placeholder="Search"
+        value={searchTerm}
+        onChange={handleChange}
+      />
+      {/* <ul>
+        {results.map(item => (
+          <li>{item}</li>
+        ))}
+      </ul> */}
+      <Dump nodes={nodes} />
+      <Dump data={data} />
     </Layout>
   );
 };
@@ -51,6 +83,9 @@ export const indexQuery = graphql`
         headings {
           value
           depth
+        }
+        fields {
+          slug
         }
       }
     }

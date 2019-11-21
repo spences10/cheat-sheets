@@ -57,13 +57,19 @@ export default ({ data }) => {
         value={searchTerm}
         onChange={handleChange}
       />
-      {/* <ul>
-        {results.map(item => (
-          <li>{item}</li>
-        ))}
-      </ul> */}
+      <ul>
+        {result.map(item => {
+          console.log(item);
+          return (
+            <ul>
+              <li>{item.frontmatter.title}</li>
+              <li>{item.fields.slug}</li>
+            </ul>
+          );
+        })}
+      </ul>
       <Dump result={result} />
-      <Dump data={data} />
+      {/* <Dump data={data} /> */}
     </Layout>
   );
 };

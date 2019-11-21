@@ -1,4 +1,4 @@
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import React, { useState } from 'react';
 import SEO from 'react-seo-component';
 import { GitHubCorner } from '../components/github-corner';
@@ -70,9 +70,9 @@ export default ({ data }) => {
               {item.tableOfContents.items.map(h => {
                 return (
                   <h2>
-                    <a href={`${item.fields.slug}${h.url}`}>
+                    <Link to={`${item.fields.slug}${h.url}`}>
                       {h.title}
-                    </a>
+                    </Link>
                   </h2>
                 );
               })}

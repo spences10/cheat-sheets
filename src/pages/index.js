@@ -62,14 +62,12 @@ export default ({ data }) => {
       />
       <div>
         {result.map(item => {
-          // console.log(item);
           return (
-            <div>
+            <div key={item.id}>
               <h1>{item.frontmatter.title}</h1>
-              <li>{item.fields.slug}</li>
               {item.tableOfContents.items.map(h => {
                 return (
-                  <h2>
+                  <h2 key={`${item.id}${h.title}`}>
                     <Link to={`${item.fields.slug}${h.url}`}>
                       {h.title}
                     </Link>
@@ -90,6 +88,7 @@ export const indexQuery = graphql`
   {
     allMdx {
       nodes {
+        id
         frontmatter {
           title
           createdDate

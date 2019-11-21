@@ -37,15 +37,21 @@ export default ({ data }) => {
 
     // Filter based on that filters object:
     return data.filter(sheet => {
-      console.log(sheet);
       return (
-        sheet.fields.slug
-          .toLowerCase()
-          .includes(filters.fields.slug) &&
-        sheet.frontmatter.title
-          .toLowerCase()
-          .includes(filters.frontmatter.title)
-        // ||         sheet.headings.filter(heading =>           heading.value.includes(filters.headings)         )
+        // sheet.fields.slug
+        //   .toLowerCase()
+        //   .includes(filters.fields.slug) &&
+        // sheet.frontmatter.title
+        //   .toLowerCase()
+        //   .includes(filters.frontmatter.title)
+        // ||
+        console.log(
+          sheet.headings.filter(heading =>
+            heading.value.toLowerCase().includes(filters.headings)
+              ? true
+              : false
+          )
+        )
       );
     });
   }
@@ -56,20 +62,6 @@ export default ({ data }) => {
     headings: [searchTerm],
   });
 
-  // const results = !searchTerm
-  //   ? nodes
-  //   : nodes.filter(sheet => {
-  //       // console.log('=====================');
-  //       // console.log(
-  //       sheet.frontmatter.title
-  //         .toLowerCase()
-  //         .includes(searchTerm.toLocaleLowerCase());
-  //       // );
-  //       // console.log(sheet.headings);
-  //       // console.log(sheet.fields);
-  //       // // sheet.toLowerCase().includes(searchTerm.toLocaleLowerCase())
-  //       // console.log('=====================');
-  //     });
   return (
     <Layout>
       <SEO

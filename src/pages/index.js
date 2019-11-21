@@ -24,20 +24,52 @@ export default ({ data }) => {
     setSearchTerm(event.target.value);
   };
 
-  const results = !searchTerm
-    ? nodes
-    : nodes.filter(sheet => {
-        // console.log('=====================');
-        // console.log(
+  function filterBy(data, filters = {}) {
+    // Set up the specific defaults that will show everything:
+    const defaults = {
+      fields: { slug: null },
+      frontmatter: { title: null },
+      headings: [],
+    };
+
+    // Merge any filters with the defaults
+    filters = Object.assign({}, defaults, filters);
+
+    // Filter based on that filters object:
+    return data.filter(sheet => {
+      console.log(sheet);
+      return (
+        sheet.fields.slug
+          .toLowerCase()
+          .includes(filters.fields.slug) &&
         sheet.frontmatter.title
           .toLowerCase()
-          .includes(searchTerm.toLocaleLowerCase());
-        // );
-        // console.log(sheet.headings);
-        // console.log(sheet.fields);
-        // // sheet.toLowerCase().includes(searchTerm.toLocaleLowerCase())
-        // console.log('=====================');
-      });
+          .includes(filters.frontmatter.title)
+        // ||         sheet.headings.filter(heading =>           heading.value.includes(filters.headings)         )
+      );
+    });
+  }
+
+  const result = filterBy(nodes, {
+    fields: { slug: searchTerm },
+    frontmatter: { title: searchTerm },
+    headings: [searchTerm],
+  });
+
+  // const results = !searchTerm
+  //   ? nodes
+  //   : nodes.filter(sheet => {
+  //       // console.log('=====================');
+  //       // console.log(
+  //       sheet.frontmatter.title
+  //         .toLowerCase()
+  //         .includes(searchTerm.toLocaleLowerCase());
+  //       // );
+  //       // console.log(sheet.headings);
+  //       // console.log(sheet.fields);
+  //       // // sheet.toLowerCase().includes(searchTerm.toLocaleLowerCase())
+  //       // console.log('=====================');
+  //     });
   return (
     <Layout>
       <SEO
@@ -63,8 +95,8 @@ export default ({ data }) => {
           <li>{item}</li>
         ))}
       </ul> */}
-      <Dump nodes={nodes} />
-      <Dump data={data} />
+      <Dump result={result} />
+      {/* <Dump data={data} /> */}
     </Layout>
   );
 };

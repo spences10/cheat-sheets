@@ -82,6 +82,24 @@ output:
 ["Boris", "Leo", "Darcy"]
 ```
 
+## Reverse a string
+
+There's a `.reverse()` method for arrays, so if you split your sting
+into an array then you'll be able to reverse it.
+
+```js
+'racecar'
+  .split('')
+  .reverse()
+  .join('');
+```
+
+output:
+
+```bash
+racecar
+```
+
 ## New array from existing
 
 Return one new entry for every existing entry: `map()`

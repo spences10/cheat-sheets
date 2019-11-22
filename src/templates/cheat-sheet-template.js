@@ -3,6 +3,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import React from 'react';
 import SEO from 'react-seo-component';
 import styled from 'styled-components';
+import { GitHubCorner } from '../components/github-corner';
 import { Layout } from '../components/layout';
 import { useSiteMetadata } from '../hooks/useSiteMetadata';
 
@@ -39,7 +40,7 @@ export default ({ data, pageContext }) => {
       <SEO
         title={title}
         description={tOCList}
-        image={cover ? `${siteUrl}/${cover}` : `${siteUrl}${image}`}
+        image={!!cover ? `${siteUrl}/${cover}` : `${siteUrl}${image}`}
         pathname={`${siteUrl}${fields.slug}`}
         article={true}
         publishedDate={createdDate}
@@ -47,6 +48,7 @@ export default ({ data, pageContext }) => {
         twitterUsername={twitterUsername}
         author={authorName}
       />
+      <GitHubCorner />
       <StyledTitle>{title}</StyledTitle>
       <StyledDate>Created: {createdDate}</StyledDate>
       <StyledDate>Updated: {updatedDate}</StyledDate>

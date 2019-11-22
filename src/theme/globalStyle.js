@@ -12,13 +12,13 @@ export const theme = {
   fontLight: '#5f6368',
   fontWhite: '#ffffff',
   h1: '"Josefin Slab", sans, sans-serif',
-  h1Size: '32px',
+  h1Size: '40px',
   h2: '"Pontano Sans", sans, sans-serif',
-  h2Size: '24px',
+  h2Size: '26px',
   h3: 'Maitree, sans, sans-serif',
-  h3Size: '18.7167px',
+  h3Size: '24px',
   p: 'Maitree, sans-serif',
-  pSize: '16px',
+  pSize: '21px',
 };
 
 const fonts = () => {

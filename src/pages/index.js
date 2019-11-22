@@ -13,7 +13,7 @@ const StyledInput = styled.input`
   height: 50px;
   border-radius: 5px;
   border: solid 1px lightgray;
-  font-size: 30px;
+  font-size: 32px;
   font-family: ${props => props.theme.h1};
   padding-left: 5px;
 `;
@@ -55,7 +55,7 @@ const StyledP = styled.p`
 
 const StyledDescription = styled.p`
   font-family: ${({ theme }) => theme.p};
-  font-size: 24px;
+  font-size: 26px;
 `;
 
 export default ({ data }) => {
@@ -122,6 +122,7 @@ export default ({ data }) => {
                   searchWords={[searchTerm]}
                   autoEscape={true}
                   textToHighlight={frontmatter.title}
+                  className="highlighted"
                 >
                   {frontmatter.title}
                 </Highlighter>
@@ -135,6 +136,7 @@ export default ({ data }) => {
                       searchWords={[searchTerm]}
                       autoEscape={true}
                       textToHighlight={h.title}
+                      className="highlighted"
                     >
                       {h.title}
                     </Highlighter>

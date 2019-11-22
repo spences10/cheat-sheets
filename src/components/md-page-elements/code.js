@@ -20,6 +20,7 @@ export const Pre = styled.pre`
   overflow-x: auto;
   border-radius: 3px;
   font-family: 'Victor Mono', 'Courier New', Courier, monospace;
+  font-size: 18px;
 `;
 
 export const LineNo = styled.span`
@@ -39,6 +40,8 @@ const CopyCode = styled.button`
   &:hover {
     opacity: 1;
   }
+  font-family: 'Victor Mono', 'Courier New', Courier, monospace;
+  font-size: 13px;
 `;
 
 export const Code = ({ codeString, language, ...props }) => {

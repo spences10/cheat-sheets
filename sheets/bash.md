@@ -16,7 +16,7 @@ alias f='fish'
 # ctrl+x then y to save
 ```
 
-## Sort alphabetically 👌
+## Sort alphabetically
 
 You may find that commands like `ll` are under your `~/.bashrc` file,
 if not then add the following as an alias:

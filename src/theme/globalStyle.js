@@ -28,7 +28,6 @@ const fonts = () => {
 export const GlobalStyle = createGlobalStyle`
 
   @import url('https://fonts.googleapis.com/css?family=${fonts}');
-  @import url('https://fonts-for-the-font-god.netlify.com/dank-mono.css?family=dm');
 
   *, *:before, *:after {
     box-sizing: border-box;
@@ -40,6 +39,7 @@ export const GlobalStyle = createGlobalStyle`
   html {
     min-height: 100%;
     background: linear-gradient(#fff, #f2f2f2);
+    /* scroll-behavior: smooth; */
   }
   body {
     margin: 0;

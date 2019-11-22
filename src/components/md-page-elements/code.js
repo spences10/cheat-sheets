@@ -8,6 +8,7 @@ import {
   LiveProvider,
 } from 'react-live';
 import styled from 'styled-components';
+import 'victormono';
 import { copyToClipboard } from '../../util/copy-to-clipboard';
 // import { Dump } from '../utils/helpers'
 
@@ -18,7 +19,7 @@ export const Pre = styled.pre`
   padding: 0.5em;
   overflow-x: auto;
   border-radius: 3px;
-  font-family: dm;
+  font-family: 'Victor Mono', 'Courier New', Courier, monospace;
 `;
 
 export const LineNo = styled.span`

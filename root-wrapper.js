@@ -1,8 +1,13 @@
 import { MDXProvider } from '@mdx-js/react';
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
-import { Code, H1, H2, H3 } from './src/components/page-elements';
-import { InlineCode } from './src/components/page-elements/styles';
+import {
+  Code,
+  H1,
+  H2,
+  H3,
+  InlineCode,
+} from './src/components/md-page-elements';
 import { theme } from './src/theme/globalStyle';
 
 // import { Dump } from './src/utils/helpers';

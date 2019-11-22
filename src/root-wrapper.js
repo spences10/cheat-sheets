@@ -7,8 +7,8 @@ import {
   H2,
   H3,
   InlineCode,
-} from './src/components/md-page-elements';
-import { theme } from './src/theme/globalStyle';
+} from './components/md-page-elements';
+import { theme } from './theme/globalStyle';
 
 // import { Dump } from './src/utils/helpers';
 // components is its own object outside of render so that the references to

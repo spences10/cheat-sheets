@@ -76,7 +76,9 @@ export default ({ data }) => {
       {result.map(({ id, frontmatter, headings, fields }) => {
         return (
           <div key={id}>
-            <H1>{frontmatter.title}</H1>
+            <Link to={fields.slug}>
+              <H1>{frontmatter.title}</H1>
+            </Link>
             {headings.map(h => {
               return (
                 <p key={`${id}${h.title}`}>

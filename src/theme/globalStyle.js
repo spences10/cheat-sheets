@@ -12,8 +12,13 @@ export const theme = {
   fontLight: '#5f6368',
   fontWhite: '#ffffff',
   h1: '"Josefin Slab", sans, sans-serif',
+  h1Size: '32px',
   h2: '"Pontano Sans", sans, sans-serif',
+  h2Size: '24px',
+  h3: 'Maitree, sans, sans-serif',
+  h3Size: '18.7167px',
   p: 'Maitree, sans-serif',
+  pSize: '16px',
 };
 
 const fonts = () => {
@@ -46,5 +51,6 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     min-height: 100%;
     line-height: 1.3125;
+    font-size: 16px;
   }
 `;

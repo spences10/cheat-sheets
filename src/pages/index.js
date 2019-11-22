@@ -18,6 +18,22 @@ const StyledInput = styled.input`
   padding-left: 5px;
 `;
 
+const SheetTitle = styled.p`
+  font-family: ${({ theme }) => theme.h1};
+  font-size: 32px;
+  font-weight: 700;
+  margin: 25px 0;
+`;
+
+const StyledP = styled.p`
+  font-family: ${({ theme }) => theme.p};
+`;
+
+const StyledDescription = styled.p`
+  font-family: ${({ theme }) => theme.p};
+  font-size: 24px;
+`;
+
 export default ({ data }) => {
   const {
     description,
@@ -65,7 +81,7 @@ export default ({ data }) => {
       />
       <GitHubCorner />
       <SocialButtons />
-      <h2>{description}</h2>
+      <StyledDescription>{description}</StyledDescription>
       <StyledInput
         aria-label="search input box"
         type="text"
@@ -76,7 +92,7 @@ export default ({ data }) => {
       {result.map(({ id, frontmatter, headings, fields }) => {
         return (
           <div key={id}>
-            <h3>
+            <SheetTitle>
               <Link to={fields.slug}>
                 <Highlighter
                   searchWords={[searchTerm]}
@@ -86,10 +102,10 @@ export default ({ data }) => {
                   {frontmatter.title}
                 </Highlighter>
               </Link>
-            </h3>
+            </SheetTitle>
             {headings.map(h => {
               return (
-                <p key={`${id}${h.title}`}>
+                <StyledP key={`${id}${h.title}`}>
                   <Link to={`${fields.slug}${h.url}`}>
                     <Highlighter
                       searchWords={[searchTerm]}
@@ -99,7 +115,7 @@ export default ({ data }) => {
                       {h.title}
                     </Highlighter>
                   </Link>
-                </p>
+                </StyledP>
               );
             })}
           </div>

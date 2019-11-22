@@ -7,12 +7,17 @@ const HeaderWrapper = styled.header`
   margin: 30px;
 `;
 
+const StyledH1 = styled.h1`
+  font-family: ${({ theme }) => theme.h1};
+  font-size: 40px;
+`;
+
 export const Header = ({ title }) => {
   return (
     <HeaderWrapper>
-      <h1>
+      <StyledH1>
         <Link to="/">{title}</Link>
-      </h1>
+      </StyledH1>
     </HeaderWrapper>
   );
 };

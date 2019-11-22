@@ -1,12 +1,23 @@
 import { graphql, Link } from 'gatsby';
 import React, { useState } from 'react';
 import SEO from 'react-seo-component';
+import styled from 'styled-components';
 import { Dump } from '../components/dump';
 import { GitHubCorner } from '../components/github-corner';
 import { Layout } from '../components/layout';
-import { H3 } from '../components/page-elements';
+import { H1, H3 } from '../components/page-elements';
 import { SocialButtons } from '../components/social-buttons';
 import { useSiteMetadata } from '../hooks/useSiteMetadata';
+
+const StyledInput = styled.input`
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  border: solid 1px lightgray;
+  font-size: 30px;
+  font-family: ${props => props.theme.h1};
+  padding-left: 5px;
+`;
 
 export default ({ data }) => {
   const {
@@ -56,30 +67,26 @@ export default ({ data }) => {
       <GitHubCorner />
       <SocialButtons />
       <H3>{description}</H3>
-      <input
+      <StyledInput
         type="text"
         placeholder="Search"
         value={searchTerm}
         onChange={handleChange}
       />
-      <div>
-        {result.map(({ id, frontmatter, headings, fields }) => {
-          return (
-            <div key={id}>
-              <h1>{frontmatter.title}</h1>
-              {headings.map(h => {
-                return (
-                  <h2 key={`${id}${h.title}`}>
-                    <Link to={`${fields.slug}${h.url}`}>
-                      {h.title}
-                    </Link>
-                  </h2>
-                );
-              })}
-            </div>
-          );
-        })}
-      </div>
+      {result.map(({ id, frontmatter, headings, fields }) => {
+        return (
+          <div key={id}>
+            <H1>{frontmatter.title}</H1>
+            {headings.map(h => {
+              return (
+                <p key={`${id}${h.title}`}>
+                  <Link to={`${fields.slug}${h.url}`}>{h.title}</Link>
+                </p>
+              );
+            })}
+          </div>
+        );
+      })}
       <Dump result={result} />
       <Dump data={data} />
     </Layout>

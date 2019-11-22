@@ -2,7 +2,6 @@ import { graphql, Link } from 'gatsby';
 import React, { useState } from 'react';
 import SEO from 'react-seo-component';
 import styled from 'styled-components';
-import { Dump } from '../components/dump';
 import { GitHubCorner } from '../components/github-corner';
 import { Layout } from '../components/layout';
 import { H1, H3 } from '../components/page-elements';
@@ -89,8 +88,6 @@ export default ({ data }) => {
           </div>
         );
       })}
-      <Dump result={result} />
-      <Dump data={data} />
     </Layout>
   );
 };

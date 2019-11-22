@@ -1,5 +1,6 @@
 import { graphql, Link } from 'gatsby';
 import React, { useState } from 'react';
+import Highlighter from 'react-highlight-words';
 import SEO from 'react-seo-component';
 import styled from 'styled-components';
 import { GitHubCorner } from '../components/github-corner';
@@ -75,9 +76,18 @@ export default ({ data }) => {
       {result.map(({ id, frontmatter, headings, fields }) => {
         return (
           <div key={id}>
-            <Link to={fields.slug}>
-              <H1>{frontmatter.title}</H1>
-            </Link>
+            <H1>
+              <Highlighter
+                highlightClassName="highlight"
+                searchWords={[...searchTerm]}
+                autoEscape={true}
+                textToHighlight={frontmatter.title}
+              >
+                <Link to={fields.slug} className="highlight">
+                  {frontmatter.title}
+                </Link>
+              </Highlighter>
+            </H1>
             {headings.map(h => {
               return (
                 <p key={`${id}${h.title}`}>

@@ -61,7 +61,8 @@ export const Code = ({ codeString, language, ...props }) => {
         {...defaultProps}
         code={codeString}
         language={language}
-        theme={theme}>
+        theme={theme}
+      >
         {({
           className,
           style,

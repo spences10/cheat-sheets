@@ -5,7 +5,6 @@ import SEO from 'react-seo-component';
 import styled from 'styled-components';
 import { GitHubCorner } from '../components/github-corner';
 import { Layout } from '../components/layout';
-import { H1, H3 } from '../components/page-elements';
 import { SocialButtons } from '../components/social-buttons';
 import { useSiteMetadata } from '../hooks/useSiteMetadata';
 
@@ -57,7 +56,7 @@ export default ({ data }) => {
     <Layout>
       <SEO
         title={title}
-        description={description || 'nothin’'}
+        description={description}
         image={image}
         pathname={siteUrl}
         siteLanguage={siteLanguage}
@@ -66,8 +65,9 @@ export default ({ data }) => {
       />
       <GitHubCorner />
       <SocialButtons />
-      <H3>{description}</H3>
+      <h2>{description}</h2>
       <StyledInput
+        aria-label="search input box"
         type="text"
         placeholder="Search"
         value={searchTerm}
@@ -76,7 +76,7 @@ export default ({ data }) => {
       {result.map(({ id, frontmatter, headings, fields }) => {
         return (
           <div key={id}>
-            <H1>
+            <h3>
               <Link to={fields.slug}>
                 <Highlighter
                   searchWords={[searchTerm]}
@@ -86,7 +86,7 @@ export default ({ data }) => {
                   {frontmatter.title}
                 </Highlighter>
               </Link>
-            </H1>
+            </h3>
             {headings.map(h => {
               return (
                 <p key={`${id}${h.title}`}>

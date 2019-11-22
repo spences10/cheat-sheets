@@ -1,7 +1,6 @@
 import { Link } from 'gatsby';
 import React from 'react';
 import styled from 'styled-components';
-import { H1 } from './page-elements';
 
 const HeaderWrapper = styled.header`
   position: relative;
@@ -11,9 +10,9 @@ const HeaderWrapper = styled.header`
 export const Header = ({ title }) => {
   return (
     <HeaderWrapper>
-      <Link to="/">
-        <H1>{title}</H1>
-      </Link>
+      <h1>
+        <Link to="/">{title}</Link>
+      </h1>
     </HeaderWrapper>
   );
 };

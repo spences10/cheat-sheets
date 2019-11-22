@@ -77,21 +77,28 @@ export default ({ data }) => {
         return (
           <div key={id}>
             <H1>
-              <Highlighter
-                highlightClassName="highlight"
-                searchWords={[...searchTerm]}
-                autoEscape={true}
-                textToHighlight={frontmatter.title}
-              >
-                <Link to={fields.slug} className="highlight">
+              <Link to={fields.slug}>
+                <Highlighter
+                  searchWords={[searchTerm]}
+                  autoEscape={true}
+                  textToHighlight={frontmatter.title}
+                >
                   {frontmatter.title}
-                </Link>
-              </Highlighter>
+                </Highlighter>
+              </Link>
             </H1>
             {headings.map(h => {
               return (
                 <p key={`${id}${h.title}`}>
-                  <Link to={`${fields.slug}${h.url}`}>{h.title}</Link>
+                  <Link to={`${fields.slug}${h.url}`}>
+                    <Highlighter
+                      searchWords={[searchTerm]}
+                      autoEscape={true}
+                      textToHighlight={h.title}
+                    >
+                      {h.title}
+                    </Highlighter>
+                  </Link>
                 </p>
               );
             })}

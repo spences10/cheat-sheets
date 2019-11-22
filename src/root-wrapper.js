@@ -2,6 +2,7 @@ import { MDXProvider } from '@mdx-js/react';
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import {
+  Blockquote,
   Code,
   H1,
   H2,
@@ -35,7 +36,10 @@ const components = {
     return <pre />;
   },
   'p.inlineCode': InlineCode,
+  'p.code': InlineCode,
   code: InlineCode,
+  'p.blockquote': Blockquote,
+  blockquote: Blockquote,
   wrapper: ({ children }) => <>{children}</>,
 };
 

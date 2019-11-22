@@ -18,6 +18,18 @@ const StyledInput = styled.input`
   padding-left: 5px;
 `;
 
+const spinThing = keyframes`
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+`;
+
 const SheetTitle = styled.p`
   font-family: ${({ theme }) => theme.h1};
   font-size: 32px;
@@ -35,18 +47,6 @@ const SheetTitle = styled.p`
   -moz-animation: ${spinThing} 1s ease infinite;
   animation: ${spinThing} 1s ease infinite;
   transition: all 0.5s ease;
-`;
-
-const spinThing = keyframes`
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 `;
 
 const StyledP = styled.p`

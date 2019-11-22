@@ -1,8 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const theme = {
-  primary: '#f2ff49',
-  primaryAccent: '#645dd7',
+  primary: '#c0ff33',
+  primaryAccent: '#663399',
   branding: '#f7e018',
   secondary: '#ff4242',
   background: '#b1b1cc',
@@ -51,6 +51,6 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     min-height: 100%;
     line-height: 1.3125;
-    font-size: 16px;
+    font-size: 21px;
   }
 `;

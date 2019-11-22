@@ -2,7 +2,7 @@ import { graphql, Link } from 'gatsby';
 import React, { useState } from 'react';
 import Highlighter from 'react-highlight-words';
 import SEO from 'react-seo-component';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { GitHubCorner } from '../components/github-corner';
 import { Layout } from '../components/layout';
 import { SocialButtons } from '../components/social-buttons';
@@ -23,6 +23,30 @@ const SheetTitle = styled.p`
   font-size: 32px;
   font-weight: 700;
   margin: 25px 0;
+  &:hover {
+    background: linear-gradient(
+      ${({ theme }) => theme.primary},
+      ${({ theme }) => theme.primaryAccent}
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  -webkit-animation: ${spinThing} 1s ease infinite;
+  -moz-animation: ${spinThing} 1s ease infinite;
+  animation: ${spinThing} 1s ease infinite;
+  transition: all 0.5s ease;
+`;
+
+const spinThing = keyframes`
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 `;
 
 const StyledP = styled.p`

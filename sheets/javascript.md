@@ -94,6 +94,12 @@ into an array then you'll be able to reverse it.
   .join('');
 ```
 
+output:
+
+```bash
+racecar
+```
+
 ## New array from existing
 
 Return one new entry for every existing entry: `map()`

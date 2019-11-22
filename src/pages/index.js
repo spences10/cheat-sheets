@@ -1,6 +1,7 @@
 import { graphql, Link } from 'gatsby';
 import React, { useState } from 'react';
 import SEO from 'react-seo-component';
+import { Dump } from '../components/dump';
 import { GitHubCorner } from '../components/github-corner';
 import { Layout } from '../components/layout';
 import { H3 } from '../components/page-elements';
@@ -24,18 +25,19 @@ export default ({ data }) => {
   };
 
   function filterBy(data, searchTerm) {
-    return data.filter(
-      ({
-        frontmatter: { title },
-        tableOfContents: { items },
-        fields: { slug },
-      }) => {
-        const headingValues = items.map(({ title }) => title);
-        return [title, ...headingValues, slug].some(value =>
-          value.toLowerCase().includes(searchTerm)
-        );
-      }
-    );
+    const hasSearchTerm = value =>
+      value.toLowerCase().includes(searchTerm);
+
+    return data.reduce((matches, sheet) => {
+      const headings = sheet.tableOfContents.items.filter(
+        ({ title }) => hasSearchTerm(title)
+      );
+      return [sheet.frontmatter.title, sheet.fields.slug].some(
+        hasSearchTerm
+      ) || headings.length
+        ? matches.concat(Object.assign(sheet, { headings }))
+        : matches;
+    }, []);
   }
 
   const result = filterBy(nodes, searchTerm);
@@ -61,14 +63,14 @@ export default ({ data }) => {
         onChange={handleChange}
       />
       <div>
-        {result.map(item => {
+        {result.map(({ id, frontmatter, headings, fields }) => {
           return (
-            <div key={item.id}>
-              <h1>{item.frontmatter.title}</h1>
-              {item.tableOfContents.items.map(h => {
+            <div key={id}>
+              <h1>{frontmatter.title}</h1>
+              {headings.map(h => {
                 return (
-                  <h2 key={`${item.id}${h.title}`}>
-                    <Link to={`${item.fields.slug}${h.url}`}>
+                  <h2 key={`${id}${h.title}`}>
+                    <Link to={`${fields.slug}${h.url}`}>
                       {h.title}
                     </Link>
                   </h2>
@@ -78,8 +80,8 @@ export default ({ data }) => {
           );
         })}
       </div>
-      {/* <Dump result={result} /> */}
-      {/* <Dump data={data} /> */}
+      <Dump result={result} />
+      <Dump data={data} />
     </Layout>
   );
 };
@@ -104,73 +106,3 @@ export const indexQuery = graphql`
     }
   }
 `;
-
-const dataArr = [
-  {
-    frontmatter: {
-      title: 'Alfred',
-    },
-    headings: [
-      {
-        value: 'Add custom search',
-        depth: 2,
-      },
-      {
-        value: 'Change the default search in Alfred',
-        depth: 2,
-      },
-    ],
-    fields: {
-      slug: '/alfred/',
-    },
-  },
-  {
-    frontmatter: {
-      title: 'Fish Shell',
-    },
-    headings: [
-      {
-        value: 'Aliases',
-        depth: 2,
-      },
-      {
-        value: 'Oh My Fish',
-        depth: 2,
-      },
-      {
-        value: 'Use nvm with fish',
-        depth: 2,
-      },
-      {
-        value: 'List out added aliases',
-        depth: 2,
-      },
-    ],
-    fields: {
-      slug: '/fish/',
-    },
-  },
-  {
-    frontmatter: {
-      title: 'Bash',
-    },
-    headings: [
-      {
-        value: 'Add an alias',
-        depth: 2,
-      },
-      {
-        value: 'Sort alphabetically 👌',
-        depth: 2,
-      },
-      {
-        value:
-          'Open the SSH agent each time you open a new terminal.',
-        depth: 2,
-      },
-    ],
-    fields: {
-      slug: '/bash/',
-    },
-  },
-];

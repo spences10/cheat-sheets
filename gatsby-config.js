@@ -21,31 +21,6 @@ const siteMetadata = {
   siteLocale: `en_gb`,
 };
 
-const sheetsQuery = `
-{
-  allMdx {
-    nodes {
-      frontmatter {
-        title
-        createdDate
-        updatedDate
-      }
-      tableOfContents
-      fields {
-        slug
-      }
-    }
-  }
-}
-`;
-
-const queries = [
-  {
-    query: sheetsQuery,
-    transformer: ({ data }) => data.allMdx.nodes,
-  },
-];
-
 module.exports = {
   siteMetadata: siteMetadata,
   plugins: [
@@ -53,16 +28,6 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
-    {
-      resolve: `gatsby-plugin-algolia`,
-      options: {
-        appId: process.env.GATSBY_ALGOLIA_APP_ID,
-        apiKey: process.env.GATSBY_ALGOLIA_API_KEY,
-        indexName: process.env.GATSBY_ALGOLIA_INDEX_NAME, // for all queries
-        queries,
-        chunkSize: 10000, // default: 1000
-      },
-    },
     {
       resolve: `gatsby-plugin-mdx`,
       options: {

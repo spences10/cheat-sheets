@@ -18,10 +18,8 @@
   "dependencies": {
     "@mdx-js/mdx": "1.5.1",
     "@mdx-js/react": "1.5.1",
-    "algoliasearch": "3.35.1",
     "babel-plugin-styled-components": "1.10.6",
     "gatsby": "2.17.9",
-    "gatsby-plugin-algolia": "0.3.4",
     "gatsby-plugin-google-analytics": "2.1.24",
     "gatsby-plugin-manifest": "2.2.26",
     "gatsby-plugin-mdx": "1.0.55",
@@ -38,7 +36,6 @@
     "react-dom": "16.10.2",
     "react-github-btn": "1.1.1",
     "react-helmet": "5.2.1",
-    "react-instantsearch-dom": "6.0.0",
     "react-live": "2.2.1",
     "react-seo-component": "0.1.10",
     "styled-components": "4.4.1"

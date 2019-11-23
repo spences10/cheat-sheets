@@ -10,7 +10,7 @@ exports.createPages = ({ actions, graphql }) => {
   // returns promise that will start with this graphql query
   return graphql(`
     {
-      allMdx {
+      allMdx(sort: { fields: fields___slug, order: ASC }) {
         edges {
           node {
             fields {

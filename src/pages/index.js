@@ -58,6 +58,8 @@ const StyledDescription = styled.p`
   font-size: 26px;
 `;
 
+const StyledLink = styled(props => <Link {...props} />)``;
+
 export default ({ data }) => {
   const {
     description,
@@ -117,7 +119,7 @@ export default ({ data }) => {
         return (
           <div key={id}>
             <SheetTitle>
-              <Link to={fields.slug}>
+              <StyledLink to={fields.slug}>
                 <Highlighter
                   searchWords={[searchTerm]}
                   autoEscape={true}
@@ -126,12 +128,12 @@ export default ({ data }) => {
                 >
                   {frontmatter.title}
                 </Highlighter>
-              </Link>
+              </StyledLink>
             </SheetTitle>
             {headings.map(h => {
               return (
                 <StyledP key={`${id}${h.title}`}>
-                  <Link to={`${fields.slug}${h.url}`}>
+                  <StyledLink to={`${fields.slug}${h.url}`}>
                     <Highlighter
                       searchWords={[searchTerm]}
                       autoEscape={true}
@@ -140,7 +142,7 @@ export default ({ data }) => {
                     >
                       {h.title}
                     </Highlighter>
-                  </Link>
+                  </StyledLink>
                 </StyledP>
               );
             })}

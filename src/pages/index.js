@@ -34,12 +34,18 @@ const StyledDescription = styled.p`
   font-size: 26px;
 `;
 
-const StyledLink = styled(props => <Link {...props} />)`
+export const StyledLink = styled(props => <Link {...props} />)`
   color: ${({ theme }) => theme.fontDark};
   &:focus {
     outline: 3px dashed ${({ theme }) => theme.primaryAccent};
   }
   padding: 3px;
+  &:hover {
+    color: ${({ theme }) => theme.primaryAccent};
+  }
+  &:active {
+    color: ${({ theme }) => theme.secondary};
+  }
 `;
 
 const LinkTitle = styled(StyledLink)`

@@ -147,7 +147,7 @@ export default ({ data }) => {
 
 export const indexQuery = graphql`
   {
-    allMdx {
+    allMdx(sort: { fields: fields___slug, order: ASC }) {
       nodes {
         id
         frontmatter {

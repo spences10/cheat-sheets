@@ -107,40 +107,44 @@ export default ({ data }) => {
         value={searchTerm}
         onChange={handleChange}
       />
-      {result.map(({ id, frontmatter, headings, fields }) => {
-        return (
-          <div key={id}>
-            <SheetTitle>
-              <LinkTitle to={fields.slug}>
-                <Highlighter
-                  searchWords={[searchTerm]}
-                  autoEscape={true}
-                  textToHighlight={frontmatter.title}
-                  className="highlighted"
-                >
-                  {frontmatter.title}
-                </Highlighter>
-              </LinkTitle>
-            </SheetTitle>
-            {headings.map(h => {
-              return (
-                <StyledP key={`${id}${h.title}`}>
-                  <LinkLink to={`${fields.slug}${h.url}`}>
-                    <Highlighter
-                      searchWords={[searchTerm]}
-                      autoEscape={true}
-                      textToHighlight={h.title}
-                      className="highlighted"
-                    >
-                      {h.title}
-                    </Highlighter>
-                  </LinkLink>
-                </StyledP>
-              );
-            })}
-          </div>
-        );
-      })}
+      {result.length === 0 ? (
+        <SheetTitle>Nothing for that term 😭</SheetTitle>
+      ) : (
+        result.map(({ id, frontmatter, headings, fields }) => {
+          return (
+            <div key={id}>
+              <SheetTitle>
+                <LinkTitle to={fields.slug}>
+                  <Highlighter
+                    searchWords={[searchTerm]}
+                    autoEscape={true}
+                    textToHighlight={frontmatter.title}
+                    className="highlighted"
+                  >
+                    {frontmatter.title}
+                  </Highlighter>
+                </LinkTitle>
+              </SheetTitle>
+              {headings.map(h => {
+                return (
+                  <StyledP key={`${id}${h.title}`}>
+                    <LinkLink to={`${fields.slug}${h.url}`}>
+                      <Highlighter
+                        searchWords={[searchTerm]}
+                        autoEscape={true}
+                        textToHighlight={h.title}
+                        className="highlighted"
+                      >
+                        {h.title}
+                      </Highlighter>
+                    </LinkLink>
+                  </StyledP>
+                );
+              })}
+            </div>
+          );
+        })
+      )}
     </Layout>
   );
 };

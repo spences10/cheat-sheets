@@ -2,7 +2,7 @@ import { graphql, Link } from 'gatsby';
 import React, { useState } from 'react';
 import Highlighter from 'react-highlight-words';
 import SEO from 'react-seo-component';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import { GitHubCorner } from '../components/github-corner';
 import { Layout } from '../components/layout';
 import { SocialButtons } from '../components/social-buttons';
@@ -18,35 +18,11 @@ const StyledInput = styled.input`
   padding-left: 5px;
 `;
 
-const spinThing = keyframes`
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-`;
-
 const SheetTitle = styled.p`
   font-family: ${({ theme }) => theme.h1};
   font-size: 32px;
   font-weight: 700;
   margin: 25px 0;
-  &:hover {
-    background: linear-gradient(
-      ${({ theme }) => theme.primary},
-      ${({ theme }) => theme.primaryAccent}
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  -webkit-animation: ${spinThing} 1s ease infinite;
-  -moz-animation: ${spinThing} 1s ease infinite;
-  animation: ${spinThing} 1s ease infinite;
-  transition: all 0.5s ease;
 `;
 
 const StyledP = styled.p`
@@ -56,6 +32,34 @@ const StyledP = styled.p`
 const StyledDescription = styled.p`
   font-family: ${({ theme }) => theme.p};
   font-size: 26px;
+`;
+
+export const StyledLink = styled(props => <Link {...props} />)`
+  color: ${({ theme }) => theme.fontDark};
+  &:focus {
+    outline: 3px dashed ${({ theme }) => theme.primaryAccent};
+  }
+  padding: 3px;
+  &:hover {
+    color: ${({ theme }) => theme.primaryAccent};
+  }
+  &:active {
+    color: ${({ theme }) => theme.secondary};
+  }
+`;
+
+const LinkTitle = styled(StyledLink)`
+  text-decoration: underline;
+  &:hover {
+    text-decoration: none;
+  }
+`;
+
+const LinkLink = styled(StyledLink)`
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
 export default ({ data }) => {
@@ -113,47 +117,62 @@ export default ({ data }) => {
         value={searchTerm}
         onChange={handleChange}
       />
-      {result.map(({ id, frontmatter, headings, fields }) => {
-        return (
-          <div key={id}>
-            <SheetTitle>
-              <Link to={fields.slug}>
-                <Highlighter
-                  searchWords={[searchTerm]}
-                  autoEscape={true}
-                  textToHighlight={frontmatter.title}
-                  className="highlighted"
+      {result.length === 0 ? (
+        <SheetTitle>
+          Nothing for that term.
+          <span role="img" aria-label="cry emoji">
+            😭
+          </span>
+        </SheetTitle>
+      ) : (
+        result.map(({ id, frontmatter, headings, fields }) => {
+          return (
+            <div key={id}>
+              <SheetTitle>
+                <LinkTitle
+                  to={fields.slug}
+                  aria-label={`Link for ${frontmatter.title}`}
                 >
-                  {frontmatter.title}
-                </Highlighter>
-              </Link>
-            </SheetTitle>
-            {headings.map(h => {
-              return (
-                <StyledP key={`${id}${h.title}`}>
-                  <Link to={`${fields.slug}${h.url}`}>
-                    <Highlighter
-                      searchWords={[searchTerm]}
-                      autoEscape={true}
-                      textToHighlight={h.title}
-                      className="highlighted"
+                  <Highlighter
+                    searchWords={[searchTerm]}
+                    autoEscape={true}
+                    textToHighlight={frontmatter.title}
+                    className="highlighted"
+                  >
+                    {frontmatter.title}
+                  </Highlighter>
+                </LinkTitle>
+              </SheetTitle>
+              {headings.map(h => {
+                return (
+                  <StyledP key={`${id}${h.title}`}>
+                    <LinkLink
+                      to={`${fields.slug}${h.url}`}
+                      aria-label={`Link for ${frontmatter.title} detailing ${h.title}`}
                     >
-                      {h.title}
-                    </Highlighter>
-                  </Link>
-                </StyledP>
-              );
-            })}
-          </div>
-        );
-      })}
+                      <Highlighter
+                        searchWords={[searchTerm]}
+                        autoEscape={true}
+                        textToHighlight={h.title}
+                        className="highlighted"
+                      >
+                        {h.title}
+                      </Highlighter>
+                    </LinkLink>
+                  </StyledP>
+                );
+              })}
+            </div>
+          );
+        })
+      )}
     </Layout>
   );
 };
 
 export const indexQuery = graphql`
   {
-    allMdx {
+    allMdx(sort: { fields: fields___slug, order: ASC }) {
       nodes {
         id
         frontmatter {

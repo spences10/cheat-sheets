@@ -36,6 +36,10 @@ const StyledDescription = styled.p`
 
 const StyledLink = styled(props => <Link {...props} />)`
   color: ${({ theme }) => theme.fontDark};
+  &:focus {
+    outline: 3px dashed ${({ theme }) => theme.primaryAccent};
+  }
+  padding: 3px;
 `;
 
 const LinkTitle = styled(StyledLink)`
@@ -109,7 +113,7 @@ export default ({ data }) => {
       />
       {result.length === 0 ? (
         <SheetTitle>
-          Nothing for that term{' '}
+          Nothing for that term.
           <span role="img" aria-label="cry emoji">
             😭
           </span>

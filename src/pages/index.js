@@ -2,7 +2,7 @@ import { graphql, Link } from 'gatsby';
 import React, { useState } from 'react';
 import Highlighter from 'react-highlight-words';
 import SEO from 'react-seo-component';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import { GitHubCorner } from '../components/github-corner';
 import { Layout } from '../components/layout';
 import { SocialButtons } from '../components/social-buttons';
@@ -18,35 +18,11 @@ const StyledInput = styled.input`
   padding-left: 5px;
 `;
 
-const spinThing = keyframes`
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-`;
-
 const SheetTitle = styled.p`
   font-family: ${({ theme }) => theme.h1};
   font-size: 32px;
   font-weight: 700;
   margin: 25px 0;
-  &:hover {
-    background: linear-gradient(
-      ${({ theme }) => theme.primary},
-      ${({ theme }) => theme.primaryAccent}
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  -webkit-animation: ${spinThing} 1s ease infinite;
-  -moz-animation: ${spinThing} 1s ease infinite;
-  animation: ${spinThing} 1s ease infinite;
-  transition: all 0.5s ease;
 `;
 
 const StyledP = styled.p`
@@ -58,7 +34,23 @@ const StyledDescription = styled.p`
   font-size: 26px;
 `;
 
-const StyledLink = styled(props => <Link {...props} />)``;
+const StyledLink = styled(props => <Link {...props} />)`
+  color: ${({ theme }) => theme.fontDark};
+`;
+
+const LinkTitle = styled(StyledLink)`
+  text-decoration: underline;
+  &:hover {
+    text-decoration: none;
+  }
+`;
+
+const LinkLink = styled(StyledLink)`
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+`;
 
 export default ({ data }) => {
   const {
@@ -119,7 +111,7 @@ export default ({ data }) => {
         return (
           <div key={id}>
             <SheetTitle>
-              <StyledLink to={fields.slug}>
+              <LinkTitle to={fields.slug}>
                 <Highlighter
                   searchWords={[searchTerm]}
                   autoEscape={true}
@@ -128,12 +120,12 @@ export default ({ data }) => {
                 >
                   {frontmatter.title}
                 </Highlighter>
-              </StyledLink>
+              </LinkTitle>
             </SheetTitle>
             {headings.map(h => {
               return (
                 <StyledP key={`${id}${h.title}`}>
-                  <StyledLink to={`${fields.slug}${h.url}`}>
+                  <LinkLink to={`${fields.slug}${h.url}`}>
                     <Highlighter
                       searchWords={[searchTerm]}
                       autoEscape={true}
@@ -142,7 +134,7 @@ export default ({ data }) => {
                     >
                       {h.title}
                     </Highlighter>
-                  </StyledLink>
+                  </LinkLink>
                 </StyledP>
               );
             })}

@@ -50,7 +50,8 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     min-height: 100%;
-    line-height: 1.3125;
+    line-height: 34px;
     font-size: 21px;
+    color: ${({ theme }) => theme.fontDark};
   }
 `;

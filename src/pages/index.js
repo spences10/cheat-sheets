@@ -108,7 +108,12 @@ export default ({ data }) => {
         onChange={handleChange}
       />
       {result.length === 0 ? (
-        <SheetTitle>Nothing for that term 😭</SheetTitle>
+        <SheetTitle>
+          Nothing for that term{' '}
+          <span role="img" aria-label="cry emoji">
+            😭
+          </span>
+        </SheetTitle>
       ) : (
         result.map(({ id, frontmatter, headings, fields }) => {
           return (

@@ -129,7 +129,10 @@ export default ({ data }) => {
           return (
             <div key={id}>
               <SheetTitle>
-                <LinkTitle to={fields.slug}>
+                <LinkTitle
+                  to={fields.slug}
+                  aria-label={`Link for ${frontmatter.title}`}
+                >
                   <Highlighter
                     searchWords={[searchTerm]}
                     autoEscape={true}
@@ -143,7 +146,10 @@ export default ({ data }) => {
               {headings.map(h => {
                 return (
                   <StyledP key={`${id}${h.title}`}>
-                    <LinkLink to={`${fields.slug}${h.url}`}>
+                    <LinkLink
+                      to={`${fields.slug}${h.url}`}
+                      aria-label={`Link for ${frontmatter.title} detailing ${h.title}`}
+                    >
                       <Highlighter
                         searchWords={[searchTerm]}
                         autoEscape={true}

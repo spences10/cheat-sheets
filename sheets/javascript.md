@@ -224,3 +224,39 @@ axios({
   console.log(result.data);
 });
 ```
+
+## Remove vowels from string
+
+Use a regular expression:
+
+```js
+'replace vowels from string'.replace(/[aeiou]/gi, '');
+```
+
+Output:
+
+```bash
+"rplc vwls frm strng"
+```
+
+With JavaScript functions:
+
+```js
+'replace vowels from string'
+  .split('a')
+  .join('')
+  .split('e')
+  .join('')
+  .split('i')
+  .join('')
+  .split('o')
+  .join('')
+  .split('u')
+  .join('');
+```
+
+Output:
+
+```bash
+"rplc vwls frm strng"
+```

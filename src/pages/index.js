@@ -101,7 +101,7 @@ export default ({ data }) => {
       <SEO
         title={title}
         description={description}
-        image={image}
+        image={`${siteUrl}${image}`}
         pathname={siteUrl}
         siteLanguage={siteLanguage}
         siteLocale={siteLocale}

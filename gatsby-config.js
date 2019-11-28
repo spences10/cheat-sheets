@@ -1,7 +1,5 @@
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
-  // path: `.env.development`,
-  // path: `.env.production`,
 });
 
 const siteMetadata = {
@@ -46,11 +44,9 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-fathom`,
       options: {
-        // add to netlify Build environment variables
-        trackingId: process.env.GATSBY_GA_TRACKING_ID,
-        anonymize: false,
+        siteId: process.env.GATSBY_FATHOM_TRACKING_ID_CHEAT_SHEETS,
       },
     },
     {

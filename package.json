@@ -20,7 +20,7 @@
     "@mdx-js/react": "1.5.1",
     "babel-plugin-styled-components": "1.10.6",
     "gatsby": "2.17.9",
-    "gatsby-plugin-google-analytics": "2.1.24",
+    "gatsby-plugin-fathom": "1.1.0",
     "gatsby-plugin-manifest": "2.2.26",
     "gatsby-plugin-mdx": "1.0.55",
     "gatsby-plugin-offline": "3.0.18",

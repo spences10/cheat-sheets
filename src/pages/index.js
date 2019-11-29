@@ -16,6 +16,9 @@ const StyledInput = styled.input`
   font-size: 32px;
   font-family: ${props => props.theme.h1};
   padding-left: 5px;
+  &:focus {
+    outline: 3px dashed ${({ theme }) => theme.primaryAccent};
+  }
 `;
 
 const SheetTitle = styled.p`

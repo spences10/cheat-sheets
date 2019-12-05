@@ -68,13 +68,13 @@ git push --set-upstream origin <branch-you-just-created>
 Fork other users repo in GitHub, then clone to your machine.
 
 ```bash
-git clone https://github.com/YourUserName/awesome-awesome-repo
+git clone https://github.com/your-username/awesome-awesome-repo
 ```
 
 Add the remote repo:
 
 ```bash
-git remote add upstream https://github.com/OtherUserName/awesome-awesome-repo
+git remote add upstream https://github.com/other-username/awesome-awesome-repo
 ```
 
 Create your branch:
@@ -156,7 +156,7 @@ Using two factor authentication? Then use the following so you're not
 adding in your auth token each time you want to `push` your code.
 
 ```bash
-git remote set-url origin https://yourgithubuser:your-token@github.com/yourgithubuser/yourrepo.git
+git remote set-url origin https://your-username:your-token@github.com/your-username/your-repo.git
 ```
 
 ## Change `origin` url
@@ -164,7 +164,7 @@ git remote set-url origin https://yourgithubuser:your-token@github.com/yourgithu
 If you want to change the origin url you can use the `set-url` command
 
 ```bash
-git remote set-url origin https://github.com/user/new-repo-name
+git remote set-url origin https://github.com/username/new-repo-name
 ```
 
 ## Add code on your machine to new repo
@@ -228,7 +228,7 @@ git branch --merged master | grep -v '^[ *]*master$' | xargs git branch -d
 ## Merge master branch into feature branch
 
 How to merge the master branch into the feature branch? This will come
-up often if you are workingon a team with other devs and you want to
+up often if you are working on a team with other devs and you want to
 update your feature branch to include the latest changes.
 
 ```bash
@@ -281,8 +281,8 @@ add it to your GitHub account before making a pull
 
 ```bash
 git remote -v
-origin  https://github.com/OtherUser/OtherUserRepo (fetch)
-origin  https://github.com/OtherUser/OtherUserRepo (push)
+origin  https://github.com/OtherUser/other-username/other-repo (fetch)
+origin  https://github.com/OtherUser/other-username/other-repo (push)
 ```
 
 You just need to set the `origin` to yours then add the `upstream` as
@@ -291,23 +291,23 @@ the original `origin` make sense?
 So change `origin` to yours:
 
 ```bash
-git remote set-url origin http://github.com/YourUser/YourRepo
+git remote set-url origin http://github.com/your-username/your-repo
 ```
 
 Then add `upsrtream` as theirs:
 
 ```bash
-git remote add upstream https://github.com/OtherUser/OtherUserRepo
+git remote add upstream https://github.com/other-username/other-repo
 ```
 
 Now it should look something like this:
 
 ```bash
 git remote -v
-origin  http://github.com/YourUser/YourRepo (fetch)
-origin  http://github.com/YourUser/YourRepo (push)
-upstream        https://github.com/OtherUser/OtherUserRepo (fetch)
-upstream        https://github.com/OtherUser/OtherUserRepo (push)
+origin  http://github.com/your-username/your-repo (fetch)
+origin  http://github.com/your-username/your-repo (push)
+upstream  https://github.com/other-username/other-repo (fetch)
+upstream  https://github.com/other-username/other-repo (push)
 ```
 
 ## Remove an `upstream` repository
@@ -322,7 +322,7 @@ git remote rm upstream
 ## Clone a repo and give it a different name
 
 ```bash
-git clone https://github.com/user/repoNameYouToChange NameYouWantToGiveToRepo
+git clone https://github.com/your-username/repo-name new-repo-name
 ```
 
 ## Using Husky?
@@ -364,7 +364,7 @@ think did the same thing.
 
 ## Show `.gitconfig` details
 
-There are there are three leves for Git config:
+There are three levels for Git config:
 
 **System level**
 
@@ -542,7 +542,7 @@ nano ~/.ssh/config
 ```
 
 The SSH agent will also need to be started on each terminal session
-now to store the keys in, add the follwowinf to your `~/.bashrc` file:
+now to store the keys in, add the following to your `~/.bashrc` file:
 
 ```bash
 [ -z "$SSH_AUTH_SOCK" ] && eval "$(ssh-agent -s)"
@@ -724,7 +724,7 @@ ssh -T git@github.com
 ## Change SSH key password
 
 Tired of typing your SSH key password because you made it a 32
-characters and can't stand the manotoney anymore?
+characters and can't stand the monotony anymore?
 
 Still want to have a SSH key password on your existing SSH key?
 
@@ -766,12 +766,6 @@ git config --global user.email 'your@email.com'
 ```bash
 git show
 ```
-
-<!-- Links -->
-
-[syncing a fork]: https://help.github.com/articles/syncing-a-fork/
-[adding an existing project to github using the command line]:
-  https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/
 
 ## Rebase changes
 
@@ -891,3 +885,9 @@ can create a global file (i.e. `.gitignore_global`), and copy to your
 new project.
 
 Reference: https://docs.gitignore.io/install/command-line
+
+<!-- Links -->
+
+[syncing a fork]: https://help.github.com/articles/syncing-a-fork/
+[adding an existing project to github using the command line]:
+  https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/

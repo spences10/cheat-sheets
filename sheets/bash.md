@@ -47,3 +47,9 @@ Add the following to your `~/.bashrc` file.
 # nano ~/.bashrc
 [ -z "$SSH_AUTH_SOCK" ] && eval "\$(ssh-agent -s)"
 ```
+
+## Search Bash history
+
+Want to search for an entry in your Bash history?
+
+Use `Ctrl+r` then enter your search term.

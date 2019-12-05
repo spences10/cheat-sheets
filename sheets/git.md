@@ -6,22 +6,21 @@ published: true
 cover: cover-git.png
 ---
 
-This is just stuff that I have put down that I find I use a lot of the
-time for my own reference.
+## Add a repo from your machine to GitHub
 
-## Add a new repo from your machine to GitHub
+Create a new repo and push it to GitHub.
 
 ```bash
 echo "# name-of-your-awesome-repo" >> README.md # add repo name to README.md
 git init # init the repository
 git add README.md
 git commit -m "first commit"
-git remote add origin https://github.com/spences10/name-of-your-awesome-repo.git
+git remote add origin https://github.com/your-username/name-of-your-awesome-repo.git
 git push -u origin master
 ```
 
-The first four commands can be ignored if you have done more work on
-the repo than adding a README.md
+The first four commands can be ignored if you have a repo you're
+already working on (git)committing to.
 
 ## Latest changes from repo to your machine
 

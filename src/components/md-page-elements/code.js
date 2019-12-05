@@ -42,6 +42,7 @@ const CopyCode = styled.button`
   }
   font-family: 'Victor Mono', 'Courier New', Courier, monospace;
   font-size: 13px;
+  background-color: ${({ theme }) => theme.primary};
 `;
 
 export const Code = ({ codeString, language, ...props }) => {

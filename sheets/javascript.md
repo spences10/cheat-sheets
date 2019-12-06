@@ -290,4 +290,34 @@ console.log(sayHello('margret'));
 Private variables:
 
 ```js
+function createGame(gameType) {
+  let score = 0;
+  return function increment() {
+    score++;
+    return `Your game of ${gameType} score is ${score}.`;
+  };
+}
+
+const cribbage = createGame('Cribbage');
+const bridge = createGame('Bridge');
+
+console.log(cribbage());
+console.log(cribbage());
+console.log(cribbage());
+console.log(cribbage());
+console.log(bridge());
+console.log(bridge());
+console.log(cribbage());
+```
+
+Output:
+
+```bash
+Your game of Cribbage score is 1.
+Your game of Cribbage score is 2.
+Your game of Cribbage score is 3.
+Your game of Cribbage score is 4.
+Your game of Bridge score is 1.
+Your game of Bridge score is 2.
+Your game of Cribbage score is 5.
 ```

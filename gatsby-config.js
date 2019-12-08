@@ -22,6 +22,14 @@ const siteMetadata = {
 module.exports = {
   siteMetadata: siteMetadata,
   plugins: [
+    {
+      resolve: `gatsby-plugin-printer`,
+      options: {
+        puppeteerLaunchOptions: {
+          headless: true,
+        },
+      },
+    },
     `gatsby-plugin-robots-txt`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,

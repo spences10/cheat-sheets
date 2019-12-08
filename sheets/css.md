@@ -11,6 +11,9 @@ cover: favicon.png
 You can use `margin: auto` on both `display: flex` and
 `display: grid`.
 
+It will work on the child of `grid` or `flexbox` but not on a block
+level element.
+
 ```html
 <div class="margins">
   <p>Pls center me!</p>

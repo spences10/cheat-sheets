@@ -1,5 +1,6 @@
 const path = require('path');
 const { createFilePath } = require(`gatsby-source-filesystem`);
+const { createPrinterNode } = require(`gatsby-plugin-printer`);
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
@@ -60,6 +61,22 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       name: `slug`,
       node,
       value,
+    });
+
+    // console.log('=====================');
+    // console.log({ node });
+    // console.log('=====================');
+    createPrinterNode({
+      id: node.id,
+      // fileName is something you can use in opengraph images, etc
+      fileName: node.frontmatter.title,
+      // renderDir is relative to `public` by default
+      outputDir: 'static',
+      // data gets passed directly to your react component
+      data: node,
+      // the component to use for rendering. Will get batched with
+      // other nodes that use the same component
+      component: require.resolve('./src/printer-components/sheet.js'),
     });
   }
 };

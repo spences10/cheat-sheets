@@ -102,7 +102,7 @@ racecar
 
 ## New array from existing
 
-Return one new entry for every existing entry: `map()`
+Return one new entry for every existing entry: `.map()`
 
 ```js
 const originalArray = [1, 2, 3];
@@ -118,7 +118,7 @@ output:
 
 ## Return new array filter
 
-Return a new array with only some of the existing entries: `filter()`
+Return a new array with only some of the existing entries: `.filter()`
 
 ```js
 const originalArray = [1, 9, 4, 2, 42];
@@ -134,7 +134,7 @@ output:
 
 ## Return one new thing only
 
-Return one new thing only: `reduce()`
+Return one new thing only: `.reduce()`
 
 ```js
 const originalArray = [
@@ -259,4 +259,65 @@ Output:
 
 ```bash
 "rplc vwls frm strng"
+```
+
+## Closure examples
+
+The running of a function within a function:
+
+```js
+function greeting(salutation = '') {
+  const sarcasm = () => {
+    return [...salutation]
+      .map((char, i) => char[`to${i % 2 ? 'Upper' : 'Lower'}Case`]())
+      .join('');
+  };
+  return function(name) {
+    return `${sarcasm()} ${name}`;
+  };
+}
+
+// run the function
+const sayHiya = greeting('Hiiiya');
+const sayHello = greeting('Hellooo');
+
+// now the function is closed but we can still
+// access the variables inside it
+console.log(sayHiya('scott'));
+console.log(sayHello('margret'));
+```
+
+Private variables:
+
+```js
+function createGame(gameType) {
+  let score = 0;
+  return function increment() {
+    score++;
+    return `Your game of ${gameType} score is ${score}.`;
+  };
+}
+
+const cribbage = createGame('Cribbage');
+const bridge = createGame('Bridge');
+
+console.log(cribbage());
+console.log(cribbage());
+console.log(cribbage());
+console.log(cribbage());
+console.log(bridge());
+console.log(bridge());
+console.log(cribbage());
+```
+
+Output:
+
+```bash
+Your game of Cribbage score is 1.
+Your game of Cribbage score is 2.
+Your game of Cribbage score is 3.
+Your game of Cribbage score is 4.
+Your game of Bridge score is 1.
+Your game of Bridge score is 2.
+Your game of Cribbage score is 5.
 ```

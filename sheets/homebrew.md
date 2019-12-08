@@ -1,7 +1,7 @@
 ---
 title: Homebrew
 createdDate: 2019-08-16
-updatedDate: 2019-08-16
+updatedDate: 2019-12-02
 published: true
 cover: cover-homebrew.png
 ---
@@ -40,3 +40,33 @@ outdated.
 ```bash
 brew update --verbose && brew upgrade `brew outdated`
 ```
+
+## Cask upgrade
+
+Brew and casks are treated differently so the upgrade is a different
+syntax too.
+
+```bash
+# check outdated
+brew cask outdated
+# update outdated
+brew cask upgrade
+```
+
+Alternatively [there's a package] you can install.
+
+Install:
+
+```bash
+brew tap buo/cask-upgrade
+```
+
+Usage:
+
+```bash
+brew cu
+```
+
+<!-- Links -->
+
+[there's a package]: https://github.com/buo/homebrew-cask-upgrade

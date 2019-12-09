@@ -4,8 +4,8 @@ export default ({ frontmatter: { title } }) => {
   return (
     <div
       style={{
-        height: '800px',
-        width: '400px',
+        width: '800px',
+        height: '400px',
         border: '5px solid black',
         padding: '1rem',
       }}

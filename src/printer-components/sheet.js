@@ -1,6 +1,16 @@
 import React from 'react';
-import { Layout } from '../components/layout';
 
-export default ({ title }) => {
-  return <Layout>{title}</Layout>;
+export default ({ frontmatter: { title } }) => {
+  return (
+    <div
+      style={{
+        height: '800px',
+        width: '400px',
+        border: '5px solid black',
+        padding: '1rem',
+      }}
+    >
+      <h1>{title}</h1>
+    </div>
+  );
 };

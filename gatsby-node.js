@@ -1,6 +1,7 @@
 const path = require('path');
 const { createFilePath } = require(`gatsby-source-filesystem`);
 const { createPrinterNode } = require(`gatsby-plugin-printer`);
+const slugify = require(`slugify`);
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
@@ -11,7 +12,7 @@ exports.createPages = ({ actions, graphql }) => {
   // returns promise that will start with this graphql query
   return graphql(`
     {
-      allMdx(sort: { fields: fields___slug, order: ASC }) {
+      allMdx(sort: { fields: frontmatter___title, order: ASC }) {
         edges {
           node {
             fields {
@@ -69,7 +70,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createPrinterNode({
       id: node.id,
       // fileName is something you can use in opengraph images, etc
-      fileName: node.frontmatter.title,
+      fileName: slugify(node.frontmatter.title),
       // renderDir is relative to `public` by default
       outputDir: 'static',
       // data gets passed directly to your react component

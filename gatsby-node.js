@@ -70,7 +70,9 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createPrinterNode({
       id: node.id,
       // fileName is something you can use in opengraph images, etc
-      fileName: slugify(node.frontmatter.title),
+      fileName: `cover-${slugify(
+        node.frontmatter.title
+      ).toLowerCase()}`,
       // renderDir is relative to `public` by default
       outputDir: 'static',
       // data gets passed directly to your react component

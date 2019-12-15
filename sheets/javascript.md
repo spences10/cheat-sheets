@@ -263,6 +263,10 @@ Output:
 
 ## Closure examples
 
+Closures are the ability for a child function (or inner function) to
+access variables from a higher level scope even after the functions
+have been called (closed or closed over).
+
 The running of a function within a function:
 
 ```js

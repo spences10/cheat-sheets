@@ -53,3 +53,32 @@ Add the following to your `~/.bashrc` file.
 Want to search for an entry in your Bash history?
 
 Use `Ctrl+r` then enter your search term.
+
+## Remove command from bash history
+
+Accidentally added your password as a bash command?
+
+To remove that from the bash history:
+
+```bash
+# list out history with
+history
+```
+
+Then take the number from the output:
+
+```bash
+471  ssh-agent
+472  exit
+473  kill 53111
+474  super secret password
+475  history
+```
+
+Then delete the line you want removed:
+
+```bash
+history -d 474
+```
+
+Check your `history` again and gone until you do it again.

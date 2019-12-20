@@ -325,3 +325,30 @@ Your game of Bridge score is 1.
 Your game of Bridge score is 2.
 Your game of Cribbage score is 5.
 ```
+
+## Mock and endpoint
+
+Use a mock endpoint to test against for auth forms.
+
+```js
+const wait = n => new Promise(resolve => setTimeout(resolve, n));
+
+const mockFetch = url =>
+  wait(1000).then(() => ({
+    status: 200,
+    body: {
+      url: 'http://bbc.co.uk',
+    },
+  }));
+
+mockFetch(`${endpoint}`).then(response => {
+  console.log('=====================');
+  console.log(response.status);
+  console.log(form.userEmail.value);
+  console.log(form.userPassword.value);
+  console.log('=====================');
+  response.status === 200
+    ? (location = response.body.url)
+    : console.error(`incorrect`);
+});
+```

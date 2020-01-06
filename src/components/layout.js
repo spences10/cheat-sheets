@@ -23,7 +23,13 @@ export const Layout = ({ children }) => {
   return (
     <AppLayout>
       <GlobalStyle />
-      <Header title={/*title*/} />
+      <Header
+        title={
+
+            // title
+
+        }
+      />
       <Wrapper>{children}</Wrapper>
     </AppLayout>
   );

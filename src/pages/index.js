@@ -112,7 +112,11 @@ export default ({ data }) => {
       />
       <GitHubCorner />
       <SocialButtons />
-      <StyledDescription>{/*description*/}</StyledDescription>
+      <StyledDescription>
+        {
+          // description
+        }
+      </StyledDescription>
       <StyledInput
         aria-label="search input box"
         type="text"

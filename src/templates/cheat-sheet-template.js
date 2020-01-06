@@ -50,8 +50,18 @@ export default ({ data, pageContext }) => {
       />
       <GitHubCorner />
       <StyledTitle>{title}</StyledTitle>
-      <StyledDate>Created: {/*createdDate*/}</StyledDate>
-      <StyledDate>Updated: {/*updatedDate*/}</StyledDate>
+      <StyledDate>
+        Created:{' '}
+        {
+          // createdDate
+        }
+      </StyledDate>
+      <StyledDate>
+        Updated:{' '}
+        {
+          // updatedDate
+        }
+      </StyledDate>
       <MDXRenderer>{body}</MDXRenderer>
     </Layout>
   );

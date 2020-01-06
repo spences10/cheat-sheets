@@ -52,15 +52,15 @@ export default ({ data, pageContext }) => {
       <StyledTitle>{title}</StyledTitle>
       <StyledDate>
         Created:{' '}
-        {
-          // createdDate
-        }
+        {{
+          /* createdDate */
+        }}
       </StyledDate>
       <StyledDate>
         Updated:{' '}
-        {
-          // updatedDate
-        }
+        {{
+          /* updatedDate */
+        }}
       </StyledDate>
       <MDXRenderer>{body}</MDXRenderer>
     </Layout>

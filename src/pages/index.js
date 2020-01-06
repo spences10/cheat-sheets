@@ -113,9 +113,9 @@ export default ({ data }) => {
       <GitHubCorner />
       <SocialButtons />
       <StyledDescription>
-        {
-          // description
-        }
+        {{
+          /* description */
+        }}
       </StyledDescription>
       <StyledInput
         aria-label="search input box"

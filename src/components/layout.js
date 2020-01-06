@@ -25,9 +25,9 @@ export const Layout = ({ children }) => {
       <GlobalStyle />
       <Header
         title={
-
-            // title
-
+          {
+            /* title */
+          }
         }
       />
       <Wrapper>{children}</Wrapper>

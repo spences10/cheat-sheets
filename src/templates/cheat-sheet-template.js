@@ -5,7 +5,7 @@ import SEO from 'react-seo-component';
 import styled from 'styled-components';
 import { GitHubCorner } from '../components/github-corner';
 import { Layout } from '../components/layout';
-import { useSiteMetadata } from '../hooks/useSiteMetadata';
+// import { useSiteMetadata } from '../hooks/useSiteMetadata';
 
 const StyledTitle = styled.h1`
   color: ${props => props.theme.fontDark};
@@ -21,12 +21,12 @@ const StyledDate = styled.p`
 export default ({ data, pageContext }) => {
   const { frontmatter, body, fields, tableOfContents } = data.mdx;
   const { title, createdDate, updatedDate, cover } = frontmatter;
-  const {
-    siteUrl,
-    image,
-    twitterUsername,
-    authorName,
-  } = useSiteMetadata();
+  // const {
+  //   siteUrl,
+  //   image,
+  //   twitterUsername,
+  //   authorName,
+  // } = useSiteMetadata();
   // const { prev, next } = pageContext
   // const { imageLink } = data.site.siteMetadata
   const tOCList =
@@ -38,20 +38,20 @@ export default ({ data, pageContext }) => {
   return (
     <Layout>
       <SEO
-        title={title}
-        description={tOCList}
-        image={!!cover ? `${siteUrl}/${cover}` : `${siteUrl}${image}`}
-        pathname={`${siteUrl}${fields.slug}`}
-        article={true}
-        publishedDate={createdDate}
-        modifiedDate={updatedDate}
-        twitterUsername={twitterUsername}
-        author={authorName}
+      // title={title}
+      // description={tOCList}
+      // image={!!cover ? `${siteUrl}/${cover}` : `${siteUrl}${image}`}
+      // pathname={`${siteUrl}${fields.slug}`}
+      // article={true}
+      // publishedDate={createdDate}
+      // modifiedDate={updatedDate}
+      // twitterUsername={twitterUsername}
+      // author={authorName}
       />
       <GitHubCorner />
       <StyledTitle>{title}</StyledTitle>
-      <StyledDate>Created: {createdDate}</StyledDate>
-      <StyledDate>Updated: {updatedDate}</StyledDate>
+      <StyledDate>Created: {/*createdDate*/}</StyledDate>
+      <StyledDate>Updated: {/*updatedDate*/}</StyledDate>
       <MDXRenderer>{body}</MDXRenderer>
     </Layout>
   );

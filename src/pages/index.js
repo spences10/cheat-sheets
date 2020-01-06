@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import { GitHubCorner } from '../components/github-corner';
 import { Layout } from '../components/layout';
 import { SocialButtons } from '../components/social-buttons';
-import { useSiteMetadata } from '../hooks/useSiteMetadata';
+// import { useSiteMetadata } from '../hooks/useSiteMetadata';
 
 const StyledInput = styled.input`
   width: 100%;
@@ -66,15 +66,15 @@ const LinkLink = styled(StyledLink)`
 `;
 
 export default ({ data }) => {
-  const {
-    description,
-    image,
-    title,
-    siteUrl,
-    siteLanguage,
-    siteLocale,
-    twitterUsername,
-  } = useSiteMetadata();
+  // const {
+  //   description,
+  //   image,
+  //   title,
+  //   siteUrl,
+  //   siteLanguage,
+  //   siteLocale,
+  //   twitterUsername,
+  // } = useSiteMetadata();
   const { nodes } = data.allMdx;
   const [searchTerm, setSearchTerm] = useState('');
   const handleChange = event => {
@@ -102,17 +102,17 @@ export default ({ data }) => {
   return (
     <Layout>
       <SEO
-        title={title}
-        description={description}
-        image={`${siteUrl}${image}`}
-        pathname={siteUrl}
-        siteLanguage={siteLanguage}
-        siteLocale={siteLocale}
-        twitterUsername={twitterUsername}
+      // title={title}
+      // description={description}
+      // image={`${siteUrl}${image}`}
+      // pathname={siteUrl}
+      // siteLanguage={siteLanguage}
+      // siteLocale={siteLocale}
+      // twitterUsername={twitterUsername}
       />
       <GitHubCorner />
       <SocialButtons />
-      <StyledDescription>{description}</StyledDescription>
+      <StyledDescription>{/*description*/}</StyledDescription>
       <StyledInput
         aria-label="search input box"
         type="text"

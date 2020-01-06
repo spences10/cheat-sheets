@@ -12,7 +12,7 @@ const siteMetadata = {
   image: `/favicon.png`,
   twitterUsername: `@spences10`,
   authorName: `Scott Spence`,
-  faviconPng: `./static/favicon.png?v=1`,
+  faviconPng: `./static/favicon.png`,
   backgroundColour: `#f7f0eb`,
   themeColour: `#a2466c`,
   siteLanguage: `en-GB`,

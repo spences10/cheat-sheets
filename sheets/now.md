@@ -1,13 +1,22 @@
 ---
 title: now
 createdDate: 2017-05-30
-updatedDate: 2018-04-27
+updatedDate: 2020-01-06
 published: true
 cover: cover-now.png
 ---
 
 The awesome now from zeit! It has a great cli with probably all of
 this detailed in there under `-h` somewhere 😁
+
+## Add a TXT record
+
+When wanting to add something like a Google search console
+verification code.
+
+```bash
+now dns add mydomain.com '@' TXT my-txt-record
+```
 
 ## Aliases
 

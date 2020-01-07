@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-// import { useSiteMetadata } from '../hooks/useSiteMetadata';
+import { useSiteMetadata } from '../hooks/useSiteMetadata';
 import { GlobalStyle } from '../theme/globalStyle';
+import { Header } from './header';
 
 const AppLayout = styled.main`
   max-width: 570px;
@@ -17,11 +18,11 @@ const Wrapper = styled.div`
 `;
 
 export const Layout = ({ children }) => {
-  // const { title } = useSiteMetadata();
+  const { title } = useSiteMetadata();
   return (
     <AppLayout>
       <GlobalStyle />
-      {/* <Header title={title} /> */}
+      <Header title={title} />
       <Wrapper>{children}</Wrapper>
     </AppLayout>
   );

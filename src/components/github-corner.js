@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import gitHubCorner from '../../static/github-corner-right.svg';
-// import { useSiteMetadata } from '../hooks/useSiteMetadata';
+import { useSiteMetadata } from '../hooks/useSiteMetadata';
 
 const CornerStyle = styled.a`
   position: absolute;
@@ -13,7 +13,7 @@ const CornerStyle = styled.a`
 `;
 
 export const GitHubCorner = () => {
-  // const { gitHubUrl } = useSiteMetadata();
+  const { gitHubUrl } = useSiteMetadata();
   return (
     <CornerStyle
       role="link"

@@ -1,7 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-// import { Dump } from '../components/dump';
-import { Header } from '../components/header';
 // import { useSiteMetadata } from '../hooks/useSiteMetadata';
 import { GlobalStyle } from '../theme/globalStyle';
 
@@ -23,13 +21,7 @@ export const Layout = ({ children }) => {
   return (
     <AppLayout>
       <GlobalStyle />
-      <Header
-        title={
-          {
-            /* title */
-          }
-        }
-      />
+      {/* <Header title={title} /> */}
       <Wrapper>{children}</Wrapper>
     </AppLayout>
   );

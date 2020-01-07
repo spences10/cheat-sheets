@@ -1,7 +1,7 @@
 import { graphql, Link } from 'gatsby';
 import React, { useState } from 'react';
 import Highlighter from 'react-highlight-words';
-import SEO from 'react-seo-component';
+// import SEO from 'react-seo-component';
 import styled from 'styled-components';
 import { GitHubCorner } from '../components/github-corner';
 import { Layout } from '../components/layout';
@@ -101,22 +101,18 @@ export default ({ data }) => {
 
   return (
     <Layout>
-      <SEO
-      // title={title}
-      // description={description}
-      // image={`${siteUrl}${image}`}
-      // pathname={siteUrl}
-      // siteLanguage={siteLanguage}
-      // siteLocale={siteLocale}
-      // twitterUsername={twitterUsername}
-      />
+      {/* <SEO
+        title={title}
+        description={description}
+        image={`${siteUrl}${image}`}
+        pathname={siteUrl}
+        siteLanguage={siteLanguage}
+        siteLocale={siteLocale}
+        twitterUsername={twitterUsername}
+      /> */}
       <GitHubCorner />
       <SocialButtons />
-      <StyledDescription>
-        {{
-          /* description */
-        }}
-      </StyledDescription>
+      {/* <StyledDescription>{description}</StyledDescription> */}
       <StyledInput
         aria-label="search input box"
         type="text"

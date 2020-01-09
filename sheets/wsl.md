@@ -18,7 +18,7 @@ https://www.addictivetips.com/windows-tips/how-to-run-linux-apps-from-bash-on-wi
 
 ## WSL Programs that work
 
-https://www.google.co.uk/url?sa=t&rct=j&q=&esrc=s&source=web&cd=3&cad=rja&uact=8&ved=0ahUKEwi0rcuFr-rWAhXRDRoKHXlrA58QFgg4MAI&url=https%3A%2F%2Fgithub.com%2Fethanhs%2FWSL-Programs&usg=AOvVaw2miCspYckMufw34925HcoS
+https://github.com/ethanhs/WSL-Programs
 
 ## Linuxbrew
 

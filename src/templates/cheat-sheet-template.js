@@ -5,6 +5,7 @@ import SEO from 'react-seo-component';
 import styled from 'styled-components';
 import { GitHubCorner } from '../components/github-corner';
 import { Layout } from '../components/layout';
+import { useAnalytics } from '../contexts/event-tracking';
 import { useSiteMetadata } from '../hooks/useSiteMetadata';
 
 const StyledTitle = styled.h1`
@@ -13,6 +14,12 @@ const StyledTitle = styled.h1`
 `;
 
 const StyledDate = styled.p`
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  color: ${props => props.theme.fontLight};
+`;
+
+const StyledA = styled.a`
   margin: 0.5rem 0;
   font-size: 0.9rem;
   color: ${props => props.theme.fontLight};
@@ -35,6 +42,7 @@ export default ({ data, pageContext }) => {
         return h.title;
       })
       .join(', ') || 'nothing yo!';
+  const fa = useAnalytics();
   return (
     <Layout>
       <SEO
@@ -52,6 +60,16 @@ export default ({ data, pageContext }) => {
       <StyledTitle>{title}</StyledTitle>
       <StyledDate>Created: {createdDate}</StyledDate>
       <StyledDate>Updated: {updatedDate}</StyledDate>
+      <StyledA
+        onClick={() => {
+          fa('6ETKCM0U');
+        }}
+        target="_blank"
+        rel="noopener noreferrer"
+        href={fields.editLink}
+      >
+        Edit this page on GitHub
+      </StyledA>
       <MDXRenderer>{body}</MDXRenderer>
     </Layout>
   );
@@ -71,6 +89,7 @@ export const query = graphql`
       tableOfContents
       fields {
         slug
+        editLink
       }
     }
   }

@@ -20,7 +20,7 @@ export const GitHubCorner = () => {
       aria-label="github repo link"
       href={gitHubUrl}
       target="_blank"
-      rel="noopener"
+      rel="noopener noreferrer"
     />
   );
 };

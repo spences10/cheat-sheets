@@ -9,6 +9,7 @@ import {
   H3,
   InlineCode,
 } from './components/md-page-elements';
+import { AnalyticsProvider } from './contexts/event-tracking';
 import { theme } from './theme/globalStyle';
 
 // import { Dump } from './src/utils/helpers';
@@ -45,6 +46,8 @@ const components = {
 
 export const wrapRootElement = ({ element }) => (
   <ThemeProvider theme={theme}>
-    <MDXProvider components={components}>{element}</MDXProvider>
+    <AnalyticsProvider>
+      <MDXProvider components={components}>{element}</MDXProvider>
+    </AnalyticsProvider>
   </ThemeProvider>
 );

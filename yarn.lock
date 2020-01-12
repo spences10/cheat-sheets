@@ -11963,10 +11963,10 @@ vfile@^4.0.0:
     unist-util-stringify-position "^2.0.0"
     vfile-message "^2.0.0"
 
-victormono@1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/victormono/-/victormono-1.3.0.tgz#ee51eaef47204a0b1d5d5a906c166e6df4b219c2"
-  integrity sha512-o9uEiZqlczcjqvq0qbJ3idzkHPQb5bG/XbYDonwmOjoAr8HZWmPar+En3Hnp/tvYO70+7RjQVoILUvKz4USlyA==
+victormono@1.3.1:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/victormono/-/victormono-1.3.1.tgz#c96064b745bd88ca9558ae48c3dc5eb9f7e74009"
+  integrity sha512-aNP+ur1mjI0g34SiwPZG/UaxuVQbC9u2O1QLN/+ukqDTyE6/Uc8EsTOJ9QbUleea11FQGiMx9P4Ngcw5zml7eQ==
   dependencies:
     animejs "^3.0.1"
     core-js "^2.6.5"

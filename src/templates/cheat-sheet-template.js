@@ -5,6 +5,7 @@ import SEO from 'react-seo-component';
 import styled from 'styled-components';
 import { GitHubCorner } from '../components/github-corner';
 import { Layout } from '../components/layout';
+import { useAnalytics } from '../contexts/event-tracking';
 import { useSiteMetadata } from '../hooks/useSiteMetadata';
 
 const StyledTitle = styled.h1`
@@ -41,6 +42,7 @@ export default ({ data, pageContext }) => {
         return h.title;
       })
       .join(', ') || 'nothing yo!';
+  const fa = useAnalytics();
   return (
     <Layout>
       <SEO
@@ -62,6 +64,9 @@ export default ({ data, pageContext }) => {
         target="_blank"
         rel="noopener noreferrer"
         href={fields.editLink}
+        onClick={() => {
+          fa('6ETKCM0U');
+        }}
       >
         Edit this page on GitHub
       </StyledA>

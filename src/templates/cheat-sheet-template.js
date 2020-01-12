@@ -61,12 +61,12 @@ export default ({ data, pageContext }) => {
       <StyledDate>Created: {createdDate}</StyledDate>
       <StyledDate>Updated: {updatedDate}</StyledDate>
       <StyledA
-        target="_blank"
-        rel="noopener noreferrer"
-        href={fields.editLink}
         onClick={() => {
           fa('6ETKCM0U');
         }}
+        target="_blank"
+        rel="noopener noreferrer"
+        href={fields.editLink}
       >
         Edit this page on GitHub
       </StyledA>

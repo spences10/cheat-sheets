@@ -21,19 +21,7 @@ export const theme = {
   pSize: '21px',
 };
 
-const fonts = () => {
-  const list = [
-    'Josefin+Slab:400,700|',
-    'Maitree:400,700|',
-    'Pontano+Sans:400:700|',
-  ];
-  return list.join('');
-};
-
 export const GlobalStyle = createGlobalStyle`
-
-  @import url('https://fonts.googleapis.com/css?family=${fonts}');
-
   *, *:before, *:after {
     box-sizing: border-box;
   }

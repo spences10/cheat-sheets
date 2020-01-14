@@ -62,5 +62,17 @@ module.exports = {
       },
     },
     `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-web-font-loader`,
+      options: {
+        google: {
+          families: [
+            `Josefin Slab:400,700`,
+            `Pontano Sans:400,700`,
+            `Maitree: 400,700`,
+          ],
+        },
+      },
+    },
   ],
 };

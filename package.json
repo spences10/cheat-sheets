@@ -1,6 +1,6 @@
 {
   "name": "cheat-sheets",
-  "version": "1.0.291",
+  "version": "1.0.292",
   "author": "Scott Spence <spences10apps@gmail.com>(https://scottspence.me/)",
   "license": "MIT",
   "description": "Cheat sheets",
@@ -23,7 +23,7 @@
     "gatsby-plugin-fathom": "1.1.1",
     "gatsby-plugin-manifest": "2.2.37",
     "gatsby-plugin-mdx": "1.0.67",
-    "gatsby-plugin-offline": "3.0.31",
+    "gatsby-plugin-offline": "3.0.32",
     "gatsby-plugin-react-helmet": "3.1.21",
     "gatsby-plugin-remove-serviceworker": "1.0.0",
     "gatsby-plugin-robots-txt": "1.5.0",

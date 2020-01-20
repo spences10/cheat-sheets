@@ -13,7 +13,6 @@ import { copyToClipboard } from '../../util/copy-to-clipboard';
 // import { Dump } from '../utils/helpers'
 
 export const Pre = styled.pre`
-  position: relative;
   text-align: left;
   margin: 1em 0;
   padding: 0.5em;

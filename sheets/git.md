@@ -216,7 +216,8 @@ git branch -D branch-name
 Remove local branches that are not on the `remote`.
 
 ```bash
-git remote prune origin
+git remote prune origin --dry-run
+# remove --dry-run if you're happy to delete
 ```
 
 Remove local branches that were created from remote branches.

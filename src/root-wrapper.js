@@ -23,14 +23,16 @@ const components = {
     // if there's a codeString and some props, we passed the test
     if (props.mdxType === 'code') {
       return (
-        <Code
-          codeString={props.children.trim()}
-          language={
-            props.className &&
-            props.className.replace('language-', '')
-          }
-          {...props}
-        />
+        <div style={{ position: 'relative' }}>
+          <Code
+            codeString={props.children.trim()}
+            language={
+              props.className &&
+              props.className.replace('language-', '')
+            }
+            {...props}
+          />
+        </div>
       );
     }
     // it's possible to have a pre without a code in it

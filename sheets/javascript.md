@@ -352,3 +352,14 @@ mockFetch(`${endpoint}`).then(response => {
     : console.error(`incorrect`);
 });
 ```
+
+## List all image URLs from a web page
+
+Need to quickly grab a load of images from a page?
+
+```js
+let images = document.querySelectorAll('img')
+Array.from(images).map(i => {
+	console.log(i.src)
+})
+```

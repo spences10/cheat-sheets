@@ -75,5 +75,22 @@ module.exports = {
       },
     },
     `gatsby-plugin-remove-serviceworker`,
+    {
+      resolve: `gatsby-plugin-zeit-now`,
+      options: {
+        globalHeaders: {
+          'referrer-policy': 'same-origin',
+          'feature-policy':
+            "geolocation 'self'; microphone 'self'; camera 'self'",
+          'expect-ct': 'max-age=604800, enforce',
+          'strict-transport-security':
+            'max-age=31536000; includeSubDomains',
+          'x-frame-options': 'DENY',
+          'x-xss-protection': '1; mode=block',
+          'x-content-type-options': 'nosniff',
+          'x-download-options': 'noopen',
+        },
+      },
+    },
   ],
 };

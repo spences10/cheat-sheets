@@ -5117,6 +5117,11 @@ gatsby-plugin-web-font-loader@1.0.4:
     babel-runtime "^6.26.0"
     webfontloader "^1.6.28"
 
+gatsby-plugin-zeit-now@0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-zeit-now/-/gatsby-plugin-zeit-now-0.2.0.tgz#1ec1052fd94788df12f2fc469ff0587046627454"
+  integrity sha512-opnQxqvnQkKsJDcwoq7Hounzk45E1ojNSfP0Au6QsNKvahmjTzpbTJpO5uXRbmGpe1TQw8ZizXzZD4l8ZdFcqw==
+
 gatsby-react-router-scroll@^2.1.20:
   version "2.1.20"
   resolved "https://registry.yarnpkg.com/gatsby-react-router-scroll/-/gatsby-react-router-scroll-2.1.20.tgz#bd208ae384597a6a9af8f6ef50c9c90f44965d48"

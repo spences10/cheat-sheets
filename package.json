@@ -30,6 +30,7 @@
     "gatsby-plugin-sitemap": "2.2.25",
     "gatsby-plugin-styled-components": "3.1.17",
     "gatsby-plugin-web-font-loader": "1.0.4",
+    "gatsby-plugin-zeit-now": "0.2.0",
     "gatsby-remark-autolink-headers": "2.1.23",
     "gatsby-remark-smartypants": "2.1.20",
     "gatsby-source-filesystem": "2.1.46",

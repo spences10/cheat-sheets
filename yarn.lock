@@ -5155,10 +5155,10 @@ gatsby-plugin-manifest@2.2.39:
     semver "^5.7.1"
     sharp "^0.23.4"
 
-gatsby-plugin-mdx@1.0.67:
-  version "1.0.67"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-mdx/-/gatsby-plugin-mdx-1.0.67.tgz#1c2d80606a4c6b112164f46fad0a81b146603884"
-  integrity sha512-PG1j8voD1hCBrj1blw1CqiJlXMv+QATVllvqClKl47GfCOZAuVj+VMN6O9WbImc5sVUw/SuvfCTOpk9H7gHlPw==
+gatsby-plugin-mdx@1.0.68:
+  version "1.0.68"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-mdx/-/gatsby-plugin-mdx-1.0.68.tgz#7e614cb31961006c9bb173f8f3cefcd459e43b26"
+  integrity sha512-wOf9CGweHUZ4EQu5UTIoFUR8bWIwQzRM7Og59DiyQLzIdKDfTR59qCE/PlK3mg07I6DG+YP27hM5zG7wU4LrGg==
   dependencies:
     "@babel/core" "^7.7.5"
     "@babel/generator" "^7.7.4"
@@ -5346,10 +5346,10 @@ gatsby-telemetry@^1.1.47:
     stack-utils "1.0.2"
     uuid "3.3.3"
 
-gatsby@2.19.7:
-  version "2.19.7"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.19.7.tgz#670d04f25259a914db0049ebd56c14bc04f62d38"
-  integrity sha512-pdCXdzH7Ht0KcpGJPV//WIWgZ10vxO5Gqs4N3NvfAAAKnhZotJ8W5pbSfbw+7ec5zxNw57SWPE5hV6Unm9rIYA==
+gatsby@2.19.8:
+  version "2.19.8"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.19.8.tgz#318f9c9eb9b38c9f3988884db69000ce1b08acfc"
+  integrity sha512-5Hfp+tzuom6871kOeVkfJMKNsZb6+a8+HMj8TXQcfLEio4absrfw+3EUSchaMu9rg7P8YS2Pi88/NQMI8DveaQ==
   dependencies:
     "@babel/code-frame" "^7.5.5"
     "@babel/core" "^7.7.5"

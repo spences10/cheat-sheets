@@ -363,3 +363,11 @@ Array.from(images).map(i => {
 	console.log(i.src)
 })
 ```
+
+## <div> cannot appear as a descendant of <p>
+
+If you're looking for where this is happening, in console you can use: 
+
+```js
+document.querySelectorAll(" p * div ")
+```

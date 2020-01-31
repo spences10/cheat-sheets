@@ -86,7 +86,7 @@ Use either `align-items: center;` or `place-items: center;`
 }
 ```
 
-## Breaking Long 
+## Breaking Long Words and URLs
 
 There are times when a really long string of text can overflow the container of a layout, use this:
 

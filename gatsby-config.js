@@ -63,18 +63,16 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
     {
-      resolve: `gatsby-plugin-web-font-loader`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
-        google: {
-          families: [
-            `Josefin Slab:400,700`,
-            `Pontano Sans:400,700`,
-            `Maitree: 400,700`,
-          ],
-        },
+        fonts: [
+          `josefin slab\:400,700`,
+          `pontano\:400,700`,
+          `maitree\:400,700`,
+        ],
+        display: 'swap',
       },
     },
-    `gatsby-plugin-remove-serviceworker`,
     {
       resolve: `gatsby-plugin-zeit-now`,
       options: {

@@ -85,3 +85,15 @@ Use either `align-items: center;` or `place-items: center;`
   place-items: center;
 }
 ```
+
+## Breaking Long 
+
+There are times when a really long string of text can overflow the container of a layout, use this:
+
+```css
+.don_break_out_of_parent {
+  /* These are technically the same, but use both */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+ }
+```

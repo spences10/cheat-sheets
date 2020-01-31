@@ -364,7 +364,7 @@ Array.from(images).map(i => {
 })
 ```
 
-## <div> cannot appear as a descendant of <p>
+## `<div>` cannot appear as a descendant of `<p>`
 
 If you're looking for where this is happening, in console you can use: 
 

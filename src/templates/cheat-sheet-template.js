@@ -33,6 +33,7 @@ export default ({ data, pageContext }) => {
     image,
     twitterUsername,
     authorName,
+    siteTitle,
   } = useSiteMetadata();
   // const { prev, next } = pageContext
   // const { imageLink } = data.site.siteMetadata
@@ -47,6 +48,7 @@ export default ({ data, pageContext }) => {
     <Layout>
       <SEO
         title={title}
+        titleTemplate={siteTitle}
         description={tOCList}
         image={!!cover ? `${siteUrl}/${cover}` : `${siteUrl}${image}`}
         pathname={`${siteUrl}${fields.slug}`}

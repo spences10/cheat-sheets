@@ -371,3 +371,14 @@ If you're looking for where this is happening, in console you can use:
 ```js
 document.querySelectorAll(" p * div ")
 ```
+
+## Truncate a string
+
+Shorten a string! Define the start and the end of the string you want
+to return: 
+
+```js
+const myString = "ABCDEFG";
+const myTruncatedString = myString.substring(0, 3);
+// The value of myTruncatedString is "ABC"
+```

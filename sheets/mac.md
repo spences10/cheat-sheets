@@ -34,6 +34,19 @@ Window screenshot to clipboard
 cmd + shift + cmd + 4 #then spacebar
 ```
 
+## Screenshot, record screen UI
+
+There's another option for taking screenshots in Mojave.
+
+```bash
+cmd + shift + 5
+```
+
+This is where you can configure the type of snip you want to take.
+
+Hold dow the option key when taking a screenshot to remove the shadow.
+
+
 ## Keys
 
 The '#' character

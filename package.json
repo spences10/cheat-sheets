@@ -1,6 +1,6 @@
 {
   "name": "cheat-sheets",
-  "version": "1.0.332",
+  "version": "1.0.333",
   "author": "Scott Spence <spences10apps@gmail.com>(https://scottspence.me/)",
   "license": "MIT",
   "description": "Cheat sheets",
@@ -34,8 +34,8 @@
     "gatsby-remark-smartypants": "2.1.21",
     "gatsby-source-filesystem": "2.1.48",
     "prism-react-renderer": "1.0.2",
-    "react": "16.12.0",
-    "react-dom": "16.12.0",
+    "react": "16.13.0",
+    "react-dom": "16.13.0",
     "react-github-btn": "1.1.1",
     "react-helmet": "5.2.1",
     "react-highlight-words": "0.16.0",

@@ -23,6 +23,12 @@ yarn upgrade --latest
 yarn global add netlify-cli
 ```
 
+## Upgrade global packages
+
+```bash
+yarn global upgrade
+```
+
 ## displays the location of the yarn bin folder.
 
 ```bash

@@ -1,6 +1,6 @@
 {
   "name": "cheat-sheets",
-  "version": "1.0.383",
+  "version": "1.0.384",
   "author": "Scott Spence <spences10apps@gmail.com>(https://scottspence.me/)",
   "license": "MIT",
   "description": "Cheat sheets",
@@ -45,7 +45,7 @@
     "victormono": "1.3.1"
   },
   "devDependencies": {
-    "husky": "4.2.3",
+    "husky": "4.2.4",
     "prettier": "2.0.4",
     "pretty-quick": "2.0.1"
   },

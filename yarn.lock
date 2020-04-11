@@ -5276,10 +5276,10 @@ gatsby-plugin-styled-components@3.2.1:
   dependencies:
     "@babel/runtime" "^7.8.7"
 
-gatsby-plugin-zeit-now@0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-zeit-now/-/gatsby-plugin-zeit-now-0.2.0.tgz#1ec1052fd94788df12f2fc469ff0587046627454"
-  integrity sha512-opnQxqvnQkKsJDcwoq7Hounzk45E1ojNSfP0Au6QsNKvahmjTzpbTJpO5uXRbmGpe1TQw8ZizXzZD4l8ZdFcqw==
+gatsby-plugin-zeit-now@0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-zeit-now/-/gatsby-plugin-zeit-now-0.3.0.tgz#532adf24b6311d4f654ec967ad3467140b6cb077"
+  integrity sha512-7lNe/MRWg7ZVjMY147MDFHmypWfDE734aynV/n6f5WiIVWG5EggUPKWUIFLKVtjQsR8o3dbTUCjSOYY4fs2cZg==
 
 gatsby-react-router-scroll@^2.2.1:
   version "2.2.1"

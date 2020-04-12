@@ -382,3 +382,10 @@ const myString = "ABCDEFG";
 const myTruncatedString = myString.substring(0, 3);
 // The value of myTruncatedString is "ABC"
 ```
+
+## Current year one liner
+
+```js
+const copyrightYear = new Date().getFullYear()
+```
+

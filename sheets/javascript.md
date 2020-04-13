@@ -1,7 +1,7 @@
 ---
 title: JavaScript
 createdDate: 2017-12-01
-updatedDate: 2017-11-03
+updatedDate: 2020-04-12
 published: true
 cover: cover-javascript.png
 ---

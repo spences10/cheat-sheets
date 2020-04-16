@@ -17,6 +17,13 @@ Need to add a verification for something like the Google Search console.
 now dns add yoursite.xyz '@' TXT someTextRecordYouNeedToAdd
 ```
 
+## Add a CNAME
+
+
+```bash
+now dns add yoursitename.com subdomainreference CNAME dnsprovider.org
+```
+
 ## Aliases
 
 Got your own domain name? You can alias your latest `now` deployment

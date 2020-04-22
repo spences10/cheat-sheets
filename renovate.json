@@ -12,7 +12,7 @@
     "extends": "schedule:monthly"
   },
   "packageRules": {
-    "packagePatterns": ["gatsby^"],
+    "packagePatterns": ["^gatsby"],
     "extends": "schedule:after 10pm on Wednesday"
   }
 }

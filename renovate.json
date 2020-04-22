@@ -7,20 +7,28 @@
   "major": {
     "automerge": false
   },
-  "lockFileMaintenance": {
-    "enabled": true,
-    "extends": "schedule:monthly"
-  },
   "packageRules": [
     {
-      "packagePatterns": ["gatsby^"],
-      "extends": {
-        "schedule": [
-          "after 10pm every weekday",
-          "before 5am every weekday",
-          "every weekend"
-        ]
-      }
+      "packagePatterns": ["^eslint"],
+      "groupName": "eslint"
+    },
+    {
+      "packagePatterns": ["gatsby"],
+      "groupName": "gatsby"
+    },
+    {
+      "packagePatterns": ["@mdx-js"],
+      "groupName": "@mdx-js"
+    },
+    {
+      "packageNames": ["react", "react-dom"],
+      "groupName": "react"
     }
-  ]
+  ],
+  "labels": ["renovate"],
+  "prHourlyLimit": 4,
+  "prConcurrentLimit": 15,
+  "rangeStrategy": "bump",
+  "semanticCommits": true,
+  "schedule": "before 5am on Monday"
 }

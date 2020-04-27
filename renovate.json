@@ -26,8 +26,8 @@
     }
   ],
   "labels": ["renovate"],
-  "prHourlyLimit": 4,
-  "prConcurrentLimit": 15,
+  "prHourlyLimit": 1,
+  "prConcurrentLimit": 5,
   "rangeStrategy": "bump",
   "semanticCommits": true,
   "schedule": "before 5am on Monday"

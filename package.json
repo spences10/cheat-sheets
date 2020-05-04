@@ -1,6 +1,10 @@
 {
   "name": "cheat-sheets",
+<<<<<<< HEAD
   "version": "1.0.419",
+=======
+  "version": "1.0.405",
+>>>>>>> fix(deps): update @mdx-js to v1.6.1
   "author": "Scott Spence <spences10apps@gmail.com>(https://scottspence.me/)",
   "license": "MIT",
   "description": "Cheat sheets",
@@ -17,8 +21,13 @@
     }
   },
   "dependencies": {
+<<<<<<< HEAD
     "@mdx-js/mdx": "1.6.5",
     "@mdx-js/react": "1.6.5",
+=======
+    "@mdx-js/mdx": "1.6.1",
+    "@mdx-js/react": "1.6.1",
+>>>>>>> fix(deps): update @mdx-js to v1.6.1
     "babel-plugin-styled-components": "1.10.7",
     "gatsby": "2.23.1",
     "gatsby-plugin-google-fonts": "1.0.1",

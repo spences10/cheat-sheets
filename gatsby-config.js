@@ -1,6 +1,6 @@
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
-});
+})
 
 const siteMetadata = {
   title: `Cheat Sheets`,
@@ -17,7 +17,7 @@ const siteMetadata = {
   themeColour: `#a2466c`,
   siteLanguage: `en-GB`,
   siteLocale: `en_gb`,
-};
+}
 
 module.exports = {
   siteMetadata: siteMetadata,
@@ -41,12 +41,6 @@ module.exports = {
       options: {
         path: `${__dirname}/sheets`,
         name: `sheets`,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-fathom`,
-      options: {
-        siteId: process.env.GATSBY_FATHOM_TRACKING_ID_CHEAT_SHEETS,
       },
     },
     {
@@ -91,4 +85,4 @@ module.exports = {
       },
     },
   ],
-};
+}

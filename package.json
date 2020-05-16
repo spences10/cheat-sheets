@@ -21,7 +21,6 @@
     "@mdx-js/react": "1.5.8",
     "babel-plugin-styled-components": "1.10.7",
     "gatsby": "2.20.28",
-    "gatsby-plugin-fathom": "1.1.1",
     "gatsby-plugin-google-fonts": "1.0.1",
     "gatsby-plugin-manifest": "2.3.6",
     "gatsby-plugin-mdx": "1.1.9",

@@ -4,8 +4,9 @@ import { StyledLink } from '../pages'
 import { H1 } from './md-page-elements'
 
 const HeaderWrapper = styled.header`
+  color: ${({ theme }) => theme.colors.blue[500]};
   position: relative;
-  margin: 30px;
+  margin: 30px 0;
 `
 
 export const Header = ({ title }) => {

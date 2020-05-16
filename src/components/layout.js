@@ -10,12 +10,7 @@ const AppLayout = styled.main`
   margin: 0 auto;
 `
 
-const Wrapper = styled.div`
-  margin: 30px;
-  ul {
-    padding: 0;
-  }
-`
+const Wrapper = styled.div``
 
 export const Layout = ({ children }) => {
   const { title } = useSiteMetadata()

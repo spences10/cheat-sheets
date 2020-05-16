@@ -43,11 +43,11 @@ const components = {
     // it's possible to have a pre without a code in it
     return <pre />
   },
-  'p.inlineCode': InlineCode,
-  'p.code': InlineCode,
-  code: InlineCode,
-  'p.blockquote': Blockquote,
-  blockquote: Blockquote,
+  'p.inlineCode': props => <InlineCode {...props} />,
+  'p.code': props => <InlineCode {...props} />,
+  code: props => <InlineCode {...props} />,
+  'p.blockquote': props => <Blockquote {...props} />,
+  blockquote: props => <Blockquote {...props} />,
   wrapper: ({ children }) => <>{children}</>,
   p: props => <P {...props} />,
   small: props => <Small {...props} />,

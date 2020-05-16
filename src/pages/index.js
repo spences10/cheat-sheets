@@ -5,51 +5,50 @@ import Highlighter from 'react-highlight-words'
 import SEO from 'react-seo-component'
 import styled from 'styled-components'
 import { GitHubCorner } from '../components/github-corner'
+import { P } from '../components/md-page-elements'
 import { SocialButtons } from '../components/social-buttons'
 import { useSiteMetadata } from '../hooks/useSiteMetadata'
 import { ogImageUrl } from '../util/og-image-url-build'
 
 const StyledInput = styled.input`
   width: 100%;
-  height: 50px;
-  border-radius: 5px;
-  border: solid 1px lightgray;
-  font-size: 32px;
-  font-family: ${props => props.theme.h1};
-  padding-left: 5px;
+  border-radius: ${({ theme }) => theme.borderRadius.default};
+  border: solid 1px ${({ theme }) => theme.colors.gray[500]};
+  font-size: ${({ theme }) => theme.fontSize['3xl']};
+  padding: ${({ theme }) => theme.spacing[2]};
   &:focus {
-    outline: 3px dashed ${({ theme }) => theme.primaryAccent};
+    outline: 3px dashed ${({ theme }) => theme.colors.blue[500]};
   }
+  margin-bottom: ${({ theme }) => theme.spacing[10]};
 `
 
-const SheetTitle = styled.h1`
+const SheetTitle = styled.h2`
   font-family: ${({ theme }) => theme.fontFamily.sans};
   font-size: ${({ theme }) => theme.fontSize['2xl']};
   font-weight: 700;
-  margin: 25px 0;
+  margin: ${({ theme }) => theme.spacing[2]} 0;
   display: block;
 `
 
-const StyledP = styled.p`
-  font-family: ${({ theme }) => theme.p};
+const StyledP = styled(P)`
+  margin: ${({ theme }) => theme.spacing[2]} 0;
 `
 
-const StyledDescription = styled.p`
-  font-family: ${({ theme }) => theme.p};
-  font-size: 26px;
+const StyledDescription = styled(P)`
+  font-size: ${({ theme }) => theme.fontSize['1xl']};
 `
 
 export const StyledLink = styled(props => <Link {...props} />)`
-  color: ${({ theme }) => theme.fontDark};
+  color: ${({ theme }) => theme.colors.gray[900]};
   &:focus {
     outline: 3px dashed ${({ theme }) => theme.primaryAccent};
   }
   padding: 3px;
   &:hover {
-    color: ${({ theme }) => theme.primaryAccent};
+    color: ${({ theme }) => theme.colors.blue[500]};
   }
   &:active {
-    color: ${({ theme }) => theme.secondary};
+    color: ${({ theme }) => theme.colors.red[500]};
   }
 `
 
@@ -58,6 +57,7 @@ const LinkTitle = styled(StyledLink)`
   &:hover {
     text-decoration: none;
   }
+  display: block;
 `
 
 const LinkLink = styled(StyledLink)`
@@ -65,6 +65,7 @@ const LinkLink = styled(StyledLink)`
   &:hover {
     text-decoration: underline;
   }
+  display: block;
 `
 
 export default ({ data }) => {

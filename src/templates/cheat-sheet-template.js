@@ -17,7 +17,7 @@ const Toc = styled.aside`
   width: 310px;
   display: flex;
   flex-direction: column;
-  box-shadow: var(--box-shadow-xl);
+  border: solid 1px ${({ theme }) => theme.colors.blue[500]};
   border-radius: ${({ theme }) => theme.borderRadius.default};
   padding: ${({ theme }) => theme.spacing[3]};
   margin: ${({ theme }) => theme.spacing[3]} 0;

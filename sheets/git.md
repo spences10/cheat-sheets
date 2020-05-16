@@ -3,7 +3,6 @@ title: Git
 createdDate: 2017-05-19
 updatedDate: 2019-05-09
 published: true
-cover: cover-git.png
 ---
 
 ## Add a repo from your machine to GitHub

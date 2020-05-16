@@ -5,8 +5,9 @@
   "license": "MIT",
   "description": "Cheat sheets",
   "scripts": {
-    "clean": "rm -rf .cache/ && rm -rf public/",
+    "clean": "gatsby clean",
     "build": "gatsby build",
+    "serve": "gatsby serve -p 8400 -o",
     "dev": "gatsby develop -p 8488 -o",
     "format": "pretty-quick"
   },

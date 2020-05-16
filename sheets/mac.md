@@ -3,7 +3,6 @@ title: macOS
 createdDate: 2018-04-05
 updatedDate: 2019-08-16
 published: true
-cover: cover-macos.png
 ---
 
 ## Screen snip
@@ -45,7 +44,6 @@ cmd + shift + 5
 This is where you can configure the type of snip you want to take.
 
 Hold dow the option key when taking a screenshot to remove the shadow.
-
 
 ## Keys
 

@@ -3,7 +3,6 @@ title: npx
 createdDate: 2019-10-07
 updatedDate: 2019-10-07
 published: true
-cover: cover-npx.png
 ---
 
 npx, one off command

@@ -3,7 +3,6 @@ title: VS Code
 createdDate: 2019-05-27
 updatedDate: 2019-08-18
 published: true
-cover: cover-vscode.png
 ---
 
 ## Want to list out what extensions you have installed?

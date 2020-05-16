@@ -3,7 +3,6 @@ title: CSS
 createdDate: 2019-12-07
 updatedDate: 2019-12-07
 published: true
-cover: favicon.png
 ---
 
 ## Vertically center with margin
@@ -88,12 +87,13 @@ Use either `align-items: center;` or `place-items: center;`
 
 ## Breaking Long Words and URLs
 
-There are times when a really long string of text can overflow the container of a layout, use this:
+There are times when a really long string of text can overflow the
+container of a layout, use this:
 
 ```css
 .don_break_out_of_parent {
   /* These are technically the same, but use both */
   overflow-wrap: break-word;
   word-wrap: break-word;
- }
+}
 ```

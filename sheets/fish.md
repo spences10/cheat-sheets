@@ -3,7 +3,6 @@ title: Fish Shell
 createdDate: 2017-10-11
 updatedDate: 2019-03-12
 published: true
-cover: cover-fish.png
 ---
 
 ## Aliases

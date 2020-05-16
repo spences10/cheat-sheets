@@ -3,7 +3,6 @@ title: Hyperterm
 createdDate: 2017-05-19
 updatedDate: 2017-10-13
 published: true
-cover: cover-hyper.png
 ---
 
 ## use Git bash

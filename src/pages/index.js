@@ -1,5 +1,6 @@
 import { graphql, Link } from 'gatsby'
 import React, { useState } from 'react'
+import { Helmet } from 'react-helmet'
 import Highlighter from 'react-highlight-words'
 import SEO from 'react-seo-component'
 import styled from 'styled-components'
@@ -7,6 +8,7 @@ import { GitHubCorner } from '../components/github-corner'
 import { Layout } from '../components/layout'
 import { SocialButtons } from '../components/social-buttons'
 import { useSiteMetadata } from '../hooks/useSiteMetadata'
+import { ogImageUrl } from '../util/og-image-url-build'
 
 const StyledInput = styled.input`
   width: 100%;
@@ -74,6 +76,7 @@ export default ({ data }) => {
     siteLanguage,
     siteLocale,
     twitterUsername,
+    authorName,
   } = useSiteMetadata()
 
   const allSheets = data.allMdx.nodes
@@ -123,6 +126,16 @@ export default ({ data }) => {
         siteLocale={siteLocale}
         twitterUsername={twitterUsername}
       />
+      <Helmet encodeSpecialCharacters={false}>
+        <meta
+          property="og:image"
+          content={ogImageUrl(authorName, 'cheatsheets.xyz', title)}
+        />
+        <meta
+          name="twitter:image:src"
+          content={ogImageUrl(authorName, 'cheatsheets.xyz', title)}
+        />
+      </Helmet>
       <GitHubCorner />
       <SocialButtons />
       <StyledDescription>{description}</StyledDescription>
@@ -200,7 +213,6 @@ export const indexQuery = graphql`
           createdDate
           updatedDate
           published
-          cover
         }
         tableOfContents
         fields {

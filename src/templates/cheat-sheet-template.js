@@ -1,11 +1,13 @@
 import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import SEO from 'react-seo-component'
 import styled from 'styled-components'
 import { GitHubCorner } from '../components/github-corner'
 import { Layout } from '../components/layout'
 import { useSiteMetadata } from '../hooks/useSiteMetadata'
+import { ogImageUrl } from '../util/og-image-url-build'
 
 const StyledTitle = styled.h1`
   color: ${props => props.theme.fontDark};
@@ -80,7 +82,7 @@ export default ({ data, pageContext }) => {
     tableOfContents,
     excerpt,
   } = data.mdx
-  const { title, createdDate, updatedDate, cover } = frontmatter
+  const { title, createdDate, updatedDate } = frontmatter
   const {
     siteUrl,
     image,
@@ -97,7 +99,7 @@ export default ({ data, pageContext }) => {
         title={title}
         titleTemplate={siteTitle}
         description={excerpt}
-        image={!!cover ? `${siteUrl}/${cover}` : `${siteUrl}${image}`}
+        image={`${siteUrl}${image}`}
         pathname={`${siteUrl}${fields.slug}`}
         article={true}
         publishedDate={createdDate}
@@ -105,6 +107,16 @@ export default ({ data, pageContext }) => {
         twitterUsername={twitterUsername}
         author={authorName}
       />
+      <Helmet encodeSpecialCharacters={false}>
+        <meta
+          property="og:image"
+          content={ogImageUrl(authorName, 'cheatsheets.xyz', title)}
+        />
+        <meta
+          name="twitter:image:src"
+          content={ogImageUrl(authorName, 'cheatsheets.xyz', title)}
+        />
+      </Helmet>
       <GitHubCorner />
       {typeof tableOfContents.items === 'undefined' ? null : (
         <Toc>
@@ -144,7 +156,6 @@ export const query = graphql`
         title
         createdDate(formatString: "YYYY MMMM Do")
         updatedDate(formatString: "YYYY MMMM Do")
-        cover
       }
       tableOfContents
       fields {

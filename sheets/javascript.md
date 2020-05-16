@@ -389,7 +389,7 @@ const myTruncatedString = myString.substring(0, 3);
 const copyrightYear = new Date().getFullYear()
 ```
 
-## FizBuz
+## Fizz Buzz
 
 Classic FizzBuzz loop.
 

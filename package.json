@@ -49,6 +49,14 @@
     "prettier": "2.0.5",
     "pretty-quick": "2.0.1"
   },
+  "prettier": {
+    "singleQuote": true,
+    "semi": false,
+    "trailingComma": "es5",
+    "printWidth": 70,
+    "arrowParens": "avoid",
+    "proseWrap": "always"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/spences10/cheat-sheets.git"

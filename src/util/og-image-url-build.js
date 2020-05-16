@@ -10,7 +10,7 @@ export const ogImageUrl = (author, website, title) => {
     author,
     website: website || `cheatsheets.xyz`,
     title,
-    image: `/favicon.png`,
+    image: `https://cheatsheets.xyz/favicon.png`,
   }
   return `https://image-og.now.sh/og.jpg${objectToQueryParams(
     params

@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet'
 import SEO from 'react-seo-component'
 import styled from 'styled-components'
 import { GitHubCorner } from '../components/github-corner'
-import { A, H1, Small } from '../components/md-page-elements'
+import { A, H2, H3, Small } from '../components/md-page-elements'
 import { useSiteMetadata } from '../hooks/useSiteMetadata'
 import { ogImageUrl } from '../util/og-image-url-build'
 
@@ -57,6 +57,11 @@ const Toc = styled.aside`
   }
 `
 
+const Title = styled(H2)`
+  font-weight: 700;
+  color: ${({ theme }) => theme.colors.blue[500]};
+`
+
 export default ({ data }) => {
   const {
     frontmatter,
@@ -101,7 +106,7 @@ export default ({ data }) => {
       <GitHubCorner />
       {typeof tableOfContents.items === 'undefined' ? null : (
         <Toc>
-          <h3>Table of contents</h3>
+          <H3>Table of contents</H3>
           <ul>
             {tableOfContents.items.map(i => (
               <li key={i.url}>
@@ -113,7 +118,7 @@ export default ({ data }) => {
           </ul>
         </Toc>
       )}
-      <H1>{title}</H1>
+      <Title>{title}</Title>
       <Small>
         <p>Created: {createdDate}</p>
         <p>Updated: {updatedDate}</p>

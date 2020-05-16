@@ -16,9 +16,6 @@ import {
 import { AnalyticsProvider } from './contexts/event-tracking'
 import { theme } from './theme/global-style'
 
-// import { Dump } from './src/utils/helpers';
-// components is its own object outside of render so that the references to
-// components are stable
 const components = {
   a: props => <A {...props} />,
   h1: H1,

@@ -10,7 +10,6 @@ import {
 import styled from 'styled-components'
 import 'victormono'
 import { copyToClipboard } from '../../util/copy-to-clipboard'
-// import { Dump } from '../utils/helpers'
 
 export const Pre = styled.pre`
   text-align: left;

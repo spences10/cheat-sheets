@@ -160,7 +160,7 @@ export default ({ data }) => {
                     searchWords={[query]}
                     autoEscape={true}
                     textToHighlight={title}
-                    className="highlighted"
+                    highlightClassName="highlight"
                   >
                     {title}
                   </Highlighter>
@@ -174,7 +174,7 @@ export default ({ data }) => {
                         searchWords={[query]}
                         autoEscape={true}
                         textToHighlight={item.title}
-                        className="highlighted"
+                        highlightClassName="highlight"
                       >
                         {item.title}
                       </Highlighter>

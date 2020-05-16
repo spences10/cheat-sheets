@@ -1,6 +1,6 @@
-import { MDXProvider } from '@mdx-js/react';
-import React from 'react';
-import { ThemeProvider } from 'styled-components';
+import { MDXProvider } from '@mdx-js/react'
+import React from 'react'
+import { ThemeProvider } from 'styled-components'
 import {
   Blockquote,
   Code,
@@ -8,9 +8,9 @@ import {
   H2,
   H3,
   InlineCode,
-} from './components/md-page-elements';
-import { AnalyticsProvider } from './contexts/event-tracking';
-import { theme } from './theme/globalStyle';
+} from './components/md-page-elements'
+import { AnalyticsProvider } from './contexts/event-tracking'
+import { theme } from './theme/global-style'
 
 // import { Dump } from './src/utils/helpers';
 // components is its own object outside of render so that the references to
@@ -33,10 +33,10 @@ const components = {
             {...props}
           />
         </div>
-      );
+      )
     }
     // it's possible to have a pre without a code in it
-    return <pre />;
+    return <pre />
   },
   'p.inlineCode': InlineCode,
   'p.code': InlineCode,
@@ -44,7 +44,7 @@ const components = {
   'p.blockquote': Blockquote,
   blockquote: Blockquote,
   wrapper: ({ children }) => <>{children}</>,
-};
+}
 
 export const wrapRootElement = ({ element }) => (
   <ThemeProvider theme={theme}>
@@ -52,4 +52,4 @@ export const wrapRootElement = ({ element }) => (
       <MDXProvider components={components}>{element}</MDXProvider>
     </AnalyticsProvider>
   </ThemeProvider>
-);
+)

@@ -50,7 +50,7 @@ const components = {
   small: props => <Small {...props} />,
 }
 
-export const wrapRootElement = ({ element }) => (
+export const wrapPageElement = ({ element }) => (
   <ThemeProvider theme={theme}>
     <AnalyticsProvider>
       <MDXProvider components={components}>

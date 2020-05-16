@@ -1,5 +1,6 @@
 import { graphql, Link } from 'gatsby'
 import React, { useState } from 'react'
+import Highlighter from 'react-highlight-words'
 import SEO from 'react-seo-component'
 import styled from 'styled-components'
 import { GitHubCorner } from '../components/github-corner'
@@ -131,27 +132,60 @@ export default ({ data }) => {
         placeholder="Search"
         onChange={handleInputChange}
       />
+      {Object.keys(sheets).length === 0 ? (
+        <SheetTitle>
+          Nothing for that search term.
+          <span
+            style={{ paddingLeft: '5px' }}
+            role="img"
+            aria-label="cry emoji"
+          >
+            😭
+          </span>
+        </SheetTitle>
+      ) : (
+        sheets.map(post => {
+          const {
+            id,
+            fields: { slug },
+            frontmatter: { title },
+            tableOfContents: { items },
+          } = post
 
-      {sheets.map(post => {
-        const {
-          id,
-          fields: { slug },
-          frontmatter: { title, date },
-          tableOfContents: { items },
-        } = post
-
-        return (
-          <article key={id}>
-            <Link to={slug}>
-              <h1>{title}</h1>
-              <p>{date}</p>
+          return (
+            <article key={id}>
+              <SheetTitle>
+                <LinkTitle to={slug} aria-label={`Link for ${title}`}>
+                  <Highlighter
+                    searchWords={[query]}
+                    autoEscape={true}
+                    textToHighlight={title}
+                    className="highlighted"
+                  >
+                    {title}
+                  </Highlighter>
+                </LinkTitle>
+              </SheetTitle>
               {items.map(item => {
-                return <p>{item.title}</p>
+                return (
+                  <StyledP>
+                    <LinkLink to={`${slug}${item.url}`}>
+                      <Highlighter
+                        searchWords={[query]}
+                        autoEscape={true}
+                        textToHighlight={item.title}
+                        className="highlighted"
+                      >
+                        {item.title}
+                      </Highlighter>
+                    </LinkLink>
+                  </StyledP>
+                )
               })}
-            </Link>
-          </article>
-        )
-      })}
+            </article>
+          )
+        })
+      )}
     </Layout>
   )
 }

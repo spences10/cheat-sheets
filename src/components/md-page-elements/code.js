@@ -1,15 +1,15 @@
-import Highlight, { defaultProps } from 'prism-react-renderer';
-import theme from 'prism-react-renderer/themes/nightOwl';
-import React from 'react';
+import Highlight, { defaultProps } from 'prism-react-renderer'
+import theme from 'prism-react-renderer/themes/nightOwl'
+import React from 'react'
 import {
   LiveEditor,
   LiveError,
   LivePreview,
   LiveProvider,
-} from 'react-live';
-import styled from 'styled-components';
-import 'victormono';
-import { copyToClipboard } from '../../util/copy-to-clipboard';
+} from 'react-live'
+import styled from 'styled-components'
+import 'victormono'
+import { copyToClipboard } from '../../util/copy-to-clipboard'
 // import { Dump } from '../utils/helpers'
 
 export const Pre = styled.pre`
@@ -20,14 +20,14 @@ export const Pre = styled.pre`
   border-radius: 3px;
   font-family: 'Victor Mono', 'Courier New', Courier, monospace;
   font-size: 18px;
-`;
+`
 
 export const LineNo = styled.span`
   display: inline-block;
   width: 2em;
   user-select: none;
   opacity: 0.3;
-`;
+`
 
 const CopyCode = styled.button`
   position: absolute;
@@ -42,7 +42,7 @@ const CopyCode = styled.button`
   font-family: 'Victor Mono', 'Courier New', Courier, monospace;
   font-size: 13px;
   background-color: ${({ theme }) => theme.primary};
-`;
+`
 
 export const Code = ({ codeString, language, ...props }) => {
   if (props['react-live']) {
@@ -52,12 +52,12 @@ export const Code = ({ codeString, language, ...props }) => {
         <LiveError />
         <LivePreview />
       </LiveProvider>
-    );
+    )
   }
 
   const handleClick = () => {
-    copyToClipboard(codeString);
-  };
+    copyToClipboard(codeString)
+  }
 
   return (
     <>
@@ -88,5 +88,5 @@ export const Code = ({ codeString, language, ...props }) => {
         )}
       </Highlight>
     </>
-  );
-};
+  )
+}

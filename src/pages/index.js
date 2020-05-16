@@ -5,7 +5,6 @@ import Highlighter from 'react-highlight-words'
 import SEO from 'react-seo-component'
 import styled from 'styled-components'
 import { GitHubCorner } from '../components/github-corner'
-import { Layout } from '../components/layout'
 import { SocialButtons } from '../components/social-buttons'
 import { useSiteMetadata } from '../hooks/useSiteMetadata'
 import { ogImageUrl } from '../util/og-image-url-build'
@@ -23,11 +22,12 @@ const StyledInput = styled.input`
   }
 `
 
-const SheetTitle = styled.p`
-  font-family: ${({ theme }) => theme.h1};
-  font-size: 32px;
+const SheetTitle = styled.h1`
+  font-family: ${({ theme }) => theme.fontFamily.sans};
+  font-size: ${({ theme }) => theme.fontSize['2xl']};
   font-weight: 700;
   margin: 25px 0;
+  display: block;
 `
 
 const StyledP = styled.p`
@@ -115,7 +115,7 @@ export default ({ data }) => {
   const sheets = hasSearchResults ? filteredData : allSheets
 
   return (
-    <Layout>
+    <>
       <SEO
         title={`Home`}
         titleTemplate={title}
@@ -199,7 +199,7 @@ export default ({ data }) => {
           )
         })
       )}
-    </Layout>
+    </>
   )
 }
 

@@ -8,7 +8,6 @@ import { GlobalStyle } from '../theme/global-style'
 const AppLayout = styled.main`
   max-width: 570px;
   margin: 0 auto;
-  font-family: ${({ theme }) => theme.p};
 `
 
 const Wrapper = styled.div`

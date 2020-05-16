@@ -5,26 +5,9 @@ import { Helmet } from 'react-helmet'
 import SEO from 'react-seo-component'
 import styled from 'styled-components'
 import { GitHubCorner } from '../components/github-corner'
-import { Layout } from '../components/layout'
+import { A, H1, Small } from '../components/md-page-elements'
 import { useSiteMetadata } from '../hooks/useSiteMetadata'
 import { ogImageUrl } from '../util/og-image-url-build'
-
-const StyledTitle = styled.h1`
-  color: ${props => props.theme.fontDark};
-  font-family: ${props => props.theme.h1};
-`
-
-const StyledDate = styled.p`
-  margin: 0.5rem 0;
-  font-size: 0.9rem;
-  color: ${props => props.theme.fontLight};
-`
-
-const StyledA = styled.a`
-  margin: 0.5rem 0;
-  font-size: 0.9rem;
-  color: ${props => props.theme.fontLight};
-`
 
 const Toc = styled.aside`
   position: fixed;
@@ -74,7 +57,7 @@ const Toc = styled.aside`
   }
 `
 
-export default ({ data, pageContext }) => {
+export default ({ data }) => {
   const {
     frontmatter,
     body,
@@ -90,11 +73,9 @@ export default ({ data, pageContext }) => {
     authorName,
     siteTitle,
   } = useSiteMetadata()
-  // const { prev, next } = pageContext
-  // const { imageLink } = data.site.siteMetadata
 
   return (
-    <Layout>
+    <>
       <SEO
         title={title}
         titleTemplate={siteTitle}
@@ -132,18 +113,20 @@ export default ({ data, pageContext }) => {
           </ul>
         </Toc>
       )}
-      <StyledTitle>{title}</StyledTitle>
-      <StyledDate>Created: {createdDate}</StyledDate>
-      <StyledDate>Updated: {updatedDate}</StyledDate>
-      <StyledA
-        target="_blank"
-        rel="noopener noreferrer"
-        href={fields.editLink}
-      >
-        Edit this page on GitHub
-      </StyledA>
+      <H1>{title}</H1>
+      <Small>
+        <p>Created: {createdDate}</p>
+        <p>Updated: {updatedDate}</p>
+        <A
+          target="_blank"
+          rel="noopener noreferrer"
+          href={fields.editLink}
+        >
+          Edit this page on GitHub
+        </A>
+      </Small>
       <MDXRenderer>{body}</MDXRenderer>
-    </Layout>
+    </>
   )
 }
 

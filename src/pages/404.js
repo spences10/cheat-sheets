@@ -1,10 +1,9 @@
-import { Link } from 'gatsby';
-import React from 'react';
-import { Layout } from '../components/layout';
+import { Link } from 'gatsby'
+import React from 'react'
 
 export default () => (
-  <Layout>
+  <>
     <h1>That's a nope!</h1>
     <Link to="/">Go to the homepage</Link>
-  </Layout>
-);
+  </>
+)

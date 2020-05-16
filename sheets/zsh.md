@@ -3,7 +3,6 @@ title: ZSH
 createdDate: 2017-10-11
 updatedDate: 2019-11-18
 published: true
-cover: cover-zsh.png
 ---
 
 ## Use nvm with zsh

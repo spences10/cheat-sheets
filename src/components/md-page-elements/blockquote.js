@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Blockquote = styled.blockquote`
   border-left: 5px solid #ccc;
@@ -7,4 +7,4 @@ export const Blockquote = styled.blockquote`
   font-size: 16px;
   margin: 20px;
   opacity: 0.7;
-`;
+`

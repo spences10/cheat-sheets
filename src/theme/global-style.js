@@ -23,6 +23,8 @@ export const GlobalStyle = createGlobalStyle`
     scroll-behavior: smooth;
     font-family: ${({ theme }) => theme.fontFamily.sans};
     font-size: 16px;
+    margin-left: calc(100vw - 100%);
+    margin-right: 0;
   }
   body {
     min-height: 100%;

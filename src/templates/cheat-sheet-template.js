@@ -1,7 +1,6 @@
 import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import React from 'react'
-import { Helmet } from 'react-helmet'
 import SEO from 'react-seo-component'
 import styled from 'styled-components'
 import { GitHubCorner } from '../components/github-corner'
@@ -85,7 +84,7 @@ export default ({ data }) => {
         title={title}
         titleTemplate={siteTitle}
         description={excerpt}
-        image={`${siteUrl}${image}`}
+        image={ogImageUrl(authorName, 'cheatsheets.xyz', title)}
         pathname={`${siteUrl}${fields.slug}`}
         article={true}
         publishedDate={createdDate}
@@ -93,16 +92,6 @@ export default ({ data }) => {
         twitterUsername={twitterUsername}
         author={authorName}
       />
-      <Helmet encodeSpecialCharacters={false}>
-        <meta
-          property="og:image"
-          content={ogImageUrl(authorName, 'cheatsheets.xyz', title)}
-        />
-        <meta
-          name="twitter:image:src"
-          content={ogImageUrl(authorName, 'cheatsheets.xyz', title)}
-        />
-      </Helmet>
       <GitHubCorner />
       {typeof tableOfContents.items === 'undefined' ? null : (
         <Toc>

@@ -72,7 +72,6 @@ export default ({ data }) => {
   const { title, createdDate, updatedDate } = frontmatter
   const {
     siteUrl,
-    image,
     twitterUsername,
     authorName,
     siteTitle,

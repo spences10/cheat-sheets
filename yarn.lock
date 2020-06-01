@@ -10325,10 +10325,10 @@ react-refresh@^0.7.0:
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.7.2.tgz#f30978d21eb8cac6e2f2fde056a7d04f6844dd50"
   integrity sha512-u5l7fhAJXecWUJzVxzMRU2Zvw8m4QmDNHlTrT5uo3KBlYBhmChd7syAakBoay1yIiVhx/8Fi7a6v6kQZfsw81Q==
 
-react-seo-component@2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/react-seo-component/-/react-seo-component-2.0.0.tgz#65e2370d9db2110a96d62bd63eb4dda7254844b4"
-  integrity sha512-D0GWu+lYfYhBm5hjVIVRd6H9z3aFZmdBe4ypjv5WzlYg+D0+W/1M1CcVdZqtVwT/MJejjZSW7ZPEOk9vIS6XZg==
+react-seo-component@2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/react-seo-component/-/react-seo-component-2.0.1.tgz#e92954d2a18d4a336f5dad7174f571327df2cdaa"
+  integrity sha512-7YqJRatjyaW1wUAe1mnxiK3F8FSQDLiwO+xV4wYEtD4+3+EPSFl9lSJPPLc/kkZoeAWCNiw+463q92nbBDkEnQ==
 
 react-side-effect@^2.1.0:
   version "2.1.0"

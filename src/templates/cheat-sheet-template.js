@@ -76,7 +76,7 @@ export default ({ data }) => {
     authorName,
     siteTitle,
   } = useSiteMetadata()
-
+  const fa = useAnalytics()
   return (
     <>
       <SEO
@@ -111,6 +111,7 @@ export default ({ data }) => {
         <p>Created: {createdDate}</p>
         <p>Updated: {updatedDate}</p>
         <A
+          onClick={() => fa('6ETKCM0U')}
           target="_blank"
           rel="noopener noreferrer"
           href={fields.editLink}

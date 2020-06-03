@@ -5,6 +5,7 @@ import SEO from 'react-seo-component'
 import styled from 'styled-components'
 import { GitHubCorner } from '../components/github-corner'
 import { A, H2, H3, Small } from '../components/md-page-elements'
+import { useAnalytics } from '../contexts/event-tracking'
 import { useSiteMetadata } from '../hooks/useSiteMetadata'
 import { ogImageUrl } from '../util/og-image-url-build'
 
@@ -76,7 +77,7 @@ export default ({ data }) => {
     authorName,
     siteTitle,
   } = useSiteMetadata()
-
+  const fa = useAnalytics()
   return (
     <>
       <SEO
@@ -111,6 +112,7 @@ export default ({ data }) => {
         <p>Created: {createdDate}</p>
         <p>Updated: {updatedDate}</p>
         <A
+          onClick={() => fa('6ETKCM0U')}
           target="_blank"
           rel="noopener noreferrer"
           href={fields.editLink}

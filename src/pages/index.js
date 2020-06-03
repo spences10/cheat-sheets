@@ -167,7 +167,7 @@ export default ({ data }) => {
           } = post
 
           return (
-            <article key={id}>
+            <article key={`${id}${title}`}>
               <SheetTitle>
                 <LinkTitle to={slug} aria-label={`Link for ${title}`}>
                   <Highlighter
@@ -182,7 +182,7 @@ export default ({ data }) => {
               </SheetTitle>
               {items.map(item => {
                 return (
-                  <StyledP>
+                  <StyledP key={`${id}${slug}${item.url}`}>
                     <LinkLink to={`${slug}${item.url}`}>
                       <Highlighter
                         searchWords={[query]}

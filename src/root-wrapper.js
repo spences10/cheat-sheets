@@ -1,5 +1,6 @@
 import { MDXProvider } from '@mdx-js/react'
 import React from 'react'
+import { Helmet } from 'react-helmet'
 import { ThemeProvider } from 'styled-components'
 import { Layout } from './components/layout'
 import {
@@ -51,11 +52,21 @@ const components = {
 }
 
 export const wrapPageElement = ({ element }) => (
-  <ThemeProvider theme={theme}>
-    <AnalyticsProvider>
-      <MDXProvider components={components}>
-        <Layout>{element}</Layout>
-      </MDXProvider>
-    </AnalyticsProvider>
-  </ThemeProvider>
+  <>
+    <Helmet>
+      <script
+        src={`${process.env.GATSBY_FATHOM_TRACKING_URL_CHEAT_SHEETS}/script.js`}
+        spa="auto"
+        site={process.env.GATSBY_FATHOM_TRACKING_ID_CHEAT_SHEETS}
+        defer
+      ></script>
+    </Helmet>
+    <ThemeProvider theme={theme}>
+      <AnalyticsProvider>
+        <MDXProvider components={components}>
+          <Layout>{element}</Layout>
+        </MDXProvider>
+      </AnalyticsProvider>
+    </ThemeProvider>
+  </>
 )

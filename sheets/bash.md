@@ -1,7 +1,7 @@
 ---
 title: Bash
 createdDate: 2017-10-11
-updatedDate: 2019-03-10
+updatedDate: 2020-06-03
 published: true
 ---
 
@@ -81,3 +81,12 @@ history -d 474
 ```
 
 Check your `history` again and gone until you do it again.
+
+## Move the contents of a folder to another folder
+
+This will move everything in the Downloads folder to the Videos folder
+including any folders inside Downloads.
+
+```bash
+mv ~/Downloads/* ~/Videos
+```

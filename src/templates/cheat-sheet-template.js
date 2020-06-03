@@ -5,6 +5,7 @@ import SEO from 'react-seo-component'
 import styled from 'styled-components'
 import { GitHubCorner } from '../components/github-corner'
 import { A, H2, H3, Small } from '../components/md-page-elements'
+import { useAnalytics } from '../contexts/event-tracking'
 import { useSiteMetadata } from '../hooks/useSiteMetadata'
 import { ogImageUrl } from '../util/og-image-url-build'
 

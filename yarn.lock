@@ -13148,10 +13148,10 @@ styled-components@5.1.0:
     shallowequal "^1.1.0"
     supports-color "^5.5.0"
 
-styled-reset@4.1.5:
-  version "4.1.5"
-  resolved "https://registry.yarnpkg.com/styled-reset/-/styled-reset-4.1.5.tgz#ce99b66d214af4dbf2ddbdceb5a1f39b6fc9e951"
-  integrity sha512-eLkx7EL0/TIrcf6h7m7KhD0SBIY3vg97Fpg9/k6Toxw7CY8+vTGgLq8gpGeS13bPgNAjUuV4eZwuqo4J5uMKtA==
+styled-reset@4.1.6:
+  version "4.1.6"
+  resolved "https://registry.yarnpkg.com/styled-reset/-/styled-reset-4.1.6.tgz#c3f5927552d90f0d65e45bb654c24e2a68b669fb"
+  integrity sha512-ttktpWqPNk9MYRPgRTEwx1WLN3ALlXzAGyC1u6xbKOeNGDsN6AJ0z1O3BFYz7epkiMKlF50whlM/IT/IY+attQ==
 
 styled-system@^5.0.0, styled-system@^5.1.5:
   version "5.1.5"

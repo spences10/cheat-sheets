@@ -1,9 +1,21 @@
 ---
 title: Git
 createdDate: 2017-05-19
-updatedDate: 2019-05-09
+updatedDate: 2020-06-30
 published: true
 ---
+
+## Change the git init default branch name
+
+Don't want to have the default branch called master?
+
+Thanks to [Mathias Bynens] for this one.
+
+```bash
+mkdir -p ~/.config/git/template
+echo 'ref: refs/heads/main' > ~/.config/git/template/HEAD
+git config --global init.templateDir ~/.config/git/template/
+```
 
 ## Add a repo from your machine to GitHub
 
@@ -891,3 +903,5 @@ Reference: https://docs.gitignore.io/install/command-line
 [syncing a fork]: https://help.github.com/articles/syncing-a-fork/
 [adding an existing project to github using the command line]:
   https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/
+[mathias bynens]:
+  https://twitter.com/mathias/status/1277896371455090688

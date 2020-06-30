@@ -1,7 +1,7 @@
 ---
 title: Bash
 createdDate: 2017-10-11
-updatedDate: 2020-06-03
+updatedDate: 2020-06-30
 published: true
 ---
 

@@ -406,3 +406,36 @@ for (let i = 1; i <= 100; ++i) {
   console.log(output)
 }
 ```
+## Prototypal Instantiation
+```js
+  var person = function(name) {
+    var obj = Object.create(objMethods);
+    obj.name = name;
+    return obj;
+  }
+
+  var objMethods = {
+    sayHello: function() {
+      console.log(`${this.name} says hello!`);
+    },
+    changeName: function(newName) {
+      var oldName = this.name;
+      this.name = newName;
+
+      console.log(`${oldName} has changed their name to ${this.name}`);
+    }
+  }
+
+  // Implementation
+  var person1 = person('Austin');
+  person1.sayHello();
+  person1.changeName('Derek');
+  person1.sayHello();
+```
+Output:
+
+```bash
+Austin says hello!
+Austin has changed their name to Derek
+Derek says hello!
+```

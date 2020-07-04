@@ -32,6 +32,9 @@ In VSCode goto `File -> Preferences -> Keyboard shortcuts.`, then over
 on the top right you can select the icon for Open Keyboard Shortcuts
 (JSON).
 
+Alternatively use the keyboard shortcuts `Crtl+Shift+p` and search for
+"Open Keyboard Shortcuts (JSON)"
+
 Paste in your shortcut, in this case duplicating lines, which is
 missing in Ubuntu VS Code:
 
@@ -80,6 +83,9 @@ for the sidebar defaults, "explorer", "git" (scm), "debug" and
 
 Another tip from [Caleb Porzio] is removing all the clutter in the
 editor and moving the sidebar.
+
+Add these "optional" setting to the `settings.json` file, you can
+access it with `Crtl+Shift+p`.
 
 ```json
 {

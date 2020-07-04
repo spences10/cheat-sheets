@@ -32,6 +32,9 @@ In VSCode goto `File -> Preferences -> Keyboard shortcuts.`, then over
 on the top right you can select the icon for Open Keyboard Shortcuts
 (JSON).
 
+Alternatively use the keyboard shortcuts `Crtl+Shift+p` and search for
+"Open Keyboard Shortcuts (JSON)"
+
 Paste in your shortcut, in this case duplicating lines, which is
 missing in Ubuntu VS Code:
 
@@ -50,3 +53,50 @@ missing in Ubuntu VS Code:
   }
 ]
 ```
+
+Shout out to [Caleb Porzio] for the suggestion of adding in shortcuts
+for the sidebar defaults, "explorer", "git" (scm), "debug" and
+"extensions". The default shortcuts are a bit inconsistent.
+
+```json
+[
+  {
+    "key": "ctrl+k ctrl+e",
+    "command": "workbench.view.explorer"
+  },
+  {
+    "key": "ctrl+k ctrl+g",
+    "command": "workbench.view.scm"
+  },
+  {
+    "key": "ctrl+k ctrl+d",
+    "command": "workbench.view.debug"
+  },
+  {
+    "key": "ctrl+k ctrl+x",
+    "command": "workbench.extensions.action.showInstalledExtensions"
+  }
+]
+```
+
+## Remove the clutter
+
+Another tip from [Caleb Porzio] is removing all the clutter in the
+editor and moving the sidebar.
+
+Add these "optional" setting to the `settings.json` file, you can
+access it with `Crtl+Shift+p`.
+
+```json
+{
+  "workbench.activityBar.visible": false,
+  "workbench.editor.showTabs": false,
+  "workbench.sideBar.location": "right",
+  "workbench.statusBar.visible": false,
+  "editor.minimap.enabled": false
+}
+```
+
+<!-- Links -->
+
+[caleb porzio]: https://twitter.com/calebporzio

@@ -1,9 +1,29 @@
 ---
 title: Bash
 createdDate: 2017-10-11
-updatedDate: 2020-06-30
+updatedDate: 2020-07-05
 published: true
 ---
+
+## Kill process on port
+
+List any process running on port 8000
+
+```bash
+lsof -i:8000
+```
+Output will look similar to this.
+
+```text
+COMMAND   PID  USER   
+chrome  16085  iamuser   
+```
+
+Then kill it with `kill`.
+
+```bash
+kill -9 16085
+```
 
 ## Add an alias
 

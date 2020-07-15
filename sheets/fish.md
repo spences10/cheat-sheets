@@ -40,7 +40,7 @@ functions functionName
 To create an alias:
 
 ```bash
-# Sort alphabetically 👌
+# Sort alphabetically
 alias lss 'ls -lart | sort -k9,9'
 ```
 

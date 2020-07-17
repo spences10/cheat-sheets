@@ -51,6 +51,9 @@
     "prettier": "2.0.5",
     "pretty-quick": "2.0.1"
   },
+  "resolutions": {
+    "gatsby-react-router-scroll": "3.0.3"
+  },
   "prettier": {
     "singleQuote": true,
     "semi": false,

@@ -1,9 +1,25 @@
 ---
 title: Bash
 createdDate: 2017-10-11
-updatedDate: 2020-07-05
+updatedDate: 2020-07-17
 published: true
 ---
+
+## Change default shell
+
+Use `chsh` utility to change your default shell:
+
+```bash
+# list out the shells available with -l
+chsh -l
+# /bin/bash
+# /bin/zsh
+# /bin/fish
+# set the default shell (with -s) to fish
+chsh -s /bin/fish
+# set the default shell (with -s) to zsh
+chsh -s /bin/zsh
+```
 
 ## Kill process on port
 
@@ -12,11 +28,12 @@ List any process running on port 8000
 ```bash
 lsof -i:8000
 ```
+
 Output will look similar to this.
 
 ```text
-COMMAND   PID  USER   
-chrome  16085  iamuser   
+COMMAND   PID  USER
+chrome  16085  iamuser
 ```
 
 Then kill it with `kill`.

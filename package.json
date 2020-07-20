@@ -1,6 +1,6 @@
 {
   "name": "cheat-sheets",
-  "version": "1.0.429",
+  "version": "1.0.430",
   "author": "Scott Spence <spences10apps@gmail.com>(https://scottspence.me/)",
   "license": "MIT",
   "description": "Cheat sheets",
@@ -20,10 +20,10 @@
     "@mdx-js/mdx": "1.6.11",
     "@mdx-js/react": "1.6.11",
     "babel-plugin-styled-components": "1.10.7",
-    "gatsby": "2.24.3",
+    "gatsby": "2.24.4",
     "gatsby-plugin-google-fonts": "1.0.1",
     "gatsby-plugin-manifest": "2.4.18",
-    "gatsby-plugin-mdx": "1.2.26",
+    "gatsby-plugin-mdx": "1.2.27",
     "gatsby-plugin-offline": "3.2.18",
     "gatsby-plugin-react-helmet": "3.3.10",
     "gatsby-plugin-robots-txt": "1.5.1",
@@ -32,7 +32,7 @@
     "gatsby-plugin-zeit-now": "0.3.0",
     "gatsby-remark-autolink-headers": "2.3.11",
     "gatsby-remark-smartypants": "2.3.10",
-    "gatsby-source-filesystem": "2.3.19",
+    "gatsby-source-filesystem": "2.3.20",
     "prism-react-renderer": "1.1.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
@@ -52,7 +52,7 @@
     "pretty-quick": "2.0.1"
   },
   "resolutions": {
-    "gatsby-react-router-scroll": "3.0.3"
+    "gatsby-react-router-scroll": "3.0.12"
   },
   "prettier": {
     "singleQuote": true,

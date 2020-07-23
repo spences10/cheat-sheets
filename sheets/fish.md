@@ -1,9 +1,17 @@
 ---
 title: Fish Shell
 createdDate: 2017-10-11
-updatedDate: 2019-03-12
+updatedDate: 2020-07-23
 published: true
 ---
+
+## NVM not recognised in Fish?
+
+Install the [Oh My Fish](#Oh-My-Fish) package `nvm` with:
+
+```bash
+omf install nvm
+```
 
 ## Aliases
 

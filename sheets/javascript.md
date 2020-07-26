@@ -447,9 +447,9 @@ Derek says hello!
 
 ## Change Page Font Size
 
-You need to target the font-size style of the HTML element. You'll have 
-to make sure that an initial value exists so that you can easily modify it.
+Want to change the font size on a page? Here you can target the while
+document, but could change `html` with `p`, `span` whatever.
 
 ```javascript
-document.getElementsByTagName( "html" )[0].style[ "font-size" ] = "10px"
+document.getElementsByTagName('html')[0].style['font-size'] = '10px'
 ```

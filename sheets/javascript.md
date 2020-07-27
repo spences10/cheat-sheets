@@ -5,6 +5,16 @@ updatedDate: 2020-04-12
 published: true
 ---
 
+## Document Design Mode
+
+Edit a web page, set the design mode to on.
+
+```js
+document.designMode = 'on'
+// make edits, then
+document.designMode = 'off'
+```
+
 ## Copy an array
 
 ```js

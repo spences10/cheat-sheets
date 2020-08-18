@@ -1,9 +1,25 @@
 ---
 title: Git
 createdDate: 2017-05-19
-updatedDate: 2020-06-30
+updatedDate: 2020-08-18
 published: true
 ---
+
+## Use a git patch file
+
+How to apply a git patch file.
+
+Good resource here:
+https://www.devroom.io/2009/10/26/how-to-create-and-apply-a-patch-with-git/
+
+```bash
+# see the changes in the patch file
+git apply --stat the-patch-file.patch
+# test if ther's going to be issues
+git apply --check the-patch-file.patch
+# no issues, cool
+git apply the-patch-file.patch
+```
 
 ## Change the git init default branch name
 

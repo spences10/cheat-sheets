@@ -1,6 +1,6 @@
 {
   "name": "cheat-sheets",
-  "version": "1.0.434",
+  "version": "1.0.435",
   "author": "Scott Spence <spences10apps@gmail.com>(https://scottspence.me/)",
   "license": "MIT",
   "description": "Cheat sheets",
@@ -50,7 +50,7 @@
     "gatsby-react-router-scroll": "3.0.12",
     "husky": "4.2.5",
     "prettier": "2.0.5",
-    "pretty-quick": "2.0.1"
+    "pretty-quick": "2.0.2"
   },
   "prettier": {
     "singleQuote": true,

@@ -12,6 +12,8 @@ Use `chsh` utility to change your default shell:
 ```bash
 # list out the shells available with -l
 chsh -l
+# if that doesn't work try
+cat /etc/shells
 # /bin/bash
 # /bin/zsh
 # /bin/fish

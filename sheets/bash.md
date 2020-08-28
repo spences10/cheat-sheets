@@ -1,7 +1,7 @@
 ---
 title: Bash
 createdDate: 2017-10-11
-updatedDate: 2020-07-17
+updatedDate: 2020-08-27
 published: true
 ---
 
@@ -12,6 +12,8 @@ Use `chsh` utility to change your default shell:
 ```bash
 # list out the shells available with -l
 chsh -l
+# if that doesn't work try
+cat /etc/shells
 # /bin/bash
 # /bin/zsh
 # /bin/fish

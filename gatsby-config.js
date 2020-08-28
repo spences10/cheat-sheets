@@ -44,6 +44,28 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-google-fonts-v2`,
+      options: {
+        fonts: [
+          {
+            family: 'Recursive',
+            variable: true,
+            weights: ['200..800'],
+          },
+          {
+            family: 'Kreon',
+            variable: true,
+            weights: ['400..900'],
+          },
+          {
+            family: 'Inconsolata',
+            variable: true,
+            weights: ['200..900'],
+          },
+        ],
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Cheat Sheets`,
@@ -56,33 +78,5 @@ module.exports = {
       },
     },
     `gatsby-plugin-offline`,
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [
-          `josefin slab\:400,700`,
-          `pontano\:400,700`,
-          `maitree\:400,700`,
-        ],
-        display: 'swap',
-      },
-    },
-    {
-      resolve: `gatsby-plugin-zeit-now`,
-      options: {
-        globalHeaders: {
-          'referrer-policy': 'same-origin',
-          'feature-policy':
-            "geolocation 'self'; microphone 'self'; camera 'self'",
-          'expect-ct': 'max-age=604800, enforce',
-          'strict-transport-security':
-            'max-age=31536000; includeSubDomains',
-          'x-frame-options': 'DENY',
-          'x-xss-protection': '1; mode=block',
-          'x-content-type-options': 'nosniff',
-          'x-download-options': 'noopen',
-        },
-      },
-    },
   ],
 }

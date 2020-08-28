@@ -10,6 +10,11 @@ export const theme = {
     lg: '1024px',
     xl: '1280px',
   },
+  fontFamily: {
+    sans: [['Recursive'], defaults.fontFamily.sans].join(`,`),
+    serif: [['Kreon'], defaults.fontFamily.serif].join(`,`),
+    mono: [['Inconsolata'], defaults.fontFamily.mono].join(`,`),
+  },
 }
 
 export const GlobalStyle = createGlobalStyle`

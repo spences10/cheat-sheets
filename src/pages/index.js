@@ -9,7 +9,7 @@ const h1Styled = css`
   color: red;
 `
 
-export default () => {
+export default props => {
   useEffect(() => {
     console.log('MOUNTED')
   }, [])
@@ -19,9 +19,14 @@ export default () => {
       <Helmet>
         <link rel="stylesheet" href="/styles/src/pages/index.css" />
       </Helmet>
-      <header className={h1Styled}>
-        <h1>Hey you</h1>
-      </header>
+      {props.posts.map(post => {
+        let slug = post.slug.replace(`.md`, ``)
+        return (
+          <a href={slug} id={slug}>
+            <h2>{post.title}</h2>
+          </a>
+        )
+      })}
     </Fragment>
   )
 }

@@ -12,10 +12,7 @@ exports.sourceData = async ({ createPage, ...options }) => {
 
   return Promise.all(
     files.map(async filename => {
-      const file = await fs.readFile(
-        `./sheets/${filename}/index.mdx`,
-        'utf-8'
-      )
+      const file = await fs.readFile(`./sheets/${filename}`, 'utf-8')
       let compiledMDX
 
       const { data, content } = frontmatter(file)
@@ -33,7 +30,7 @@ exports.sourceData = async ({ createPage, ...options }) => {
         module: `/** @jsx mdx */
             import {mdx} from '@mdx-js/preact';
             ${compiledMDX}`,
-        slug: filename,
+        slug: filename.replace(`.md`, ``),
         data: { ...data, slug: filename },
       })
 

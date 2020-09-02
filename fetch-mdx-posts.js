@@ -5,6 +5,7 @@ const frontmatter = require('gray-matter')
 const mdx = require('@mdx-js/mdx')
 const rehypeSlug = require('rehype-slug')
 const rehypePrism = require('./rehype-prism-plugin')
+const toc = require('mdast-util-toc')
 
 exports.sourceData = async ({ createPage, ...options }) => {
   console.log('sourceData')
@@ -16,6 +17,13 @@ exports.sourceData = async ({ createPage, ...options }) => {
       let compiledMDX
 
       const { data, content } = frontmatter(file)
+
+      // this is for the ToC
+      let mdAST = mdx
+        .createMdxAstCompiler({ remarkPlugins: [] })
+        .parse(content)
+
+      let tocContent = toc(mdAST)
 
       try {
         compiledMDX = await mdx(content, {
@@ -31,7 +39,7 @@ exports.sourceData = async ({ createPage, ...options }) => {
             import {mdx} from '@mdx-js/preact';
             ${compiledMDX}`,
         slug: filename.replace(`.md`, ``),
-        data: { ...data, slug: filename },
+        data: { ...data, slug: filename, tocContent },
       })
 
       // Data to be stored in `mdx-posts.json` file

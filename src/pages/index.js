@@ -1,7 +1,6 @@
 /** @jsx h */
 import { css } from 'linaria'
 import { Fragment, h } from 'preact'
-import { useEffect } from 'preact/hooks'
 import { Helmet } from 'react-helmet'
 
 const h1Styled = css`
@@ -10,10 +9,6 @@ const h1Styled = css`
 `
 
 export default props => {
-  useEffect(() => {
-    console.log('MOUNTED')
-  }, [])
-
   return (
     <Fragment>
       <Helmet>

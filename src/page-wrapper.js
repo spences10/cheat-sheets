@@ -55,6 +55,7 @@ export default ({ children, ...props }) => {
               <h2>{props.title}</h2>
               <p>Created: {props.createdDate}</p>
               <p>Updated: {props.updatedDate}</p>
+              <pre>{JSON.stringify(props.tocContent, null, 2)}</pre>
             </Fragment>
           ) : null}
           {children}

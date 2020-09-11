@@ -1,5 +1,6 @@
 /** @jsx h */
 import { css } from 'linaria'
+import { styled } from 'linaria/react'
 import { Fragment, h } from 'preact'
 import { Helmet } from 'react-helmet'
 
@@ -8,7 +9,14 @@ const h1Styled = css`
   color: red;
 `
 
+const Yo = styled.div`
+  background-color: red;
+`
+
 export default props => {
+  console.log('=====================')
+  console.log(props)
+  console.log('=====================')
   return (
     <Fragment>
       <Helmet>

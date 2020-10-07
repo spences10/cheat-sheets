@@ -119,35 +119,19 @@ your functions:
 function aliases --description "list all fish aliases";for f in (functions);functions $f | grep \'alias;end;end;
 ```
 
-Then you save it `funcsave aliases` and use it:
+Then you save it `funcsave aliases` and use it `funcsave` the output will be:
 
 ```bash
 aliases
 function c --description 'alias c code .'
 function g --description 'alias g git'
-function lss --description 'alias lss ls -lart | sort -k9,9'
-function ni --description 'alias ni npm i'
-function nid --description 'alias nid npm i -D'
-function nig --description 'alias nig npm i -g'
-function no --description 'alias no npm outdated'
-function nog --description 'alias nog npm outdated -g --depth=0'
-function nr --description 'alias nr npm run'
-function nrb --description 'alias nrb npm run build'
-function nrd --description 'alias nrd npm run dev'
-function nrf --description 'alias nrf npm run format'
-function nrs --description 'alias nrs npm run start'
-function nug --description 'alias nug npm -g un'
-function nun --description 'alias nu npm un'
-function r --description 'alias r cd /mnt/d/repos/'
-function yd --description 'alias yd yarn dev'
-function yg --description 'alias yg yarn go'
-function ys --description 'alias ys yarn start'
+...
 ```
 
 The following you can copy paste into fish:
 
 ```bash
-alias c 'code .';funcsave c;alias g 'git';funcsave g;alias lss 'ls -lart | sort -k9,9';funcsave lss;alias ni 'npm i';funcsave ni;alias nid 'npm i -D';funcsave nid;alias nig 'npm i -g';funcsave nig;alias no 'npm outdated';funcsave no;alias nog 'npm outdated -g --depth=0';funcsave nog;alias nr 'npm run';funcsave nr;alias nrb 'npm run build';funcsave nrb;alias nrd 'npm run dev';funcsave nrd;alias nrf 'npm run format';funcsave nrf;alias nrs 'npm run start';funcsave nrs;alias nug 'npm -g un';funcsave nug;alias nu 'npm un';funcsave nu;alias r 'cd /mnt/d/repos/';funcsave r;alias yd 'yarn dev';funcsave yd;alias yg 'yarn go';funcsave yg;alias ys 'yarn start';funcsave ys;
+alias c 'code .';funcsave c;alias e exit;funcsave e;alias g hub;funcsave g;alias lss 'ls -lart | sort -k9,9';funcsave lss;alias ni 'npm i';funcsave ni;alias nid 'npm i -D';funcsave nid;alias nig 'npm i -g';funcsave nig;alias no 'npm outdated';funcsave no;alias nog 'npm outdated -g --depth=0';funcsave nog;alias nr 'npm run';funcsave nr;alias nrb 'npm run build';funcsave nrb;alias nrd 'npm run dev';funcsave nrd;alias nrf 'npm run format';funcsave nrf;alias nrs 'npm run start';funcsave nrs;alias nu 'npm un';funcsave nu;alias nug 'npm -g un';funcsave nug;alias pp 'git pull && git push';funcsave pp;alias r 'cd ~/repos';funcsave r;alias ya 'yarn add';funcsave ya;alias yad 'yarn add -D';funcsave yad;alias yb 'yarn build';funcsave yb;alias ybycys 'yarn clean && yb && yarn serve';funcsave ybycys;alias yd 'yarn dev';funcsave yd;alias yg 'yarn go';funcsave yg;alias yga 'yarn global add';funcsave yga;alias yr 'yarn remove';funcsave yr;alias ys 'yarn start';funcsave ys;alias yyb 'yarn && yarn build';funcsave yyb;alias yyd 'yarn && yarn dev';funcsave yyd;
 ```
 
 <!-- Links -->

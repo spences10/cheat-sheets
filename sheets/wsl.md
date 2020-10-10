@@ -1,44 +1,31 @@
 ---
 title: Windows Subsystem Linux (WSL)
 createdDate: 2017-10-11
-updatedDate: 2018-01-27
+updatedDate: 2020-10-10
 published: true
 ---
 
-There's a few config options as part of the WSL I always forget
+## Shutdown WSL
 
-Links for getting Linux programs running in mixed mode:
-
-https://github.com/Microsoft/BashOnWindows/issues/2537
-
-https://virtualizationreview.com/articles/2017/02/08/graphical-programs-on-windows-subsystem-on-linux.aspx
-
-https://www.addictivetips.com/windows-tips/how-to-run-linux-apps-from-bash-on-windows-10-guide/
-
-## WSL Programs that work
-
-https://github.com/ethanhs/WSL-Programs
-
-## Linuxbrew
-
-Linuxbrew is like Chocolatey for Windows or Homebrew for OSx
+Localhost not working?
 
 ```bash
-brew install package
+wsl --shutdown
 ```
 
-## What version of Ubuntu is installed
+## Change WSL Version
+
+Change between WSL versions
 
 ```bash
-lsb_release -a
+# wsl --set-version <distro> 2
+# example
+wsl --set-version Debian 2
 ```
 
-## lxrun.exe
-
-Use `lxrun.exe` to interact with the WSL from the CMD prompt
-
-Burn it all 🔥:
+## List installed WSL Distros
 
 ```bash
-lxrun /uninstall /full
+# wsl --list --verbose
+wsl -l -v
 ```

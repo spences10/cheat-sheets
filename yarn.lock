@@ -2287,10 +2287,10 @@ alphanum-sort@^1.0.0:
   resolved "https://registry.yarnpkg.com/alphanum-sort/-/alphanum-sort-1.0.2.tgz#97a1119649b211ad33691d9f9f486a8ec9fbe0a3"
   integrity sha1-l6ERlkmyEa0zaR2fn0hqjsn74KM=
 
-animejs@^3.0.1:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/animejs/-/animejs-3.2.0.tgz#2daea7365983249022cc454fa726acdb4a84345d"
-  integrity sha512-zhtGl5cS0G2f5DfciMO8uwWpnx06nfFnHlXYYXHBazHep1Lyd6kEtBQP+9hpYKE0dBZjIigHp9VpMO95ZfXQJQ==
+animejs@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/animejs/-/animejs-3.2.1.tgz#de9fe2e792f44a777a7fdf6ae160e26604b0cdda"
+  integrity sha512-sWno3ugFryK5nhiDm/2BKeFCpZv7vzerWUcUPyAZLDhMek3+S/p418ldZJbJXo5ZUOpfm2kP2XRO4NJcULMy9A==
 
 ansi-align@^3.0.0:
   version "3.0.0"
@@ -4873,7 +4873,7 @@ doctrine@^3.0.0:
   dependencies:
     esutils "^2.0.2"
 
-dom-confetti@^0.1.1:
+dom-confetti@^0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/dom-confetti/-/dom-confetti-0.1.2.tgz#3b3acc4a5469e88fff43f2edc14db71a1cce5eb4"
   integrity sha512-6Zo1pJEbEW1/GPgmk7uGWnPsoZ1E1vF7pmrPARnN3tp8L3ReMr/SIyLl6E8mGbu4DermzDWXfa+be77HehH2MA==
@@ -5009,10 +5009,10 @@ electron-to-chromium@^1.3.523:
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.555.tgz#a096716ff77cf8da9a608eb628fd6927869503d2"
   integrity sha512-/55x3nF2feXFZ5tdGUOr00TxnUjUgdxhrn+eCJ1FAcoAt+cKQTjQkUC5XF4frMWE1R5sjHk+JueuBalimfe5Pg==
 
-element-ui@^2.12.0:
-  version "2.13.2"
-  resolved "https://registry.yarnpkg.com/element-ui/-/element-ui-2.13.2.tgz#582bf47aaaaaafe23ea1958fae217a687ad06447"
-  integrity sha512-r761DRPssMPKDiJZWFlG+4e4vr0cRG/atKr3Eqr8Xi0tQMNbtmYU1QXvFnKiFPFFGkgJ6zS6ASkG+sellcoHlQ==
+element-ui@^2.13.2:
+  version "2.14.0"
+  resolved "https://registry.yarnpkg.com/element-ui/-/element-ui-2.14.0.tgz#dcff2718fb485542ea5b5a1f5c0daf1113477b24"
+  integrity sha512-dda4xw40HT7Xcx/7aV5METvGjwMumdd5D1B7vjhDkmqvJP/9IEqgL5VsYA4YXz+RUVqyxMByRwf1WedrICJTTQ==
   dependencies:
     async-validator "~1.8.1"
     babel-helper-vue-jsx-merge-props "^2.0.0"
@@ -13968,20 +13968,20 @@ vfile@^4.0.0:
     unist-util-stringify-position "^2.0.0"
     vfile-message "^2.0.0"
 
-victormono@1.4.1:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/victormono/-/victormono-1.4.1.tgz#00e354387ae5e3ed1efafc8fd4febebe1838dad9"
-  integrity sha512-p/4uNqEHqDS8qHxFYDz2tf7hecV5cFiAAExtb22LLc9nQ769C5hNWF41VvmQHiXpmmNYCN5ey14Gsx4SqfSAdg==
+victormono@1.4.2:
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/victormono/-/victormono-1.4.2.tgz#4be0a17bd393db00f9db5e7820c7a03cc5059d50"
+  integrity sha512-QYcfSZorx7U1fnTy9z/MgW/lXbZvrMAKnYkxdLugbev6+VvjWZLHoFVsVieD/HLsCnveeTYxq6HuyqXtzwpZEg==
   dependencies:
-    animejs "^3.0.1"
+    animejs "^3.2.1"
     core-js "^2.6.5"
-    dom-confetti "^0.1.1"
-    element-ui "^2.12.0"
+    dom-confetti "^0.1.2"
+    element-ui "^2.13.2"
     granim "^2.0.0"
     typed.js "^2.0.11"
-    vue "^2.6.10"
+    vue "^2.6.12"
     vue-codemirror "^4.0.6"
-    vue-faq-accordion "^1.2.1"
+    vue-faq-accordion "^1.6.2"
     vue-scrollTo "^2.4.1"
     vue-social-sharing "^2.4.6"
     vue-twentytwenty "^0.6.2"
@@ -14004,7 +14004,7 @@ vue-codemirror@^4.0.6:
     codemirror "^5.41.0"
     diff-match-patch "^1.0.0"
 
-vue-faq-accordion@^1.2.1:
+vue-faq-accordion@^1.6.2:
   version "1.6.2"
   resolved "https://registry.yarnpkg.com/vue-faq-accordion/-/vue-faq-accordion-1.6.2.tgz#f8f1d68abba88240e8a5b86dc811db4a154ae861"
   integrity sha512-PXFgeYQiXBe6fYERfIn44bFYUYsP+TiZ+qBH/KQKvXck85neCZvQiJN8IHwMLSC41fDdBnQvBIi6V9oO/wl/zg==
@@ -14043,7 +14043,7 @@ vue2-transitions@^0.3.0:
   resolved "https://registry.yarnpkg.com/vue2-transitions/-/vue2-transitions-0.3.0.tgz#765fc0d743103fcfe2d10f431697d8873a075c17"
   integrity sha512-m1ad8K8kufqiEhj5gXHkkqOioI5sW0FaMbRiO0Tv2WFfGbO2eIKrfkFiO3HPQtMJboimaLCN4p/zL81clLbG4w==
 
-vue@^2.2.4, vue@^2.6.10:
+vue@^2.2.4, vue@^2.6.12:
   version "2.6.12"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.12.tgz#f5ebd4fa6bd2869403e29a896aed4904456c9123"
   integrity sha512-uhmLFETqPPNyuLLbsKz6ioJ4q7AZHzD8ZVFNATNyICSZouqP2Sz0rotWQC8UNBF6VGSCs5abnKJoStA6JbCbfg==

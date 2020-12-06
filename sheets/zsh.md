@@ -1,7 +1,7 @@
 ---
 title: ZSH
 createdDate: 2017-10-11
-updatedDate: 2020-12-05
+updatedDate: 2020-12-06
 published: true
 ---
 
@@ -16,6 +16,18 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 ```
+
+## Clone plugin into correct location
+
+Some of the ZSH plugins provide this snippet other don't, if you want
+to clone a plugin to the preferred location use the following syntax:
+
+```bash
+git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+```
+
+This is for `zsh-syntax-highlighting` but it's the same for other
+plugins.
 
 ## Use nvm with zsh
 

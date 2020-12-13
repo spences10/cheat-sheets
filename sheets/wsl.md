@@ -23,6 +23,15 @@ Change between WSL versions
 wsl --set-version Debian 2
 ```
 
+## Set the default version of WSL
+
+When installing new Linux distros you can default them all to be WSL2
+or or one:
+
+```bash
+wsl --set-default-version 2
+```
+
 ## List installed WSL Distros
 
 ```bash

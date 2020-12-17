@@ -47,8 +47,8 @@
     "victormono": "1.4.2"
   },
   "devDependencies": {
-    "husky": "4.3.0",
-    "prettier": "2.1.2",
+    "husky": "4.3.6",
+    "prettier": "2.2.1",
     "pretty-quick": "3.1.0"
   },
   "prettier": {

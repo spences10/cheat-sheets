@@ -71,16 +71,19 @@ export default function IndexPage({ data }) {
       <GitHubCorner />
       <SocialButtons />
       <form>
-        <FormLabel htmlFor="search">Search</FormLabel>
+        <FormLabel htmlFor="search" fontSize="xl">
+          Search
+        </FormLabel>
         <Input
           name="search"
           type="text"
           placeholder="Search the things!"
           value={query}
           onChange={onSearch}
+          autoFocus
         />
       </form>
-      <UnorderedList>
+      <UnorderedList m="0">
         {searchResults.map(sheet => {
           const {
             id,
@@ -96,7 +99,12 @@ export default function IndexPage({ data }) {
               {items.map((item, count) => {
                 if (count > 5) return
                 return (
-                  <Link as={GatsbyLink} to={`/${slug}${item.url}`}>
+                  <Link
+                    as={GatsbyLink}
+                    to={`/${slug}${item.url}`}
+                    key={item.url}
+                    fontSize="xl"
+                  >
                     <p>{item.title}</p>
                   </Link>
                 )

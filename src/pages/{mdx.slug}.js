@@ -4,8 +4,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import React from 'react'
 import SEO from 'react-seo-component'
 import { GitHubCorner } from '../components/github-corner'
-import { A, H3, Small } from '../components/md-page-elements'
-import { useAnalytics } from '../contexts/event-tracking'
+import { Small } from '../components/md-page-elements'
 import { useSiteMetadata } from '../hooks/useSiteMetadata'
 import { ogImageUrl } from '../util/og-image-url-build'
 
@@ -24,7 +23,7 @@ export default ({ data }) => {
     authorName,
     siteTitle,
   } = useSiteMetadata()
-  const fa = useAnalytics()
+  // const fa = useAnalytics()
 
   return (
     <>
@@ -51,13 +50,17 @@ export default ({ data }) => {
           w="310px"
           display="flex"
           flexDirection="column"
+          boxShadow="lg"
+          borderRadius="sm"
         >
-          <H3>Table of contents</H3>
+          <Box as="h3" fontSize="2xl" m="3">
+            Table of contents
+          </Box>
           <UnorderedList
             overflow="hidden"
             overflowY="auto"
-            m="3"
-            boxShadow="lg"
+            mb="3"
+            mr="4"
           >
             {tableOfContents.items.map(i => (
               <ListItem
@@ -65,6 +68,7 @@ export default ({ data }) => {
                 lineHeight="shorter"
                 mb="3"
                 mr="4"
+                listStyleType="none"
               >
                 <Link href={i.url} key={i.url}>
                   {i.title}
@@ -80,14 +84,14 @@ export default ({ data }) => {
       <Small>
         <p>Created: {createdDate}</p>
         <p>Updated: {updatedDate}</p>
-        <A
+        {/* <A
           onClick={() => fa('6ETKCM0U')}
           target="_blank"
           rel="noopener noreferrer"
           href="#" // fields.editLink
         >
           Edit this page on GitHub
-        </A>
+        </A> */}
       </Small>
       <MDXRenderer>{body}</MDXRenderer>
     </>

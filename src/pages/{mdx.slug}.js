@@ -66,7 +66,7 @@ export default ({ data }) => {
   const {
     frontmatter,
     body,
-    fields,
+    slug,
     tableOfContents,
     excerpt,
   } = data.mdx
@@ -85,7 +85,7 @@ export default ({ data }) => {
         titleTemplate={siteTitle}
         description={excerpt}
         image={ogImageUrl(authorName, 'cheatsheets.xyz', title)}
-        pathname={`${siteUrl}${fields.slug}`}
+        pathname={`${siteUrl}${slug}`}
         article={true}
         publishedDate={createdDate}
         modifiedDate={updatedDate}
@@ -115,7 +115,7 @@ export default ({ data }) => {
           onClick={() => fa('6ETKCM0U')}
           target="_blank"
           rel="noopener noreferrer"
-          href={fields.editLink}
+          href="#" // fields.editLink
         >
           Edit this page on GitHub
         </A>
@@ -130,6 +130,7 @@ export const query = graphql`
     mdx(slug: { eq: $slug }) {
       excerpt(pruneLength: 250)
       body
+      slug
       frontmatter {
         title
         createdDate(formatString: "YYYY MMMM Do")

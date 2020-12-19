@@ -27,7 +27,7 @@
     "framer-motion": "^3.1.1",
     "fuse.js": "^6.4.3",
     "gatsby": "2.29.1",
-    "gatsby-plugin-google-fonts-v2": "^0.0.6",
+    "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-manifest": "2.9.0",
     "gatsby-plugin-mdx": "1.7.0",
     "gatsby-plugin-offline": "3.7.0",

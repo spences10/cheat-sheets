@@ -44,25 +44,14 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-fonts-v2`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          {
-            family: 'Recursive',
-            variable: true,
-            weights: ['200..800'],
-          },
-          {
-            family: 'Kreon',
-            variable: true,
-            weights: ['400..900'],
-          },
-          {
-            family: 'Inconsolata',
-            variable: true,
-            weights: ['200..900'],
-          },
+          `Jost`,
+          `Open Sans`,
+          `source sans pro\:300,400,400i,700`, // you can also specify font weights and styles
         ],
+        display: 'swap',
       },
     },
     {

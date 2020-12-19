@@ -19,6 +19,10 @@ export const theme = extendTheme({
       900: '#070014',
     },
   },
+  fonts: {
+    heading: 'Open Sans',
+    body: 'Jost',
+  },
   fontSizes: {
     xs: '12px',
     sm: '14px',
@@ -59,6 +63,17 @@ export const theme = extendTheme({
       html: {
         scrollBehavior: 'smooth',
       },
+      // scrollbarWidth: 'thin',
+      // scrollbarColor: 'brand.100 brand.500',
+      // '&::-webkit-scrollbar': { width: '15px' },
+      // '&::-webkit-scrollbar-track': {
+      //   background: 'brand.100',
+      // },
+      // '&::-webkit-scrollbar-thumb': {
+      //   backgroundColor: 'brand.500',
+      //   borderRadius: '14px',
+      //   border: '3px solid brand.100',
+      // },
     },
   },
 })

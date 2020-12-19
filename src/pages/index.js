@@ -1,44 +1,56 @@
 import Fuse from 'fuse.js'
 import { graphql } from 'gatsby'
-import React from 'react'
+import React, { useState } from 'react'
 
 export default function IndexPage({ data }) {
   const { nodes } = data.allMdx
-
-  const Dump = props => (
-    <div
-      style={{
-        fontSize: 20,
-        border: '1px solid #efefef',
-        padding: 10,
-        background: 'white',
-      }}
-    >
-      {Object.entries(props).map(([key, val]) => (
-        <pre key={key}>
-          <strong style={{ color: 'white', background: 'red' }}>
-            {key} 💩
-          </strong>
-          {JSON.stringify(val, '', '  ')}
-        </pre>
-      ))}
-    </div>
-  )
+  const [query, updateQuery] = useState('')
 
   const options = {
     includeScore: true,
-    // Search in `author` and in `tags` array
     keys: ['frontmatter.title', 'tableOfContents.items.title'],
   }
   const fuse = new Fuse(nodes, options)
 
-  console.log('=====================')
-  console.log(fuse.search('add custom search'))
-  console.log('=====================')
+  const results = fuse.search(query)
+  const searchResults = query
+    ? results.map(result => result.item)
+    : nodes
+
+  function onSearch({ currentTarget = {} }) {
+    updateQuery(currentTarget.value)
+  }
+
   return (
     <>
-      <div>yo!</div>
-      <Dump poops={nodes} />
+      <form>
+        <label>Search</label>
+        <input type="text" value={query} onChange={onSearch} />
+      </form>
+      <ul>
+        {searchResults.map(sheet => {
+          const {
+            id,
+            frontmatter: { title },
+            slug,
+            tableOfContents: { items },
+          } = sheet
+          return (
+            <li key={id}>
+              <p>{title}</p>
+              {items.map((item, count) => {
+                if (count > 5) return
+                return (
+                  <div>
+                    <p>{item.title}</p>
+                    <p>{item.url}</p>
+                  </div>
+                )
+              })}
+            </li>
+          )
+        })}
+      </ul>
     </>
   )
 }

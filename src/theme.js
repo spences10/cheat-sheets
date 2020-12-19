@@ -54,4 +54,11 @@ export const theme = extendTheme({
     widest: '0.1em',
   },
   breakpoints: ['30em', '48em', '62em', '80em'],
+  styles: {
+    global: {
+      html: {
+        scrollBehavior: 'smooth',
+      },
+    },
+  },
 })

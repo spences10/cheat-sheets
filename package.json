@@ -24,7 +24,6 @@
     "@emotion/styled": "^11.0.0",
     "@mdx-js/mdx": "1.6.22",
     "@mdx-js/react": "1.6.22",
-    "babel-plugin-styled-components": "1.12.0",
     "framer-motion": "^3.1.1",
     "fuse.js": "^6.4.3",
     "gatsby": "2.29.1",
@@ -45,10 +44,7 @@
     "react-github-btn": "1.2.0",
     "react-helmet": "6.1.0",
     "react-highlight-words": "0.16.0",
-    "react-live": "2.2.3",
     "react-seo-component": "2.0.2",
-    "styled-breakpoints": "9.0.8",
-    "styled-reset": "4.3.3",
     "victormono": "1.4.2"
   },
   "devDependencies": {

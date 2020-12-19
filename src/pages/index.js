@@ -75,6 +75,7 @@ export default function IndexPage({ data }) {
         </FormLabel>
         <Input
           name="search"
+          id="search"
           type="text"
           placeholder="Search the things!"
           value={query}

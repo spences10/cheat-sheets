@@ -1,20 +1,15 @@
+import { Box } from '@chakra-ui/react'
 import React from 'react'
-import styled from 'styled-components'
-import { StyledLink } from '../pages'
-import { H1 } from './md-page-elements'
-
-const HeaderWrapper = styled.header`
-  color: ${({ theme }) => theme.colors.blue[500]};
-  position: relative;
-  margin: 30px 0;
-`
+import { A } from '../components/md-page-elements'
 
 export const Header = ({ title }) => {
   return (
-    <HeaderWrapper>
-      <H1>
-        <StyledLink to="/">{title}</StyledLink>
-      </H1>
-    </HeaderWrapper>
+    <Box as="header" m="30px 0">
+      <A to="/">
+        <Box as="h1" fontSize="4xl">
+          {title}
+        </Box>
+      </A>
+    </Box>
   )
 }

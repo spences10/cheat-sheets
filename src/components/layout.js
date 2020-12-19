@@ -1,7 +1,7 @@
 import React from 'react'
 import { down, up } from 'styled-breakpoints'
 import styled from 'styled-components'
-import { Header } from '../components/header'
+// import { Header } from '../components/header'
 import { useSiteMetadata } from '../hooks/useSiteMetadata'
 import { GlobalStyle } from '../theme/global-style'
 
@@ -28,7 +28,7 @@ export const Layout = ({ children }) => {
   return (
     <AppLayout>
       <GlobalStyle />
-      <Header title={title} />
+      {/* <Header title={title} /> */}
       {children}
     </AppLayout>
   )

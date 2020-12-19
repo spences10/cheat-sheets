@@ -127,7 +127,7 @@ export default ({ data }) => {
 
 export const query = graphql`
   query SheetsBySlug($slug: String!) {
-    mdx(fields: { slug: { eq: $slug } }) {
+    mdx(slug: { eq: $slug }) {
       excerpt(pruneLength: 250)
       body
       frontmatter {
@@ -136,10 +136,6 @@ export const query = graphql`
         updatedDate(formatString: "YYYY MMMM Do")
       }
       tableOfContents
-      fields {
-        slug
-        editLink
-      }
     }
   }
 `

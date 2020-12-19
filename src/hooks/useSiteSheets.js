@@ -1,16 +1,14 @@
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby'
 
 export const useSiteSheets = () => {
   const { allMdx } = useStaticQuery(
     graphql`
       query SITE_SHEETS_QUERY {
-        allMdx(sort: { fields: [fields___slug], order: ASC }) {
+        allMdx(sort: { fields: slug, order: ASC }) {
           edges {
             node {
               id
-              fields {
-                slug
-              }
+              slug
               excerpt(pruneLength: 250)
               frontmatter {
                 title
@@ -23,6 +21,6 @@ export const useSiteSheets = () => {
         }
       }
     `
-  );
-  return allMdx;
-};
+  )
+  return allMdx
+}

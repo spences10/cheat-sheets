@@ -11,8 +11,8 @@ export const Header = ({ title }) => {
         to="/"
         textDecor="underline"
         fontWeight="bold"
-        color="brand.400"
         _hover={{
+          color: 'brand.400',
           textDecor: 'none',
         }}
       >

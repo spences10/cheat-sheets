@@ -1,8 +1,6 @@
-import styled from 'styled-components'
-import { AutoLink } from './linked-headers'
+import { Text } from '@chakra-ui/react'
+import React from 'react'
 
-export const H3 = styled.h3`
-  font-family: ${props => props.theme.h2};
-  color: ${props => props.theme.fontDark};
-  ${AutoLink}
-`
+export const H3 = ({ children }) => {
+  return <Text fontSize="2xl">{children}</Text>
+}

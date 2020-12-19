@@ -61,7 +61,7 @@ export const wrapPageElement = ({ element }) => (
         defer
       ></script>
     </Helmet>
-    <ChakraProvider theme={theme}>
+    <ChakraProvider theme={theme} resetCSS>
       <AnalyticsProvider>
         <MDXProvider components={components}>
           <Layout>{element}</Layout>

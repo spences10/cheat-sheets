@@ -26,6 +26,7 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
+    `@chakra-ui/gatsby-plugin`,
     {
       resolve: `gatsby-plugin-mdx`,
       options: {

@@ -79,6 +79,7 @@ export const theme = extendTheme({
       //   borderRadius: '14px',
       //   border: '3px solid brand.100',
       // },
+      '.highlight': { backgroundColor: 'brand.400' },
     },
   },
 })

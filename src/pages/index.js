@@ -10,6 +10,7 @@ import Fuse from 'fuse.js'
 import { graphql, Link as GatsbyLink } from 'gatsby'
 import React, { useState } from 'react'
 import { Helmet } from 'react-helmet'
+import Highlighter from 'react-highlight-words'
 import SEO from 'react-seo-component'
 import { SocialButtons } from '../components/social-buttons'
 import { useSiteMetadata } from '../hooks/useSiteMetadata'
@@ -68,9 +69,9 @@ export default function IndexPage({ data }) {
         />
       </Helmet>
       <SocialButtons />
-      <form>
+      <Box as="form" mt="5" mb="8">
         <FormLabel htmlFor="search" fontSize="xl">
-          Search
+          Search:
         </FormLabel>
         <Input
           name="search"
@@ -80,7 +81,7 @@ export default function IndexPage({ data }) {
           onChange={onSearch}
           autoFocus
         />
-      </form>
+      </Box>
       <UnorderedList m="0">
         {searchResults.map(sheet => {
           const {
@@ -102,19 +103,33 @@ export default function IndexPage({ data }) {
                 }}
               >
                 <Box as="h2" fontSize="3xl" my="4">
-                  {title}
+                  <Highlighter
+                    searchWords={[query]}
+                    autoEscape={true}
+                    textToHighlight={title}
+                    highlightClassName="highlight"
+                  >
+                    {title}
+                  </Highlighter>
                 </Box>
               </Link>
               {items.map((item, count) => {
-                if (count > 5) return
                 return (
                   <Link
                     as={GatsbyLink}
                     to={`/${slug}${item.url}`}
                     key={item.url}
                     fontSize="xl"
+                    display="block"
                   >
-                    <p>{item.title}</p>
+                    <Highlighter
+                      searchWords={[query]}
+                      autoEscape={true}
+                      textToHighlight={item.title}
+                      highlightClassName="highlight"
+                    >
+                      <p>{item.title}</p>
+                    </Highlighter>
                   </Link>
                 )
               })}

@@ -1,6 +1,6 @@
-import React from 'react';
-import GitHubButton from 'react-github-btn';
-import styled from 'styled-components';
+import React from 'react'
+import GitHubButton from 'react-github-btn'
+// import styled from 'styled-components';
 
 const Button = ({
   ariaLabel,
@@ -20,22 +20,22 @@ const Button = ({
     >
       {children}
     </GitHubButton>
-  );
-};
+  )
+}
 
-const Wrapper = styled.div`
-  margin-top: 20px;
-`;
+// const Wrapper = styled.div`
+//   margin-top: 20px;
+// `;
 
-const ButtonWrapper = styled.div`
-  display: inline-block;
-  margin-right: 5px;
-`;
+// const ButtonWrapper = styled.div`
+//   display: inline-block;
+//   margin-right: 5px;
+// `;
 
 export const SocialButtons = () => {
   return (
-    <Wrapper>
-      <ButtonWrapper>
+    <div>
+      <div>
         <Button
           ariaLabel={'Star spences10/cheat-sheets on GitHub'}
           dataIcon={'octicon-star'}
@@ -43,8 +43,8 @@ export const SocialButtons = () => {
         >
           Star
         </Button>
-      </ButtonWrapper>
-      <ButtonWrapper>
+      </div>
+      <div>
         <Button
           ariaLabel={'Fork spences10/cheat-sheets on GitHub'}
           dataIcon={'octicon-repo-forked'}
@@ -52,12 +52,12 @@ export const SocialButtons = () => {
         >
           Fork
         </Button>
-      </ButtonWrapper>
-      <ButtonWrapper>
+      </div>
+      <div>
         <Button ariaLabel={'Follow @spences10 on GitHub'}>
           Follow @spences10
         </Button>
-      </ButtonWrapper>
-    </Wrapper>
-  );
-};
+      </div>
+    </div>
+  )
+}

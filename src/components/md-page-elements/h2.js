@@ -1,10 +1,10 @@
 import { Text } from '@chakra-ui/react'
 import React from 'react'
 
-export const H2 = ({ children }) => {
+export const H2 = props => {
   return (
-    <Text fontSize="3xl" my="4">
-      {children}
+    <Text as="h2" fontSize="3xl" my="4" {...props}>
+      {props.children}
     </Text>
   )
 }

@@ -35,7 +35,6 @@
     "gatsby-plugin-react-helmet": "3.7.0",
     "gatsby-plugin-robots-txt": "1.5.3",
     "gatsby-plugin-sitemap": "2.9.0",
-    "gatsby-plugin-styled-components": "3.7.0",
     "gatsby-plugin-zeit-now": "0.3.0",
     "gatsby-remark-autolink-headers": "2.8.0",
     "gatsby-remark-smartypants": "2.7.0",
@@ -49,7 +48,6 @@
     "react-live": "2.2.3",
     "react-seo-component": "2.0.2",
     "styled-breakpoints": "9.0.8",
-    "styled-components": "5.2.1",
     "styled-reset": "4.3.3",
     "victormono": "1.4.2"
   },

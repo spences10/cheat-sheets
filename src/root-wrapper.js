@@ -19,9 +19,9 @@ import { theme } from './theme'
 
 const components = {
   a: props => <A {...props} />,
-  h1: H1,
-  h2: H2,
-  h3: H3,
+  h1: props => <H1 {...props} />,
+  h2: props => <H2 {...props} />,
+  h3: props => <H3 {...props} />,
   pre: ({ children: { props } }) => {
     // if there's a codeString and some props, we passed the test
     if (props.mdxType === 'code') {

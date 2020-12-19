@@ -2,6 +2,7 @@ import { Flex, Grid, Spacer } from '@chakra-ui/react'
 import Highlight, { defaultProps } from 'prism-react-renderer'
 import theme from 'prism-react-renderer/themes/nightOwl'
 import React from 'react'
+import 'victormono'
 import {
   BashSvg,
   CssSvg,
@@ -91,6 +92,8 @@ export const Code = ({ children, className }) => {
               borderLeftColor: '#000000',
               borderRightColor: '#000000',
               backgroundColor: '#1f2127',
+              fontFamily: 'victor mono',
+              fontSize: 'large',
             }}
           >
             {tokens.map((line, i) => (

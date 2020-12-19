@@ -4,7 +4,7 @@ import React from 'react'
 export const P = props => {
   const { children, ...rest } = props
   return (
-    <Text color="gray.900" fontSize="xl" {...rest}>
+    <Text fontSize="xl" {...rest}>
       {children}
     </Text>
   )

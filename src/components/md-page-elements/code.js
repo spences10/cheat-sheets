@@ -13,7 +13,7 @@ import {
 import { CopyButton } from './copy-button'
 
 export const Code = ({ children, className }) => {
-  const language = className.replace(/language-/, '')
+  const language = className?.replace(/language-/, '')
 
   const showLanguage = () => {
     switch (language) {
@@ -32,7 +32,7 @@ export const Code = ({ children, className }) => {
       case 'css':
         return <CssSvg />
       default:
-        break
+        return <div />
     }
   }
 

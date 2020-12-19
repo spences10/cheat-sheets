@@ -6,6 +6,11 @@ import { extendTheme } from '@chakra-ui/react'
  * Example usage of theme values: <Text color="brand.100" fontSize="6xl" fontWeight="bold">Boop</Text>
  */
 export const theme = extendTheme({
+  config: {
+    useSystemColorMode: true,
+    initialColorMode: 'dark',
+    key: 'chakra-ui-no-flash',
+  },
   colors: {
     brand: {
       100: '#E0AAFF',

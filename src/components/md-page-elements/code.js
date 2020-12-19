@@ -1,91 +1,111 @@
+import { Flex, Grid, Spacer } from '@chakra-ui/react'
 import Highlight, { defaultProps } from 'prism-react-renderer'
 import theme from 'prism-react-renderer/themes/nightOwl'
 import React from 'react'
 import {
-  LiveEditor,
-  LiveError,
-  LivePreview,
-  LiveProvider,
-} from 'react-live'
-import styled from 'styled-components'
-import 'victormono'
-import { copyToClipboard } from '../../util/copy-to-clipboard'
+  BashSvg,
+  CssSvg,
+  HtmlSvg,
+  JavaScriptSvg,
+  ReactSvg,
+  TypeScriptSvg,
+} from '../../assets'
+import { CopyButton } from './copy-button'
 
-export const Pre = styled.pre`
-  text-align: left;
-  margin: 1em 0;
-  padding: 0.5em;
-  overflow-x: auto;
-  border-radius: 3px;
-  font-family: 'Victor Mono', 'Courier New', Courier, monospace;
-  font-size: 18px;
-`
+export const Code = ({ children, className }) => {
+  const language = className.replace(/language-/, '')
 
-export const LineNo = styled.span`
-  display: inline-block;
-  width: 2em;
-  user-select: none;
-  opacity: 0.3;
-`
-
-const CopyCode = styled.button`
-  position: absolute;
-  right: 0.25rem;
-  border: 0;
-  border-radius: 3px;
-  margin: 0.25em;
-  opacity: 0.3;
-  &:hover {
-    opacity: 1;
-  }
-  font-family: 'Victor Mono', 'Courier New', Courier, monospace;
-  font-size: 13px;
-  background-color: ${({ theme }) => theme.primary};
-`
-
-export const Code = ({ codeString, language, ...props }) => {
-  if (props['react-live']) {
-    return (
-      <LiveProvider code={codeString} noInline={true} theme={theme}>
-        <LiveEditor />
-        <LiveError />
-        <LivePreview />
-      </LiveProvider>
-    )
-  }
-
-  const handleClick = () => {
-    copyToClipboard(codeString)
+  const showLanguage = () => {
+    switch (language) {
+      case 'typescript':
+        return <TypeScriptSvg />
+      case 'javascript':
+        return <JavaScriptSvg />
+      case 'js':
+        return <JavaScriptSvg />
+      case 'bash':
+        return <BashSvg />
+      case 'jsx':
+        return <ReactSvg />
+      case 'html':
+        return <HtmlSvg />
+      case 'css':
+        return <CssSvg />
+      default:
+        break
+    }
   }
 
   return (
-    <>
-      <Highlight
-        {...defaultProps}
-        code={codeString}
-        language={language}
-        theme={theme}
-      >
-        {({
-          className,
-          style,
-          tokens,
-          getLineProps,
-          getTokenProps,
-        }) => (
-          <Pre className={className} style={style}>
-            <CopyCode onClick={handleClick}>Copy</CopyCode>
+    <Highlight
+      {...defaultProps}
+      theme={theme}
+      code={children.trim()}
+      language={language}
+    >
+      {({
+        className,
+        style,
+        tokens,
+        getLineProps,
+        getTokenProps,
+      }) => (
+        <Flex position="relative" direction="column" my={6}>
+          <Grid
+            h="50px"
+            bg="brand.darkGrey"
+            mb="-20px"
+            borderTop="solid 2px"
+            borderTopColor="brand.black"
+            borderLeft="solid 2px"
+            borderLeftColor="brand.black"
+            borderRight="solid 2px"
+            borderRightColor="brand.black"
+            borderBottom="solid 1px"
+            borderBottomColor="brand.black"
+            templateColumns="auto 100px 80px"
+            alignItems="center"
+            justifyItems="center"
+          >
+            <Spacer />
+            {showLanguage()}
+            <CopyButton value={children.trim()} />
+          </Grid>
+          <pre
+            className={className}
+            style={{
+              ...style,
+              overflow: 'scroll',
+              overflowY: 'hidden',
+              marginTop: 20,
+              marginBottom: 20,
+              padding: 16,
+              display: 'flex',
+              flexDirection: 'column',
+              width: '100%',
+              position: 'relative',
+              borderBottom: 'solid 2px',
+              borderLeft: 'solid 2px',
+              borderRight: 'solid 2px',
+              borderBottomColor: '#000000',
+              borderLeftColor: '#000000',
+              borderRightColor: '#000000',
+              backgroundColor: '#1f2127',
+            }}
+          >
             {tokens.map((line, i) => (
-              <div {...getLineProps({ line, key: i })}>
-                <LineNo>{i + 1}</LineNo>
+              <div key={i} {...getLineProps({ line, key: i })}>
                 {line.map((token, key) => (
-                  <span {...getTokenProps({ token, key })} />
+                  <span
+                    key={key}
+                    {...getTokenProps({ token, key })}
+                  />
                 ))}
               </div>
             ))}
-          </Pre>
-        )}
-      </Highlight>
-    </>
+          </pre>
+        </Flex>
+      )}
+    </Highlight>
   )
 }

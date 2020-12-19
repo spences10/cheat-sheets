@@ -1,7 +1,7 @@
+import { ChakraProvider } from '@chakra-ui/react'
 import { MDXProvider } from '@mdx-js/react'
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import { ThemeProvider } from 'styled-components'
 import { Layout } from './components/layout'
 import {
   A,
@@ -15,7 +15,7 @@ import {
   Small,
 } from './components/md-page-elements'
 import { AnalyticsProvider } from './contexts/event-tracking'
-import { theme } from './theme/global-style'
+import { theme } from './theme'
 
 const components = {
   a: props => <A {...props} />,
@@ -61,12 +61,12 @@ export const wrapPageElement = ({ element }) => (
         defer
       ></script>
     </Helmet>
-    <ThemeProvider theme={theme}>
+    <ChakraProvider theme={theme}>
       <AnalyticsProvider>
         <MDXProvider components={components}>
           <Layout>{element}</Layout>
         </MDXProvider>
       </AnalyticsProvider>
-    </ThemeProvider>
+    </ChakraProvider>
   </>
 )

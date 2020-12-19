@@ -17,29 +17,28 @@ const Toc = styled.aside`
   width: 310px;
   display: flex;
   flex-direction: column;
-  border: solid 1px ${({ theme }) => theme.colors.blue[500]};
-  border-radius: ${({ theme }) => theme.borderRadius.default};
-  padding: ${({ theme }) => theme.spacing[3]};
-  margin: ${({ theme }) => theme.spacing[3]} 0;
-  font-size: ${({ theme }) => theme.fontSize.sm};
+  /* border: solid 1px ${({ theme }) => theme.colors.blue[500]}; */
+  /* border-radius: ${({ theme }) => theme.borderRadius.default}; */
+  /* padding: ${({ theme }) => theme.spacing[3]}; */
+  /* margin: ${({ theme }) => theme.spacing[3]} 0; */
+  /* font-size: ${({ theme }) => theme.fontSize.sm}; */
   * {
     width: 100%;
   }
-  a {
+  /* a {
     color: var(
       --colour-on-background,
-      ${({ theme }) => theme.colors.gray[900]}
     );
-  }
+  } */
   h3 {
-    margin: 0 ${({ theme }) => theme.spacing[3]};
-    font-size: ${({ theme }) => theme.fontSize['2xl']};
-    font-family: ${({ theme }) => theme.fontFamily.serif};
+    /* margin: 0 ${({ theme }) => theme.spacing[3]}; */
+    /* font-size: ${({ theme }) => theme.fontSize['2xl']}; */
+    /* font-family: ${({ theme }) => theme.fontFamily.serif}; */
   }
   ul {
     overflow: hidden;
     overflow-y: auto;
-    margin: ${({ theme }) => theme.spacing[3]};
+    /* margin: ${({ theme }) => theme.spacing[3]}; */
     &::-webkit-scrollbar {
       width: 11px;
     }
@@ -47,11 +46,11 @@ const Toc = styled.aside`
       border-radius: 14px;
     }
   }
-  li {
-    line-height: ${({ theme }) => theme.lineHeight.tight};
-    margin-bottom: ${({ theme }) => theme.spacing[3]};
-    margin-right: ${({ theme }) => theme.spacing[4]};
-  }
+  /* li { */
+  /* line-height: ${({ theme }) => theme.lineHeight.tight}; */
+  /* margin-bottom: ${({ theme }) => theme.spacing[3]}; */
+  /* margin-right: ${({ theme }) => theme.spacing[4]}; */
+  /* } */
   a {
     text-decoration: none;
   }
@@ -59,7 +58,7 @@ const Toc = styled.aside`
 
 const Title = styled(H2)`
   font-weight: 700;
-  color: ${({ theme }) => theme.colors.blue[500]};
+  /* color: ${({ theme }) => theme.colors.blue[500]}; */
 `
 
 export default ({ data }) => {

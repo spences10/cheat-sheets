@@ -3,7 +3,7 @@ import { down, up } from 'styled-breakpoints'
 import styled from 'styled-components'
 // import { Header } from '../components/header'
 import { useSiteMetadata } from '../hooks/useSiteMetadata'
-import { GlobalStyle } from '../theme/global-style'
+// import { GlobalStyle } from '../theme/global-style'
 
 const AppLayout = styled.main`
   max-width: 570px;
@@ -27,7 +27,7 @@ export const Layout = ({ children }) => {
   const { title } = useSiteMetadata()
   return (
     <AppLayout>
-      <GlobalStyle />
+      {/* <GlobalStyle /> */}
       {/* <Header title={title} /> */}
       {children}
     </AppLayout>

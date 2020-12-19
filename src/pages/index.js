@@ -1,74 +1,40 @@
-import { graphql, Link } from 'gatsby'
+import {
+  Box,
+  FormLabel,
+  Input,
+  Link,
+  ListItem,
+  UnorderedList,
+} from '@chakra-ui/react'
+import Fuse from 'fuse.js'
+import { graphql, Link as GatsbyLink } from 'gatsby'
 import React, { useState } from 'react'
 import { Helmet } from 'react-helmet'
 import Highlighter from 'react-highlight-words'
 import SEO from 'react-seo-component'
-import styled from 'styled-components'
-import { GitHubCorner } from '../components/github-corner'
-import { P } from '../components/md-page-elements'
 import { SocialButtons } from '../components/social-buttons'
 import { useSiteMetadata } from '../hooks/useSiteMetadata'
 import { ogImageUrl } from '../util/og-image-url-build'
 
-const StyledInput = styled.input`
-  width: 100%;
-  border-radius: ${({ theme }) => theme.borderRadius.default};
-  border: solid 1px ${({ theme }) => theme.colors.gray[500]};
-  font-size: ${({ theme }) => theme.fontSize['3xl']};
-  padding: ${({ theme }) => theme.spacing[2]};
-  &:focus {
-    outline: 3px dashed ${({ theme }) => theme.colors.blue[500]};
+export default function IndexPage({ data }) {
+  const { nodes } = data.allMdx
+  const [query, updateQuery] = useState('')
+
+  const options = {
+    includeScore: true,
+    keys: ['frontmatter.title', 'tableOfContents.items.title'],
   }
-  margin-bottom: ${({ theme }) => theme.spacing[10]};
-`
+  const fuse = new Fuse(nodes, options)
 
-const SheetTitle = styled.h2`
-  font-family: ${({ theme }) => theme.fontFamily.sans};
-  font-size: ${({ theme }) => theme.fontSize['2xl']};
-  font-weight: 700;
-  margin: ${({ theme }) => theme.spacing[2]} 0;
-  display: block;
-`
+  const results = fuse.search(query)
+  const searchResults = query
+    ? results.map(result => result.item)
+    : nodes
 
-const StyledP = styled(P)`
-  margin: ${({ theme }) => theme.spacing[2]} 0;
-`
-
-const StyledDescription = styled(P)`
-  font-size: ${({ theme }) => theme.fontSize['1xl']};
-`
-
-export const StyledLink = styled(props => <Link {...props} />)`
-  color: ${({ theme }) => theme.colors.gray[900]};
-  &:focus {
-    outline: 3px dashed ${({ theme }) => theme.primaryAccent};
+  function onSearch({ currentTarget = {} }) {
+    updateQuery(currentTarget.value)
   }
-  padding: 3px;
-  &:hover {
-    color: ${({ theme }) => theme.colors.blue[500]};
-  }
-  &:active {
-    color: ${({ theme }) => theme.colors.red[500]};
-  }
-`
 
-const LinkTitle = styled(StyledLink)`
-  text-decoration: underline;
-  &:hover {
-    text-decoration: none;
-  }
-  display: block;
-`
-
-const LinkLink = styled(StyledLink)`
-  text-decoration: none;
-  &:hover {
-    text-decoration: underline;
-  }
-  display: block;
-`
-
-export default ({ data }) => {
   const {
     description,
     image,
@@ -79,41 +45,6 @@ export default ({ data }) => {
     twitterUsername,
     authorName,
   } = useSiteMetadata()
-
-  const allSheets = data.allMdx.nodes
-  const emptyQuery = ''
-
-  const [state, stateSet] = useState({
-    filteredData: [],
-    query: emptyQuery,
-  })
-
-  const handleInputChange = e => {
-    const query = e.target.value
-    const sheets = data.allMdx.nodes || []
-
-    const filteredData = sheets.filter((sheet, i) => {
-      const {
-        frontmatter: { title },
-        tableOfContents: { items },
-      } = sheet
-
-      const toc = items.map(item => {
-        return item.title
-      })
-      return (
-        title.toLowerCase().includes(query.toLowerCase()) ||
-        (toc &&
-          toc.join('').toLowerCase().includes(query.toLowerCase()))
-      )
-    })
-
-    stateSet({ query, filteredData })
-  }
-
-  const { filteredData, query } = state
-  const hasSearchResults = filteredData && query !== emptyQuery
-  const sheets = hasSearchResults ? filteredData : allSheets
 
   return (
     <>
@@ -137,39 +68,41 @@ export default ({ data }) => {
           content={ogImageUrl(authorName, 'cheatsheets.xyz', title)}
         />
       </Helmet>
-      <GitHubCorner />
       <SocialButtons />
-      <StyledDescription>{description}</StyledDescription>
-      <StyledInput
-        aria-label="search input box"
-        type="text"
-        placeholder="Search"
-        onChange={handleInputChange}
-      />
-      {Object.keys(sheets).length === 0 ? (
-        <SheetTitle>
-          Nothing for that search term.
-          <span
-            style={{ paddingLeft: '5px' }}
-            role="img"
-            aria-label="cry emoji"
-          >
-            😭
-          </span>
-        </SheetTitle>
-      ) : (
-        sheets.map(post => {
+      <Box as="form" mt="5" mb="8">
+        <FormLabel htmlFor="search" fontSize="xl">
+          Search:
+        </FormLabel>
+        <Input
+          name="search"
+          type="text"
+          placeholder="Search the things!"
+          value={query}
+          onChange={onSearch}
+          autoFocus
+        />
+      </Box>
+      <UnorderedList m="0">
+        {searchResults.map(sheet => {
           const {
             id,
-            fields: { slug },
             frontmatter: { title },
+            slug,
             tableOfContents: { items },
-          } = post
-
+          } = sheet
           return (
-            <article key={`${id}${title}`}>
-              <SheetTitle>
-                <LinkTitle to={slug} aria-label={`Link for ${title}`}>
+            <ListItem key={id} listStyleType="none">
+              <Link
+                as={GatsbyLink}
+                to={`/${slug}`}
+                textDecor="underline"
+                fontWeight="bold"
+                _hover={{
+                  color: 'brand.400',
+                  textDecor: 'none',
+                }}
+              >
+                <Box as="h2" fontSize="3xl" my="4">
                   <Highlighter
                     searchWords={[query]}
                     autoEscape={true}
@@ -178,28 +111,32 @@ export default ({ data }) => {
                   >
                     {title}
                   </Highlighter>
-                </LinkTitle>
-              </SheetTitle>
-              {items.map(item => {
+                </Box>
+              </Link>
+              {items.map((item, count) => {
                 return (
-                  <StyledP key={`${id}${slug}${item.url}`}>
-                    <LinkLink to={`${slug}${item.url}`}>
-                      <Highlighter
-                        searchWords={[query]}
-                        autoEscape={true}
-                        textToHighlight={item.title}
-                        highlightClassName="highlight"
-                      >
-                        {item.title}
-                      </Highlighter>
-                    </LinkLink>
-                  </StyledP>
+                  <Link
+                    as={GatsbyLink}
+                    to={`/${slug}${item.url}`}
+                    key={item.url}
+                    fontSize="xl"
+                    display="block"
+                  >
+                    <Highlighter
+                      searchWords={[query]}
+                      autoEscape={true}
+                      textToHighlight={item.title}
+                      highlightClassName="highlight"
+                    >
+                      <p>{item.title}</p>
+                    </Highlighter>
+                  </Link>
                 )
               })}
-            </article>
+            </ListItem>
           )
-        })
-      )}
+        })}
+      </UnorderedList>
     </>
   )
 }
@@ -216,9 +153,7 @@ export const indexQuery = graphql`
           published
         }
         tableOfContents
-        fields {
-          slug
-        }
+        slug
       }
     }
   }

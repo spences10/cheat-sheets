@@ -1,7 +1,7 @@
+import { ChakraProvider } from '@chakra-ui/react'
 import { MDXProvider } from '@mdx-js/react'
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import { ThemeProvider } from 'styled-components'
 import { Layout } from './components/layout'
 import {
   A,
@@ -11,17 +11,20 @@ import {
   H2,
   H3,
   InlineCode,
+  Li,
+  Ol,
   P,
   Small,
+  Ul,
 } from './components/md-page-elements'
 import { AnalyticsProvider } from './contexts/event-tracking'
-import { theme } from './theme/global-style'
+import { theme } from './theme'
 
 const components = {
   a: props => <A {...props} />,
-  h1: H1,
-  h2: H2,
-  h3: H3,
+  h1: props => <H1 {...props} />,
+  h2: props => <H2 {...props} />,
+  h3: props => <H3 {...props} />,
   pre: ({ children: { props } }) => {
     // if there's a codeString and some props, we passed the test
     if (props.mdxType === 'code') {
@@ -49,6 +52,9 @@ const components = {
   wrapper: ({ children }) => <>{children}</>,
   p: props => <P {...props} />,
   small: props => <Small {...props} />,
+  ol: props => <Ol {...props} />,
+  ul: props => <Ul {...props} />,
+  li: props => <Li {...props} />,
 }
 
 export const wrapPageElement = ({ element }) => (
@@ -61,12 +67,12 @@ export const wrapPageElement = ({ element }) => (
         defer
       ></script>
     </Helmet>
-    <ThemeProvider theme={theme}>
+    <ChakraProvider theme={theme} resetCSS>
       <AnalyticsProvider>
         <MDXProvider components={components}>
           <Layout>{element}</Layout>
         </MDXProvider>
       </AnalyticsProvider>
-    </ThemeProvider>
+    </ChakraProvider>
   </>
 )

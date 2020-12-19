@@ -1,6 +1,6 @@
-import React from 'react';
-import GitHubButton from 'react-github-btn';
-import styled from 'styled-components';
+import { Box } from '@chakra-ui/react'
+import React from 'react'
+import GitHubButton from 'react-github-btn'
 
 const Button = ({
   ariaLabel,
@@ -20,22 +20,13 @@ const Button = ({
     >
       {children}
     </GitHubButton>
-  );
-};
-
-const Wrapper = styled.div`
-  margin-top: 20px;
-`;
-
-const ButtonWrapper = styled.div`
-  display: inline-block;
-  margin-right: 5px;
-`;
+  )
+}
 
 export const SocialButtons = () => {
   return (
-    <Wrapper>
-      <ButtonWrapper>
+    <Box mt="20px">
+      <Box as="div" display="inline-block" mr="5px">
         <Button
           ariaLabel={'Star spences10/cheat-sheets on GitHub'}
           dataIcon={'octicon-star'}
@@ -43,8 +34,8 @@ export const SocialButtons = () => {
         >
           Star
         </Button>
-      </ButtonWrapper>
-      <ButtonWrapper>
+      </Box>
+      <Box as="div" display="inline-block" mr="5px">
         <Button
           ariaLabel={'Fork spences10/cheat-sheets on GitHub'}
           dataIcon={'octicon-repo-forked'}
@@ -52,12 +43,12 @@ export const SocialButtons = () => {
         >
           Fork
         </Button>
-      </ButtonWrapper>
-      <ButtonWrapper>
+      </Box>
+      <Box as="div" display="inline-block" mr="5px">
         <Button ariaLabel={'Follow @spences10 on GitHub'}>
           Follow @spences10
         </Button>
-      </ButtonWrapper>
-    </Wrapper>
-  );
-};
+      </Box>
+    </Box>
+  )
+}

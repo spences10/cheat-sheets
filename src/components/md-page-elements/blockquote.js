@@ -1,10 +1,17 @@
-import styled from 'styled-components'
+import { Text } from '@chakra-ui/react'
+import React from 'react'
 
-export const Blockquote = styled.blockquote`
-  border-left: 5px solid #ccc;
-  padding-left: 5px;
-  font-style: italic;
-  font-size: 16px;
-  margin: 20px;
-  opacity: 0.7;
-`
+export const Blockquote = ({ children }) => {
+  return (
+    <Text
+      borderLeft="5px solid #ccc"
+      pl="5px"
+      fontStyle="italic"
+      fontSize="xl"
+      m="20px"
+      opacity="0.7"
+    >
+      {children}
+    </Text>
+  )
+}

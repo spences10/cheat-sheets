@@ -1,20 +1,29 @@
+import { Box, Link, Spacer } from '@chakra-ui/react'
+import { Link as GatsbyLink } from 'gatsby'
 import React from 'react'
-import styled from 'styled-components'
-import { StyledLink } from '../pages'
-import { H1 } from './md-page-elements'
-
-const HeaderWrapper = styled.header`
-  color: ${({ theme }) => theme.colors.blue[500]};
-  position: relative;
-  margin: 30px 0;
-`
+import { ThemeToggle } from '../components/theme-toggle'
 
 export const Header = ({ title }) => {
   return (
-    <HeaderWrapper>
-      <H1>
-        <StyledLink to="/">{title}</StyledLink>
-      </H1>
-    </HeaderWrapper>
+    <Box as="header" m="30px 0" display="flex">
+      <Link
+        as={GatsbyLink}
+        to="/"
+        textDecor="underline"
+        fontWeight="bold"
+        _hover={{
+          color: 'brand.400',
+          textDecor: 'none',
+        }}
+      >
+        <Box as="h1" fontSize="4xl" fontFamily="heading">
+          {title}
+        </Box>
+      </Link>
+      <Spacer />
+      <Box as="div" position="relative">
+        <ThemeToggle />
+      </Box>
+    </Box>
   )
 }

@@ -1,4 +1,5 @@
 import {
+  Box,
   FormLabel,
   Input,
   Link,
@@ -10,8 +11,6 @@ import { graphql, Link as GatsbyLink } from 'gatsby'
 import React, { useState } from 'react'
 import { Helmet } from 'react-helmet'
 import SEO from 'react-seo-component'
-import { GitHubCorner } from '../components/github-corner'
-import { H2 } from '../components/md-page-elements'
 import { SocialButtons } from '../components/social-buttons'
 import { useSiteMetadata } from '../hooks/useSiteMetadata'
 import { ogImageUrl } from '../util/og-image-url-build'
@@ -68,7 +67,6 @@ export default function IndexPage({ data }) {
           content={ogImageUrl(authorName, 'cheatsheets.xyz', title)}
         />
       </Helmet>
-      <GitHubCorner />
       <SocialButtons />
       <form>
         <FormLabel htmlFor="search" fontSize="xl">
@@ -93,8 +91,19 @@ export default function IndexPage({ data }) {
           } = sheet
           return (
             <ListItem key={id} listStyleType="none">
-              <Link as={GatsbyLink} to={`/${slug}`}>
-                <H2>{title}</H2>
+              <Link
+                as={GatsbyLink}
+                to={`/${slug}`}
+                textDecor="underline"
+                fontWeight="bold"
+                _hover={{
+                  color: 'brand.400',
+                  textDecor: 'none',
+                }}
+              >
+                <Box as="h2" fontSize="3xl" my="4">
+                  {title}
+                </Box>
               </Link>
               {items.map((item, count) => {
                 if (count > 5) return

@@ -3,7 +3,6 @@ import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import React from 'react'
 import SEO from 'react-seo-component'
-import { GitHubCorner } from '../components/github-corner'
 import { Small } from '../components/md-page-elements'
 import { useSiteMetadata } from '../hooks/useSiteMetadata'
 import { ogImageUrl } from '../util/og-image-url-build'
@@ -39,7 +38,6 @@ export default ({ data }) => {
         twitterUsername={twitterUsername}
         author={authorName}
       />
-      <GitHubCorner />
       {typeof tableOfContents.items === 'undefined' ? null : (
         <Box
           as="aside"

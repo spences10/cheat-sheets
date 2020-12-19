@@ -6,8 +6,17 @@ import { ThemeToggle } from '../components/theme-toggle'
 export const Header = ({ title }) => {
   return (
     <Box as="header" m="30px 0" display="flex">
-      <Link as={GatsbyLink} to="/">
-        <Box as="h1" fontSize="4xl">
+      <Link
+        as={GatsbyLink}
+        to="/"
+        textDecor="underline"
+        fontWeight="bold"
+        color="brand.400"
+        _hover={{
+          textDecor: 'none',
+        }}
+      >
+        <Box as="h1" fontSize="4xl" fontFamily="heading">
           {title}
         </Box>
       </Link>

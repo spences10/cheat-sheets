@@ -122,6 +122,7 @@ export default function IndexPage({ data }) {
                     key={item.url}
                     fontSize="xl"
                     display="block"
+                    my="4"
                   >
                     <Highlighter
                       searchWords={[query]}

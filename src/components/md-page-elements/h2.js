@@ -1,8 +1,11 @@
-import styled from 'styled-components'
-import { AutoLink } from './linked-headers'
+import { Text } from '@chakra-ui/react'
+import React from 'react'
+import { HideLink } from './hide-link'
 
-export const H2 = styled.h2`
-  font-size: ${({ theme }) => theme.fontSize['2xl']};
-  ${AutoLink};
-  margin: ${({ theme }) => theme.spacing[4]} 0;
-`
+export const H2 = props => {
+  return (
+    <Text as="h2" fontSize="3xl" my="4" {...props}>
+      <HideLink>{props.children}</HideLink>
+    </Text>
+  )
+}

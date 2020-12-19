@@ -1,6 +1,14 @@
+import {
+  FormLabel,
+  Input,
+  Link,
+  ListItem,
+  UnorderedList,
+} from '@chakra-ui/react'
 import Fuse from 'fuse.js'
-import { graphql } from 'gatsby'
+import { graphql, Link as GatsbyLink } from 'gatsby'
 import React, { useState } from 'react'
+import { H2 } from '../components/md-page-elements'
 
 export default function IndexPage({ data }) {
   const { nodes } = data.allMdx
@@ -24,10 +32,16 @@ export default function IndexPage({ data }) {
   return (
     <>
       <form>
-        <label>Search</label>
-        <input type="text" value={query} onChange={onSearch} />
+        <FormLabel htmlFor="search">Search</FormLabel>
+        <Input
+          name="search"
+          type="text"
+          placeholder="Search the things!"
+          value={query}
+          onChange={onSearch}
+        />
       </form>
-      <ul>
+      <UnorderedList>
         {searchResults.map(sheet => {
           const {
             id,
@@ -36,21 +50,22 @@ export default function IndexPage({ data }) {
             tableOfContents: { items },
           } = sheet
           return (
-            <li key={id}>
-              <p>{title}</p>
+            <ListItem key={id} listStyleType="none">
+              <Link as={GatsbyLink} to={`/${slug}`}>
+                <H2>{title}</H2>
+              </Link>
               {items.map((item, count) => {
                 if (count > 5) return
                 return (
-                  <div>
+                  <Link as={GatsbyLink} to={`/${slug}${item.url}`}>
                     <p>{item.title}</p>
-                    <p>{item.url}</p>
-                  </div>
+                  </Link>
                 )
               })}
-            </li>
+            </ListItem>
           )
         })}
-      </ul>
+      </UnorderedList>
     </>
   )
 }

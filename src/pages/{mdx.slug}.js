@@ -1,72 +1,19 @@
+import { Box, Link, ListItem, UnorderedList } from '@chakra-ui/react'
 import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import React from 'react'
 import SEO from 'react-seo-component'
-import styled from 'styled-components'
 import { GitHubCorner } from '../components/github-corner'
-import { A, H2, H3, Small } from '../components/md-page-elements'
+import { A, H3, Small } from '../components/md-page-elements'
 import { useAnalytics } from '../contexts/event-tracking'
 import { useSiteMetadata } from '../hooks/useSiteMetadata'
 import { ogImageUrl } from '../util/og-image-url-build'
-
-const Toc = styled.aside`
-  position: fixed;
-  left: calc(50% + 400px);
-  top: 80px;
-  max-height: 50vh;
-  width: 310px;
-  display: flex;
-  flex-direction: column;
-  border: solid 1px ${({ theme }) => theme.colors.blue[500]};
-  border-radius: ${({ theme }) => theme.borderRadius.default};
-  padding: ${({ theme }) => theme.spacing[3]};
-  margin: ${({ theme }) => theme.spacing[3]} 0;
-  font-size: ${({ theme }) => theme.fontSize.sm};
-  * {
-    width: 100%;
-  }
-  a {
-    color: var(
-      --colour-on-background,
-      ${({ theme }) => theme.colors.gray[900]}
-    );
-  }
-  h3 {
-    margin: 0 ${({ theme }) => theme.spacing[3]};
-    font-size: ${({ theme }) => theme.fontSize['2xl']};
-    font-family: ${({ theme }) => theme.fontFamily.serif};
-  }
-  ul {
-    overflow: hidden;
-    overflow-y: auto;
-    margin: ${({ theme }) => theme.spacing[3]};
-    &::-webkit-scrollbar {
-      width: 11px;
-    }
-    &::-webkit-scrollbar-track {
-      border-radius: 14px;
-    }
-  }
-  li {
-    line-height: ${({ theme }) => theme.lineHeight.tight};
-    margin-bottom: ${({ theme }) => theme.spacing[3]};
-    margin-right: ${({ theme }) => theme.spacing[4]};
-  }
-  a {
-    text-decoration: none;
-  }
-`
-
-const Title = styled(H2)`
-  font-weight: 700;
-  color: ${({ theme }) => theme.colors.blue[500]};
-`
 
 export default ({ data }) => {
   const {
     frontmatter,
     body,
-    fields,
+    slug,
     tableOfContents,
     excerpt,
   } = data.mdx
@@ -85,7 +32,7 @@ export default ({ data }) => {
         titleTemplate={siteTitle}
         description={excerpt}
         image={ogImageUrl(authorName, 'cheatsheets.xyz', title)}
-        pathname={`${siteUrl}${fields.slug}`}
+        pathname={`${siteUrl}${slug}`}
         article={true}
         publishedDate={createdDate}
         modifiedDate={updatedDate}
@@ -94,20 +41,41 @@ export default ({ data }) => {
       />
       <GitHubCorner />
       {typeof tableOfContents.items === 'undefined' ? null : (
-        <Toc>
+        <Box
+          as="aside"
+          position="fixed"
+          left="calc(50% + 400px)"
+          top="80px"
+          maxH="50vh"
+          w="310px"
+          display="flex"
+          flexDirection="column"
+        >
           <H3>Table of contents</H3>
-          <ul>
+          <UnorderedList
+            overflow="hidden"
+            overflowY="auto"
+            m="3"
+            boxShadow="lg"
+          >
             {tableOfContents.items.map(i => (
-              <li key={i.url}>
-                <a href={i.url} key={i.url}>
+              <ListItem
+                key={i.url}
+                lineHeight="shorter"
+                mb="3"
+                mr="4"
+              >
+                <Link href={i.url} key={i.url}>
                   {i.title}
-                </a>
-              </li>
+                </Link>
+              </ListItem>
             ))}
-          </ul>
-        </Toc>
+          </UnorderedList>
+        </Box>
       )}
-      <Title>{title}</Title>
+      <Box as="h1" fontSize="4xl">
+        {title}
+      </Box>
       <Small>
         <p>Created: {createdDate}</p>
         <p>Updated: {updatedDate}</p>
@@ -115,7 +83,7 @@ export default ({ data }) => {
           onClick={() => fa('6ETKCM0U')}
           target="_blank"
           rel="noopener noreferrer"
-          href={fields.editLink}
+          href="#" // fields.editLink
         >
           Edit this page on GitHub
         </A>
@@ -130,6 +98,7 @@ export const query = graphql`
     mdx(slug: { eq: $slug }) {
       excerpt(pruneLength: 250)
       body
+      slug
       frontmatter {
         title
         createdDate(formatString: "YYYY MMMM Do")

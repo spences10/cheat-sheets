@@ -25,6 +25,7 @@ export default ({ data }) => {
     siteTitle,
   } = useSiteMetadata()
   const fa = useAnalytics()
+
   return (
     <>
       <SEO

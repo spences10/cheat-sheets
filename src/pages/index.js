@@ -8,7 +8,13 @@ import {
 import Fuse from 'fuse.js'
 import { graphql, Link as GatsbyLink } from 'gatsby'
 import React, { useState } from 'react'
+import { Helmet } from 'react-helmet'
+import SEO from 'react-seo-component'
+import { GitHubCorner } from '../components/github-corner'
 import { H2 } from '../components/md-page-elements'
+import { SocialButtons } from '../components/social-buttons'
+import { useSiteMetadata } from '../hooks/useSiteMetadata'
+import { ogImageUrl } from '../util/og-image-url-build'
 
 export default function IndexPage({ data }) {
   const { nodes } = data.allMdx
@@ -29,8 +35,41 @@ export default function IndexPage({ data }) {
     updateQuery(currentTarget.value)
   }
 
+  const {
+    description,
+    image,
+    title,
+    siteUrl,
+    siteLanguage,
+    siteLocale,
+    twitterUsername,
+    authorName,
+  } = useSiteMetadata()
+
   return (
     <>
+      <SEO
+        title={`Home`}
+        titleTemplate={title}
+        description={description}
+        image={`${siteUrl}${image}`}
+        pathname={siteUrl}
+        siteLanguage={siteLanguage}
+        siteLocale={siteLocale}
+        twitterUsername={twitterUsername}
+      />
+      <Helmet encodeSpecialCharacters={false}>
+        <meta
+          property="og:image"
+          content={ogImageUrl(authorName, 'cheatsheets.xyz', title)}
+        />
+        <meta
+          name="twitter:image:src"
+          content={ogImageUrl(authorName, 'cheatsheets.xyz', title)}
+        />
+      </Helmet>
+      <GitHubCorner />
+      <SocialButtons />
       <form>
         <FormLabel htmlFor="search">Search</FormLabel>
         <Input

@@ -11,8 +11,11 @@ import {
   H2,
   H3,
   InlineCode,
+  Li,
+  Ol,
   P,
   Small,
+  Ul,
 } from './components/md-page-elements'
 import { AnalyticsProvider } from './contexts/event-tracking'
 import { theme } from './theme'
@@ -49,6 +52,9 @@ const components = {
   wrapper: ({ children }) => <>{children}</>,
   p: props => <P {...props} />,
   small: props => <Small {...props} />,
+  ol: props => <Ol {...props} />,
+  ul: props => <Ul {...props} />,
+  li: props => <Li {...props} />,
 }
 
 export const wrapPageElement = ({ element }) => (

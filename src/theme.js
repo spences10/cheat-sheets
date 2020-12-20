@@ -7,9 +7,9 @@ import { extendTheme } from '@chakra-ui/react'
  */
 export const theme = extendTheme({
   config: {
-    useSystemColorMode: true,
     initialColorMode: 'dark',
     key: 'chakra-ui-no-flash',
+    // useSystemColorMode: true,
   },
   colors: {
     brand: {
@@ -80,6 +80,7 @@ export const theme = extendTheme({
       //   border: '3px solid brand.100',
       // },
       '.highlight': { backgroundColor: 'brand.400' },
+      body: { marginLeft: 'calc(100vw - 100%)' },
     },
   },
 })

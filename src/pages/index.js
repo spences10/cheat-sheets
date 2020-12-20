@@ -24,6 +24,7 @@ export default function IndexPage({ data }) {
     includeScore: true,
     keys: ['frontmatter.title', 'tableOfContents.items.title'],
     includeMatches: true,
+    threshold: 0.3,
   }
   const fuse = new Fuse(nodes, options)
 
@@ -31,10 +32,6 @@ export default function IndexPage({ data }) {
   const searchResults = query
     ? results.map(result => result.item)
     : nodes
-
-  console.log('=====================')
-  console.log(searchResults)
-  console.log('=====================')
 
   function onSearch({ currentTarget = {} }) {
     updateQuery(currentTarget.value)
@@ -123,28 +120,37 @@ export default function IndexPage({ data }) {
                   </Highlighter>
                 </Box>
               </Link>
-              {items.map(item => {
-                return (
-                  <Link
-                    as={GatsbyLink}
-                    to={`/${slug}${item.url}`}
-                    key={item.url}
-                    fontSize="xl"
-                    display="block"
-                    my="4"
-                  >
-                    <Highlighter
-                      searchWords={[query]}
-                      autoEscape={true}
-                      textToHighlight={item.title}
-                      highlightClassName="highlight"
+              <UnorderedList m="0">
+                {items.map(item => {
+                  return (
+                    <ListItem
+                      key={`${slug}-${item.url}`}
+                      listStyleType="none"
                     >
-                      {}
-                      <p>{item.title}</p>
-                    </Highlighter>
-                  </Link>
-                )
-              })}
+                      {item.title
+                        .toLowerCase()
+                        .includes(query.toLowerCase()) ? (
+                        <Link
+                          as={GatsbyLink}
+                          to={`/${slug}${item.url}`}
+                          fontSize="xl"
+                          display="block"
+                          my="4"
+                        >
+                          <Highlighter
+                            searchWords={[query]}
+                            autoEscape={true}
+                            textToHighlight={item.title}
+                            highlightClassName="highlight"
+                          >
+                            <p>{item.title}</p>
+                          </Highlighter>
+                        </Link>
+                      ) : null}
+                    </ListItem>
+                  )
+                })}
+              </UnorderedList>
             </ListItem>
           )
         })}

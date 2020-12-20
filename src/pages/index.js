@@ -8,7 +8,7 @@ import {
 } from '@chakra-ui/react'
 import Fuse from 'fuse.js'
 import { graphql, Link as GatsbyLink } from 'gatsby'
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Helmet } from 'react-helmet'
 import Highlighter from 'react-highlight-words'
 import SEO from 'react-seo-component'
@@ -23,6 +23,8 @@ export default function IndexPage({ data }) {
   const options = {
     includeScore: true,
     keys: ['frontmatter.title', 'tableOfContents.items.title'],
+    includeMatches: true,
+    threshold: 0.3,
   }
   const fuse = new Fuse(nodes, options)
 
@@ -46,6 +48,10 @@ export default function IndexPage({ data }) {
     authorName,
   } = useSiteMetadata()
 
+  const searchRef = useRef(null)
+  useEffect(() => {
+    searchRef.current.focus()
+  }, [])
   return (
     <>
       <SEO
@@ -80,7 +86,7 @@ export default function IndexPage({ data }) {
           placeholder="Search the things!"
           value={query}
           onChange={onSearch}
-          autoFocus
+          ref={searchRef}
         />
       </Box>
       <UnorderedList m="0">
@@ -114,27 +120,37 @@ export default function IndexPage({ data }) {
                   </Highlighter>
                 </Box>
               </Link>
-              {items.map((item, count) => {
-                return (
-                  <Link
-                    as={GatsbyLink}
-                    to={`/${slug}${item.url}`}
-                    key={item.url}
-                    fontSize="xl"
-                    display="block"
-                    my="4"
-                  >
-                    <Highlighter
-                      searchWords={[query]}
-                      autoEscape={true}
-                      textToHighlight={item.title}
-                      highlightClassName="highlight"
+              <UnorderedList m="0">
+                {items.map(item => {
+                  return (
+                    <ListItem
+                      key={`${slug}-${item.url}`}
+                      listStyleType="none"
                     >
-                      <p>{item.title}</p>
-                    </Highlighter>
-                  </Link>
-                )
-              })}
+                      {item.title
+                        .toLowerCase()
+                        .includes(query.toLowerCase()) ? (
+                        <Link
+                          as={GatsbyLink}
+                          to={`/${slug}${item.url}`}
+                          fontSize="xl"
+                          display="block"
+                          my="4"
+                        >
+                          <Highlighter
+                            searchWords={[query]}
+                            autoEscape={true}
+                            textToHighlight={item.title}
+                            highlightClassName="highlight"
+                          >
+                            <p>{item.title}</p>
+                          </Highlighter>
+                        </Link>
+                      ) : null}
+                    </ListItem>
+                  )
+                })}
+              </UnorderedList>
             </ListItem>
           )
         })}

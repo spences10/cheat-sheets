@@ -90,7 +90,7 @@ yarn ls
 ## create-react-app
 
 Couple of good one here from
-[@beedesignllc](https://twitter.com/beedesignllc) 👌
+[@beedesignllc](https://twitter.com/beedesignllc)
 
 ```bash
 yarn create react-app my-app-name

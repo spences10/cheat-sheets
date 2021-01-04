@@ -1,9 +1,22 @@
 ---
 title: CSS
 createdDate: 2019-12-07
-updatedDate: 2019-12-07
+updatedDate: 2021-01-04
 published: true
 ---
+
+## Center anything, horizontally and vertically, with 3 lines of CSS:
+
+```css
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+```
+
+Via
+[Marko ⚡ Denic](https://twitter.com/denicmarko/status/1346039973087215617)
 
 ## Vertically center with margin
 

@@ -92,7 +92,7 @@ Instead use:
 npm ci
 ```
 
-It will have the same effect but be 2-3x faster 👌
+It will have the same effect but be 2-3x faster
 
 ## Bump version number
 

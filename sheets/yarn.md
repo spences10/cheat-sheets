@@ -1,12 +1,59 @@
 ---
 title: Yarn
 createdDate: 2017-05-19
-updatedDate: 2019-10-13
+updatedDate: 2021-01-04
 published: true
 ---
 
-This is just stuff that I have put down that I find I use a lot of the
-time for my own reference.
+## Yarn global binaries not showing
+
+When you globally add a package with yarn and it doesn't show in the
+terminal.
+
+Usually adding the path to your `.bashrc` or `.zshrc` works, try
+adding this:
+
+```bash
+# nano ~/.bashrc
+# or
+# nano ~/.zshrc
+export PATH="$PATH:$(yarn global bin)"
+```
+
+If that doesn't work you may need to set the yarn prefix.
+
+**Steps**
+
+Confirm your global bin path:
+
+```bash
+yarn global bin
+```
+
+I got: `/home/username/.yarn/bin`
+
+**set yarn prefix:**
+
+make sure your yarn prefix is the parent directory of your bin
+directory. You can confirm by running
+
+```bash
+yarn config get prefix
+```
+
+When I ran this it was undefined, so I set it:
+
+```bash
+yarn config set prefix ~/.yarn
+```
+
+Add the following to `~/.zshrc` or `~/.bashrc`
+
+```bash
+export PATH="$PATH:`yarn global bin`"
+```
+
+[Source](https://stackoverflow.com/a/53879534/1138354)
 
 ## Update dependencies
 

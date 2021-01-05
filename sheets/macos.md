@@ -1,9 +1,29 @@
 ---
 title: macOS
 createdDate: 2018-04-05
-updatedDate: 2019-08-16
+updatedDate: 2021-01-05
 published: true
 ---
+
+## Install Git without xcode
+
+In the terminal app do:
+
+```bash
+git
+```
+
+This will install prompt you to install them, agree to the terms and
+it will download: git, svn, libtool, perl, make, among others. These
+would come with many Linux distros by default.
+
+You can investigate the install:
+`/Library/Developer/CommandLineTools/`
+
+Thanks to [Harris Geo] for the tip 👍
+
+[harris geo]:
+  https://twitter.com/harrisgeo88/status/1346518293805469697
 
 ## Screen snip
 

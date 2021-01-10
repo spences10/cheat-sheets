@@ -24,7 +24,7 @@ export default function IndexPage({ data }) {
     includeScore: true,
     keys: ['frontmatter.title', 'tableOfContents.items.title'],
     includeMatches: true,
-    threshold: 0.3,
+    threshold: 0.2,
   }
   const fuse = new Fuse(nodes, options)
 

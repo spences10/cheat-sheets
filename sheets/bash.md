@@ -1,9 +1,17 @@
 ---
 title: Bash
 createdDate: 2017-10-11
-updatedDate: 2020-08-27
+updatedDate: 2021-01-10
 published: true
 ---
+
+## Human Readable `$PATH` output
+
+Use this to nicely format the `$PATH` variable:
+
+```bash
+echo -e ${PATH//:/\\n}
+```
 
 ## Change default shell
 

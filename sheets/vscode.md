@@ -1,9 +1,40 @@
 ---
 title: VS Code
 createdDate: 2019-05-27
-updatedDate: 2019-08-18
+updatedDate: 2021-01-21
 published: true
 ---
+
+## Show Key presses
+
+If you're screencasting you can display the keys being pressed in
+VSCode with the Screencast Mode.
+
+In the command pallet (Ctrl+shift+p) search for "Toggle Screencast
+Mode", you can add a keyboard shortcut to it as well in the keyboard
+shortcuts, search for "Open Keyboard Shortcuts (JSON)" in the command
+pallet.
+
+```json
+{
+  "key": "ctrl+alt+s ctrl+alt+c",
+  "command": "workbench.action.toggleScreencastMode"
+}
+```
+
+Here's the settings that can be changed in the VSCode settings (open
+with Ctrl+,).
+
+```json
+{
+  "screencastMode.fontSize": 56,
+  "screencastMode.keyboardOverlayTimeout": 800,
+  "screencastMode.mouseIndicatorColor": "#FF0000",
+  "screencastMode.mouseIndicatorSize": 20,
+  "screencastMode.onlyKeyboardShortcuts": false,
+  "screencastMode.verticalOffset": 20
+}
+```
 
 ## Want to list out what extensions you have installed?
 

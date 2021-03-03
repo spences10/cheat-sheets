@@ -11,7 +11,8 @@ If a project uses a specific version of node a `.nvmrc` file can be
 generated with the following command.
 
 ```bash
-echo $(node -v) >> .nvmrc
+# echo $(node -v) >> .nvmrc
+node -v >> .nvmrc
 ```
 
 When using the project for the first time (in a while maybe) then use

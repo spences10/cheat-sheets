@@ -1,9 +1,28 @@
 ---
-title: Node Version Manager (nvm)
+title: NVM (Node Version Manager)
 createdDate: 2019-10-26
-updatedDate: 2019-10-26
+updatedDate: 2021-03-03
 published: true
 ---
+
+## Set the node version for use in a project
+
+If a project uses a specific version of node a `.nvmrc` file can be
+generated with the following command.
+
+```bash
+echo $(node -v) >> .nvmrc
+```
+
+When using the project for the first time (in a while maybe) then use
+the `nvm use` command to make sure you're using the correct node
+version:
+
+```bash
+nvm use
+# Found '/home/project-name/.nvmrc' with version <v14.16.0>
+# Now using node v14.16.0 (npm v6.14.11)
+```
 
 ## Install specific node version
 

@@ -10,7 +10,7 @@ published: true
 If you're screencasting you can display the keys being pressed in
 VSCode with the Screencast Mode.
 
-In the command pallet (Ctrl+shift+p) search for "Toggle Screencast
+In the command palette (Ctrl+shift+p) search for "Toggle Screencast
 Mode", you can add a keyboard shortcut to it as well in the keyboard
 shortcuts, search for "Open Keyboard Shortcuts (JSON)" in the command
 pallet.

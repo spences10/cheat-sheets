@@ -4,6 +4,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import React from 'react'
 import SEO from 'react-seo-component'
 import { Small } from '../components/md-page-elements'
+import { useAnalytics } from '../contexts/event-tracking'
 import { useSiteMetadata } from '../hooks/useSiteMetadata'
 import { ogImageUrl } from '../util/og-image-url-build'
 
@@ -22,7 +23,7 @@ export default ({ data }) => {
     authorName,
     siteTitle,
   } = useSiteMetadata()
-  // const fa = useAnalytics()
+  const fa = useAnalytics()
 
   return (
     <>
@@ -82,14 +83,17 @@ export default ({ data }) => {
       <Small>
         <p>Created: {createdDate}</p>
         <p>Updated: {updatedDate}</p>
-        {/* <A
+        <Link
           onClick={() => fa('6ETKCM0U')}
           target="_blank"
           rel="noopener noreferrer"
-          href="#" // fields.editLink
+          href={`https://github.com/spences10/cheat-sheets/edit/production/sheets/${slug}.md`}
+          isExternal
+          textDecor="underline"
+          _hover={{ textDecor: 'none' }}
         >
           Edit this page on GitHub
-        </A> */}
+        </Link>
       </Small>
       <MDXRenderer>{body}</MDXRenderer>
     </>

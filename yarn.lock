@@ -6601,10 +6601,10 @@ functional-red-black-tree@^1.0.1:
   resolved "https://registry.yarnpkg.com/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
   integrity sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
 
-gatsby-cli@^3.4.0:
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-3.4.0.tgz#df38c340a302800505ea2b21a3d21ca2313c1425"
-  integrity sha512-mqf8SbaY0ZEQBUedkchnGwLlBR64HQSXJ/KA1kciDwWyHpOlipXByYpXNpakolA9VDKBfHYTu1tofPxcfM+0fA==
+gatsby-cli@^3.4.1:
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-3.4.1.tgz#eccbbd71289a4da0dcbc05d8f51ca8ea891fafaf"
+  integrity sha512-w93IcAL/Zl1x9oD6pw/iJ0DkAC1V78NhL9K0QvIjwa5Rx/EOhZ0cx3+bX9/l1v1aDX8YSUk09Ac4QhAizeGBUA==
   dependencies:
     "@babel/code-frame" "^7.10.4"
     "@types/common-tags" "^1.8.0"
@@ -6620,8 +6620,8 @@ gatsby-cli@^3.4.0:
     fs-exists-cached "^1.0.0"
     fs-extra "^8.1.0"
     gatsby-core-utils "^2.4.0"
-    gatsby-recipes "^0.15.0"
-    gatsby-telemetry "^2.4.0"
+    gatsby-recipes "^0.15.1"
+    gatsby-telemetry "^2.4.1"
     hosted-git-info "^3.0.6"
     is-valid-path "^0.1.1"
     joi "^17.4.0"
@@ -6797,10 +6797,10 @@ gatsby-plugin-offline@4.4.0:
     lodash "^4.17.21"
     workbox-build "^4.3.1"
 
-gatsby-plugin-page-creator@^3.4.0:
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-page-creator/-/gatsby-plugin-page-creator-3.4.0.tgz#6829d1923c57c39f6fc457a8514ed9b21d98a7b3"
-  integrity sha512-H+UaS/XFalUUIIvaLXWKLeBdqLwp3gkGOYNoNfcmIsd82PHQWvcaVmCNmzaA+ji6ByOA043rNB2tOcAz84s+jw==
+gatsby-plugin-page-creator@^3.4.1:
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-page-creator/-/gatsby-plugin-page-creator-3.4.1.tgz#e0ec0945697297914039ac4494fcd535fcd7e119"
+  integrity sha512-/nDtxG2Bq5SMpvg0MONHJ5m+r2fPzXtiap+XXvLO7tsc08E7YdckrpJZ5OQ5NlEjcN3iPPHmYpLoUd9wSgttXA==
   dependencies:
     "@babel/traverse" "^7.12.5"
     "@sindresorhus/slugify" "^1.1.2"
@@ -6808,7 +6808,7 @@ gatsby-plugin-page-creator@^3.4.0:
     fs-exists-cached "^1.0.0"
     gatsby-core-utils "^2.4.0"
     gatsby-page-utils "^1.4.0"
-    gatsby-telemetry "^2.4.0"
+    gatsby-telemetry "^2.4.1"
     globby "^11.0.3"
     lodash "^4.17.21"
 
@@ -6886,10 +6886,10 @@ gatsby-react-router-scroll@4.4.0, gatsby-react-router-scroll@^4.4.0:
   dependencies:
     "@babel/runtime" "^7.12.5"
 
-gatsby-recipes@^0.15.0:
-  version "0.15.0"
-  resolved "https://registry.yarnpkg.com/gatsby-recipes/-/gatsby-recipes-0.15.0.tgz#b0bfbd8aeb95298b8bd17eac975249ec6219a401"
-  integrity sha512-obucDJnWXbOKoxCfNdI9IZ2tXZzfvp8HkRJ6T2xNX8Wwk9F/UuwoQAvWZXdfHR9+rO8ynRBLMPMRcszKa9x+iw==
+gatsby-recipes@^0.15.1:
+  version "0.15.1"
+  resolved "https://registry.yarnpkg.com/gatsby-recipes/-/gatsby-recipes-0.15.1.tgz#0e99eb0f66d58b8d4ae3250ac19a3b3c6d5eb7fd"
+  integrity sha512-GyQbITic2Id1rkG7UaQ1ALqAy/rP1ACS90jOM8iU4KTTYMfClNRoRcpOFuPGGBhNJ71Oigbk9fXDCYEHy8IZdw==
   dependencies:
     "@babel/core" "^7.12.3"
     "@babel/generator" "^7.12.5"
@@ -6915,7 +6915,7 @@ gatsby-recipes@^0.15.0:
     express-graphql "^0.9.0"
     fs-extra "^8.1.0"
     gatsby-core-utils "^2.4.0"
-    gatsby-telemetry "^2.4.0"
+    gatsby-telemetry "^2.4.1"
     glob "^7.1.6"
     graphql "^15.4.0"
     graphql-compose "~7.25.0"
@@ -6990,10 +6990,10 @@ gatsby-source-filesystem@3.4.0:
     valid-url "^1.0.9"
     xstate "^4.14.0"
 
-gatsby-telemetry@^2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/gatsby-telemetry/-/gatsby-telemetry-2.4.0.tgz#42754dfbec554daf6b44376cd7440e46e967a494"
-  integrity sha512-OF4Qj1bn+BeBn0DQ9wwbOxaFFz6IPyYIoZW7nxdb65wwotBlWNBkL2LhwpEpvQ6U4tydxVNGYEZSJ7TSVS/+Gg==
+gatsby-telemetry@^2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/gatsby-telemetry/-/gatsby-telemetry-2.4.1.tgz#bc1b726cbf207193b6eefddc78455d65bea4e4d3"
+  integrity sha512-VLlZvFCdpCCT0mxnSK1UE/uD7NY/7Sj5vwvv09WRDlIGw6qaUJFWLIav99WXocbIN0FvYKKGIbmIUlmBnhxzVA==
   dependencies:
     "@babel/code-frame" "^7.10.4"
     "@babel/runtime" "^7.12.5"
@@ -7010,10 +7010,10 @@ gatsby-telemetry@^2.4.0:
     node-fetch "^2.6.1"
     uuid "3.4.0"
 
-gatsby@3.4.0:
-  version "3.4.0"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-3.4.0.tgz#5bfb41b3bdbd7969aa21d316de7752b44abd3e3d"
-  integrity sha512-gqfJn1gvcNgVfhn1L0EWgW3To2tHZM9hdoxUweZVOtA9HdXeOONEV5xob2aDOl+fl3CLUmvSPSsb9PnqQEikuw==
+gatsby@3.4.2:
+  version "3.4.2"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-3.4.2.tgz#cb14f70f8861b72d8cf7f77237580d88f939d1e6"
+  integrity sha512-iMIzCNOktXCPJ9Z7LPOyFkGvyfUxk3Jbt4j3B94AJVQje2E7KltOH1eJqg9GiJ0kzYO60jOyDw4abnr6gNSugQ==
   dependencies:
     "@babel/code-frame" "^7.10.4"
     "@babel/core" "^7.12.3"
@@ -7083,16 +7083,16 @@ gatsby@3.4.0:
     find-cache-dir "^3.3.1"
     fs-exists-cached "1.0.0"
     fs-extra "^8.1.0"
-    gatsby-cli "^3.4.0"
+    gatsby-cli "^3.4.1"
     gatsby-core-utils "^2.4.0"
     gatsby-graphiql-explorer "^1.4.0"
     gatsby-legacy-polyfills "^1.4.0"
     gatsby-link "^3.4.0"
-    gatsby-plugin-page-creator "^3.4.0"
+    gatsby-plugin-page-creator "^3.4.1"
     gatsby-plugin-typescript "^3.4.0"
     gatsby-plugin-utils "^1.4.0"
     gatsby-react-router-scroll "^4.4.0"
-    gatsby-telemetry "^2.4.0"
+    gatsby-telemetry "^2.4.1"
     glob "^7.1.6"
     got "8.3.2"
     graphql "^15.4.0"
@@ -7114,7 +7114,7 @@ gatsby@3.4.0:
     memoizee "^0.4.15"
     micromatch "^4.0.2"
     mime "^2.4.6"
-    mini-css-extract-plugin "1.3.9"
+    mini-css-extract-plugin "1.5.1"
     mitt "^1.2.0"
     mkdirp "^0.5.1"
     moment "^2.27.0"
@@ -9606,10 +9606,10 @@ min-indent@^1.0.0:
   resolved "https://registry.yarnpkg.com/min-indent/-/min-indent-1.0.1.tgz#a63f681673b30571fbe8bc25686ae746eefa9869"
   integrity sha512-I9jwMn07Sy/IwOj3zVkVik2JTvgpaykDZEigL6Rx6N9LbMywwUSMtxET+7lVoDLLd3O3IXwJwvuuns8UB/HeAg==
 
-mini-css-extract-plugin@1.3.9:
-  version "1.3.9"
-  resolved "https://registry.yarnpkg.com/mini-css-extract-plugin/-/mini-css-extract-plugin-1.3.9.tgz#47a32132b0fd97a119acd530e8421e8f6ab16d5e"
-  integrity sha512-Ac4s+xhVbqlyhXS5J/Vh/QXUz3ycXlCqoCPpg0vdfhsIBH9eg/It/9L1r1XhSCH737M1lqcWnMuWL13zcygn5A==
+mini-css-extract-plugin@1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/mini-css-extract-plugin/-/mini-css-extract-plugin-1.5.1.tgz#c0ac557c48a7de47de3df0768fe037c9cf961f69"
+  integrity sha512-wEpr0XooH6rw/Mlf+9KTJoMBLT3HujzdTrmohPjAzF47N4Q6yAeczQLpRD/WxvAtXvskcXbily7TAdCfi2M4Dg==
   dependencies:
     loader-utils "^2.0.0"
     schema-utils "^3.0.0"

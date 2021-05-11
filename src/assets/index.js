@@ -1,8 +1,0 @@
-export { BashSvg } from './bash-svg'
-export { CssSvg } from './css-svg'
-export { GitHubSvg } from './github-svg'
-export { HtmlSvg } from './html-svg'
-export { JavaScriptSvg } from './javascript-svg'
-export { ReactSvg } from './react-svg'
-export { TwitterSvg } from './twitter-svg'
-export { TypeScriptSvg } from './typescript-svg'

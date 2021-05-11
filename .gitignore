@@ -1,13 +1,5 @@
-# Project dependencies
-.cache
-node_modules
-
-# Build directory
-/public
 .DS_Store
-
-# error logs
-yarn-error.log
-
-# env files
-.env.*
+node_modules
+/.svelte-kit
+/build
+/functions

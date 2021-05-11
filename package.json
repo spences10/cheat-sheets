@@ -1,75 +1,37 @@
 {
   "name": "cheat-sheets",
-  "version": "1.1.0",
+  "version": "2.0.1",
   "author": {
     "name": "Scott Spence",
     "email": "yo@scottspence.dev",
     "url": "https://scottspence.com"
   },
-  "license": "MIT",
-  "description": "Cheat sheets",
+  "type": "module",
   "scripts": {
-    "clean": "gatsby clean",
-    "build": "gatsby build",
-    "serve": "gatsby serve -p 8400 -o",
-    "dev": "gatsby develop -p 8488 -o",
-    "format": "pretty-quick"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
-  },
-  "dependencies": {
-    "@chakra-ui/gatsby-plugin": "^2.0.0",
-    "@chakra-ui/icons": "^1.0.12",
-    "@chakra-ui/react": "^1.6.0",
-    "@emotion/react": "^11.1.5",
-    "@emotion/styled": "^11.3.0",
-    "@mdx-js/mdx": "1.6.22",
-    "@mdx-js/react": "1.6.22",
-    "framer-motion": "^4.1.9",
-    "fuse.js": "^6.4.6",
-    "gatsby": "3.3.1",
-    "gatsby-plugin-google-fonts": "^1.0.1",
-    "gatsby-plugin-manifest": "3.3.0",
-    "gatsby-plugin-mdx": "2.3.0",
-    "gatsby-plugin-offline": "4.3.0",
-    "gatsby-plugin-react-helmet": "4.3.0",
-    "gatsby-plugin-robots-txt": "1.5.6",
-    "gatsby-plugin-sitemap": "3.3.0",
-    "gatsby-remark-autolink-headers": "4.0.0",
-    "gatsby-remark-smartypants": "4.0.0",
-    "gatsby-source-filesystem": "3.3.0",
-    "prism-react-renderer": "1.2.0",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-github-btn": "1.2.0",
-    "react-helmet": "6.1.0",
-    "react-highlight-words": "0.17.0",
-    "react-seo-component": "2.0.2",
-    "victormono": "1.4.2"
+    "dev": "svelte-kit dev",
+    "build": "svelte-kit build",
+    "preview": "svelte-kit preview",
+    "lint": "prettier --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
+    "format": "prettier --write --plugin-search-dir=. ."
   },
   "devDependencies": {
-    "husky": "^6.0.0",
-    "prettier": "2.2.1",
-    "pretty-quick": "3.1.0"
-  },
-  "prettier": {
-    "singleQuote": true,
-    "semi": false,
-    "trailingComma": "es5",
-    "printWidth": 70,
-    "arrowParens": "avoid",
-    "proseWrap": "always"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/spences10/cheat-sheets.git"
-  },
-  "keywords": [],
-  "bugs": {
-    "url": "https://github.com/spences10/cheat-sheets/issues"
-  },
-  "homepage": "https://github.com/spences10/cheat-sheets#readme"
+    "@sveltejs/kit": "next",
+    "eslint": "^7.22.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-svelte3": "^3.2.0",
+    "prettier": "~2.2.1",
+    "prettier-plugin-svelte": "^2.2.0",
+    "svelte": "^3.34.0",
+    "mdsvex": "^0.9.0",
+    "rehype-autolink-headings": "^5.0.1",
+    "rehype-slug": "^4.0.1",
+    "remark-abbr": "^1.4.1",
+    "remark-github": "^10.0.1",
+    "autoprefixer": "^10.2.5",
+    "cssnano": "^5.0.1",
+    "postcss": "^8.2.10",
+    "postcss-load-config": "^3.0.1",
+    "svelte-preprocess": "^4.7.1",
+    "tailwindcss": "^2.1.1"
+  }
 }

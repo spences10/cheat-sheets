@@ -8,7 +8,7 @@ import { useAnalytics } from '../contexts/event-tracking'
 import { useSiteMetadata } from '../hooks/useSiteMetadata'
 import { ogImageUrl } from '../util/og-image-url-build'
 
-export default ({ data }) => {
+export default function SheetPage({ data }) {
   const {
     frontmatter,
     body,

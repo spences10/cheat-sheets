@@ -1,6 +1,6 @@
 {
   "name": "cheat-sheets",
-  "version": "1.0.516",
+  "version": "1.0.517",
   "author": "Scott Spence <spences10apps@gmail.com>(https://scottspence.me/)",
   "license": "MIT",
   "description": "Cheat sheets",
@@ -22,7 +22,7 @@
     "babel-plugin-styled-components": "1.12.0",
     "gatsby": "3.6.1",
     "gatsby-plugin-google-fonts": "1.0.1",
-    "gatsby-plugin-google-fonts-v2": "^0.0.6",
+    "gatsby-plugin-google-fonts-v2": "^1.0.0",
     "gatsby-plugin-manifest": "3.6.0",
     "gatsby-plugin-mdx": "2.6.0",
     "gatsby-plugin-offline": "4.6.0",

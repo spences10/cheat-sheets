@@ -3,6 +3,7 @@ title: CSS
 createdDate: 2019-12-07
 updatedDate: 2021-01-04
 published: true
+slug: css
 ---
 
 ## Center anything, horizontally and vertically, with 3 lines of CSS:

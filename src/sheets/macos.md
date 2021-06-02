@@ -3,6 +3,7 @@ title: macOS
 createdDate: 2018-04-05
 updatedDate: 2021-01-05
 published: true
+slug: macos
 ---
 
 ## Install Git without xcode

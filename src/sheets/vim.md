@@ -3,6 +3,7 @@ title: Vim
 createdDate: 2020-08-06
 updatedDate: 2020-08-06
 published: true
+slug: vim
 ---
 
 ## Exit Vim

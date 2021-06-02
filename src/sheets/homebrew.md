@@ -3,6 +3,7 @@ title: Homebrew
 createdDate: 2019-08-16
 updatedDate: 2019-12-02
 published: true
+slug: homebrew
 ---
 
 ## Search homebrew

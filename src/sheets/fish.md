@@ -3,6 +3,7 @@ title: Fish Shell
 createdDate: 2017-10-11
 updatedDate: 2020-08-26
 published: true
+slug: fish
 ---
 
 ## NVM not recognised in Fish?

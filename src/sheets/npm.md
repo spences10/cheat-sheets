@@ -3,6 +3,7 @@ title: npm
 createdDate: 2017-05-19
 updatedDate: 2019-03-01
 published: true
+slug: npm
 ---
 
 A list of terminal commands and flags to help me use `npm`

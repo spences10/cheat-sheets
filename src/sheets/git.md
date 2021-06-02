@@ -3,6 +3,7 @@ title: Git
 createdDate: 2017-05-19
 updatedDate: 2020-08-18
 published: true
+slug: git
 ---
 
 ## Use a git patch file

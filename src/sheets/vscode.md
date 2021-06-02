@@ -3,6 +3,7 @@ title: VS Code
 createdDate: 2019-05-27
 updatedDate: 2021-01-21
 published: true
+slug: vscode
 ---
 
 ## Show Key presses

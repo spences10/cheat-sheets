@@ -6,5 +6,6 @@
     "titleBar.inactiveBackground": "#5d98bb99",
     "titleBar.activeForeground": "#15202b",
     "titleBar.inactiveForeground": "#15202b99"
-  }
+  },
+  "cSpell.words": ["abbr", "mdsvex", "rehype", "sveltejs"]
 }

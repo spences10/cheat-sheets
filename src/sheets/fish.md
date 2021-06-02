@@ -119,7 +119,8 @@ your functions:
 function aliases --description "list all fish aliases";for f in (functions);functions $f | grep \'alias;end;end;
 ```
 
-Then you save it `funcsave aliases` and use it `funcsave` the output will be:
+Then you save it `funcsave aliases` and use it `funcsave` the output
+will be:
 
 ```bash
 aliases

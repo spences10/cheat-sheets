@@ -17,7 +17,6 @@
   export let posts
 </script>
 
-<h1>Cheat Sheets</h1>
 <ul>
   {#each posts as post}
     {#if post.published}

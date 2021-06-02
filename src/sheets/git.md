@@ -1,0 +1,923 @@
+---
+title: Git
+createdDate: 2017-05-19
+updatedDate: 2020-08-18
+published: true
+---
+
+## Use a git patch file
+
+How to apply a git patch file.
+
+Good resource here:
+https://www.devroom.io/2009/10/26/how-to-create-and-apply-a-patch-with-git/
+
+```bash
+# see the changes in the patch file
+git apply --stat the-patch-file.patch
+# test if ther's going to be issues
+git apply --check the-patch-file.patch
+# no issues, cool
+git apply the-patch-file.patch
+```
+
+## Change the git init default branch name
+
+Don't want to have the default branch called master?
+
+Thanks to [Mathias Bynens] for this one.
+
+```bash
+mkdir -p ~/.config/git/template
+echo 'ref: refs/heads/main' > ~/.config/git/template/HEAD
+git config --global init.templateDir ~/.config/git/template/
+```
+
+## Add a repo from your machine to GitHub
+
+Create a new repo and push it to GitHub.
+
+```bash
+echo "# name-of-your-awesome-repo" >> README.md # add repo name to README.md
+git init # init the repository
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/your-username/name-of-your-awesome-repo.git
+git push -u origin master
+```
+
+The first four commands can be ignored if you have a repo you're
+already working on (git)committing to.
+
+## Latest changes from repo to your machine
+
+```bash
+git pull
+```
+
+## Add tracking information to your work
+
+Assuming that you are working on the master branch then
+
+```bash
+git branch --set-upstream-to=origin/master
+```
+
+You can set it to whatever branch you want to track changes for
+
+```bash
+git branch --set-upstream-to=origin/<branch>
+```
+
+This will mean you can just do `git pull` and the latest changes will
+be pulled to your `origin`
+
+## What branch
+
+```bash
+git branch # shows what branch you're on
+git branch -r # shows remote branches
+git branch -a # shows all branches
+```
+
+## Create a local branch and push it to GitHub
+
+Want to make your feature branch and get it on GitHub?
+
+Make your branch first then:
+
+```bash
+git push --set-upstream origin <branch-you-just-created>
+```
+
+## Create a PR [Pull Request]
+
+Fork other users repo in GitHub, then clone to your machine.
+
+```bash
+git clone https://github.com/your-username/awesome-awesome-repo
+```
+
+Add the remote repo:
+
+```bash
+git remote add upstream https://github.com/other-username/awesome-awesome-repo
+```
+
+Create your branch:
+
+```bash
+git branch your-awesome-branch
+```
+
+Check it out:
+
+```bash
+git checkout your-awesome-branch
+```
+
+If adding a folder use.
+
+```bash
+git add nameOfFolder/\\*
+```
+
+Make your commit and push to your new branch.
+
+```bash
+git add .
+git commit -m 'initial commit'
+git push origin your-awesome-branch
+```
+
+Manage the rest of the PR via GitHub
+
+## Check remotes
+
+```bash
+git remote -v
+```
+
+## Sync a remote fork on your machine
+
+First configure the local to point to the remote upstream
+
+```bash
+git remote -v
+git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git
+git remote -v
+git fetch upstream
+git checkout master
+git merge upstream/master
+```
+
+You then use `git merge` to update any branch on the upstream
+repository:
+
+```bash
+git merge upstream/dev
+```
+
+Take a look at [syncing a fork] for more details.
+
+## Sync a remote fork on Github
+
+1.  Open your fork on GitHub.
+1.  Click on Pull Requests.
+1.  Click on New Pull Request. By default, GitHub will compare the
+    original with your fork, and there shouldn't be anything to
+    compare if you didn't make any changes.
+1.  Click on Try `switching the base`. Now GitHub will compare your
+    fork with the original, and you should see all the latest changes.
+1.  Click on Click to create a pull request for this comparison and
+    assign a predictable name to your pull request (e.g., Update from
+    original).
+1.  Click on Send pull request.
+1.  Scroll down and click Merge pull request and finally Confirm
+    merge. If your fork didn't have any changes, you will be able to
+    merge it automatically.
+
+## 2fa
+
+Using two factor authentication? Then use the following so you're not
+adding in your auth token each time you want to `push` your code.
+
+```bash
+git remote set-url origin https://your-username:your-token@github.com/your-username/your-repo.git
+```
+
+## Change `origin` url
+
+If you want to change the origin url you can use the `set-url` command
+
+```bash
+git remote set-url origin https://github.com/username/new-repo-name
+```
+
+## Add code on your machine to new repo
+
+Via terminal navigate to your code folder.
+
+```bash
+git init
+```
+
+Add your files.
+
+```bash
+git add .
+```
+
+Adding a folder use the following syntax or it'll get added as a BLOB.
+
+```bash
+git add nameOfFolder/\\*
+```
+
+Commit to local repo.
+
+```bash
+git commit -m 'some detailed message'
+```
+
+To add your files to the remote repo,
+[first add your remote repo](https://help.github.com/articles/adding-a-remote/)
+
+```bash
+git remote add origin [remote repository URL] # Sets the new remote
+git remote -v # Verifies the new remote URL
+git push origin master
+```
+
+For more info check out: [adding an existing project to github using
+the command line]
+
+## Delete branches
+
+Delete local branch.
+
+```bash
+git branch -D branch-name
+```
+
+Remove local branches that are not on the `remote`.
+
+```bash
+git remote prune origin --dry-run
+# remove --dry-run if you're happy to delete
+```
+
+Remove local branches that were created from remote branches.
+
+```bash
+git branch --merged master | grep -v '^[ *]*master$' | xargs git branch -d
+```
+
+## Merge master branch into feature branch
+
+How to merge the master branch into the feature branch? This will come
+up often if you are working on a team with other devs and you want to
+update your feature branch to include the latest changes.
+
+```bash
+# checkout your feature branch
+git checkout feature1
+# merge master into it
+git merge master
+```
+
+## Merge two repos
+
+If you want to merge project-a into project-b:
+
+```bash
+cd path/to/project-b
+git remote add project-a path/to/project-a
+git fetch project-a
+git merge --allow-unrelated-histories project-a/master # or whichever branch you want to merge
+git remote remove project-a
+```
+
+## Stop tracking a file
+
+If you have `.env` files that are tracked by Git and want to ignore
+them so your API keys don't get added to GitHub use:
+
+```bash
+git update-index --assume-unchanged <file>
+```
+
+## Stop tracking a previously tracked folder
+
+First add the folder to your `.gitignore` then remove the folder from
+your local git tracking with:
+
+```bash
+git rm -r --cached <folder>
+```
+
+## Start tracking a previously un-tracked file
+
+```bash
+git update-index --no-assume-unchanged <file>
+```
+
+## Cloning a repo from someone else's GitHub and pushing it to a repo on my GitHub
+
+So you make a clone, make some changes then realise that you need to
+add it to your GitHub account before making a pull
+
+```bash
+git remote -v
+origin  https://github.com/OtherUser/other-username/other-repo (fetch)
+origin  https://github.com/OtherUser/other-username/other-repo (push)
+```
+
+You just need to set the `origin` to yours then add the `upstream` as
+the original `origin` make sense?
+
+So change `origin` to yours:
+
+```bash
+git remote set-url origin http://github.com/your-username/your-repo
+```
+
+Then add `upsrtream` as theirs:
+
+```bash
+git remote add upstream https://github.com/other-username/other-repo
+```
+
+Now it should look something like this:
+
+```bash
+git remote -v
+origin  http://github.com/your-username/your-repo (fetch)
+origin  http://github.com/your-username/your-repo (push)
+upstream  https://github.com/other-username/other-repo (fetch)
+upstream  https://github.com/other-username/other-repo (push)
+```
+
+## Remove an `upstream` repository
+
+If you no longer need a reference to a forked repository then remove
+it with the following:
+
+```bash
+git remote rm upstream
+```
+
+## Clone a repo and give it a different name
+
+```bash
+git clone https://github.com/your-username/repo-name new-repo-name
+```
+
+## Using Husky?
+
+If you are pushing right after a commit, you can use
+`git push --no-verify` to avoid running all the tests again.
+
+If you make a trivial change and want to commit
+`git commit -m 'some detailed message' --no-verify` will skip your
+`precommit` and `prepush` scripts.
+
+## How to read last commit comment?
+
+```bash
+git show # is the fastest to type, but shows you the diff as well.
+git log -1 # is fast and simple.
+git log -1 --pretty=%B # if you need just the commit message and nothing else.
+```
+
+## Remove commit from pull request
+
+Read
+[this](http://stackoverflow.com/questions/34519665/how-to-move-head-back-to-a-previous-location-detached-head/34519716#34519716)
+for more detail on how to revert.
+
+This was the simplest approach I found:
+
+```bash
+# Checkout the desired branch
+git checkout <branch>
+# Undo the desired commit
+git revert <commit>
+# Update the remote with the undo of the code
+git push origin <branch>
+```
+
+Rather than use the last part I unstaged the changes in VSCode which I
+think did the same thing.
+
+## Show `.gitconfig` details
+
+There are three levels for Git config:
+
+**System level**
+
+```bash
+# to view
+git config --list --system
+# to set
+git config --system color.ui true
+```
+
+**Global level**
+
+```bash
+# to view
+git config --list --global
+# to set
+git config --global user.name xyz
+```
+
+**Repository level**
+
+```bash
+# to view
+git config --list --local
+# to set
+git config --local core.ignorecase true # (--local optional)
+# to edit repository config file
+git config --edit --local # (--local optional)
+```
+
+**View All Settings**
+
+```bash
+git config --list --show-origin
+```
+
+[info](https://stackoverflow.com/a/46986031/1138354)
+
+## Conflicts between Windows Git and WSL Git?
+
+If you are having issues with changes showing in Windows Git and not
+Windows Subsystem Linux Git (For a Windows WSL Dev set-up) then check
+the settings of each environment by using:
+
+```bash
+git config --list --show-origin
+```
+
+Remove any conflicting settings then try again.
+
+## If you want to rename a branch while pointed to any branch, do:
+
+```bash
+git branch -m <oldname> <newname>
+```
+
+If you want to rename the current branch, you can do:
+
+```bash
+git branch -m <newname>
+```
+
+A way to remember this, is `-m` is for "move" (or `mv`), which is how
+you rename files.
+
+## Git ref log
+
+Want to know what work you have done on a repo? Use `git reflog` to
+displpay all the commits.
+
+```bash
+# show all changes for the last 90 days
+git reflog show -a
+# show changes with a date
+git reflog --date=iso
+```
+
+https://stackoverflow.com/questions/17369254/is-there-a-way-to-cause-git-reflog-to-show-a-date-alongside-each-entry
+
+## Use SSH in place of HTTPS
+
+Get your SSH set up on your machine and add a key to GitHub, more on
+that here:
+https://egghead.io/lessons/javascript-how-to-authenticate-with-github-using-ssh
+
+You will then need to pick your **Clone with SSH** option from the
+**Clone or download** section on your repo page.
+
+Once you have taken the link from there you will need to set the repo
+remote to the SSH URL
+
+```bash
+git remote set-url origin git@github.com:username/repo-name-here.git
+```
+
+Where username is the `username` of the repo owner and
+`repo-name-here` is the name of that user's repository.
+
+## How to authenticate with GitHub using SSH
+
+Check that there are no `rsa` files here before continuing, use (bash
+or Git bash if you're on Windows):
+
+```bash
+ls -al ~/.ssh
+```
+
+If there's nothing there then generate a new keygen with:
+
+```bash
+ssh-keygen -t rsa -b 4096 -C your@email.com # add your email address 👍
+```
+
+> If you decide to use a password for your SSH key see
+> [SSH Keys With Passwords](#ssh-keys-with-passwords)
+
+Now using `ls -al ~/.ssh` will show our `id_rsa.pub` file.
+
+Add the SSH key to the SSH agent:
+
+```bash
+# for mac and Linux from bash, also from Windows Git Bash
+eval "$(ssh-agent -s)"
+# for Git Bash on Windows
+eval `ssh-agent -s`
+# fir Fish shell
+eval (ssh-agent -c)
+```
+
+Add RSA key to SSH with:
+
+```bash
+ssh-add ~/.ssh/id_rsa
+```
+
+Copy your key to clipboard with one of the following:
+
+```bash
+clip < ~/.ssh/id_rsa.pub # Windows
+cat ~/.ssh/id_rsa.pub # Linux
+pbcopy < ~/.ssh/id_github.pub # Mac
+```
+
+Add a new SSH Key to your GitHub profile from the [settings] page by
+clicking the [New SSH key] button and paste in your key. Save it...
+
+[settings]: https://github.com/settings/keys
+[new ssh key]: https://github.com/settings/ssh/new
+
+Then authenticate with:
+
+```bash
+ssh -T git@github.com
+```
+
+If you go back to the GitHub setting page and refresh the key icon
+should go from black to green. 🎉
+
+### SSH Keys With Passwords
+
+If you add a password to your SSH key you will find yourself entering
+the password to authenticate on each [pull, push] operation. This can
+get tedious, especially if you have a long password in your keys.
+
+Add the following line to your `~/.ssh/config/` file:
+
+```bash
+AddKeysToAgent yes
+```
+
+Open or create the `~/.ssh/config` file with:
+
+```bash
+nano ~/.ssh/config
+```
+
+The SSH agent will also need to be started on each terminal session
+now to store the keys in, add the following to your `~/.bashrc` file:
+
+```bash
+[ -z "$SSH_AUTH_SOCK" ] && eval "$(ssh-agent -s)"
+```
+
+Open the `~/.bashrc` file with:
+
+```bash
+nano ~/.bashrc
+```
+
+Now the SSH agent will start on each terminal session and you will
+only be prompted for the password on the first `pull`, `push`
+operation.
+
+## Use multiple SSH keys
+
+If you have more than one GitHub account or if you have AWS code
+commit account then you will need to set up a `config` file, add your
+SSH key the same as detailed in
+[How to authenticate with GitHub using SSH](#how-to-authenticate-with-github-using-ssh)
+and give the key a different name:
+
+```bash
+# ls ~/.ssh
+~/.ssh/id_rsa_github_1
+~/.ssh/id_rsa_github_2
+~/.ssh/id_rsa_git_aws
+```
+
+You can delete all cached keys before, with:
+
+```bash
+ssh-add -D
+```
+
+You can check your saved keys, with:
+
+```bash
+ssh-add -l
+```
+
+Set up the SSH config file, check to see if you haven't got a `config`
+file already set up with:
+
+```bash
+ls -al ~/.ssh/
+```
+
+If you haven't got a `config` file there then:
+
+```bash
+cd ~/.ssh/
+touch config
+```
+
+Use your text editor of choice, in this example we'll use `nano`:
+
+```bash
+nano config
+```
+
+Add your configuration:
+
+```bash
+AddKeysToAgent yes
+
+# github_1 account
+Host github.com-github_1
+	HostName github.com
+	User git
+	IdentityFile ~/.ssh/id_rsa_github_1
+
+# github_2 account
+Host github.com-github_2
+	HostName github.com
+	User git
+	IdentityFile ~/.ssh/id_rsa_github_2
+
+# AWS code commit account
+Host git-codecommit.*.amazonaws.com
+	User AWSUSERNAME
+	IdentityFile ~/.ssh/id_rsa_git_aws
+```
+
+Clone your repo and modify the config file of the repo as detailed
+here:
+[Specify multiple users for myself in .gitconfig?](#specify-multiple-users-for-myself-in-gitconfig)
+
+There's a great Gist detailing this
+[here](https://gist.github.com/jexchan/2351996) for more detail if
+needed.
+
+## Re-use SSH keys, from one machine to another
+
+If you want to avoid creating multiple SSH keys for different
+environments and move your `.ssh` folder from one machine to another
+then you can do the following:
+
+Copy your `.ssh` and `.gitconfig` files:
+
+Copy from Linux to Windows
+
+```bash
+cp ~/.ssh/* /c/Users/Scott.Spence/.linuxFiles/.ssh/
+cp ~/.gitconfig /c/Users/Scott.Spence/.linuxFiles/
+```
+
+Copy from Windows to Linux
+
+```bash
+cp /mnt/c/Users/Scott.Spence/.linuxFiles/.ssh/* ~/.ssh/
+# Reset the permissions back to default:
+sudo chmod 600 ~/.ssh/id_rsa
+sudo chmod 600 ~/.ssh/id_rsa.pub
+cp /mnt/c/Users/Scott.Spence/.linuxFiles/.* ~/
+chmod 644 ~/.gitconfig
+```
+
+Start the SSH agent with:
+
+```bash
+eval "$(ssh-agent -s)" # for mac and Linux from bash, also from Windows Git Bash
+```
+
+Add your SSH key to the `ssh-agent` with:
+
+```bash
+ssh-add ~/.ssh/id_rsa
+```
+
+Then authenticate with:
+
+```bash
+# GitHub
+ssh -T git@github.com
+# Bitbucket
+ssh -T git@bitbucket.org
+```
+
+## Using SSH over the HTTPS port
+
+SSH can be tunnelled over HTTPS if the network you are on blocks the
+SSH port.
+
+Test if SSH over HTTPS is possible with:
+
+```bash
+ssh -T -p 443 git@ssh.github.com
+```
+
+If you get a response then, edit your `~/.ssh/config` file and add
+this section:
+
+```bash
+Host github.com
+  Hostname ssh.github.com
+  Port 443
+```
+
+Check that you have a key already added with:
+
+```bash
+ssh-add -l
+```
+
+If nothing is listed then add in your key with:
+
+```bash
+ssh-add ~/.ssh/id_rsa
+```
+
+Test that is has worked with:
+
+```bash
+ssh -T git@github.com
+```
+
+## Change SSH key password
+
+Tired of typing your SSH key password because you made it a 32
+characters and can't stand the monotony anymore?
+
+Still want to have a SSH key password on your existing SSH key?
+
+Use:
+
+```bash
+ssh-keygen -p -f ~/.ssh/id_rsa
+```
+
+## Specify multiple users for myself in .gitconfig?
+
+Want to have different git credentials for one specific repository?
+
+You can configure an individual git repo to use a specific user/email
+address which overrides the global configuration.
+
+To list out the config for the repo:
+
+```bash
+git config --list --local
+```
+
+From the root of the repo, run:
+
+```bash
+git config user.name 'Your Name'
+git config user.email 'your@email.com'
+```
+
+Whereas the default user / email is configured in your `~/.gitconfig`
+
+```bash
+git config --global user.name 'Your Name'
+git config --global user.email 'your@email.com'
+```
+
+## Cant remember what your last git commit said?
+
+```bash
+git show
+```
+
+## Rebase changes
+
+If you're working on a team and there have been changes to the main
+branch you want to push your changes to, you can rebase before
+submitting a PR.
+
+In this scenario we're going to rebase our `feature` branch off of the
+`develop` branch
+
+```bash
+# switch from your feature to get latest develop changes
+git checkout develop
+git pull
+# checkout the feature branch and rebase
+git checkout feature
+git rebase develop
+```
+
+Then use the prompts from there in conjunction with your text editor
+to add in the changes.
+
+```bash
+# add a change
+git add
+# continue the rebase
+git rebase --continue
+# have an unrelated change, nothing to correct
+git rebase --skip
+# oh DERP! Want to start over?
+git rebase --abort
+```
+
+## Rebase accept incoming in bulk
+
+If you have a large file (like a `package-lock.json`) that you want to
+accept all the incoming changes from then.
+
+Whilst you're in rebase you'll need to check out the file from your
+incoming branch then add it as the new file.
+
+```bash
+# checkout the file
+git checkout temp-branch -- package-lock.json
+# add the file whilst in rebase
+git add package-lock.json
+# continue with the things
+git rebase --continue
+```
+
+## See differences between two branches
+
+If you want to see the difference between two branches then use the
+git built in diff tool.
+
+```bash
+git diff branch1..branch2
+```
+
+## See differences between two files
+
+If you want to see the difference between two file across different
+branches then use.
+
+```bash
+git diff branch1..branch2 package.json
+```
+
+## Revert to a previous commit
+
+Find the commit you want to revert to, then:
+
+```bash
+git reset hashOfCommit
+```
+
+Then reset to the branch on the origin:
+
+```bash
+# if I wanted to push back to the develop branch on GitHub say
+git reset --soft origin/develop
+```
+
+Reference:
+https://stackoverflow.com/questions/11829911/push-changes-without-pull
+
+## Gitignore
+
+You can automate the creation of your projects `gitignore` file using
+the [gitignore API](https://docs.gitignore.io/install/command-line).
+
+Setup the API:
+
+```
+git config --global alias.ignore \
+'!gi() { curl -sL https://www.gitignore.io/api/$@ ;}; gi'
+```
+
+Add to your shell configuration:
+
+Bash
+
+```
+echo "function gi() { curl -sL https://www.gitignore.io/api/\$@ ;}" >> \
+~/.bashrc && source ~/.bashrc
+```
+
+checkout `gi list` for the languages and editors supported. You can
+issue the following command inside your project
+
+```
+gi linux,visualstudiocode,node >> ./.gitignore
+```
+
+If you find yourself using the same `.gitignore` on your projects you
+can create a global file (i.e. `.gitignore_global`), and copy to your
+new project.
+
+Reference: https://docs.gitignore.io/install/command-line
+
+<!-- Links -->
+
+[syncing a fork]: https://help.github.com/articles/syncing-a-fork/
+[adding an existing project to github using the command line]:
+  https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/
+[mathias bynens]:
+  https://twitter.com/mathias/status/1277896371455090688

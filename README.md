@@ -1,48 +1,38 @@
-# Cheat Sheets
+# create-svelte
 
-## A searchable site of hints and tips!
+Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
 
-[![](/src/images/flying-cube.gif)](https://cheatsheets.xyz)
+## Creating a project
 
-###### Image Credit [ccbyplz](https://www.deviantart.com/ccbyplz)
+If you're seeing this, you've probably already done this step. Congrats!
 
-A place for all my cheat sheets to live!
+```bash
+# create a new project in the current directory
+npm init svelte@next
 
-This is a list of stuff that I have put down that I continually
-reference.
+# create a new project in my-app
+npm init svelte@next my-app
+```
 
-Current list of sheets:
+> Note: the `@next` is temporary
 
-- Alfred
-- Fish Shell
-- Bash
-- Homebrew
-- Hyperterm
-- JavaScript
-- Linux
-- macOS
-- npm
-- now
-- Windows Subsystem Linux (WSL)
-- VS Code
-- Node Version Manager (nvm)
-- npx
-- Yarn
-- ZSH
-- Git
+## Developing
 
-## Thanks
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
-- [Benjamin Lannon] for his Toast starters.
-  - [Toast Linaria]
-  - [Toast Digital Garden Starter]
-- [Chris Biscardi] for [Toast]
+```bash
+npm run dev
 
-<!-- Links -->
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
 
-[benjamin lannon]: https://github.com/lannonbr/toast-linaria
-[toast linaria]: https://github.com/lannonbr/toast-linaria
-[toast digital garden starter]:
-  https://github.com/lannonbr/toast-digital-garden-starter
-[chris biscardi]: https://github.com/ChristopherBiscardi
-[toast]: https://github.com/ChristopherBiscardi/toast
+## Building
+
+Before creating a production version of your app, install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment. Then:
+
+```bash
+npm run build
+```
+
+> You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.

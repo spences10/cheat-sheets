@@ -3,6 +3,7 @@ title: JavaScript
 createdDate: 2017-12-01
 updatedDate: 2020-07-27
 published: true
+slug: javascript
 ---
 
 ## Document Design Mode

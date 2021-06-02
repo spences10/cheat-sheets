@@ -3,6 +3,7 @@ title: NVM (Node Version Manager)
 createdDate: 2019-10-26
 updatedDate: 2021-03-03
 published: true
+slug: nvm
 ---
 
 ## Set the node version for use in a project

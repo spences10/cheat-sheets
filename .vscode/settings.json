@@ -1,14 +1,14 @@
 {
+  "git.enableSmartCommit": true,
+  "git.postCommitCommand": "sync",
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
   "workbench.colorCustomizations": {
     "titleBar.activeBackground": "#5d98bb",
     "titleBar.inactiveBackground": "#5d98bb99",
     "titleBar.activeForeground": "#15202b",
     "titleBar.inactiveForeground": "#15202b99"
   },
-  "cSpell.words": [
-    "abbr",
-    "mdsvex",
-    "rehype",
-    "sveltejs"
-  ]
+  "cSpell.words": ["abbr", "mdsvex", "rehype", "sveltejs"]
 }

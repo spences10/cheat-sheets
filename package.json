@@ -1,6 +1,6 @@
 {
   "name": "cheat-sheets",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "author": {
     "name": "Scott Spence",
     "email": "yo@scottspence.dev",
@@ -19,7 +19,7 @@
   "devDependencies": {
     "@sveltejs/kit": "next",
     "autoprefixer": "^10.2.6",
-    "cssnano": "^5.0.1",
+    "cssnano": "^5.0.5",
     "eslint": "^7.22.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-svelte3": "^3.2.0",

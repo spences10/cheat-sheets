@@ -1,6 +1,6 @@
 {
   "name": "cheat-sheets",
-  "version": "2.0.9",
+  "version": "2.0.10",
   "author": {
     "name": "Scott Spence",
     "email": "yo@scottspence.dev",
@@ -29,7 +29,7 @@
     "prettier": "~2.2.1",
     "prettier-plugin-svelte": "^2.3.1",
     "prism-themes": "^1.7.0",
-    "rehype-autolink-headings": "^5.0.1",
+    "rehype-autolink-headings": "^5.1.0",
     "rehype-slug": "^4.0.1",
     "remark-abbr": "^1.4.1",
     "remark-github": "^10.0.1",

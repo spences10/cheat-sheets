@@ -1,6 +1,6 @@
 {
   "name": "cheat-sheets",
-  "version": "2.0.10",
+  "version": "2.0.11",
   "author": {
     "name": "Scott Spence",
     "email": "yo@scottspence.dev",
@@ -32,7 +32,7 @@
     "rehype-autolink-headings": "^5.1.0",
     "rehype-slug": "^4.0.1",
     "remark-abbr": "^1.4.1",
-    "remark-github": "^10.0.1",
+    "remark-github": "^10.1.0",
     "svelte": "^3.34.0",
     "svelte-preprocess": "^4.7.1",
     "tailwindcss": "^2.1.1"

@@ -1,6 +1,6 @@
 {
   "name": "cheat-sheets",
-  "version": "2.0.12",
+  "version": "2.0.13",
   "author": {
     "name": "Scott Spence",
     "email": "yo@scottspence.dev",
@@ -34,7 +34,7 @@
     "remark-abbr": "^1.4.1",
     "remark-github": "^10.1.0",
     "svelte": "^3.38.3",
-    "svelte-preprocess": "^4.7.1",
+    "svelte-preprocess": "^4.7.3",
     "tailwindcss": "^2.1.1"
   },
   "repository": {

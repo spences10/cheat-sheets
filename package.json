@@ -46,6 +46,7 @@
     "tailwindcss": "2.2.7",
     "theme-change": "2.0.2",
     "unist-util-visit": "4.1.0"
+>>>>>>> chore(deps): update dependency svelte to ^3.38.3
   },
   "repository": {
     "type": "git",

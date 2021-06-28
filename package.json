@@ -41,12 +41,19 @@
     "rehype-slug": "^4.0.1",
     "remark-abbr": "^1.4.1",
     "remark-github": "^10.1.0",
+<<<<<<< HEAD
     "svelte": "3.38.3",
     "svelte-preprocess": "4.7.4",
     "tailwindcss": "2.2.7",
     "theme-change": "2.0.2",
     "unist-util-visit": "4.1.0"
 >>>>>>> chore(deps): update dependency svelte to ^3.38.3
+=======
+    "svelte": "^3.38.3",
+    "svelte-preprocess": "^4.7.3",
+    "tailwindcss": "^2.1.1"
+>>>>>>> chore(deps): update dependency cssnano to ^5.0.6
+>>>>>>> chore(deps): update dependency svelte-preprocess to ^4.7.3
   },
   "repository": {
     "type": "git",

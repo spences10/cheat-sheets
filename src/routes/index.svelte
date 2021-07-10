@@ -33,16 +33,31 @@
   $: results = fuse.search(query)
 </script>
 
-<input type="text" bind:value={query} class="border" />
+<div class="form-control">
+  <label for="search" class="label">
+    <span id="search" class="label-text"
+      >Search for a technology...</span
+    >
+  </label>
+  <input
+    type="text"
+    bind:value={query}
+    placeholder="Search"
+    class="input input-primary input-bordered"
+  />
+</div>
 
 {#if results.length === 0}
   <ul>
     {#each posts as post}
       {#if post.published}
         <li
-          class="text-4xl font-medium my-5 hover:underline hover:text-purple-600"
+          class="font-medium my-5 text-4xl hover:underline hover:text-purple-600"
         >
-          <a sveltekit:prefetch href={`/${post.slug}`}>{post.title}</a
+          <a
+            class="link link-primary"
+            sveltekit:prefetch
+            href={`/${post.slug}`}>{post.title}</a
           >
         </li>
       {/if}
@@ -52,7 +67,7 @@
   {#each results as result}
     <ul>
       <li
-        class="text-4xl font-medium my-5 hover:underline hover:text-purple-600"
+        class="font-medium my-5 text-4xl hover:underline hover:text-purple-600"
       >
         <a sveltekit:prefetch href={result.item.slug}>
           {result.item.title}

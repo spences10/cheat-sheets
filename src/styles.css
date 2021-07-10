@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-pre {
-  border-radius: 10px;
-}
-
 html {
   scroll-behavior: smooth;
 }

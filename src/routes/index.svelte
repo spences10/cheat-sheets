@@ -1,6 +1,6 @@
 <script context="module">
   export async function load() {
-    const posts = import.meta.globEager('../sheets/*.md')
+    const posts = import.meta.globEager('../../sheets/*.md')
 
     // for (const path in posts) {
     //   console.log(path)
@@ -31,5 +31,6 @@
         <a sveltekit:prefetch href={`/${post.slug}`}>{post.title}</a>
       </li>
     {/if}
+    <pre>{JSON.stringify(post, null, 2)}</pre>
   {/each}
 </ul>

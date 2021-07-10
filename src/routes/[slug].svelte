@@ -2,7 +2,7 @@
   export async function load(ctx) {
     try {
       const Post = await import(
-        `../sheets/${ctx.page.params.slug}.md`
+        `../../sheets/${ctx.page.params.slug}.md`
       )
 
       return {

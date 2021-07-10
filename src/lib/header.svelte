@@ -1,7 +1,14 @@
+<script>
+  import ThemeSelect from './theme-select.svelte'
+</script>
+
 <header>
-  <p
-    class="font-bold my-8 text-4xl underline hover:no-underline hover:text-purple-600"
-  >
-    <a href="/">Cheat Sheets</a>
-  </p>
+  <div class="flex justify-between mt-8 mb-12">
+    <p
+      class="font-bold text-5xl hover:no-underline link link-primary"
+    >
+      <a href="/">Cheat Sheets</a>
+    </p>
+    <ThemeSelect />
+  </div>
 </header>

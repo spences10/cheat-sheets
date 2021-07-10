@@ -28,19 +28,19 @@
   let updated = format(new Date(metadata.updatedDate), 'yyy MMM do')
 </script>
 
-<h1 class="font-medium text-4xl">
+<h1 class="font-medium text-5xl">
   {metadata.title}
 </h1>
-<div class="my-3 opacity-75">
+<div class="my-3 mb-11 opacity-75">
   <p class="font-semibold text-xs">Created: {created}</p>
   <p class="font-semibold text-xs">Updated: {updated}</p>
   <a
-    class="font-semibold text-xs underline hover:no-underline hover:text-purple-600"
+    class="font-semibold text-xs underline hover:no-underline"
     href={`https://github.com/spences10/cheat-sheets/edit/production/sheets/${metadata.slug}.md`}
     >Edit this page on GitHub</a
   >
 </div>
 
 <article class="mb-16 prose md:prose-lg lg:prose-xl">
-  <Post />
+  <svelte:component this={Post} />
 </article>

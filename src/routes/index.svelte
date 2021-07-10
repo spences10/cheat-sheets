@@ -35,7 +35,7 @@
 
 <div class="form-control">
   <label for="search" class="label">
-    <span id="search" class="label-text"
+    <span id="search" class="label-text-alt"
       >Search for a technology...</span
     >
   </label>
@@ -43,7 +43,7 @@
     type="text"
     bind:value={query}
     placeholder="Search"
-    class="input input-primary input-bordered"
+    class="input input-primary input-bordered text-xl"
   />
 </div>
 
@@ -51,13 +51,9 @@
   <ul>
     {#each posts as post}
       {#if post.published}
-        <li
-          class="font-medium my-5 text-4xl hover:underline hover:text-purple-600"
-        >
-          <a
-            class="link link-primary"
-            sveltekit:prefetch
-            href={`/${post.slug}`}>{post.title}</a
+        <li class="font-medium my-5 text-4xl">
+          <a class="link" sveltekit:prefetch href={`/${post.slug}`}
+            >{post.title}</a
           >
         </li>
       {/if}
@@ -66,10 +62,8 @@
 {:else}
   {#each results as result}
     <ul>
-      <li
-        class="font-medium my-5 text-4xl hover:underline hover:text-purple-600"
-      >
-        <a sveltekit:prefetch href={result.item.slug}>
+      <li class="font-medium my-5 text-4xl">
+        <a class="link" sveltekit:prefetch href={result.item.slug}>
           {result.item.title}
         </a>
       </li>

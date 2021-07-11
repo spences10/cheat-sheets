@@ -2,74 +2,158 @@
 /* Write your global styles here, in PostCSS syntax */
 html {
   scroll-behavior: smooth;
+  margin-left: calc(100vw - 100%);
 }
 
 :root {
-  --my-color: #ffffff;
-  background-color: var(--my-color);
+  /* Default is Dark */
+  --bg-color: #3d4451;
+  --primary: #793ef9;
+  --secondary: #f000b8;
+  background-color: var(--bg-color);
 }
 [data-theme='light'] {
-  --my-color: #ffffff;
+  --bg-color: #ffffff;
+  --primary: #570df8;
+  --secondary: #f000b8;
 }
 [data-theme='dark'] {
-  --my-color: #3d4451;
+  --bg-color: #3d4451;
+  --primary: #793ef9;
+  --secondary: #f000b8;
 }
 [data-theme='cupcake'] {
-  --my-color: #faf7f5;
+  --bg-color: #faf7f5;
+  --primary: #65c3c8;
+  --secondary: #ef9fbc;
 }
 [data-theme='bumblebee'] {
-  --my-color: #ffffff;
+  --bg-color: #ffffff;
+  --primary: #f9d72f;
+  --secondary: #e0a82e;
 }
 [data-theme='emerald'] {
-  --my-color: #ffffff;
+  --bg-color: #ffffff;
+  --primary: #66cc8a;
+  --secondary: #377cfb;
 }
 [data-theme='corporate'] {
-  --my-color: #ffffff;
+  --bg-color: #ffffff;
+  --primary: #4b6bfb;
+  --secondary: #7b92b2;
 }
 [data-theme='synthwave'] {
-  --my-color: #2d1b69;
+  --bg-color: #2d1b69;
+  --primary: #e779c1;
+  --secondary: #58c7f3;
 }
 [data-theme='retro'] {
-  --my-color: #e4d8b4;
+  --bg-color: #e4d8b4;
+  --primary: #ef9995;
+  --secondary: #a4cbb4;
 }
 [data-theme='cyberpunk'] {
-  --my-color: #ffee00;
+  --bg-color: #ffee00;
+  --primary: #ff7598;
+  --secondary: #75d1f0;
 }
 [data-theme='valentine'] {
-  --my-color: #f0d6e8;
+  --bg-color: #f0d6e8;
+  --primary: #e96d7b;
+  --secondary: #a991f7;
 }
 [data-theme='halloween'] {
-  --my-color: #212121;
+  --bg-color: #212121;
+  --primary: #f28c18;
+  --secondary: #6d3a9c;
 }
 [data-theme='garden'] {
-  --my-color: #e9e7e7;
+  --bg-color: #e9e7e7;
+  --primary: #5c7f67;
+  --secondary: #ecf4e7;
 }
 [data-theme='forest'] {
-  --my-color: #171212;
+  --bg-color: #171212;
+  --primary: #1eb854;
+  --secondary: #1fd65f;
 }
 [data-theme='aqua'] {
-  --my-color: #0b25b7;
+  --bg-color: #0b25b7;
+  --primary: #42e3ff;
+  --secondary: #966fb3;
 }
 [data-theme='lofi'] {
-  --my-color: #ffffff;
+  --bg-color: #ffffff;
+  --primary: #808080;
+  --secondary: #4d4d4d;
 }
 [data-theme='pastel'] {
-  --my-color: #ffffff;
+  --bg-color: #ffffff;
+  --primary: #d1c1d7;
+  --secondary: #f6cbd1;
 }
 [data-theme='fantasy'] {
-  --my-color: #ffffff;
+  --bg-color: #ffffff;
+  --primary: #6e0b75;
+  --secondary: #007ebd;
 }
 [data-theme='wireframe'] {
-  --my-color: #ffffff;
+  --bg-color: #ffffff;
+  --primary: #b8b8b8;
+  --secondary: #b8b8b8;
 }
 [data-theme='black'] {
-  --my-color: #000000;
+  --bg-color: #000000;
+  --primary: #ffffff;
+  --secondary: #000000;
 }
 [data-theme='luxury'] {
-  --my-color: #09090b;
+  --bg-color: #09090b;
+  --primary: #ffffff;
+  --secondary: #152747;
 }
 [data-theme='dracula'] {
-  --my-color: #302f3d;
+  --bg-color: #302f3d;
+  --primary: #ffb3d9;
+  --secondary: #b9ffb3;
+}
+
+.table-of-contents {
+  z-index: 1;
+  position: fixed;
+  left: calc(50% + 400px);
+  top: 18rem;
+  max-height: 50vh;
+  width: 310px;
+  padding: 0.75rem;
+  margin: 0.75rem 0;
+  font-size: 1rem;
+  line-height: 1.75rem;
+}
+
+/* Scrollbar styles */
+
+/* Firefox */
+/* stylelint-disable */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary) var(--primary);
+}
+/* stylelint-enable */
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 15px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--primary);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--secondary);
+  border-radius: 14px;
+  border: 3px solid var(--primary);
 }
 
 @tailwind components;

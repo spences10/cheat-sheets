@@ -19,6 +19,7 @@
 </script>
 
 <script>
+  import Head from '$lib/head.svelte'
   import Fuse from 'fuse.js'
   export let posts
 
@@ -32,6 +33,12 @@
   let query = ''
   $: results = fuse.search(query)
 </script>
+
+<Head
+  title={'Home · Cheat Sheets'}
+  description="Everyday commands, config, hints and tips used for modern web development."
+  image=
+/>
 
 <div class="form-control">
   <label for="search" class="label">

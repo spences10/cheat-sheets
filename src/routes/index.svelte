@@ -20,6 +20,7 @@
 
 <script>
   import Head from '$lib/head.svelte'
+  import { ogImageUrl } from '$lib/og-image-url-build'
   import Fuse from 'fuse.js'
   export let posts
 
@@ -37,7 +38,11 @@
 <Head
   title={'Home · Cheat Sheets'}
   description="Everyday commands, config, hints and tips used for modern web development."
-  image=
+  image={ogImageUrl(
+    'Scott Spence',
+    'cheatsheets.xyz',
+    'Cheat Sheets'
+  )}
 />
 
 <div class="form-control">

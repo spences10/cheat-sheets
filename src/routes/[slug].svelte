@@ -53,17 +53,19 @@
   <TableOfContents {headings} />
 {/await}
 
-<h1 class="font-medium text-5xl">
-  {metadata.title}
-</h1>
-<div class="my-3 mb-11 opacity-75">
-  <p class="font-semibold text-xs">Created: {created}</p>
-  <p class="font-semibold text-xs">Updated: {updated}</p>
-  <a
-    class="font-semibold text-xs underline hover:no-underline"
-    href={`https://github.com/spences10/cheat-sheets/edit/production/sheets/${metadata.slug}.md`}
-    >Edit this page on GitHub</a
-  >
+<div class="flex justify-between mb-16">
+  <h1 class="font-medium text-5xl">
+    {metadata.title}
+  </h1>
+  <div class="opacity-75">
+    <p class="font-semibold text-xs">Created: {created}</p>
+    <p class="font-semibold text-xs">Updated: {updated}</p>
+    <a
+      class="font-semibold text-xs underline hover:no-underline"
+      href={`https://github.com/spences10/cheat-sheets/edit/production/sheets/${metadata.slug}.md`}
+      >Edit this page on GitHub</a
+    >
+  </div>
 </div>
 
 <article class="mb-16 prose md:prose-lg lg:prose-xl">

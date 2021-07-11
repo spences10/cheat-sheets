@@ -22,10 +22,24 @@
 
 <script>
   import { format } from 'date-fns'
+  import { onMount } from 'svelte'
 
   export let Post, metadata
   let created = format(new Date(metadata.createdDate), 'yyy MMM do')
   let updated = format(new Date(metadata.updatedDate), 'yyy MMM do')
+
+  onMount(() => {
+    let headingNodeList
+    let headings
+    headingNodeList = document.querySelectorAll('h2')
+
+    headings = Array.from(headingNodeList).map(h2 => {
+      return {
+        label: h2.innerText,
+        href: `#${h2.id}`,
+      }
+    })
+  })
 </script>
 
 <h1 class="font-medium text-5xl">

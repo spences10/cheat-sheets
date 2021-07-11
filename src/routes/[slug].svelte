@@ -21,6 +21,7 @@
 </script>
 
 <script>
+  import TableOfContents from '$lib/table-of-contents.svelte'
   import { format } from 'date-fns'
   import { onMount } from 'svelte'
 
@@ -28,9 +29,13 @@
   let created = format(new Date(metadata.createdDate), 'yyy MMM do')
   let updated = format(new Date(metadata.updatedDate), 'yyy MMM do')
 
+  let headingNodeList
+  let headings
+  async function getHeadings() {
+    await headings
+  }
+
   onMount(() => {
-    let headingNodeList
-    let headings
     headingNodeList = document.querySelectorAll('h2')
 
     headings = Array.from(headingNodeList).map(h2 => {
@@ -41,6 +46,12 @@
     })
   })
 </script>
+
+{#await getHeadings()}
+  Loading...
+{:then}
+  <TableOfContents {headings} />
+{/await}
 
 <h1 class="font-medium text-5xl">
   {metadata.title}

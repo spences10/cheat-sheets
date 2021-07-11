@@ -6,6 +6,14 @@ published: true
 slug: alfred
 ---
 
+<!-- Add Authors
+<script>
+  import Author from '$lib/author.svelte'
+</script>
+
+<Author author='Scott'/>
+ -->
+
 ## Add custom search
 
 To add a custom search to Alfred.

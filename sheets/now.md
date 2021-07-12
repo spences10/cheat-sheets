@@ -3,6 +3,7 @@ title: now
 createdDate: 2017-05-30
 updatedDate: 2020-04-18
 published: true
+slug: now
 ---
 
 The awesome now from zeit! It has a great cli with probably all of

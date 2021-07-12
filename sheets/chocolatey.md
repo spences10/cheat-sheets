@@ -3,6 +3,7 @@ title: Chocolatey
 createdDate: 2020-12-13
 updatedDate: 2020-12-13
 published: true
+slug: chocolatey
 ---
 
 ## List locally installed packages

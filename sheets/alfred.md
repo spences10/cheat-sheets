@@ -3,7 +3,16 @@ title: Alfred
 createdDate: 2019-11-19
 updatedDate: 2019-11-19
 published: true
+slug: alfred
 ---
+
+<!-- Add Authors
+<script>
+  import Author from '$lib/author.svelte'
+</script>
+
+<Author author='Scott'/>
+ -->
 
 ## Add custom search
 

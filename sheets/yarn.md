@@ -3,6 +3,7 @@ title: Yarn
 createdDate: 2017-05-19
 updatedDate: 2021-01-04
 published: true
+slug: yarn
 ---
 
 ## Yarn global binaries not showing

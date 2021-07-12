@@ -3,6 +3,7 @@ title: Windows Subsystem Linux (WSL)
 createdDate: 2017-10-11
 updatedDate: 2020-12-13
 published: true
+slug: wsl
 ---
 
 ## Shutdown WSL

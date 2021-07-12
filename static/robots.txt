@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://cheatsheets.xyz
+
+# Sitemaps
+Sitemap: https://cheatsheets.xyz/sitemap.xml

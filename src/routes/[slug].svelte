@@ -74,7 +74,7 @@
     <p class="font-semibold text-xs">Updated: {updated}</p>
     <a
       class="font-semibold text-xs underline hover:no-underline"
-      href={`https://github.com/spences10/cheat-sheets/edit/production/sheets/${metadata.slug}.md`}
+      href={`https://github.com/spences10/cheat-sheets/edit/main/sheets/${metadata.slug}.md`}
       >Edit this page on GitHub</a
     >
   </div>

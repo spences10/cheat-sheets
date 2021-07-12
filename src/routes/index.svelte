@@ -35,6 +35,10 @@
   $: results = fuse.search(query)
 </script>
 
+<svelte:head>
+  <script src="sw.js"></script>
+</svelte:head>
+
 <Head
   title={'Home · Cheat Sheets'}
   description="Everyday commands, config, hints and tips used for modern web development."

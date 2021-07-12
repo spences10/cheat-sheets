@@ -2,7 +2,7 @@ const objectToQueryParams = obj => {
   const params = Object.entries(obj).map(
     ([key, value]) => `${key}=${value}`
   )
-  return '?' + params.join('&amp;')
+  return '?' + params.join('&')
 }
 
 export const ogImageUrl = (author, website, title) => {

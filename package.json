@@ -38,7 +38,7 @@
     "remark-github": "^10.1.0",
     "svelte": "3.38.3",
     "svelte-preprocess": "4.7.4",
-    "tailwindcss": "2.2.4",
+    "tailwindcss": "2.2.7",
     "theme-change": "2.0.2"
   },
   "repository": {

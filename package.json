@@ -39,7 +39,7 @@
     "rehype-slug": "4.0.1",
     "remark-abbr": "1.4.1",
     "remark-github": "10.1.0",
-    "svelte": "3.38.3",
+    "svelte": "3.42.1",
     "svelte-preprocess": "4.7.4",
     "tailwindcss": "2.2.7",
     "theme-change": "2.0.2"

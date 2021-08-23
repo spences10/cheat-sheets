@@ -8,9 +8,6 @@ import { visit } from 'unist-util-visit'
 
 export default {
   extensions: ['.svx', '.md'],
-  smartypants: {
-    dashes: 'oldschool',
-  },
   remarkPlugins: [
     // Add a text preview snippet (no formatting) so we can use it in the meta description tag
     preview(

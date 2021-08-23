@@ -465,7 +465,7 @@ document, but could change `html` with `p`, `span` whatever.
 document.getElementsByTagName('html')[0].style['font-size'] = '10px'
 ```
 
-### Checking for `window`
+## Checking for `window`
 
 [Optional chaining](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) can not be used on `window`.
 It will throw an error when used on any undeclared root object, so no escaping the `typeof window == 'undefined'` check with a clever `?.`.

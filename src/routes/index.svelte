@@ -1,28 +1,25 @@
 <script context="module">
+  import { getSheets } from '$lib/get-sheets'
+  import Head from '$lib/head.svelte'
+  import { author, description, name, website } from '$lib/info'
+  import { ogImageUrl } from '$lib/og-image-url-build'
+  import Fuse from 'fuse.js'
+
+  export const prerender = true
+
   export async function load() {
-    const posts = import.meta.globEager('../../sheets/*.md')
+    const sheets = await getSheets()
 
-    // for (const path in posts) {
-    //   console.log(path)
-    // }
-
-    const postsList = Object.values(posts)
-    const postsMeta = postsList.map(post => {
-      return post.metadata
-    })
     return {
       props: {
-        posts: postsMeta,
+        sheets,
       },
     }
   }
 </script>
 
 <script>
-  import Head from '$lib/head.svelte'
-  import { ogImageUrl } from '$lib/og-image-url-build'
-  import Fuse from 'fuse.js'
-  export let posts
+  export let sheets
 
   let options = {
     keys: ['title'],
@@ -30,23 +27,16 @@
     includeMatches: true,
     threshold: 0.2,
   }
-  let fuse = new Fuse([...posts], options)
+  let fuse = new Fuse([...sheets], options)
   let query = ''
   $: results = fuse.search(query)
 </script>
 
-<svelte:head>
-  <script src="sw.js"></script>
-</svelte:head>
-
 <Head
-  title={'Home · Cheat Sheets'}
-  description="Everyday commands, config, hints and tips used for modern web development."
-  image={ogImageUrl(
-    'Scott Spence',
-    'cheatsheets.xyz',
-    'Cheat Sheets'
-  )}
+  title={`Home · ${name}`}
+  {description}
+  image={ogImageUrl(author, 'cheatsheets.xyz', 'Cheat Sheets')}
+  url={website}
 />
 
 <div class="form-control">
@@ -65,11 +55,11 @@
 
 {#if results.length === 0}
   <ul>
-    {#each posts as post}
-      {#if post.published}
+    {#each sheets as sheet}
+      {#if sheet.published}
         <li class="font-medium my-5 text-4xl">
-          <a class="link" sveltekit:prefetch href={`/${post.slug}`}
-            >{post.title}</a
+          <a class="link" sveltekit:prefetch href={`/${sheet.slug}`}
+            >{sheet.title}</a
           >
         </li>
       {/if}

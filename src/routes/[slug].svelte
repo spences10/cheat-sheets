@@ -22,6 +22,7 @@
 
 <script>
   import Head from '$lib/head.svelte'
+  import { description, website } from '$lib/info'
   import { ogImageUrl } from '$lib/og-image-url-build'
   import TableOfContents from '$lib/table-of-contents.svelte'
   import { format } from 'date-fns'
@@ -51,12 +52,13 @@
 
 <Head
   title={`${metadata.title} · Cheat Sheets`}
-  description="Everyday commands, config, hints and tips used for modern web development."
+  {description}
   image={ogImageUrl(
     'Scott Spence',
     'cheatsheets.xyz',
     metadata.title
   )}
+  url={`${website}/${metadata.slug}`}
 />
 
 {#await getHeadings()}

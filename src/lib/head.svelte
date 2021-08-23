@@ -1,5 +1,5 @@
 <script>
-  import { name, website,author } from '$lib/info'
+  import { author, website } from '$lib/info'
 
   export let title
   export let description
@@ -13,7 +13,6 @@
 
   <!-- HTML Meta Tags -->
   <title>{title}</title>
-  <meta name="description" content={description} />
   <meta name="author" content={author} />
 
   <!-- Google / Search Engine Tags -->

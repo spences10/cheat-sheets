@@ -14,6 +14,7 @@
   <!-- HTML Meta Tags -->
   <title>{title}</title>
   <meta name="author" content={author} />
+  <meta name="description" content={description} />
 
   <!-- Google / Search Engine Tags -->
   <meta itemprop="name" content={title} />

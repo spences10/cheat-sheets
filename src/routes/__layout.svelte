@@ -11,8 +11,9 @@
   // https://mattjennings.io/blog/how-to-use-fathom-analytics-with-sveltekit
   onMount(async () => {
     themeChange(false)
-    Fathom.load('WERPEKMT', {
-      url: 'https://4pvafmq.cheatsheets.xyz/script.js',
+    Fathom.load(import.meta.env.VITE_FATHOM_ID, {
+      url: import.meta.env.VITE_FATHOM_URL,
+      excludedDomains: ['localhost'],
     })
   })
   $: $page.path, browser && Fathom.trackPageview()

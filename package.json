@@ -39,7 +39,7 @@
     "rehype-autolink-headings": "6.1.0",
     "rehype-slug": "5.0.0",
     "remark-abbr": "1.4.1",
-    "remark-external-links": "^9.0.1",
+    "remark-external-links": "9.0.1",
     "remark-preview": "1.0.2",
     "svelte": "3.42.4",
     "svelte-preprocess": "4.8.0",

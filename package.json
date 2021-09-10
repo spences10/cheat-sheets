@@ -33,7 +33,7 @@
     "mdsvex-relative-images": "1.0.1",
     "postcss": "8.3.6",
     "postcss-load-config": "3.1.0",
-    "prettier": "2.3.2",
+    "prettier": "2.4.0",
     "prettier-plugin-svelte": "2.4.0",
     "prism-themes": "1.8.0",
     "rehype-autolink-headings": "6.1.0",

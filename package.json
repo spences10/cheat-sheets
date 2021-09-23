@@ -45,7 +45,7 @@
     "svelte-preprocess": "4.9.5",
     "tailwindcss": "2.2.15",
     "theme-change": "2.0.2",
-    "unist-util-visit": "4.0.0"
+    "unist-util-visit": "4.1.0"
   },
   "repository": {
     "type": "git",

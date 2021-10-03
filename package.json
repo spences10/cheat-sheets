@@ -41,7 +41,7 @@
     "remark-abbr": "1.4.1",
     "remark-external-links": "9.0.1",
     "remark-preview": "1.0.2",
-    "svelte": "3.43.0",
+    "svelte": "3.43.1",
     "svelte-preprocess": "4.9.5",
     "tailwindcss": "2.2.16",
     "theme-change": "2.0.2",

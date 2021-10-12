@@ -22,7 +22,7 @@
     "@tailwindcss/typography": "0.4.1",
     "autoprefixer": "10.3.7",
     "cssnano": "5.0.8",
-    "daisyui": "1.14.2",
+    "daisyui": "1.14.4",
     "date-fns": "2.25.0",
     "eslint": "8.0.0",
     "eslint-config-prettier": "8.3.0",

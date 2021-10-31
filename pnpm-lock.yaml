@@ -27,14 +27,14 @@ specifiers:
   remark-preview: 1.0.2
   svelte: 3.44.0
   svelte-preprocess: 4.9.8
-  tailwindcss: 2.2.17
+  tailwindcss: 2.2.19
   theme-change: 2.0.2
   unist-util-visit: 4.1.0
 
 devDependencies:
   '@sveltejs/adapter-vercel': 1.0.0-next.31
-  '@sveltejs/kit': 1.0.0-next.191_svelte@3.44.0
-  '@tailwindcss/typography': 0.4.1_tailwindcss@2.2.17
+  '@sveltejs/kit': 1.0.0-next.192_svelte@3.44.0
+  '@tailwindcss/typography': 0.4.1_tailwindcss@2.2.19
   autoprefixer: 10.4.0_postcss@8.3.11
   cssnano: 5.0.8_postcss@8.3.11
   daisyui: 1.16.0
@@ -58,7 +58,7 @@ devDependencies:
   remark-preview: 1.0.2
   svelte: 3.44.0
   svelte-preprocess: 4.9.8_9cd47afbf674b8038a3115607d96b979
-  tailwindcss: 2.2.17_0c54bdadaf9d9c9c6c134cb2c6c061a3
+  tailwindcss: 2.2.19_0c54bdadaf9d9c9c6c134cb2c6c061a3
   theme-change: 2.0.2
   unist-util-visit: 4.1.0
 
@@ -152,8 +152,8 @@ packages:
       esbuild: 0.13.9
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.191_svelte@3.44.0:
-    resolution: {integrity: sha512-ikFKdgr0vcQB5lYqRtj6MUH4yu65le+qNVKxjJOK/Qj7Ev8IjaFKwiX1ppO48X5vJPsW+qAwvk/TqJwSM6VPDA==}
+  /@sveltejs/kit/1.0.0-next.192_svelte@3.44.0:
+    resolution: {integrity: sha512-8LyPeEwxzMFMMr05I27j77qgvBdw92eVCH+W8+nW8kA7dkfA1e38GZXEb3qshd0Jez2Cng8MAzVMoETzGaQcng==}
     engines: {node: '>=14.13'}
     hasBin: true
     peerDependencies:
@@ -195,7 +195,7 @@ packages:
       - supports-color
     dev: true
 
-  /@tailwindcss/typography/0.4.1_tailwindcss@2.2.17:
+  /@tailwindcss/typography/0.4.1_tailwindcss@2.2.19:
     resolution: {integrity: sha512-ovPPLUhs7zAIJfr0y1dbGlyCuPhpuv/jpBoFgqAc658DWGGrOBWBMpAWLw2KlzbNeVk4YBJMzue1ekvIbdw6XA==}
     peerDependencies:
       tailwindcss: '>=2.0.0'
@@ -204,7 +204,7 @@ packages:
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
-      tailwindcss: 2.2.17_0c54bdadaf9d9c9c6c134cb2c6c061a3
+      tailwindcss: 2.2.19_0c54bdadaf9d9c9c6c134cb2c6c061a3
     dev: true
 
   /@trysound/sax/0.2.0:
@@ -2685,8 +2685,8 @@ packages:
       stable: 0.1.8
     dev: true
 
-  /tailwindcss/2.2.17_0c54bdadaf9d9c9c6c134cb2c6c061a3:
-    resolution: {integrity: sha512-WgRpn+Pxn7eWqlruxnxEbL9ByVRWi3iC10z4b6dW0zSdnkPVC4hPMSWLQkkW8GCyBIv/vbJ0bxIi9dVrl4CfoA==}
+  /tailwindcss/2.2.19_0c54bdadaf9d9c9c6c134cb2c6c061a3:
+    resolution: {integrity: sha512-6Ui7JSVtXadtTUo2NtkBBacobzWiQYVjYW0ZnKaP9S1ZCKQ0w7KVNz+YSDI/j7O7KCMHbOkz94ZMQhbT9pOqjw==}
     engines: {node: '>=12.13.0'}
     hasBin: true
     peerDependencies:

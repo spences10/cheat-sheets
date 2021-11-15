@@ -18,7 +18,7 @@ specifiers:
   postcss: 8.3.11
   postcss-load-config: 3.1.0
   prettier: 2.4.1
-  prettier-plugin-svelte: 2.4.0
+  prettier-plugin-svelte: 2.5.0
   prism-themes: 1.9.0
   rehype-autolink-headings: 6.1.0
   rehype-slug: 5.0.0
@@ -33,7 +33,7 @@ specifiers:
 
 devDependencies:
   '@sveltejs/adapter-vercel': 1.0.0-next.31
-  '@sveltejs/kit': 1.0.0-next.195_svelte@3.44.1
+  '@sveltejs/kit': 1.0.0-next.196_svelte@3.44.1
   '@tailwindcss/typography': 0.4.1_tailwindcss@2.2.19
   autoprefixer: 10.4.0_postcss@8.3.11
   cssnano: 5.0.10_postcss@8.3.11
@@ -49,7 +49,7 @@ devDependencies:
   postcss: 8.3.11
   postcss-load-config: 3.1.0
   prettier: 2.4.1
-  prettier-plugin-svelte: 2.4.0_prettier@2.4.1+svelte@3.44.1
+  prettier-plugin-svelte: 2.5.0_prettier@2.4.1+svelte@3.44.1
   prism-themes: 1.9.0
   rehype-autolink-headings: 6.1.0
   rehype-slug: 5.0.0
@@ -152,8 +152,8 @@ packages:
       esbuild: 0.13.9
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.195_svelte@3.44.1:
-    resolution: {integrity: sha512-R2X4FgzXQhp63XOik6S1Flw91S2CEA7sTxdsnNFrq3O+bIN7pQhJhkm6zgH68MZANdDcq8oIiSRkxT4M3t1+jQ==}
+  /@sveltejs/kit/1.0.0-next.196_svelte@3.44.1:
+    resolution: {integrity: sha512-z7sA/2/3Il5biibjPXCYXJC11TyFhgCvMaJvvbtMnu2l3EmOmJBMS+r2djGptzfFsugSVNwGQFn8+ldWQWq3jA==}
     engines: {node: '>=14.13'}
     hasBin: true
     peerDependencies:
@@ -2237,8 +2237,8 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
-  /prettier-plugin-svelte/2.4.0_prettier@2.4.1+svelte@3.44.1:
-    resolution: {integrity: sha512-JwJ9bOz4XHLQtiLnX4mTSSDUdhu12WH8sTwy/XTDCSyPlah6IcV7NWeYBZscPEcceu2YnW8Y9sJCP40Z2UH9GA==}
+  /prettier-plugin-svelte/2.5.0_prettier@2.4.1+svelte@3.44.1:
+    resolution: {integrity: sha512-+iHY2uGChOngrgKielJUnqo74gIL/EO5oeWm8MftFWjEi213lq9QYTOwm1pv4lI1nA61tdgf80CF2i5zMcu1kw==}
     peerDependencies:
       prettier: ^1.16.4 || ^2.0.0
       svelte: ^3.2.0

@@ -16,6 +16,16 @@ const config = {
     // hydrate the <div id="svelte"> element in src/app.html
     target: '#svelte',
     adapter: adapter(),
+    vite: {
+      // https://vitejs.dev/config/#server-fs-allow
+      server: {
+        fs: {
+          // Allow serving files from one level up to the project root
+          // posts, copy
+          allow: ['..'],
+        },
+      },
+    },
   },
 }
 

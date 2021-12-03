@@ -7,7 +7,7 @@ specifiers:
   autoprefixer: 10.4.0
   cssnano: 5.0.12
   daisyui: 1.16.2
-  date-fns: 2.26.0
+  date-fns: 2.27.0
   eslint: 8.3.0
   eslint-config-prettier: 8.3.0
   eslint-plugin-svelte3: 3.2.1
@@ -38,7 +38,7 @@ devDependencies:
   autoprefixer: 10.4.0_postcss@8.3.11
   cssnano: 5.0.12_postcss@8.3.11
   daisyui: 1.16.2
-  date-fns: 2.26.0
+  date-fns: 2.27.0
   eslint: 8.3.0
   eslint-config-prettier: 8.3.0_eslint@8.3.0
   eslint-plugin-svelte3: 3.2.1_eslint@8.3.0+svelte@3.44.2
@@ -712,8 +712,8 @@ packages:
     resolution: {integrity: sha512-kHoTvq3/eU8tPbu3U3Nwq7yy0I5zauqAYRSvw1x+t8g9FBjFm3jNtUQO/vBjUZsU7ABIf5aaT58iBF2NeusCUA==}
     dev: true
 
-  /date-fns/2.26.0:
-    resolution: {integrity: sha512-VQI812dRi3cusdY/fhoBKvc6l2W8BPWU1FNVnFH9Nttjx4AFBRzfSVb/Eyc7jBT6e9sg1XtAGsYpBQ6c/jygbg==}
+  /date-fns/2.27.0:
+    resolution: {integrity: sha512-sj+J0Mo2p2X1e306MHq282WS4/A8Pz/95GIFcsPNMPMZVI3EUrAdSv90al1k+p74WGLCruMXk23bfEDZa71X9Q==}
     engines: {node: '>=0.11'}
     dev: true
 

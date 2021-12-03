@@ -473,8 +473,31 @@ Thanks to [Nicky Meuleman] for this one.
 error when used on any undeclared root object, so no escaping the
 `typeof window == 'undefined'` check with a clever `?.`.
 
+## Unique Array of Values with Set and Spread Operator [ES6]
+
+Thanks to [Annie Liew] for this one.
+
+In ES6, Set objects are collections of values.
+Set uses strict equality (`===`) to check values & each value may only occur once.
+We use the spread operator to convert the Set object into an array.
+
+```js
+const numArr = [1, 1, 1, 2, 3];
+// (5) [1, 1, 1, 2, 3]
+
+const uniqueNumSet = new Set(numArr);
+// Set(3) {1, 2, 3}
+
+const uniqueNumArr = [...new Set(numArr)];
+// (3) [1, 2, 3]
+```
+
+If you prefer something a bit more explicit, you can do this instead:
+`const uniqueNumArr = Array.from(uniqueNumSet)`
+
 <!-- Links -->
 
 [nicky meuleman]: https://twitter.com/NMeuleman
 [optional chaining]:
   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining
+[annie liew]: https://twitter.com/anniebombanie_

@@ -495,9 +495,26 @@ const uniqueNumArr = [...new Set(numArr)];
 If you prefer something a bit more explicit, you can do this instead:
 `const uniqueNumArr = Array.from(uniqueNumSet)`
 
+## Convert an array of objects into a single object
+If you have an array of objects, you can convert that list of objects into a single object by using [`Object.assign()`][Object.assign] and [spread syntax][spread syntax]. The `Object.assign()` method copies all enumerable own properties from one or more source objects to a target object and it returns the modified target object. We use spread syntax `...` on the array `items` so that each object in the array can be "expanded" in places where key-value pairs exists.
+
+```js
+const items = [
+  { address: '123 ABC street' },
+  { isLeased: false },
+  { hasPool: true }
+]
+
+const obj = Object.assign({}, ...items);
+console.log(obj);
+// { "address": "123 ABC street", "isLeased": false, "hasPool": true }
+```
+
 <!-- Links -->
 
 [nicky meuleman]: https://twitter.com/NMeuleman
 [optional chaining]:
   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining
+[Object.assign]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
+[spread syntax]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
 [annie liew]: https://twitter.com/anniebombanie_

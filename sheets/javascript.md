@@ -418,7 +418,7 @@ for (let i = 1; i <= 100; ++i) {
 }
 ```
 
-## Prototypal Instantiation
+## Prototypical Instantiation
 
 Instantiation patterns are ways to create something in JavaScript.
 

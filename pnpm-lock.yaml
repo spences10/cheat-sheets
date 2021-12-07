@@ -8,7 +8,7 @@ specifiers:
   cssnano: 5.0.12
   daisyui: 1.16.2
   date-fns: 2.27.0
-  eslint: 8.4.0
+  eslint: 8.4.1
   eslint-config-prettier: 8.3.0
   eslint-plugin-svelte3: 3.2.1
   fathom-client: 3.2.0
@@ -41,9 +41,9 @@ devDependencies:
   cssnano: 5.0.12_postcss@8.4.4
   daisyui: 1.16.2
   date-fns: 2.27.0
-  eslint: 8.4.0
-  eslint-config-prettier: 8.3.0_eslint@8.4.0
-  eslint-plugin-svelte3: 3.2.1_eslint@8.4.0+svelte@3.44.2
+  eslint: 8.4.1
+  eslint-config-prettier: 8.3.0_eslint@8.4.1
+  eslint-plugin-svelte3: 3.2.1_eslint@8.4.1+svelte@3.44.2
   fathom-client: 3.2.0
   fuse.js: 6.4.6
   husky: 7.0.4
@@ -1226,23 +1226,23 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /eslint-config-prettier/8.3.0_eslint@8.4.0:
+  /eslint-config-prettier/8.3.0_eslint@8.4.1:
     resolution: {integrity: sha512-BgZuLUSeKzvlL/VUjx/Yb787VQ26RU3gGjA3iiFvdsp/2bMfVIWUVP7tjxtjS0e+HP409cPlPvNkQloz8C91ew==}
     hasBin: true
     peerDependencies:
       eslint: '>=7.0.0'
     dependencies:
-      eslint: 8.4.0
+      eslint: 8.4.1
     dev: true
 
-  /eslint-plugin-svelte3/3.2.1_eslint@8.4.0+svelte@3.44.2:
+  /eslint-plugin-svelte3/3.2.1_eslint@8.4.1+svelte@3.44.2:
     resolution: {integrity: sha512-YoBR9mLoKCjGghJ/gvpnFZKaMEu/VRcuxpSRS8KuozuEo7CdBH7bmBHa6FmMm0i4kJnOyx+PVsaptz96K6H/4Q==}
     engines: {node: '>=10'}
     peerDependencies:
       eslint: '>=6.0.0'
       svelte: ^3.2.0
     dependencies:
-      eslint: 8.4.0
+      eslint: 8.4.1
       svelte: 3.44.2
     dev: true
 
@@ -1254,13 +1254,13 @@ packages:
       estraverse: 5.3.0
     dev: true
 
-  /eslint-utils/3.0.0_eslint@8.4.0:
+  /eslint-utils/3.0.0_eslint@8.4.1:
     resolution: {integrity: sha512-uuQC43IGctw68pJA1RgbQS8/NP7rch6Cwd4j3ZBtgo4/8Flj4eGE7ZYSZRN3iq5pVUv6GPdW5Z1RFleo84uLDA==}
     engines: {node: ^10.0.0 || ^12.0.0 || >= 14.0.0}
     peerDependencies:
       eslint: '>=5'
     dependencies:
-      eslint: 8.4.0
+      eslint: 8.4.1
       eslint-visitor-keys: 2.1.0
     dev: true
 
@@ -1274,8 +1274,8 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
-  /eslint/8.4.0:
-    resolution: {integrity: sha512-kv0XQcAQJL/VD9THQKhTQZVqkJKA+tIj/v2ZKNaIHRAADcJWFb+B/BAewUYuF6UVg1s2xC5qXVoDk0G8sKGeTA==}
+  /eslint/8.4.1:
+    resolution: {integrity: sha512-TxU/p7LB1KxQ6+7aztTnO7K0i+h0tDi81YRY9VzB6Id71kNz+fFYnf5HD5UOQmxkzcoa0TlVZf9dpMtUv0GpWg==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     hasBin: true
     dependencies:
@@ -1289,7 +1289,7 @@ packages:
       enquirer: 2.3.6
       escape-string-regexp: 4.0.0
       eslint-scope: 7.1.0
-      eslint-utils: 3.0.0_eslint@8.4.0
+      eslint-utils: 3.0.0_eslint@8.4.1
       eslint-visitor-keys: 3.1.0
       espree: 9.2.0
       esquery: 1.4.0

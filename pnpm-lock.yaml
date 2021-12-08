@@ -18,7 +18,7 @@ specifiers:
   postcss: 8.4.4
   postcss-load-config: 3.1.0
   prettier: 2.5.1
-  prettier-plugin-svelte: 2.5.0
+  prettier-plugin-svelte: 2.5.1
   prism-themes: 1.9.0
   rehype-autolink-headings: 6.1.0
   rehype-slug: 5.0.0
@@ -49,7 +49,7 @@ devDependencies:
   postcss: 8.4.4
   postcss-load-config: 3.1.0
   prettier: 2.5.1
-  prettier-plugin-svelte: 2.5.0_prettier@2.5.1+svelte@3.44.2
+  prettier-plugin-svelte: 2.5.1_prettier@2.5.1+svelte@3.44.2
   prism-themes: 1.9.0
   rehype-autolink-headings: 6.1.0
   rehype-slug: 5.0.0
@@ -2229,8 +2229,8 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
-  /prettier-plugin-svelte/2.5.0_prettier@2.5.1+svelte@3.44.2:
-    resolution: {integrity: sha512-+iHY2uGChOngrgKielJUnqo74gIL/EO5oeWm8MftFWjEi213lq9QYTOwm1pv4lI1nA61tdgf80CF2i5zMcu1kw==}
+  /prettier-plugin-svelte/2.5.1_prettier@2.5.1+svelte@3.44.2:
+    resolution: {integrity: sha512-IhZUcqr7Bg4LY15d87t9lDr7EyC0IPehkzH5ya5igG8zYwf3UYaYDFnVW2mckREaZyLREcH9YOouesmt4f5Ozg==}
     peerDependencies:
       prettier: ^1.16.4 || ^2.0.0
       svelte: ^3.2.0

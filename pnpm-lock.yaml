@@ -28,7 +28,7 @@ specifiers:
   remark-external-links: 9.0.1
   remark-preview: 1.0.2
   svelte: 3.44.2
-  svelte-preprocess: 4.9.8
+  svelte-preprocess: 4.10.0
   tailwindcss: 2.2.19
   theme-change: 2.0.2
   unist-util-visit: 4.1.0
@@ -61,7 +61,7 @@ devDependencies:
   remark-external-links: 9.0.1
   remark-preview: 1.0.2
   svelte: 3.44.2
-  svelte-preprocess: 4.9.8_1b00e3d94bfa75ad0a5804e499f22d3f
+  svelte-preprocess: 4.10.0_1b00e3d94bfa75ad0a5804e499f22d3f
   tailwindcss: 2.2.19_16a290f6d0e3717bf6d2667234aebd30
   theme-change: 2.0.2
   unist-util-visit: 4.1.0
@@ -2927,8 +2927,8 @@ packages:
       svelte: 3.44.2
     dev: true
 
-  /svelte-preprocess/4.9.8_1b00e3d94bfa75ad0a5804e499f22d3f:
-    resolution: {integrity: sha512-EQS/oRZzMtYdAprppZxY3HcysKh11w54MgA63ybtL+TAZ4hVqYOnhw41JVJjWN9dhPnNjjLzvbZ2tMhTsla1Og==}
+  /svelte-preprocess/4.10.0_1b00e3d94bfa75ad0a5804e499f22d3f:
+    resolution: {integrity: sha512-uZgGyC4SwkFoby2ceiMgGYs4qHYGz2fT06cAsHO8FHdDbvj1dKQyQ/fD9OB0KLymVv0fmzuJo/On7Kv7AeVhWA==}
     engines: {node: '>= 9.11.2'}
     requiresBuild: true
     peerDependencies:
@@ -2943,7 +2943,7 @@ packages:
       stylus: ^0.54.7
       sugarss: ^2.0.0
       svelte: ^3.23.0
-      typescript: ^3.9.5 || ^4.0.0
+      typescript: ^4.5.2
     peerDependenciesMeta:
       '@babel/core':
         optional: true

@@ -1,5 +1,6 @@
-@tailwind base;
 /* Write your global styles here, in PostCSS syntax */
+@tailwind base;
+
 html {
   scroll-behavior: smooth;
   margin-left: calc(100vw - 100%);

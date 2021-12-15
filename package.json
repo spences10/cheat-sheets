@@ -43,7 +43,7 @@
     "remark-preview": "1.0.2",
     "svelte": "3.44.2",
     "svelte-preprocess": "4.10.0",
-    "tailwindcss": "2.2.19",
+    "tailwindcss": "3.0.2",
     "theme-change": "2.0.2",
     "unist-util-visit": "4.1.0"
   },

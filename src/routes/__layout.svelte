@@ -3,10 +3,10 @@
   import { page } from '$app/stores'
   import Header from '$lib/header.svelte'
   import * as Fathom from 'fathom-client'
+  import 'prism-themes/themes/prism-night-owl.css'
   import { onMount } from 'svelte'
   import { themeChange } from 'theme-change'
   import '../app.css'
-  import '../prism.css'
 
   // https://mattjennings.io/blog/how-to-use-fathom-analytics-with-sveltekit
   onMount(() => {

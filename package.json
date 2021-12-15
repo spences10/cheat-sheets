@@ -13,8 +13,12 @@
     "dev": "svelte-kit dev",
     "build": "svelte-kit build",
     "preview": "svelte-kit preview",
-    "lint": "prettier --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
-    "format": "prettier --write --plugin-search-dir=. ."
+    "format": "pretty-quick"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   },
   "devDependencies": {
     "@sveltejs/adapter-vercel": "1.0.0-next.31",
@@ -29,12 +33,14 @@
     "eslint-plugin-svelte3": "3.2.1",
     "fathom-client": "3.2.0",
     "fuse.js": "6.4.6",
+    "husky": "^7.0.4",
     "mdsvex": "0.9.8",
     "mdsvex-relative-images": "1.0.1",
     "postcss": "8.4.4",
     "postcss-load-config": "3.1.0",
     "prettier": "2.5.1",
     "prettier-plugin-svelte": "2.5.0",
+    "pretty-quick": "^3.1.2",
     "prism-themes": "1.9.0",
     "rehype-autolink-headings": "6.1.0",
     "rehype-slug": "5.0.0",

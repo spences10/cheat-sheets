@@ -4,31 +4,32 @@ specifiers:
   '@sveltejs/adapter-vercel': ^1.0.0-next.32
   '@sveltejs/kit': next
   '@tailwindcss/typography': ^0.5.0
-  autoprefixer: ^10.3.7
-  cssnano: ^5.0.8
+  autoprefixer: ^10.4.0
+  cssnano: ^5.0.12
   daisyui: ^1.16.5
   date-fns: ^2.27.0
   fathom-client: ^3.2.0
   fuse.js: ^6.4.6
   husky: ^7.0.4
   mdsvex: ^0.9.8
-  postcss: ^8.3.9
+  postcss: ^8.4.5
   postcss-load-config: ^3.1.0
-  prettier: ^2.4.1
-  prettier-plugin-svelte: ^2.4.0
+  prettier: ^2.5.1
+  prettier-plugin-svelte: ^2.5.1
   pretty-quick: ^3.1.2
+  prism-themes: ^1.9.0
   rehype-autolink-headings: ^6.1.0
   rehype-slug: ^5.0.0
   remark-external-links: ^9.0.1
-  svelte: ^3.44.0
-  svelte-preprocess: ^4.9.8
-  tailwindcss: ^3.0.0
+  svelte: ^3.44.3
+  svelte-preprocess: ^4.10.0
+  tailwindcss: ^3.0.3
   theme-change: ^2.0.2
 
 devDependencies:
   '@sveltejs/adapter-vercel': 1.0.0-next.32
   '@sveltejs/kit': 1.0.0-next.202_svelte@3.44.3
-  '@tailwindcss/typography': 0.5.0_tailwindcss@3.0.2
+  '@tailwindcss/typography': 0.5.0_tailwindcss@3.0.3
   autoprefixer: 10.4.0_postcss@8.4.5
   cssnano: 5.0.12_postcss@8.4.5
   daisyui: 1.16.5
@@ -42,12 +43,13 @@ devDependencies:
   prettier: 2.5.1
   prettier-plugin-svelte: 2.5.1_prettier@2.5.1+svelte@3.44.3
   pretty-quick: 3.1.2_prettier@2.5.1
+  prism-themes: 1.9.0
   rehype-autolink-headings: 6.1.0
   rehype-slug: 5.0.0
   remark-external-links: 9.0.1
   svelte: 3.44.3
   svelte-preprocess: 4.10.0_780263383bd82c24c3a39ba88c8c2aa6
-  tailwindcss: 3.0.2_16a290f6d0e3717bf6d2667234aebd30
+  tailwindcss: 3.0.3_16a290f6d0e3717bf6d2667234aebd30
   theme-change: 2.0.2
 
 packages:
@@ -151,7 +153,7 @@ packages:
       - supports-color
     dev: true
 
-  /@tailwindcss/typography/0.5.0_tailwindcss@3.0.2:
+  /@tailwindcss/typography/0.5.0_tailwindcss@3.0.3:
     resolution: {integrity: sha512-1p/3C6C+JJziS/ghtG8ACYalbA2SyLJY27Pm33cVTlAoY6VQ7zfm2H64cPxUMBkVIlWXTtWHhZcZJPobMRmQAA==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1 || insiders'
@@ -160,7 +162,7 @@ packages:
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
-      tailwindcss: 3.0.2_16a290f6d0e3717bf6d2667234aebd30
+      tailwindcss: 3.0.3_16a290f6d0e3717bf6d2667234aebd30
     dev: true
 
   /@trysound/sax/0.2.0:
@@ -1756,6 +1758,10 @@ packages:
     resolution: {integrity: sha512-yABh19CYbM24V7aS7TuPYRNMqthxwbvx6FF/Rw920YbyBWO3tnyPIqRMgHuSVsLmuHkkBS1Akyof463FVdkeDQ==}
     dev: true
 
+  /prism-themes/1.9.0:
+    resolution: {integrity: sha512-tX2AYsehKDw1EORwBps+WhBFKc2kxfoFpQAjxBndbZKr4fRmMkv47XN0BghC/K1qwodB1otbe4oF23vUTFDokw==}
+    dev: true
+
   /prismjs/1.25.0:
     resolution: {integrity: sha512-WCjJHl1KEWbnkQom1+SzftbtXMKQoezOCYs5rECqMN+jP+apI7ftoflyqigqzopSO3hMhTEb0mFClA8lkolgEg==}
     dev: true
@@ -2054,8 +2060,8 @@ packages:
       stable: 0.1.8
     dev: true
 
-  /tailwindcss/3.0.2_16a290f6d0e3717bf6d2667234aebd30:
-    resolution: {integrity: sha512-i1KpjYnGYftjzdAth6jA5iMPjhxpUkk5L6DafhfnQs+KiiWaThYxmk47Weh4oFH1mZqP6MuiQNHxtoRVPOraLg==}
+  /tailwindcss/3.0.3_16a290f6d0e3717bf6d2667234aebd30:
+    resolution: {integrity: sha512-LYpjPpsf+q9UngvQ+Hq6WuYsAsP4ij1WZ9kCmTXTkhs+LRKdW5v6XyGG/lxf04SsVbr4Uuz19yVf66mIeq/Y3w==}
     engines: {node: '>=12.13.0'}
     hasBin: true
     peerDependencies:

@@ -1,7 +1,7 @@
 <script context="module">
   import { getSheets } from '$lib/get-sheets'
   import Head from '$lib/head.svelte'
-  import { author, description, name, website } from '$lib/info'
+  import { author,description,name,website } from '$lib/info'
   import { ogImageUrl } from '$lib/og-image-url-build'
   import Fuse from 'fuse.js'
 

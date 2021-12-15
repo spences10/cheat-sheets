@@ -1,4 +1,6 @@
 <script context="module">
+  export const prerender = true
+
   export async function load(ctx) {
     try {
       const Post = await import(

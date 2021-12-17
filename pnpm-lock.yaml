@@ -1,38 +1,38 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@sveltejs/adapter-vercel': ^1.0.0-next.32
+  '@sveltejs/adapter-vercel': 1.0.0-next.32
   '@sveltejs/kit': next
-  '@tailwindcss/typography': ^0.5.0
-  autoprefixer: ^10.4.0
-  cssnano: ^5.0.13
-  daisyui: ^1.16.5
-  date-fns: ^2.27.0
-  fathom-client: ^3.2.0
-  fuse.js: ^6.4.6
-  husky: ^7.0.4
-  mdsvex: ^0.9.8
-  postcss: ^8.4.5
-  postcss-load-config: ^3.1.0
-  prettier: ^2.5.1
-  prettier-plugin-svelte: ^2.5.1
-  pretty-quick: ^3.1.2
-  prism-themes: ^1.9.0
-  rehype-autolink-headings: ^6.1.0
-  rehype-slug: ^5.0.0
-  remark-external-links: ^9.0.1
-  svelte: ^3.44.3
-  svelte-preprocess: ^4.10.0
-  tailwindcss: ^3.0.5
-  theme-change: ^2.0.2
+  '@tailwindcss/typography': 0.5.0
+  autoprefixer: 10.4.0
+  cssnano: 5.0.13
+  daisyui: 1.16.6
+  date-fns: 2.27.0
+  fathom-client: 3.2.0
+  fuse.js: 6.4.6
+  husky: 7.0.4
+  mdsvex: 0.9.8
+  postcss: 8.4.5
+  postcss-load-config: 3.1.0
+  prettier: 2.5.1
+  prettier-plugin-svelte: 2.5.1
+  pretty-quick: 3.1.2
+  prism-themes: 1.9.0
+  rehype-autolink-headings: 6.1.0
+  rehype-slug: 5.0.0
+  remark-external-links: 9.0.1
+  svelte: 3.44.3
+  svelte-preprocess: 4.10.1
+  tailwindcss: 3.0.7
+  theme-change: 2.0.2
 
 devDependencies:
   '@sveltejs/adapter-vercel': 1.0.0-next.32
   '@sveltejs/kit': 1.0.0-next.202_svelte@3.44.3
-  '@tailwindcss/typography': 0.5.0_tailwindcss@3.0.5
+  '@tailwindcss/typography': 0.5.0_tailwindcss@3.0.7
   autoprefixer: 10.4.0_postcss@8.4.5
   cssnano: 5.0.13_postcss@8.4.5
-  daisyui: 1.16.5
+  daisyui: 1.16.6
   date-fns: 2.27.0
   fathom-client: 3.2.0
   fuse.js: 6.4.6
@@ -48,8 +48,8 @@ devDependencies:
   rehype-slug: 5.0.0
   remark-external-links: 9.0.1
   svelte: 3.44.3
-  svelte-preprocess: 4.10.0_780263383bd82c24c3a39ba88c8c2aa6
-  tailwindcss: 3.0.5_16a290f6d0e3717bf6d2667234aebd30
+  svelte-preprocess: 4.10.1_780263383bd82c24c3a39ba88c8c2aa6
+  tailwindcss: 3.0.7_16a290f6d0e3717bf6d2667234aebd30
   theme-change: 2.0.2
 
 packages:
@@ -153,7 +153,7 @@ packages:
       - supports-color
     dev: true
 
-  /@tailwindcss/typography/0.5.0_tailwindcss@3.0.5:
+  /@tailwindcss/typography/0.5.0_tailwindcss@3.0.7:
     resolution: {integrity: sha512-1p/3C6C+JJziS/ghtG8ACYalbA2SyLJY27Pm33cVTlAoY6VQ7zfm2H64cPxUMBkVIlWXTtWHhZcZJPobMRmQAA==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1 || insiders'
@@ -162,7 +162,7 @@ packages:
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
-      tailwindcss: 3.0.5_16a290f6d0e3717bf6d2667234aebd30
+      tailwindcss: 3.0.7_16a290f6d0e3717bf6d2667234aebd30
     dev: true
 
   /@trysound/sax/0.2.0:
@@ -563,8 +563,8 @@ packages:
       css-tree: 1.1.3
     dev: true
 
-  /daisyui/1.16.5:
-    resolution: {integrity: sha512-34nXxyQ0M8CWv8OE8/+jEasBbw5pipBNgWkC4HVsOVDgZ0Y5jD7UgcvosOmm+pEBgZHWNze2Ocwi9NUDge6gHg==}
+  /daisyui/1.16.6:
+    resolution: {integrity: sha512-kso740gqMVVqritCQliQCpfPwos9lxp7/TEiEev4w6GGQyLNRyfriWY+DWxfawMY/DwGDzBl2DZtekCMf73bzw==}
     dev: true
 
   /date-fns/2.27.0:
@@ -1991,8 +1991,8 @@ packages:
       svelte: 3.44.3
     dev: true
 
-  /svelte-preprocess/4.10.0_780263383bd82c24c3a39ba88c8c2aa6:
-    resolution: {integrity: sha512-uZgGyC4SwkFoby2ceiMgGYs4qHYGz2fT06cAsHO8FHdDbvj1dKQyQ/fD9OB0KLymVv0fmzuJo/On7Kv7AeVhWA==}
+  /svelte-preprocess/4.10.1_780263383bd82c24c3a39ba88c8c2aa6:
+    resolution: {integrity: sha512-NSNloaylf+o9UeyUR2KvpdxrAyMdHl3U7rMnoP06/sG0iwJvlUM4TpMno13RaNqovh4AAoGsx1jeYcIyuGUXMw==}
     engines: {node: '>= 9.11.2'}
     requiresBuild: true
     peerDependencies:
@@ -2062,8 +2062,8 @@ packages:
       stable: 0.1.8
     dev: true
 
-  /tailwindcss/3.0.5_16a290f6d0e3717bf6d2667234aebd30:
-    resolution: {integrity: sha512-59pNgzx2o+wkAk7IZGIH7H9eNS53gzZGrO3+NPyOEWHDbquHgiLL/c993T5t1vPSAeBxox4X5OgZwNuRvXVf+g==}
+  /tailwindcss/3.0.7_16a290f6d0e3717bf6d2667234aebd30:
+    resolution: {integrity: sha512-rZdKNHtC64jcQncLoWOuCzj4lQDTAgLtgK3WmQS88tTdpHh9OwLqULTQxI3tw9AMJsqSpCKlmcjW/8CSnni6zQ==}
     engines: {node: '>=12.13.0'}
     hasBin: true
     peerDependencies:

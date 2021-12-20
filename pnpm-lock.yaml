@@ -5,7 +5,7 @@ specifiers:
   '@sveltejs/kit': next
   '@tailwindcss/typography': 0.5.0
   autoprefixer: 10.4.0
-  cssnano: 5.0.13
+  cssnano: 5.0.14
   daisyui: 1.16.6
   date-fns: 2.27.0
   fathom-client: 3.2.0
@@ -31,7 +31,7 @@ devDependencies:
   '@sveltejs/kit': 1.0.0-next.202_svelte@3.44.3
   '@tailwindcss/typography': 0.5.0_tailwindcss@3.0.7
   autoprefixer: 10.4.0_postcss@8.4.5
-  cssnano: 5.0.13_postcss@8.4.5
+  cssnano: 5.0.14_postcss@8.4.5
   daisyui: 1.16.6
   date-fns: 2.27.0
   fathom-client: 3.2.0
@@ -543,14 +543,13 @@ packages:
       postcss: 8.4.5
     dev: true
 
-  /cssnano/5.0.13_postcss@8.4.5:
-    resolution: {integrity: sha512-cAmLruIF28a7vKIOieXCTrllaLwbouxV1PPi8Z4M+XloXbmeooWAu4KhJgASo4vQUwbs2pqDgAlnZ1ZKJZKtuw==}
+  /cssnano/5.0.14_postcss@8.4.5:
+    resolution: {integrity: sha512-qzhRkFvBhv08tbyKCIfWbxBXmkIpLl1uNblt8SpTHkgLfON5OCPX/CCnkdNmEosvo8bANQYmTTMEgcVBlisHaw==}
     engines: {node: ^10 || ^12 || >=14.0}
     peerDependencies:
       postcss: ^8.2.15
     dependencies:
       cssnano-preset-default: 5.1.9_postcss@8.4.5
-      is-resolvable: 1.1.0
       lilconfig: 2.0.4
       postcss: 8.4.5
       yaml: 1.10.2
@@ -1096,10 +1095,6 @@ packages:
   /is-plain-obj/4.0.0:
     resolution: {integrity: sha512-NXRbBtUdBioI73y/HmOhogw/U5msYPC9DAtGkJXeFcFWSFZw0mCUsPxk/snTuJHzNKA8kLBK4rH97RMB1BfCXw==}
     engines: {node: '>=12'}
-    dev: true
-
-  /is-resolvable/1.1.0:
-    resolution: {integrity: sha512-qgDYXFSR5WvEfuS5dMj6oTMEbrrSaM0CrFk2Yiq/gXnBvD9pMa2jGXxyhGLfvhZpuMZe18CJpFxAt3CRs42NMg==}
     dev: true
 
   /is-stream/2.0.1:

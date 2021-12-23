@@ -9,7 +9,7 @@ specifiers:
   daisyui: 1.16.6
   date-fns: 2.27.0
   fathom-client: 3.2.0
-  fuse.js: 6.4.6
+  fuse.js: 6.5.3
   husky: 7.0.4
   mdsvex: 0.9.8
   postcss: 8.4.5
@@ -35,7 +35,7 @@ devDependencies:
   daisyui: 1.16.6
   date-fns: 2.27.0
   fathom-client: 3.2.0
-  fuse.js: 6.4.6
+  fuse.js: 6.5.3
   husky: 7.0.4
   mdsvex: 0.9.8_svelte@3.44.3
   postcss: 8.4.5
@@ -914,8 +914,8 @@ packages:
     resolution: {integrity: sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==}
     dev: true
 
-  /fuse.js/6.4.6:
-    resolution: {integrity: sha512-/gYxR/0VpXmWSfZOIPS3rWwU8SHgsRTwWuXhyb2O6s7aRuVtHtxCkR33bNYu3wyLyNx/Wpv0vU7FZy8Vj53VNw==}
+  /fuse.js/6.5.3:
+    resolution: {integrity: sha512-sA5etGE7yD/pOqivZRBvUBd/NaL2sjAu6QuSaFoe1H2BrJSkH/T/UXAJ8CdXdw7DvY3Hs8CXKYkDWX7RiP5KOg==}
     engines: {node: '>=10'}
     dev: true
 

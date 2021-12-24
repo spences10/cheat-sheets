@@ -25,7 +25,7 @@
     "@sveltejs/kit": "next",
     "@tailwindcss/typography": "0.5.0",
     "autoprefixer": "10.4.0",
-    "cssnano": "5.0.13",
+    "cssnano": "5.0.14",
     "daisyui": "1.16.6",
     "date-fns": "2.27.0",
     "fathom-client": "3.2.0",

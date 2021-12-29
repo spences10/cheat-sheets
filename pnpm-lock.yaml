@@ -6,7 +6,7 @@ specifiers:
   '@tailwindcss/typography': 0.5.0
   autoprefixer: 10.4.0
   cssnano: 5.0.14
-  daisyui: 1.16.6
+  daisyui: 1.20.0
   date-fns: 2.27.0
   fathom-client: 3.2.0
   fuse.js: 6.5.3
@@ -32,7 +32,7 @@ devDependencies:
   '@tailwindcss/typography': 0.5.0_tailwindcss@3.0.7
   autoprefixer: 10.4.0_postcss@8.4.5
   cssnano: 5.0.14_postcss@8.4.5
-  daisyui: 1.16.6
+  daisyui: 1.20.0
   date-fns: 2.27.0
   fathom-client: 3.2.0
   fuse.js: 6.5.3
@@ -562,8 +562,8 @@ packages:
       css-tree: 1.1.3
     dev: true
 
-  /daisyui/1.16.6:
-    resolution: {integrity: sha512-kso740gqMVVqritCQliQCpfPwos9lxp7/TEiEev4w6GGQyLNRyfriWY+DWxfawMY/DwGDzBl2DZtekCMf73bzw==}
+  /daisyui/1.20.0:
+    resolution: {integrity: sha512-vHXw/M9KRIkdPE6r2KSqfGNg/evoCXyZFsGZQDi4PNDOlP7wL+3YmPev5M+CvmviB2kXhorekQXpulbTTqLAZQ==}
     dev: true
 
   /date-fns/2.27.0:

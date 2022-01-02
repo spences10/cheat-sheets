@@ -7,7 +7,7 @@ specifiers:
   autoprefixer: 10.4.0
   cssnano: 5.0.14
   daisyui: 1.20.0
-  date-fns: 2.27.0
+  date-fns: 2.28.0
   fathom-client: 3.2.0
   fuse.js: 6.5.3
   husky: 7.0.4
@@ -33,7 +33,7 @@ devDependencies:
   autoprefixer: 10.4.0_postcss@8.4.5
   cssnano: 5.0.14_postcss@8.4.5
   daisyui: 1.20.0
-  date-fns: 2.27.0
+  date-fns: 2.28.0
   fathom-client: 3.2.0
   fuse.js: 6.5.3
   husky: 7.0.4
@@ -560,8 +560,8 @@ packages:
     resolution: {integrity: sha512-vHXw/M9KRIkdPE6r2KSqfGNg/evoCXyZFsGZQDi4PNDOlP7wL+3YmPev5M+CvmviB2kXhorekQXpulbTTqLAZQ==}
     dev: true
 
-  /date-fns/2.27.0:
-    resolution: {integrity: sha512-sj+J0Mo2p2X1e306MHq282WS4/A8Pz/95GIFcsPNMPMZVI3EUrAdSv90al1k+p74WGLCruMXk23bfEDZa71X9Q==}
+  /date-fns/2.28.0:
+    resolution: {integrity: sha512-8d35hViGYx/QH0icHYCeLmsLmMUheMmTyV9Fcm6gvNwdw31yXXH+O85sOBJ+OLnLQMKZowvpKb6FgMIQjcpvQw==}
     engines: {node: '>=0.11'}
     dev: true
 

@@ -6,7 +6,7 @@ specifiers:
   '@tailwindcss/typography': 0.5.0
   autoprefixer: 10.4.2
   cssnano: 5.0.15
-  daisyui: 1.22.0
+  daisyui: 1.22.2
   date-fns: 2.28.0
   fathom-client: 3.2.0
   fuse.js: 6.5.3
@@ -28,11 +28,11 @@ specifiers:
 
 devDependencies:
   '@sveltejs/adapter-vercel': 1.0.0-next.36
-  '@sveltejs/kit': 1.0.0-next.227_svelte@3.45.0
+  '@sveltejs/kit': 1.0.0-next.228_svelte@3.45.0
   '@tailwindcss/typography': 0.5.0_tailwindcss@3.0.13
   autoprefixer: 10.4.2_postcss@8.4.5
   cssnano: 5.0.15_postcss@8.4.5
-  daisyui: 1.22.0
+  daisyui: 1.22.2
   date-fns: 2.28.0
   fathom-client: 3.2.0
   fuse.js: 6.5.3
@@ -110,8 +110,8 @@ packages:
       esbuild: 0.13.15
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.227_svelte@3.45.0:
-    resolution: {integrity: sha512-AyTM51Mo01sV7Z3k0yEjKeSVfN84cXqu4+63FiSNMSvalIO9UfBYcKqfRZDtR/nPvw1zFNCC2HFAvRJGKIY8Xw==}
+  /@sveltejs/kit/1.0.0-next.228_svelte@3.45.0:
+    resolution: {integrity: sha512-77e8G7CcmqHhMyAbtjrAWjRDDgFiZArFhujKGql5YM68TWx0cCoipqGdhK0m3EJ/t/NL+T2YuK/9nvtrSNEK6A==}
     engines: {node: '>=14.13'}
     hasBin: true
     peerDependencies:
@@ -556,8 +556,8 @@ packages:
       css-tree: 1.1.3
     dev: true
 
-  /daisyui/1.22.0:
-    resolution: {integrity: sha512-Gu5u+uGvEVJncgbf9lYVT4NbnYkPSxm2IRe7XcHYj8qBhOvXOVZpM+ifp4zj1/YvJhcViP+hjSYXlQCLd3ItfQ==}
+  /daisyui/1.22.2:
+    resolution: {integrity: sha512-uaG7JC2wOEbcZT6mzODlfUjA0XOsCGcmJTda6qhdlYSaPoJDi9u87sfT64Hh8CNA1eeKpCm9xGt2WAWUcwqzIQ==}
     dev: true
 
   /date-fns/2.28.0:

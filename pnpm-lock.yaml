@@ -23,13 +23,13 @@ specifiers:
   remark-external-links: 9.0.1
   svelte: 3.46.1
   svelte-preprocess: 4.10.1
-  tailwindcss: 3.0.13
+  tailwindcss: 3.0.15
   theme-change: 2.0.2
 
 devDependencies:
   '@sveltejs/adapter-vercel': 1.0.0-next.36
-  '@sveltejs/kit': 1.0.0-next.229_svelte@3.46.1
-  '@tailwindcss/typography': 0.5.0_tailwindcss@3.0.13
+  '@sveltejs/kit': 1.0.0-next.230_svelte@3.46.1
+  '@tailwindcss/typography': 0.5.0_tailwindcss@3.0.15
   autoprefixer: 10.4.2_postcss@8.4.5
   cssnano: 5.0.15_postcss@8.4.5
   daisyui: 1.22.2
@@ -49,7 +49,7 @@ devDependencies:
   remark-external-links: 9.0.1
   svelte: 3.46.1
   svelte-preprocess: 4.10.1_9544d19e95c38e8f8ad87ee77c857e42
-  tailwindcss: 3.0.13_ef48b3b8837f8a23677bffe8f9cd866d
+  tailwindcss: 3.0.15_ef48b3b8837f8a23677bffe8f9cd866d
   theme-change: 2.0.2
 
 packages:
@@ -110,8 +110,8 @@ packages:
       esbuild: 0.13.15
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.229_svelte@3.46.1:
-    resolution: {integrity: sha512-i609g5T58Qdgh/qgO1atak70R7woNuJwWp7GtF/YUOZ9csMR9JPUr1tfX9lSh2I4Ez7j+Dc10RLlQ3szVywfXA==}
+  /@sveltejs/kit/1.0.0-next.230_svelte@3.46.1:
+    resolution: {integrity: sha512-97i5KK7oDqgzm8rSQTqXsscTt1ajkjlamidaxtADL183NiYWi1kqkOt+mskYU+RverGUuHTNl/8yg5p5ZEZm1A==}
     engines: {node: '>=14.13'}
     hasBin: true
     peerDependencies:
@@ -152,7 +152,7 @@ packages:
       - supports-color
     dev: true
 
-  /@tailwindcss/typography/0.5.0_tailwindcss@3.0.13:
+  /@tailwindcss/typography/0.5.0_tailwindcss@3.0.15:
     resolution: {integrity: sha512-1p/3C6C+JJziS/ghtG8ACYalbA2SyLJY27Pm33cVTlAoY6VQ7zfm2H64cPxUMBkVIlWXTtWHhZcZJPobMRmQAA==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1 || insiders'
@@ -161,7 +161,7 @@ packages:
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
-      tailwindcss: 3.0.13_ef48b3b8837f8a23677bffe8f9cd866d
+      tailwindcss: 3.0.15_ef48b3b8837f8a23677bffe8f9cd866d
     dev: true
 
   /@trysound/sax/0.2.0:
@@ -2021,8 +2021,8 @@ packages:
       stable: 0.1.8
     dev: true
 
-  /tailwindcss/3.0.13_ef48b3b8837f8a23677bffe8f9cd866d:
-    resolution: {integrity: sha512-raRPGFwQSGXn/3h0ttHND9jyPYfqk/ur2NXtlQuK25+ZnrCjlH1s1j4/oPswHGMoZzGNykUVycZ/LcROanUE0A==}
+  /tailwindcss/3.0.15_ef48b3b8837f8a23677bffe8f9cd866d:
+    resolution: {integrity: sha512-bT2iy7FtjwgsXik4ZoJnHXR+SRCiGR1W95fVqpLZebr64m4ahwUwRbIAc5w5+2fzr1YF4Ct2eI7dojMRRl8sVQ==}
     engines: {node: '>=12.13.0'}
     hasBin: true
     peerDependencies:

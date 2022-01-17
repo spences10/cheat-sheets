@@ -6,6 +6,12 @@ published: true
 slug: wsl
 ---
 
+## Shutdown one WSL instance
+
+```bash
+wsl --terminate Ubuntu # or whatever the distro is called
+```
+
 ## Shutdown WSL
 
 Localhost not working?

@@ -8,7 +8,7 @@ specifiers:
   cssnano: 5.0.15
   daisyui: 1.22.2
   date-fns: 2.28.0
-  fathom-client: 3.2.0
+  fathom-client: 3.3.1
   fuse.js: 6.5.3
   husky: 7.0.4
   mdsvex: 0.9.8
@@ -34,7 +34,7 @@ devDependencies:
   cssnano: 5.0.15_postcss@8.4.5
   daisyui: 1.22.2
   date-fns: 2.28.0
-  fathom-client: 3.2.0
+  fathom-client: 3.3.1
   fuse.js: 6.5.3
   husky: 7.0.4
   mdsvex: 0.9.8_svelte@3.46.2
@@ -865,8 +865,8 @@ packages:
       reusify: 1.0.4
     dev: true
 
-  /fathom-client/3.2.0:
-    resolution: {integrity: sha512-WF/qA5wXYSuA5K8uiIhGNbErOcTAmfLEWrBxWP2px2dEc9waH9zxjdh9k0F907VCBhdJrv+f7V3HT/Pmro40zA==}
+  /fathom-client/3.3.1:
+    resolution: {integrity: sha512-eDRVKZ6JTs/IY7cRAYhj7tfnQTKk8HIFBxdlyzbg9m5Pmz6lNLJ7BfSfA1i2LEMbOx2yHUudu0ux4sOiWz1O0A==}
     dev: true
 
   /fill-range/7.0.1:

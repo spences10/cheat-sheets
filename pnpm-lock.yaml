@@ -11,7 +11,7 @@ specifiers:
   fathom-client: 3.4.0
   fuse.js: 6.5.3
   husky: 7.0.4
-  mdsvex: 0.9.8
+  mdsvex: 0.10.5
   postcss: 8.4.5
   postcss-load-config: 3.1.1
   prettier: 2.5.1
@@ -37,7 +37,7 @@ devDependencies:
   fathom-client: 3.4.0
   fuse.js: 6.5.3
   husky: 7.0.4
-  mdsvex: 0.9.8_svelte@3.46.3
+  mdsvex: 0.10.5_svelte@3.46.3
   postcss: 8.4.5
   postcss-load-config: 3.1.1
   prettier: 2.5.1
@@ -1145,8 +1145,8 @@ packages:
     resolution: {integrity: sha512-dn6wd0uw5GsdswPFfsgMp5NSB0/aDe6fK94YJV/AJDYXL6HVLWBsxeq7js7Ad+mU2K9LAlwpk6kN2D5mwCPVow==}
     dev: true
 
-  /mdsvex/0.9.8_svelte@3.46.3:
-    resolution: {integrity: sha512-5QvThjRKoKkGH00qdHxLZ5ROd80RgGiJvM2B9opeFreaiGFTLoKKFUgEBCslLrwM24cVGJLmIM3rR83OFDf3tQ==}
+  /mdsvex/0.10.5_svelte@3.46.3:
+    resolution: {integrity: sha512-/B23WZn5Vjrjh7Qp2YsOXLkU9YFm59IEylKNXC10o05ZaCP4LNv32tGXKP6aEssss6hk/LdISJuneELHFIS2pQ==}
     peerDependencies:
       svelte: 3.x
     dependencies:

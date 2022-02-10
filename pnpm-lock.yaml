@@ -23,13 +23,13 @@ specifiers:
   remark-external-links: 9.0.1
   svelte: 3.46.4
   svelte-preprocess: 4.10.2
-  tailwindcss: 3.0.18
+  tailwindcss: 3.0.19
   theme-change: 2.0.2
 
 devDependencies:
   '@sveltejs/adapter-vercel': 1.0.0-next.40
   '@sveltejs/kit': 1.0.0-next.260_svelte@3.46.4
-  '@tailwindcss/typography': 0.5.1_tailwindcss@3.0.18
+  '@tailwindcss/typography': 0.5.1_tailwindcss@3.0.19
   autoprefixer: 10.4.2_postcss@8.4.6
   cssnano: 5.0.17_postcss@8.4.6
   daisyui: 1.25.4
@@ -49,7 +49,7 @@ devDependencies:
   remark-external-links: 9.0.1
   svelte: 3.46.4
   svelte-preprocess: 4.10.2_dfbf91453845dc558e5c7750ff21fcdc
-  tailwindcss: 3.0.18_833e1018ad0d7954aa80c53675939269
+  tailwindcss: 3.0.19_833e1018ad0d7954aa80c53675939269
   theme-change: 2.0.2
 
 packages:
@@ -152,7 +152,7 @@ packages:
       - supports-color
     dev: true
 
-  /@tailwindcss/typography/0.5.1_tailwindcss@3.0.18:
+  /@tailwindcss/typography/0.5.1_tailwindcss@3.0.19:
     resolution: {integrity: sha512-AmSzZSgLhHKlILKduU+PKBTHL6c+al82syZlRid1xgmlWwXagLigO+O++B4C0scpMfzW//f/3YCRcwwEHWoU3w==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1 || insiders'
@@ -160,7 +160,7 @@ packages:
       lodash.castarray: 4.4.0
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
-      tailwindcss: 3.0.18_833e1018ad0d7954aa80c53675939269
+      tailwindcss: 3.0.19_833e1018ad0d7954aa80c53675939269
     dev: true
 
   /@trysound/sax/0.2.0:
@@ -1040,8 +1040,8 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /is-core-module/2.8.0:
-    resolution: {integrity: sha512-vd15qHsaqrRL7dtH6QNuy0ndJmRDrS9HAM1CAiSifNUFv4x1a0CCVsj18hJ1mShxIG6T2i1sO78MkP56r0nYRw==}
+  /is-core-module/2.8.1:
+    resolution: {integrity: sha512-SdNCUs284hr40hFTFP6l0IfZ/RSrMXF3qgoRHd3/79unUTvrFO/JoXwkGm+5J/Oe3E/b5GsnG330uUNgRpu1PA==}
     dependencies:
       has: 1.0.3
     dev: true
@@ -1793,11 +1793,11 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  /resolve/1.21.0:
-    resolution: {integrity: sha512-3wCbTpk5WJlyE4mSOtDLhqQmGFi0/TD9VPwmiolnk8U0wRgMEktqCXd3vy5buTO3tljvalNvKrjHEfrd2WpEKA==}
+  /resolve/1.22.0:
+    resolution: {integrity: sha512-Hhtrw0nLeSrFQ7phPp4OOcVjLPIeMnRlr5mcnVuMe7M/7eBn98A3hmFRLoFo3DLZkivSYwhRUJTyPyWAk56WLw==}
     hasBin: true
     dependencies:
-      is-core-module: 2.8.0
+      is-core-module: 2.8.1
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
     dev: true
@@ -2013,8 +2013,8 @@ packages:
       stable: 0.1.8
     dev: true
 
-  /tailwindcss/3.0.18_833e1018ad0d7954aa80c53675939269:
-    resolution: {integrity: sha512-ihPTpEyA5ANgZbwKlgrbfnzOp9R5vDHFWmqxB1PT8NwOGCOFVVMl+Ps1cQQ369acaqqf1BEF77roCwK0lvNmTw==}
+  /tailwindcss/3.0.19_833e1018ad0d7954aa80c53675939269:
+    resolution: {integrity: sha512-rjsdfz/qZya5xQ0OVynEMETgWq1CacmftgMYeXXh6bRM5vxsNwRSbMJsCCIjq/w67om9VP/AFMolOwiE+5VKig==}
     engines: {node: '>=12.13.0'}
     hasBin: true
     peerDependencies:
@@ -2042,7 +2042,7 @@ packages:
       postcss-selector-parser: 6.0.9
       postcss-value-parser: 4.2.0
       quick-lru: 5.1.1
-      resolve: 1.21.0
+      resolve: 1.22.0
     transitivePeerDependencies:
       - ts-node
     dev: true
@@ -2169,7 +2169,7 @@ packages:
     dependencies:
       esbuild: 0.13.15
       postcss: 8.4.6
-      resolve: 1.21.0
+      resolve: 1.22.0
       rollup: 2.61.1
     optionalDependencies:
       fsevents: 2.3.2

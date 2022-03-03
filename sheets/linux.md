@@ -6,6 +6,20 @@ published: true
 slug: linux
 ---
 
+## Tar and untar
+
+To compress a file/folder into a `.tar.gz` archive:
+
+```bash
+tar -cvfz archive.tar.gz folder
+```
+
+To decompress a folder/folder:
+
+```bash
+tar -xvfz archive.tar.gz
+```
+
 ## Install a binary
 
 If you're working on a local machine with administrator permissions,

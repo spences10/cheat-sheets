@@ -5,8 +5,6 @@
   import { ogImageUrl } from '$lib/og-image-url-build'
   import Fuse from 'fuse.js'
 
-  export const prerender = true
-
   export async function load() {
     const sheets = await getSheets()
 

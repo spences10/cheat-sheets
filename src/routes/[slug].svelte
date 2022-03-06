@@ -1,6 +1,4 @@
 <script context="module">
-  export const prerender = true
-
   export async function load({ params }) {
     try {
       const Post = await import(`../../sheets/${params.slug}.md`)

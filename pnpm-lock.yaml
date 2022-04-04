@@ -22,7 +22,7 @@ specifiers:
   rehype-slug: 5.0.1
   remark-external-links: 9.0.1
   svelte: 3.46.6
-  svelte-preprocess: 4.10.4
+  svelte-preprocess: 4.10.5
   tailwindcss: 3.0.23
   theme-change: 2.0.2
 
@@ -48,7 +48,7 @@ devDependencies:
   rehype-slug: 5.0.1
   remark-external-links: 9.0.1
   svelte: 3.46.6
-  svelte-preprocess: 4.10.4_0a0033d5867bac6f6a8828d3bfcd02f8
+  svelte-preprocess: 4.10.5_0a0033d5867bac6f6a8828d3bfcd02f8
   tailwindcss: 3.0.23_autoprefixer@10.4.4
   theme-change: 2.0.2
 
@@ -2245,8 +2245,8 @@ packages:
       svelte: 3.46.6
     dev: true
 
-  /svelte-preprocess/4.10.4_0a0033d5867bac6f6a8828d3bfcd02f8:
-    resolution: {integrity: sha512-fuwol0N4UoHsNQolLFbMqWivqcJ9N0vfWO9IuPAiX/5okfoGXURyJ6nECbuEIv0nU3M8Xe2I1ONNje2buk7l6A==}
+  /svelte-preprocess/4.10.5_0a0033d5867bac6f6a8828d3bfcd02f8:
+    resolution: {integrity: sha512-VKXPRScCzAZqeBZOGq4LLwtNrAu++mVn7XvQox3eFDV7Ciq0Lg70Q8QWjH9iXF7J+pMlXhPsSFwpCb2E+hoeyA==}
     engines: {node: '>= 9.11.2'}
     requiresBuild: true
     peerDependencies:

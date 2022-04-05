@@ -1,7 +1,7 @@
 <script context="module">
   import { getSheets } from '$lib/get-sheets'
   import Head from '$lib/head.svelte'
-  import { author,description,name,website } from '$lib/info'
+  import { author, description, name, website } from '$lib/info'
   import { ogImageUrl } from '$lib/og-image-url-build'
   import Fuse from 'fuse.js'
 
@@ -47,30 +47,32 @@
     type="text"
     bind:value={query}
     placeholder="Search"
-    class="input input-primary input-bordered text-xl"
+    class="input input-primary input-bordered text-xl mb-10"
   />
 </div>
 
-{#if results.length === 0}
-  <ul>
+<ul
+  class="mb-10 grid gap-5 grid-cols-1 xs:grid-cols-2 md:grid-cols-3"
+>
+  {#if results.length === 0}
     {#each sheets as sheet}
       {#if sheet.published}
-        <li class="font-medium my-5 text-4xl">
+        <li
+          class="font-medium text-3xl border border-primary rounded-2xl p-5"
+        >
           <a class="link" sveltekit:prefetch href={`/${sheet.slug}`}
             >{sheet.title}</a
           >
         </li>
       {/if}
     {/each}
-  </ul>
-{:else}
-  {#each results as result}
-    <ul>
+  {:else}
+    {#each results as result}
       <li class="font-medium my-5 text-4xl">
         <a class="link" sveltekit:prefetch href={result.item.slug}>
           {result.item.title}
         </a>
       </li>
-    </ul>
-  {/each}
-{/if}
+    {/each}
+  {/if}
+</ul>

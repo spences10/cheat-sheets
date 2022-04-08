@@ -1,5 +1,6 @@
 import adapter from '@sveltejs/adapter-vercel'
 import { mdsvex } from 'mdsvex'
+import path from 'path'
 import preprocess from 'svelte-preprocess'
 import mdsvexConfig from './mdsvex.config.js'
 
@@ -15,6 +16,11 @@ const config = {
           // Allow serving files from one level up to the project root
           // posts, copy
           allow: ['..'],
+        },
+      },
+      resolve: {
+        alias: {
+          '$lib': path.resolve('./src/lib'),
         },
       },
     },

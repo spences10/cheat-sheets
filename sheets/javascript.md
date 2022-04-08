@@ -471,7 +471,7 @@ document.getElementsByTagName('html')[0].style['font-size'] = '10px'
 
 ## Checking for `window`
 
-Thanks to [Nicky Meuleman] for this one.
+<Author author="NickyMeuleman" />
 
 [Optional chaining] can not be used on `window`. It will throw an
 error when used on any undeclared root object, so no escaping the
@@ -480,8 +480,6 @@ error when used on any undeclared root object, so no escaping the
 ## Unique Array of Values with Set and Spread Operator [ES6]
 
 <Author author="anniebombanie" />
-
-Thanks to [Annie Liew] for this one.
 
 In ES6, Set objects are collections of values. Set uses strict
 equality (`===`) to check values & each value may only occur once. We
@@ -526,10 +524,10 @@ console.log(obj)
 <!-- Links -->
 
 [nicky meuleman]: https://twitter.com/NMeuleman
+NickyMeuleman
 [optional chaining]:
   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining
 [object.assign]:
   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
 [spread syntax]:
   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
-[annie liew]: https://twitter.com/anniebombanie_

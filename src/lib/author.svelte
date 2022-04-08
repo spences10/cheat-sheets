@@ -27,7 +27,7 @@
     <a href={data.html_url} target="_blank" rel="noopener">
       <div class="text-sm">
         <p class="text-lg font-bold tracking-widest">{data.name}</p>
-        <p>{data.bio}</p>
+        <p>{data.bio || ``}</p>
       </div>
     </a>
   </div>

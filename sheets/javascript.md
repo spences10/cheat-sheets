@@ -6,6 +6,10 @@ published: true
 slug: javascript
 ---
 
+<script>
+  import Author from '$lib/author.svelte'
+</script>
+
 ## Document Design Mode
 
 Edit a web page, set the design mode to on.
@@ -467,7 +471,7 @@ document.getElementsByTagName('html')[0].style['font-size'] = '10px'
 
 ## Checking for `window`
 
-Thanks to [Nicky Meuleman] for this one.
+<Author author="NickyMeuleman" />
 
 [Optional chaining] can not be used on `window`. It will throw an
 error when used on any undeclared root object, so no escaping the
@@ -475,20 +479,20 @@ error when used on any undeclared root object, so no escaping the
 
 ## Unique Array of Values with Set and Spread Operator [ES6]
 
-Thanks to [Annie Liew] for this one.
+<Author author="anniebombanie" />
 
-In ES6, Set objects are collections of values.
-Set uses strict equality (`===`) to check values & each value may only occur once.
-We use the spread operator to convert the Set object into an array.
+In ES6, Set objects are collections of values. Set uses strict
+equality (`===`) to check values & each value may only occur once. We
+use the spread operator to convert the Set object into an array.
 
 ```js
-const numArr = [1, 1, 1, 2, 3];
+const numArr = [1, 1, 1, 2, 3]
 // (5) [1, 1, 1, 2, 3]
 
-const uniqueNumSet = new Set(numArr);
+const uniqueNumSet = new Set(numArr)
 // Set(3) {1, 2, 3}
 
-const uniqueNumArr = [...new Set(numArr)];
+const uniqueNumArr = [...new Set(numArr)]
 // (3) [1, 2, 3]
 ```
 
@@ -496,25 +500,34 @@ If you prefer something a bit more explicit, you can do this instead:
 `const uniqueNumArr = Array.from(uniqueNumSet)`
 
 ## Convert an array of objects into a single object
-If you have an array of objects, you can convert that list of objects into a single object by using [`Object.assign()`][Object.assign] and [spread syntax][spread syntax]. The `Object.assign()` method copies all enumerable own properties from one or more source objects to a target object and it returns the modified target object. We use spread syntax `...` on the array `items` so that each object in the array can be "expanded" in places where key-value pairs exists.
+
+If you have an array of objects, you can convert that list of objects
+into a single object by using [`Object.assign()`][object.assign] and
+[spread syntax][spread syntax]. The `Object.assign()` method copies
+all enumerable own properties from one or more source objects to a
+target object and it returns the modified target object. We use spread
+syntax `...` on the array `items` so that each object in the array can
+be "expanded" in places where key-value pairs exists.
 
 ```js
 const items = [
   { address: '123 ABC street' },
   { isLeased: false },
-  { hasPool: true }
+  { hasPool: true },
 ]
 
-const obj = Object.assign({}, ...items);
-console.log(obj);
+const obj = Object.assign({}, ...items)
+console.log(obj)
 // { "address": "123 ABC street", "isLeased": false, "hasPool": true }
 ```
 
 <!-- Links -->
 
 [nicky meuleman]: https://twitter.com/NMeuleman
+NickyMeuleman
 [optional chaining]:
   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining
-[Object.assign]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
-[spread syntax]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
-[annie liew]: https://twitter.com/anniebombanie_
+[object.assign]:
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
+[spread syntax]:
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax

@@ -6,6 +6,10 @@ published: true
 slug: git
 ---
 
+<script>
+  import Author from '$lib/author.svelte'
+</script>
+
 ## Use a git patch file
 
 How to apply a git patch file.
@@ -26,7 +30,7 @@ git apply the-patch-file.patch
 
 Don't want to have the default branch called master?
 
-Thanks to [Mathias Bynens] for this one.
+<Author author="mathiasbynens" />
 
 ```bash
 mkdir -p ~/.config/git/template
@@ -920,5 +924,3 @@ Reference: https://docs.gitignore.io/install/command-line
 [syncing a fork]: https://help.github.com/articles/syncing-a-fork/
 [adding an existing project to github using the command line]:
   https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/
-[mathias bynens]:
-  https://twitter.com/mathias/status/1277896371455090688

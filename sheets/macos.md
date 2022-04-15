@@ -6,6 +6,10 @@ published: true
 slug: macos
 ---
 
+<script>
+  import Author from '$lib/author.svelte'
+</script>
+
 ## Install Git without xcode
 
 In the terminal app do:
@@ -21,10 +25,7 @@ would come with many Linux distros by default.
 You can investigate the install:
 `/Library/Developer/CommandLineTools/`
 
-Thanks to [Harris Geo] for the tip 👍
-
-[harris geo]:
-  https://twitter.com/harrisgeo88/status/1346518293805469697
+<Author author="harrisgeo88" />
 
 ## Screen snip
 

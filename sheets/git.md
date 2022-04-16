@@ -38,6 +38,12 @@ echo 'ref: refs/heads/main' > ~/.config/git/template/HEAD
 git config --global init.templateDir ~/.config/git/template/
 ```
 
+Since version `2.28` of `Git` this can be done using this command: 
+```bash
+git config --global init.defaultBranch main
+```
+For more info: [Highlights from Git 2.28](https://github.blog/2020-07-27-highlights-from-git-2-28/#introducing-init-defaultbranch)
+
 ## Add a repo from your machine to GitHub
 
 Create a new repo and push it to GitHub.

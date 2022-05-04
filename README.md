@@ -1,6 +1,6 @@
 # Cheat Sheets
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ## A searchable site of hints and tips!
@@ -44,6 +44,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://scottspence.com/"><img src="https://avatars.githubusercontent.com/u/234708?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Scott Spence</b></sub></a><br /><a href="https://github.com/spences10/cheat-sheets/commits?author=spences10" title="Code">💻</a> <a href="https://github.com/spences10/cheat-sheets/commits?author=spences10" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://nickymeuleman.netlify.app/"><img src="https://avatars.githubusercontent.com/u/30179461?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nicky Meuleman</b></sub></a><br /><a href="https://github.com/spences10/cheat-sheets/commits?author=NickyMeuleman" title="Documentation">📖</a></td>
   </tr>
 </table>
 

@@ -19,6 +19,15 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "NickyMeuleman",
+      "name": "Nicky Meuleman",
+      "avatar_url": "https://avatars.githubusercontent.com/u/30179461?v=4",
+      "profile": "https://nickymeuleman.netlify.app/",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7

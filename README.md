@@ -1,6 +1,6 @@
 # Cheat Sheets
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ## A searchable site of hints and tips!
@@ -49,6 +49,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/ghostdevv"><img src="https://avatars.githubusercontent.com/u/47755378?v=4?s=100" width="100px;" alt=""/><br /><sub><b>GHOST</b></sub></a><br /><a href="https://github.com/spences10/cheat-sheets/commits?author=ghostdevv" title="Documentation">📖</a></td>
     <td align="center"><a href="https://tannerdolby.com/"><img src="https://avatars.githubusercontent.com/u/48612525?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tanner Dolby</b></sub></a><br /><a href="https://github.com/spences10/cheat-sheets/commits?author=tannerdolby" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/marcusbarnesdeveloper"><img src="https://avatars.githubusercontent.com/u/59588519?v=4?s=100" width="100px;" alt=""/><br /><sub><b>marcusbarnesdeveloper</b></sub></a><br /><a href="https://github.com/spences10/cheat-sheets/commits?author=marcusbarnesdeveloper" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/anniebombanie"><img src="https://avatars.githubusercontent.com/u/42328163?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Annie</b></sub></a><br /><a href="https://github.com/spences10/cheat-sheets/commits?author=anniebombanie" title="Documentation">📖</a></td>
   </tr>
 </table>
 

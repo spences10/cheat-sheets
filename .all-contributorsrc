@@ -64,6 +64,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "anniebombanie",
+      "name": "Annie",
+      "avatar_url": "https://avatars.githubusercontent.com/u/42328163?v=4",
+      "profile": "https://github.com/anniebombanie",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7

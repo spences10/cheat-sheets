@@ -1,6 +1,6 @@
 # Cheat Sheets
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-9-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ## A searchable site of hints and tips!
@@ -53,6 +53,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/ddieppa"><img src="https://avatars.githubusercontent.com/u/10607192?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Daniel</b></sub></a><br /><a href="https://github.com/spences10/cheat-sheets/commits?author=ddieppa" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://www.trinity.moe/"><img src="https://avatars.githubusercontent.com/u/26193059?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Deven Blake</b></sub></a><br /><a href="https://github.com/spences10/cheat-sheets/commits?author=devenblake" title="Documentation">📖</a></td>
   </tr>
 </table>
 

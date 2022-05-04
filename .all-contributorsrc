@@ -82,6 +82,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "devenblake",
+      "name": "Deven Blake",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26193059?v=4",
+      "profile": "http://www.trinity.moe/",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7

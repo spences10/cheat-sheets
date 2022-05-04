@@ -100,6 +100,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "ozyx",
+      "name": "Jesse Mazzella",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9259993?v=4",
+      "profile": "https://github.com/ozyx",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7

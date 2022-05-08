@@ -38,11 +38,14 @@ echo 'ref: refs/heads/main' > ~/.config/git/template/HEAD
 git config --global init.templateDir ~/.config/git/template/
 ```
 
-Since version `2.28` of `Git` this can be done using this command: 
+Since version `2.28` of `Git` this can be done using this command:
+
 ```bash
 git config --global init.defaultBranch main
 ```
-For more info: [Highlights from Git 2.28](https://github.blog/2020-07-27-highlights-from-git-2-28/#introducing-init-defaultbranch)
+
+For more info:
+[Highlights from Git 2.28](https://github.blog/2020-07-27-highlights-from-git-2-28/#introducing-init-defaultbranch)
 
 ## Add a repo from your machine to GitHub
 
@@ -315,39 +318,38 @@ git update-index --no-assume-unchanged <file>
 
 ## Cloning a repo from someone else's GitHub and pushing it to a repo on my GitHub
 
-So you make a clone, make some changes then realise that you need to
-add it to your GitHub account before making a pull
+<Author author="rawkode" />
+
+So you make a clone of a repo that sin't yours, make some changes then
+realise that you need to add it to your GitHub account to make a PR.
 
 ```bash
 git remote -v
-origin  https://github.com/OtherUser/other-username/other-repo (fetch)
-origin  https://github.com/OtherUser/other-username/other-repo (push)
+origin  https://github.com/other-user/other-username/other-repo (fetch)
+origin  https://github.com/other-user/other-username/other-repo (push)
 ```
 
-You just need to set the `origin` to yours then add the `upstream` as
-the original `origin` make sense?
-
-So change `origin` to yours:
+You just need to set the clone your working on as the downstream repo.
 
 ```bash
-git remote set-url origin http://github.com/your-username/your-repo
-```
-
-Then add `upsrtream` as theirs:
-
-```bash
-git remote add upstream https://github.com/other-username/other-repo
+# add as downstream
+git remote add downstream https://github.com/your-username/your-repo
+# or as your username
+git remote add your-username https://github.com/your-username/your-repo
 ```
 
 Now it should look something like this:
 
 ```bash
 git remote -v
-origin  http://github.com/your-username/your-repo (fetch)
-origin  http://github.com/your-username/your-repo (push)
-upstream  https://github.com/other-username/other-repo (fetch)
-upstream  https://github.com/other-username/other-repo (push)
+origin  https://github.com/other-username/other-repo (fetch)
+origin  https://github.com/other-username/other-repo (push)
+downstream  http://github.com/your-username/your-repo (fetch)
+downstream  http://github.com/your-username/your-repo (push)
 ```
+
+You can then push your changes to the downstream repo and make a PR
+via GitHub.
 
 ## Remove an `upstream` repository
 

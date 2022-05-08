@@ -17,14 +17,24 @@
   class="not-prose border border-primary shadow-lg p-4 rounded-2xl"
 >
   <div class="flex space-x-5 justify-evenly">
-    <a href={data.html_url} target="_blank" rel="noopener">
+    <a
+      class="w-1/4"
+      href={data.html_url}
+      target="_blank"
+      rel="noopener"
+    >
       <img
-        class="w-20 h-20 p-0 m-0 rounded-full"
+        class="w-20 h-20 p-0 m-0 rounded-full object-cover"
         src={data.avatar_url}
         alt={data.name}
       />
     </a>
-    <a href={data.html_url} target="_blank" rel="noopener">
+    <a
+      class="w-3/4"
+      href={data.html_url}
+      target="_blank"
+      rel="noopener"
+    >
       <div class="text-sm">
         <p class="text-lg font-bold tracking-widest">{data.name}</p>
         <p>{data.bio || ``}</p>

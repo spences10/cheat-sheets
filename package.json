@@ -29,7 +29,7 @@
     "daisyui": "2.14.3",
     "date-fns": "2.28.0",
     "fathom-client": "3.4.1",
-    "fuse.js": "6.5.3",
+    "fuse.js": "6.6.1",
     "husky": "7.0.4",
     "mdsvex": "0.10.5",
     "postcss": "8.4.13",

@@ -22,13 +22,13 @@ specifiers:
   rehype-slug: 5.0.1
   remark-external-links: 9.0.1
   svelte: 3.48.0
-  svelte-preprocess: 4.10.6
+  svelte-preprocess: 4.10.7
   tailwindcss: 3.0.24
   theme-change: 2.0.2
 
 devDependencies:
   '@sveltejs/adapter-vercel': 1.0.0-next.58
-  '@sveltejs/kit': 1.0.0-next.347_svelte@3.48.0
+  '@sveltejs/kit': 1.0.0-next.348_svelte@3.48.0
   '@tailwindcss/typography': 0.5.2_tailwindcss@3.0.24
   autoprefixer: 10.4.7_postcss@8.4.14
   cssnano: 5.1.10_postcss@8.4.14
@@ -48,7 +48,7 @@ devDependencies:
   rehype-slug: 5.0.1
   remark-external-links: 9.0.1
   svelte: 3.48.0
-  svelte-preprocess: 4.10.6_x4nqt44wnukty73um2kz4qdzya
+  svelte-preprocess: 4.10.7_x4nqt44wnukty73um2kz4qdzya
   tailwindcss: 3.0.24
   theme-change: 2.0.2
 
@@ -111,8 +111,8 @@ packages:
       - supports-color
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.347_svelte@3.48.0:
-    resolution: {integrity: sha512-kxan2F8g9nM/4QzLINsPiZdLZLx6X2Tjg+Ft8KR2QPhHKCEQ3jlosnGTzmznt572PTg89UhiUhQWKK4IDk2nSA==}
+  /@sveltejs/kit/1.0.0-next.348_svelte@3.48.0:
+    resolution: {integrity: sha512-K9dfgzIbotWmbcdCsQ6ROGs9R+bsGWwmSdN6l6km1QV5esQehqg1UYHGD9q0VJsg4rJg/zmKVBYo0oBquSHPZw==}
     engines: {node: '>=16.7'}
     hasBin: true
     peerDependencies:
@@ -395,7 +395,7 @@ packages:
     dev: true
 
   /buffer-crc32/0.2.13:
-    resolution: {integrity: sha1-DTM+PwDqxQqhRUq9MO+MKl2ackI=}
+    resolution: {integrity: sha512-VO9Ht/+p3SN7SKWqcrgEzjGbRSJYTx+Q1pTQC0wrWqHx0vpJraQ6GtHx8tvcg1rlK1byhU5gccxgOgj7B0TDkQ==}
     dev: true
 
   /camelcase-css/2.0.1:
@@ -767,7 +767,7 @@ packages:
     dev: true
 
   /es6-promise/3.3.1:
-    resolution: {integrity: sha1-oIzd6EzNvzTQJ6FFG8kdS80ophM=}
+    resolution: {integrity: sha512-SOp9Phqvqn7jtEUxPWdWfWoLmyt2VaJ6MpvP9Comy1MceMXqE6bxvaTu4iaxpYYPzhny28Lc+M87/c2cPK6lDg==}
     dev: true
 
   /esbuild-android-64/0.14.42:
@@ -2494,8 +2494,8 @@ packages:
       svelte: 3.48.0
     dev: true
 
-  /svelte-preprocess/4.10.6_x4nqt44wnukty73um2kz4qdzya:
-    resolution: {integrity: sha512-I2SV1w/AveMvgIQlUF/ZOO3PYVnhxfcpNyGt8pxpUVhPfyfL/CZBkkw/KPfuFix5FJ9TnnNYMhACK3DtSaYVVQ==}
+  /svelte-preprocess/4.10.7_x4nqt44wnukty73um2kz4qdzya:
+    resolution: {integrity: sha512-sNPBnqYD6FnmdBrUmBCaqS00RyCsCpj2BG58A1JBswNF7b0OKviwxqVrOL/CKyJrLSClrSeqQv5BXNg2RUbPOw==}
     engines: {node: '>= 9.11.2'}
     requiresBuild: true
     peerDependencies:
@@ -2504,7 +2504,7 @@ packages:
       less: ^3.11.3 || ^4.0.0
       node-sass: '*'
       postcss: ^7 || ^8
-      postcss-load-config: ^2.1.0 || ^3.0.0
+      postcss-load-config: ^2.1.0 || ^3.0.0 || ^4.0.0
       pug: ^3.0.0
       sass: ^1.26.8
       stylus: ^0.55.0

@@ -19,7 +19,7 @@
 </script>
 
 <script>
-  import Head from '$lib/head.svelte'
+  import { Head } from 'svead'
   import { description, website } from '$lib/info'
   import { ogImageUrl } from '$lib/og-image-url-build'
   import TableOfContents from '$lib/table-of-contents.svelte'

@@ -19,11 +19,11 @@
 </script>
 
 <script>
-  import { Head } from 'svead'
-  import { description, website } from '$lib/info'
+  import { page } from '$app/stores'
   import { ogImageUrl } from '$lib/og-image-url-build'
   import TableOfContents from '$lib/table-of-contents.svelte'
   import { format } from 'date-fns'
+  import { Head } from 'svead'
   import { onMount } from 'svelte'
 
   export let Post, metadata
@@ -46,6 +46,7 @@
       }
     })
   })
+  let url = $page.url.toString()
 </script>
 
 <Head
@@ -56,7 +57,7 @@
     'cheatsheets.xyz',
     metadata.title
   )}
-  url={`${website}/${metadata.slug}`}
+  {url}
 />
 
 {#await getHeadings()}

@@ -4,6 +4,9 @@ createdDate: 2019-12-07
 updatedDate: 2021-01-04
 published: true
 slug: css
+description:
+  CSS is a style sheet language used for describing the presentation
+  of a document written in a markup language.
 ---
 
 ## Center anything, horizontally and vertically, with 3 lines of CSS:

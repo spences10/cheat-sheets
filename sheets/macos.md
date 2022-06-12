@@ -4,6 +4,7 @@ createdDate: 2018-04-05
 updatedDate: 2021-01-05
 published: true
 slug: macos
+description: macOS is a macOS operating system developed and published by Apple Inc.
 ---
 
 <script>

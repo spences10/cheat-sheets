@@ -4,6 +4,7 @@ createdDate: 2017-05-19
 updatedDate: 2020-08-18
 published: true
 slug: git
+description: Git is a version control system.
 ---
 
 <script>

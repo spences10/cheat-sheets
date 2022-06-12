@@ -4,6 +4,7 @@ createdDate: 2021-10-26
 updatedDate: 2021-10-26
 published: true
 slug: winget
+description: Winget is a package manager for Windows.
 ---
 
 ## Upgrade all packages

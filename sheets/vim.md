@@ -4,6 +4,7 @@ createdDate: 2020-08-06
 updatedDate: 2020-08-06
 published: true
 slug: vim
+description: Vim is a text editor.
 ---
 
 ## Exit Vim

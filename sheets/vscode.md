@@ -4,6 +4,7 @@ createdDate: 2019-05-27
 updatedDate: 2021-01-21
 published: true
 slug: vscode
+description: VS Code is a code editor for the Microsoft Windows operating system.
 ---
 
 ## Show Key presses

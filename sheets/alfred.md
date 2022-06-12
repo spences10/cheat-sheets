@@ -4,6 +4,7 @@ createdDate: 2019-11-19
 updatedDate: 2019-11-19
 published: true
 slug: alfred
+description: Alfred is a simple, powerful, and open-source workflow for macOS.
 ---
 
 <!-- Add Authors

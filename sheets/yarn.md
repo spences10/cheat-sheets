@@ -4,6 +4,7 @@ createdDate: 2017-05-19
 updatedDate: 2021-01-04
 published: true
 slug: yarn
+description: Yarn is a package manager for the JavaScript programming language.
 ---
 
 ## Yarn global binaries not showing

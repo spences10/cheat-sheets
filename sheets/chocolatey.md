@@ -4,6 +4,7 @@ createdDate: 2020-12-13
 updatedDate: 2020-12-13
 published: true
 slug: chocolatey
+description: Chocolatey is a package manager for Windows.
 ---
 
 ## List locally installed packages

@@ -50,7 +50,7 @@
 
 <Head
   title={`${metadata.title} · Cheat Sheets`}
-  {description}
+  description={`${metadata.description}`}
   image={ogImageUrl(
     'Scott Spence',
     'cheatsheets.xyz',

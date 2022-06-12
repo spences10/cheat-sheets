@@ -4,6 +4,7 @@ createdDate: 2017-10-11
 updatedDate: 2020-12-13
 published: true
 slug: wsl
+description: WSL is a Linux-based environment for Windows.
 ---
 
 ## Shutdown one WSL instance

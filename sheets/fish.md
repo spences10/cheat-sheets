@@ -4,6 +4,7 @@ createdDate: 2017-10-11
 updatedDate: 2020-08-26
 published: true
 slug: fish
+description: Fish Shell is a shell and scripting language.
 ---
 
 ## NVM not recognised in Fish?

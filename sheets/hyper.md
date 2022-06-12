@@ -4,6 +4,7 @@ createdDate: 2017-05-19
 updatedDate: 2017-10-13
 published: true
 slug: hyper
+description: Hyperterm is a terminal emulator for the web.
 ---
 
 ## use Git bash

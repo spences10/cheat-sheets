@@ -4,6 +4,7 @@ createdDate: 2020-09-29
 updatedDate: 2020-09-29
 published: true
 slug: windows
+description: Windows is a desktop operating system.
 ---
 
 ## Restart the Windows Graphics Driver

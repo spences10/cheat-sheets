@@ -4,6 +4,7 @@ createdDate: 2021-11-26
 updatedDate: 2021-11-26
 published: true
 slug: http
+description: HTTP is a stateless, hypertext transfer protocol.
 ---
 
 ## Headers

@@ -4,6 +4,7 @@ createdDate: 2017-12-01
 updatedDate: 2020-07-27
 published: true
 slug: javascript
+description: JavaScript is a programming language that conforms to the ECMAScript specification.
 ---
 
 <script>

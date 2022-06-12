@@ -4,6 +4,7 @@ createdDate: 2018-03-22
 updatedDate: 2019-02-11
 published: true
 slug: linux
+description: Linux is a free and open source operating system.
 ---
 
 ## Tar and untar

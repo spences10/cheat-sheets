@@ -4,6 +4,7 @@ createdDate: 2017-10-11
 updatedDate: 2021-01-10
 published: true
 slug: bash
+description: Bash is a shell and scripting language.
 ---
 
 ## Human Readable `$PATH` output

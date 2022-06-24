@@ -24,13 +24,13 @@ specifiers:
   svead: 0.0.3
   svelte: 3.48.0
   svelte-preprocess: 4.10.7
-  tailwindcss: 3.1.3
+  tailwindcss: 3.1.4
   theme-change: 2.0.2
 
 devDependencies:
   '@sveltejs/adapter-vercel': 1.0.0-next.58
   '@sveltejs/kit': 1.0.0-next.350_svelte@3.48.0
-  '@tailwindcss/typography': 0.5.2_tailwindcss@3.1.3
+  '@tailwindcss/typography': 0.5.2_tailwindcss@3.1.4
   autoprefixer: 10.4.7_postcss@8.4.14
   cssnano: 5.1.12_postcss@8.4.14
   daisyui: 2.15.4_ugi4xkrfysqkt4c4y6hkyfj344
@@ -51,7 +51,7 @@ devDependencies:
   svead: 0.0.3
   svelte: 3.48.0
   svelte-preprocess: 4.10.7_x4nqt44wnukty73um2kz4qdzya
-  tailwindcss: 3.1.3
+  tailwindcss: 3.1.4
   theme-change: 2.0.2
 
 packages:
@@ -156,7 +156,7 @@ packages:
       - supports-color
     dev: true
 
-  /@tailwindcss/typography/0.5.2_tailwindcss@3.1.3:
+  /@tailwindcss/typography/0.5.2_tailwindcss@3.1.4:
     resolution: {integrity: sha512-coq8DBABRPFcVhVIk6IbKyyHUt7YTEC/C992tatFB+yEx5WGBQrCgsSFjxHUr8AWXphWckadVJbominEduYBqw==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1 || insiders'
@@ -164,7 +164,7 @@ packages:
       lodash.castarray: 4.4.0
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
-      tailwindcss: 3.1.3
+      tailwindcss: 3.1.4
     dev: true
 
   /@trysound/sax/0.2.0:
@@ -638,7 +638,7 @@ packages:
       css-selector-tokenizer: 0.8.0
       postcss: 8.4.14
       postcss-js: 4.0.0_postcss@8.4.14
-      tailwindcss: 3.1.3
+      tailwindcss: 3.1.4
     transitivePeerDependencies:
       - ts-node
     dev: true
@@ -2594,8 +2594,8 @@ packages:
       stable: 0.1.8
     dev: true
 
-  /tailwindcss/3.1.3:
-    resolution: {integrity: sha512-PRJNYdSIthrb8hjmAyymEyEN8Yo61TMXpzyFUpxULeeyRn3Y3gpvuw6FlRTKrJvK7thSGKRnhT36VovVx4WeMA==}
+  /tailwindcss/3.1.4:
+    resolution: {integrity: sha512-NrxbFV4tYsga/hpWbRyUfIaBrNMXDxx5BsHgBS4v5tlyjf+sDsgBg5m9OxjrXIqAS/uR9kicxLKP+bEHI7BSeQ==}
     engines: {node: '>=12.13.0'}
     hasBin: true
     dependencies:

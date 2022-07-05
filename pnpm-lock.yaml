@@ -25,11 +25,11 @@ specifiers:
   svelte: 3.48.0
   svelte-preprocess: 4.10.7
   tailwindcss: 3.1.4
-  theme-change: 2.0.2
+  theme-change: 2.1.0
 
 devDependencies:
   '@sveltejs/adapter-vercel': 1.0.0-next.59
-  '@sveltejs/kit': 1.0.0-next.354_svelte@3.48.0
+  '@sveltejs/kit': 1.0.0-next.357_svelte@3.48.0
   '@tailwindcss/typography': 0.5.2_tailwindcss@3.1.4
   autoprefixer: 10.4.7_postcss@8.4.14
   cssnano: 5.1.12_postcss@8.4.14
@@ -52,7 +52,7 @@ devDependencies:
   svelte: 3.48.0
   svelte-preprocess: 4.10.7_x4nqt44wnukty73um2kz4qdzya
   tailwindcss: 3.1.4
-  theme-change: 2.0.2
+  theme-change: 2.1.0
 
 packages:
 
@@ -113,8 +113,8 @@ packages:
       - supports-color
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.354_svelte@3.48.0:
-    resolution: {integrity: sha512-dTfFT0c3sxztFpiw6H4bQnPd+PtHgEZG6j6ssT9sWLONfzUgWRX0S7H/WoPEjr7u65o2HNazoj8jmEq3ZTwb9g==}
+  /@sveltejs/kit/1.0.0-next.357_svelte@3.48.0:
+    resolution: {integrity: sha512-nCAehVybIEpQNnPu61V/EFVdfDb1nBSiQUfW9EcSSDEUbyAMCVBOKZZuzQ0qQDp3xniqRkyDzpBA4wN+ADxHBw==}
     engines: {node: '>=16.7'}
     hasBin: true
     peerDependencies:
@@ -2650,8 +2650,8 @@ packages:
       yallist: 4.0.0
     dev: true
 
-  /theme-change/2.0.2:
-    resolution: {integrity: sha512-YvQqavf8nlGB3J7PdO0zLLhSLlgYhrqZL6By3FuzFIlWBsPTSPG/V98cHJllK3mmU97Jecei8XYiHalhy2umUw==}
+  /theme-change/2.1.0:
+    resolution: {integrity: sha512-D8SZJR599b39VrWCgNTINAQYjTc7XbypoIFaDT1iwbH2IHEhTb5IqWHBwXIpJWDYFtfV7FhlHUVy0PlewPYgLQ==}
     dev: true
 
   /to-regex-range/5.0.1:

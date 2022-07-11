@@ -23,7 +23,7 @@
   "devDependencies": {
     "@sveltejs/adapter-vercel": "1.0.0-next.59",
     "@sveltejs/kit": "next",
-    "@tailwindcss/typography": "0.5.2",
+    "@tailwindcss/typography": "0.5.3",
     "autoprefixer": "10.4.7",
     "cssnano": "5.1.12",
     "daisyui": "2.18.0",

@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@sveltejs/adapter-vercel': 1.0.0-next.59
+  '@sveltejs/adapter-vercel': 1.0.0-next.60
   '@sveltejs/kit': next
   '@tailwindcss/typography': 0.5.2
   autoprefixer: 10.4.7
@@ -29,7 +29,7 @@ specifiers:
   vite: 2.9.14
 
 devDependencies:
-  '@sveltejs/adapter-vercel': 1.0.0-next.59
+  '@sveltejs/adapter-vercel': 1.0.0-next.60
   '@sveltejs/kit': 1.0.0-next.367_svelte@3.49.0+vite@2.9.14
   '@tailwindcss/typography': 0.5.2_tailwindcss@3.1.4
   autoprefixer: 10.4.7_postcss@8.4.14
@@ -105,8 +105,8 @@ packages:
       picomatch: 2.3.1
     dev: true
 
-  /@sveltejs/adapter-vercel/1.0.0-next.59:
-    resolution: {integrity: sha512-1lq5IFLWiLUXmNJVUXjwaInDb07BJg5er43xlMilpFpTA9BZI2hqjYCgtdtk7O6ee5EYJk876b2riM1m+y1M4Q==}
+  /@sveltejs/adapter-vercel/1.0.0-next.60:
+    resolution: {integrity: sha512-Xq+gaxQ2iKvP9G+7C8+r4xScMOUEhBouDEFyLCOzKrwmd+JWBzCl1N0qKeKm71MbR7l4YJn8J+e7105j8x+RXA==}
     dependencies:
       '@vercel/nft': 0.20.0
       esbuild: 0.14.42
@@ -496,7 +496,7 @@ packages:
     dev: true
 
   /concat-map/0.0.1:
-    resolution: {integrity: sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=}
+    resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
     dev: true
 
   /console-control-strings/1.1.0:

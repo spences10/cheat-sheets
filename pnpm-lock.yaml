@@ -26,11 +26,11 @@ specifiers:
   svelte-preprocess: 4.10.7
   tailwindcss: 3.1.4
   theme-change: 2.1.0
-  vite: ^2.9.13
+  vite: 2.9.14
 
 devDependencies:
   '@sveltejs/adapter-vercel': 1.0.0-next.59
-  '@sveltejs/kit': 1.0.0-next.361_svelte@3.49.0+vite@2.9.13
+  '@sveltejs/kit': 1.0.0-next.367_svelte@3.49.0+vite@2.9.14
   '@tailwindcss/typography': 0.5.2_tailwindcss@3.1.4
   autoprefixer: 10.4.7_postcss@8.4.14
   cssnano: 5.1.12_postcss@8.4.14
@@ -54,7 +54,7 @@ devDependencies:
   svelte-preprocess: 4.10.7_blrkfmplrezk6jx3arz7bdc3pa
   tailwindcss: 3.1.4
   theme-change: 2.1.0
-  vite: 2.9.13
+  vite: 2.9.14
 
 packages:
 
@@ -115,25 +115,25 @@ packages:
       - supports-color
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.361_svelte@3.49.0+vite@2.9.13:
-    resolution: {integrity: sha512-F5hvtNIakMqRpVg4kXQWNRnGTpud+N5HsY/Z6SWXndZUEwc2jDYDGq7ytzJp3Ep4+ZbA6yS5YbHiLdZcTMBgWQ==}
+  /@sveltejs/kit/1.0.0-next.367_svelte@3.49.0+vite@2.9.14:
+    resolution: {integrity: sha512-glilWol6iJEf8esQpH0HOzdI4n/xgZtoLa9U9sbg+BZelQXFRRglaGyw+ahjEreBH5MH3/bpIYAPPObQN8Pgbg==}
     engines: {node: '>=16.9'}
     hasBin: true
     peerDependencies:
       svelte: ^3.44.0
       vite: ^2.9.10
     dependencies:
-      '@sveltejs/vite-plugin-svelte': 1.0.0-next.49_svelte@3.49.0+vite@2.9.13
+      '@sveltejs/vite-plugin-svelte': 1.0.0-next.49_svelte@3.49.0+vite@2.9.14
       chokidar: 3.5.3
       sade: 1.8.1
       svelte: 3.49.0
-      vite: 2.9.13
+      vite: 2.9.14
     transitivePeerDependencies:
       - diff-match-patch
       - supports-color
     dev: true
 
-  /@sveltejs/vite-plugin-svelte/1.0.0-next.49_svelte@3.49.0+vite@2.9.13:
+  /@sveltejs/vite-plugin-svelte/1.0.0-next.49_svelte@3.49.0+vite@2.9.14:
     resolution: {integrity: sha512-AKh0Ka8EDgidnxWUs8Hh2iZLZovkETkefO99XxZ4sW4WGJ7VFeBx5kH/NIIGlaNHLcrIvK3CK0HkZwC3Cici0A==}
     engines: {node: ^14.13.1 || >= 16}
     peerDependencies:
@@ -151,7 +151,7 @@ packages:
       magic-string: 0.26.2
       svelte: 3.49.0
       svelte-hmr: 0.14.12_svelte@3.49.0
-      vite: 2.9.13
+      vite: 2.9.14
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -2754,8 +2754,8 @@ packages:
       vfile-message: 3.1.2
     dev: true
 
-  /vite/2.9.13:
-    resolution: {integrity: sha512-AsOBAaT0AD7Mhe8DuK+/kE4aWYFMx/i0ZNi98hJclxb4e0OhQcZYUrvLjIaQ8e59Ui7txcvKMiJC1yftqpQoDw==}
+  /vite/2.9.14:
+    resolution: {integrity: sha512-P/UCjSpSMcE54r4mPak55hWAZPlyfS369svib/gpmz8/01L822lMPOJ/RYW6tLCe1RPvMvOsJ17erf55bKp4Hw==}
     engines: {node: '>=12.2.0'}
     hasBin: true
     peerDependencies:

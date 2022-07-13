@@ -3,158 +3,11 @@
 
 html {
   scroll-behavior: smooth;
-  margin-left: calc(100vw - 100%);
 }
 
-:root {
-  /* Default is Dark */
-  --primary: #793ef9;
-  --secondary: #f000b8;
-}
-
-[data-theme='acid'] {
-  --primary: #ff00f4;
-  --secondary: #ff7400;
-}
-
-[data-theme='autumn'] {
-  --primary: #8c0327;
-  --secondary: #d85251;
-}
-
-[data-theme='business'] {
-  --primary: #1c4e80;
-  --secondary: #7c909a;
-}
-
-[data-theme='cmyk'] {
-  --primary: #45aeee;
-  --secondary: #e8488a;
-}
-
-[data-theme='coffee'] {
-  --primary: #db924b;
-  --secondary: #263e3f;
-}
-
-[data-theme='lemonade'] {
-  --primary: #519903;
-  --secondary: #e9e92e;
-}
-
-[data-theme='night'] {
-  --primary: #38bdf8;
-  --secondary: #818cf8;
-}
-
-[data-theme='winter'] {
-  --primary: #047aff;
-  --secondary: #463aa2;
-}
-
-[data-theme='light'] {
-  --primary: #570df8;
-  --secondary: #f000b8;
-}
-
-[data-theme='dark'] {
-  --primary: #793ef9;
-  --secondary: #f000b8;
-}
-
-[data-theme='cupcake'] {
-  --primary: #65c3c8;
-  --secondary: #ef9fbc;
-}
-
-[data-theme='bumblebee'] {
-  --primary: #e0a82e;
-  --secondary: #f9d72f;
-}
-
-[data-theme='emerald'] {
-  --primary: #66cc8a;
-  --secondary: #377cfb;
-}
-
-[data-theme='corporate'] {
-  --primary: #4b6bfb;
-  --secondary: #7b92b2;
-}
-
-[data-theme='synthwave'] {
-  --primary: #e779c1;
-  --secondary: #58c7f3;
-}
-
-[data-theme='retro'] {
-  --primary: #ef9995;
-  --secondary: #a4cbb4;
-}
-
-[data-theme='cyberpunk'] {
-  --primary: #ff7598;
-  --secondary: #75d1f0;
-}
-
-[data-theme='valentine'] {
-  --primary: #e96d7b;
-  --secondary: #a991f7;
-}
-
-[data-theme='halloween'] {
-  --primary: #f28c18;
-  --secondary: #6d3a9c;
-}
-
-[data-theme='garden'] {
-  --primary: #5c7f67;
-  --secondary: #ecf4e7;
-}
-
-[data-theme='forest'] {
-  --primary: #1eb854;
-  --secondary: #1fd65f;
-}
-
-[data-theme='aqua'] {
-  --primary: #09ecf3;
-  --secondary: #966fb3;
-}
-
-[data-theme='lofi'] {
-  --primary: #808080;
-  --secondary: #4d4d4d;
-}
-
-[data-theme='pastel'] {
-  --primary: #d1c1d7;
-  --secondary: #f6cbd1;
-}
-
-[data-theme='fantasy'] {
-  --primary: #6e0b75;
-  --secondary: #007ebd;
-}
-
-[data-theme='wireframe'] {
-  --primary: #b8b8b8;
-  --secondary: #fff;
-}
-
-[data-theme='black'] {
-  --primary: #333333;
-  --secondary: #fff;
-}
-
-[data-theme='luxury'] {
-  --primary: #ffffff;
-  --secondary: #152747;
-}
-
-[data-theme='dracula'] {
-  --primary: #ffb3d9;
-  --secondary: #b9ffb3;
+::selection {
+  color: hsl(var(--pc));
+  background: hsl(var(--p));
 }
 
 .table-of-contents {
@@ -176,7 +29,7 @@ html {
 /* stylelint-disable */
 * {
   scrollbar-width: thin;
-  scrollbar-color: var(--secondary) var(--primary);
+  scrollbar-color: hsl(var(--s)) hsl(var(--p));
 }
 /* stylelint-enable */
 
@@ -186,14 +39,14 @@ html {
 }
 
 *::-webkit-scrollbar-track {
-  background: var(--primary);
+  background: hsl(var(--p));
   border-radius: 5px;
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: var(--secondary);
+  background-color: hsl(var(--s));
   border-radius: 14px;
-  border: 3px solid var(--primary);
+  border: 3px solid hsl(var(--p));
 }
 
 /* glow */

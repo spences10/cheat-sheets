@@ -20,7 +20,7 @@
 
 <script>
   import { page } from '$app/stores'
-  import TableOfContents from '$lib/conponents/table-of-contents.svelte'
+  import TableOfContents from '$lib/components/table-of-contents.svelte'
   import { ogImageUrl } from '$lib/og-image-url-build'
   import { format } from 'date-fns'
   import { Head } from 'svead'

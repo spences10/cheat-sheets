@@ -4,11 +4,13 @@ createdDate: 2017-12-01
 updatedDate: 2020-07-27
 published: true
 slug: javascript
-description: JavaScript is a programming language that conforms to the ECMAScript specification.
+description:
+  JavaScript is a programming language that conforms to the ECMAScript
+  specification.
 ---
 
 <script>
-  import Author from '$lib/author.svelte'
+  import Author from '$lib/components/author.svelte'
 </script>
 
 ## Document Design Mode
@@ -525,10 +527,10 @@ console.log(obj)
 <!-- Links -->
 
 [nicky meuleman]: https://twitter.com/NMeuleman
-NickyMeuleman
-[optional chaining]:
-  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining
+
+NickyMeuleman [optional chaining]:
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining
 [object.assign]:
-  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
 [spread syntax]:
-  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax

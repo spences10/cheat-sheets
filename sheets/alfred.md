@@ -9,7 +9,7 @@ description: Alfred is a simple, powerful, and open-source workflow for macOS.
 
 <!-- Add Authors
 <script>
-  import Author from '$lib/author.svelte'
+  import Author from '$lib/components/author.svelte'
 </script>
 
 <Author author='Scott'/>

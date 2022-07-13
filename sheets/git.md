@@ -8,7 +8,7 @@ description: Git is a version control system.
 ---
 
 <script>
-  import Author from '$lib/author.svelte'
+  import Author from '$lib/components/author.svelte'
 </script>
 
 ## Use a git patch file

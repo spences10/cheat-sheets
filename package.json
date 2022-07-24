@@ -26,7 +26,7 @@
     "@tailwindcss/typography": "0.5.4",
     "autoprefixer": "10.4.7",
     "cssnano": "5.1.12",
-    "daisyui": "2.19.0",
+    "daisyui": "2.20.0",
     "date-fns": "2.29.1",
     "fathom-client": "3.5.0",
     "fuse.js": "6.6.2",

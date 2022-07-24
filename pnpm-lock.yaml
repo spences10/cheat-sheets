@@ -6,7 +6,7 @@ specifiers:
   '@tailwindcss/typography': 0.5.4
   autoprefixer: 10.4.7
   cssnano: 5.1.12
-  daisyui: 2.19.0
+  daisyui: 2.20.0
   date-fns: 2.29.1
   fathom-client: 3.5.0
   fuse.js: 6.6.2
@@ -30,11 +30,11 @@ specifiers:
 
 devDependencies:
   '@sveltejs/adapter-vercel': 1.0.0-next.65
-  '@sveltejs/kit': 1.0.0-next.390_svelte@3.49.0+vite@3.0.2
+  '@sveltejs/kit': 1.0.0-next.392_svelte@3.49.0+vite@3.0.2
   '@tailwindcss/typography': 0.5.4_tailwindcss@3.1.6
   autoprefixer: 10.4.7_postcss@8.4.14
   cssnano: 5.1.12_postcss@8.4.14
-  daisyui: 2.19.0_ugi4xkrfysqkt4c4y6hkyfj344
+  daisyui: 2.20.0_ugi4xkrfysqkt4c4y6hkyfj344
   date-fns: 2.29.1
   fathom-client: 3.5.0
   fuse.js: 6.6.2
@@ -115,8 +115,8 @@ packages:
       - supports-color
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.390_svelte@3.49.0+vite@3.0.2:
-    resolution: {integrity: sha512-BlWjFL7v1y2vIYHMYMwH2Iy49eOkaunQ8jElQ9qMlC2kp/IdP3uLulS12ZX3oOURxoJICB4gQ82uEyjxen/kdQ==}
+  /@sveltejs/kit/1.0.0-next.392_svelte@3.49.0+vite@3.0.2:
+    resolution: {integrity: sha512-od4rDJ/Soq0I7mda7sTbAnNKERHSDEGNa7QBpLA859xgBkwC1JnEIymYOh9dm+hMyHhB0bUoRoaur0qxKLqOOw==}
     engines: {node: '>=16.9'}
     hasBin: true
     peerDependencies:
@@ -596,8 +596,8 @@ packages:
       css-tree: 1.1.3
     dev: true
 
-  /daisyui/2.19.0_ugi4xkrfysqkt4c4y6hkyfj344:
-    resolution: {integrity: sha512-lLOz4cHm3xpm0AfdFojDFrhiDu4hZTdEbcVJri+KzQn1HvxmZS4STVujn8tV4RQXjchGdnIsXFqxd6F7rVZBiA==}
+  /daisyui/2.20.0_ugi4xkrfysqkt4c4y6hkyfj344:
+    resolution: {integrity: sha512-97xFBWQOXV/JCVRrGI5xranElKMmXIajDxojTQ1qoYwcWlkfFE7hY4D/NyHVIzlQb+B4xbiXhVPJM7EleRAY8g==}
     peerDependencies:
       autoprefixer: ^10.0.2
       postcss: ^8.1.6

@@ -1,4 +1,4 @@
-export async function get() {
+export async function GET() {
   const posts = import.meta.globEager('../../sheets/*.md')
 
   const postsList = Object.values(posts)

@@ -1,23 +1,3 @@
-<script context="module">
-  export async function load({ params }) {
-    try {
-      const Post = await import(`../../sheets/${params.slug}.md`)
-
-      return {
-        props: {
-          Post: Post.default,
-          metadata: Post.metadata,
-        },
-      }
-    } catch (e) {
-      return {
-        status: 404,
-        error: 'Post not found',
-      }
-    }
-  }
-</script>
-
 <script>
   import { page } from '$app/stores'
   import TableOfContents from '$lib/components/table-of-contents.svelte'

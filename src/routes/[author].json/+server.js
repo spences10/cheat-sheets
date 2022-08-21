@@ -1,4 +1,4 @@
-export const get = async req => {
+export const GET = async req => {
   const { author } = req.params
   try {
     const res = await fetch(`https://api.github.com/users/${author}`)

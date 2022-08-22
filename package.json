@@ -27,7 +27,7 @@
     "autoprefixer": "10.4.8",
     "cssnano": "5.1.12",
     "daisyui": "2.24.0",
-    "date-fns": "2.29.1",
+    "date-fns": "2.29.2",
     "fathom-client": "3.5.0",
     "fuse.js": "6.6.2",
     "husky": "8.0.1",

@@ -6,7 +6,8 @@
   import { Head } from 'svead'
   import { onMount } from 'svelte'
 
-  export let Post, metadata
+  export let data
+  let { Post, metadata } = data
   let created = format(new Date(metadata.createdDate), 'yyy MMM do')
   let updated = format(new Date(metadata.updatedDate), 'yyy MMM do')
 

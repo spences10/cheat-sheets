@@ -1,10 +1,16 @@
 <script>
   import { page } from '$app/stores'
-  import { error } from '@sveltejs/kit'
 </script>
 
 <svelte:head>
-  <title>{page.status}</title>
+  <title>Uh oh! {$page.status}</title>
 </svelte:head>
 
-<h1>{page.status}: {error.message}</h1>
+<main class="prose prose-xl">
+  <h1>{$page.status}</h1>
+  <p>{$page.error.message}</p>
+  <p>It looks like <code>{$page.url}</code> doesn't exist</p>
+  <p>
+    Maybe check out the <a href="/">homepage</a>?
+  </p>
+</main>

@@ -4,7 +4,8 @@
   import Fuse from 'fuse.js'
   import { Head } from 'svead'
 
-  export let sheets
+  export let data
+  let { sheets } = data
 
   let options = {
     keys: ['title'],

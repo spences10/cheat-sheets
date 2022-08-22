@@ -1,23 +1,11 @@
-<script context="module">
-  import { getSheets } from '$lib/get-sheets'
+<script>
   import { author, description, name, website } from '$lib/info'
   import { ogImageUrl } from '$lib/og-image-url-build'
   import Fuse from 'fuse.js'
   import { Head } from 'svead'
 
-  export async function load() {
-    const sheets = await getSheets()
-
-    return {
-      props: {
-        sheets,
-      },
-    }
-  }
-</script>
-
-<script>
-  export let sheets
+  export let data
+  let { sheets } = data
 
   let options = {
     keys: ['title'],

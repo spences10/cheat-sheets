@@ -21,7 +21,7 @@
     }
   },
   "devDependencies": {
-    "@sveltejs/adapter-vercel": "1.0.0-next.73",
+    "@sveltejs/adapter-vercel": "1.0.0-next.74",
     "@sveltejs/kit": "next",
     "@tailwindcss/typography": "0.5.7",
     "autoprefixer": "10.4.9",

@@ -19,7 +19,7 @@ specifiers:
   pretty-quick: 3.1.3
   prism-themes: 1.9.0
   rehype-autolink-headings: 6.1.1
-  rehype-slug: 5.0.1
+  rehype-slug: 5.1.0
   remark-external-links: 9.0.1
   svead: 0.0.3
   svelte: 3.52.0
@@ -30,7 +30,7 @@ specifiers:
 
 devDependencies:
   '@sveltejs/adapter-vercel': 1.0.0-next.80
-  '@sveltejs/kit': 1.0.0-next.529_svelte@3.52.0+vite@3.2.2
+  '@sveltejs/kit': 1.0.0-next.531_svelte@3.52.0+vite@3.2.2
   '@tailwindcss/typography': 0.5.7_tailwindcss@3.2.1
   autoprefixer: 10.4.13_postcss@8.4.18
   cssnano: 5.1.14_postcss@8.4.18
@@ -47,7 +47,7 @@ devDependencies:
   pretty-quick: 3.1.3_prettier@2.7.1
   prism-themes: 1.9.0
   rehype-autolink-headings: 6.1.1
-  rehype-slug: 5.0.1
+  rehype-slug: 5.1.0
   remark-external-links: 9.0.1
   svead: 0.0.3
   svelte: 3.52.0
@@ -129,8 +129,8 @@ packages:
       - supports-color
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.529_svelte@3.52.0+vite@3.2.2:
-    resolution: {integrity: sha512-wM9Y38m8GVNT2YDQo41XNNa55OwTiGE+4fEuuhQnQY4nOSihXGllPsdIulnVsrxcSw9jKLkzwJdFr+i2y2y+OQ==}
+  /@sveltejs/kit/1.0.0-next.531_svelte@3.52.0+vite@3.2.2:
+    resolution: {integrity: sha512-8uBJF5BweIFoyw+Kqv0jsDSfndNw2mTF222qi8rDuptOy7gjoWXYFy2F0kd8orNeZUnjFrHE+g/qDNHq7zzEJg==}
     engines: {node: '>=16.14'}
     hasBin: true
     requiresBuild: true
@@ -1108,8 +1108,8 @@ packages:
       pump: 3.0.0
     dev: true
 
-  /github-slugger/1.4.0:
-    resolution: {integrity: sha512-w0dzqw/nt51xMVmlaV1+JRzN+oCa1KfcgGEWhxUG16wbdA+Xnt/yoFO8Z8x/V82ZcZ0wy6ln9QDup5avbhiDhQ==}
+  /github-slugger/2.0.0:
+    resolution: {integrity: sha512-IaOQ9puYtjrkq7Y0Ygl9KDZnrf/aiUJYUpVf89y8kyaxbRG7Y1SrX/jaumrv81vc61+kiMempujsM3Yw7w5qcw==}
     dev: true
 
   /glob-parent/5.1.2:
@@ -2083,11 +2083,11 @@ packages:
       unist-util-visit: 4.1.1
     dev: true
 
-  /rehype-slug/5.0.1:
-    resolution: {integrity: sha512-X5v3wV/meuOX9NFcGhJvUpEjIvQl2gDvjg3z40RVprYFt7q3th4qMmYLULiu3gXvbNX1ppx+oaa6JyY1W67pTA==}
+  /rehype-slug/5.1.0:
+    resolution: {integrity: sha512-Gf91dJoXneiorNEnn+Phx97CO7oRMrpi+6r155tTxzGuLtm+QrI4cTwCa9e1rtePdL4i9tSO58PeSS6HWfgsiw==}
     dependencies:
       '@types/hast': 2.3.4
-      github-slugger: 1.4.0
+      github-slugger: 2.0.0
       hast-util-has-property: 2.0.0
       hast-util-heading-rank: 2.1.0
       hast-util-to-string: 2.0.0

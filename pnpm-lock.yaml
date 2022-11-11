@@ -10,7 +10,7 @@ specifiers:
   date-fns: 2.29.3
   fathom-client: 3.5.0
   fuse.js: 6.6.2
-  husky: 8.0.1
+  husky: 8.0.2
   mdsvex: 0.10.6
   postcss: 8.4.18
   postcss-load-config: 4.0.1
@@ -30,7 +30,7 @@ specifiers:
 
 devDependencies:
   '@sveltejs/adapter-vercel': 1.0.0-next.81
-  '@sveltejs/kit': 1.0.0-next.538_svelte@3.52.0+vite@3.2.2
+  '@sveltejs/kit': 1.0.0-next.539_svelte@3.52.0+vite@3.2.2
   '@tailwindcss/typography': 0.5.8_tailwindcss@3.2.2
   autoprefixer: 10.4.13_postcss@8.4.18
   cssnano: 5.1.14_postcss@8.4.18
@@ -38,7 +38,7 @@ devDependencies:
   date-fns: 2.29.3
   fathom-client: 3.5.0
   fuse.js: 6.6.2
-  husky: 8.0.1
+  husky: 8.0.2
   mdsvex: 0.10.6_svelte@3.52.0
   postcss: 8.4.18
   postcss-load-config: 4.0.1_postcss@8.4.18
@@ -147,8 +147,8 @@ packages:
       - supports-color
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.538_svelte@3.52.0+vite@3.2.2:
-    resolution: {integrity: sha512-NRu6+j1Lc0daE2OirlbDCbT/yMf5l5nFln2o1asMA3HL7A244SG+uGGFea4DZ1bdetZ3IhO5xa1MWIGY5Ybb3g==}
+  /@sveltejs/kit/1.0.0-next.539_svelte@3.52.0+vite@3.2.2:
+    resolution: {integrity: sha512-BCD9lMiNoz1S5k1R+4s0pkyMwiqtut5kAXgC7qo3WaJnzXxBJziJfkyJZT0fM6mrEHlcdJ/o5hBkswyVHsxqtA==}
     engines: {node: '>=16.14'}
     hasBin: true
     requiresBuild: true
@@ -1431,8 +1431,8 @@ packages:
     engines: {node: '>=8.12.0'}
     dev: true
 
-  /husky/8.0.1:
-    resolution: {integrity: sha512-xs7/chUH/CKdOCs7Zy0Aev9e/dKOMZf3K1Az1nar3tzlv0jfqnYtu235bstsWTmXOR0EfINrPa97yy4Lz6RiKw==}
+  /husky/8.0.2:
+    resolution: {integrity: sha512-Tkv80jtvbnkK3mYWxPZePGFpQ/tT3HNSs/sasF9P2YfkMezDl3ON37YN6jUUI4eTg5LcyVynlb6r4eyvOmspvg==}
     engines: {node: '>=14'}
     hasBin: true
     dev: true

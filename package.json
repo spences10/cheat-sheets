@@ -32,7 +32,7 @@
     "fuse.js": "6.6.2",
     "husky": "8.0.3",
     "mdsvex": "0.10.6",
-    "postcss": "8.4.20",
+    "postcss": "8.4.21",
     "postcss-load-config": "4.0.1",
     "prettier": "2.8.1",
     "prettier-plugin-svelte": "2.9.0",

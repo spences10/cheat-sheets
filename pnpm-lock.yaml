@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@sveltejs/adapter-vercel': 1.0.0
+  '@sveltejs/adapter-vercel': 1.0.1
   '@sveltejs/kit': next
   '@tailwindcss/typography': 0.5.8
   autoprefixer: 10.4.13
@@ -29,7 +29,7 @@ specifiers:
   vite: 4.0.4
 
 devDependencies:
-  '@sveltejs/adapter-vercel': 1.0.0_l5ueyfihz3gpzzvvyo2ean5u3e
+  '@sveltejs/adapter-vercel': 1.0.1_l5ueyfihz3gpzzvvyo2ean5u3e
   '@sveltejs/kit': 1.0.0-next.589_svelte@3.55.0+vite@4.0.4
   '@tailwindcss/typography': 0.5.8_tailwindcss@3.2.4
   autoprefixer: 10.4.13_postcss@8.4.20
@@ -303,8 +303,8 @@ packages:
     resolution: {integrity: sha512-a5Sab1C4/icpTZVzZc5Ghpz88yQtGOyNqYXcZgOssB2uuAr+wF/MvN6bgtW32q7HHrvBki+BsZ0OuNv6EV3K9g==}
     dev: true
 
-  /@sveltejs/adapter-vercel/1.0.0_l5ueyfihz3gpzzvvyo2ean5u3e:
-    resolution: {integrity: sha512-3zM/7BJbtxBo02J4/2mpZyiHZtH6HAggND/xRaBiKjSsKSMYvKC4ipqVfHoESuW5NQNAnJVf1zMAQY2PPxv91w==}
+  /@sveltejs/adapter-vercel/1.0.1_l5ueyfihz3gpzzvvyo2ean5u3e:
+    resolution: {integrity: sha512-2v06K1dKC8VmQnB8P/dAdBuNSQYvJbhBkCFpiBptkptoYMcSZnT2fYqsmtoUJDn13ACDQttorcFIQkf0BeFMQw==}
     peerDependencies:
       '@sveltejs/kit': ^1.0.0
     dependencies:

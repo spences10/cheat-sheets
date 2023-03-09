@@ -24,7 +24,7 @@
     "@sveltejs/adapter-vercel": "2.3.1",
     "@sveltejs/kit": "^1.5.0",
     "@tailwindcss/typography": "0.5.9",
-    "autoprefixer": "10.4.13",
+    "autoprefixer": "10.4.14",
     "cssnano": "5.1.15",
     "daisyui": "2.51.3",
     "date-fns": "2.29.3",

@@ -109,6 +109,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "osalvatierra",
+      "name": "Oscar Salvatierra",
+      "avatar_url": "https://avatars.githubusercontent.com/osalvatierra",
+      "profile": "https://github.com/osalvatierra",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7

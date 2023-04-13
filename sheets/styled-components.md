@@ -4,7 +4,8 @@ createdDate: 2019-12-11
 updatedDate: 2019-12-11
 published: true
 slug: styled-components
-description: Styled components is a library for React that allows you to write
+description:
+  Styled components is a library for React that allows you to write
   CSS-in-JS components.
 ---
 
@@ -12,8 +13,8 @@ description: Styled components is a library for React that allows you to write
 
 ```jsx
 <StyledButton
-  active={true}
-  onClick={this.handleButton}
+	active={true}
+	onClick={this.handleButton}
 ></StyledButton>
 ```
 
@@ -21,12 +22,12 @@ And in your styles something like this:
 
 ```jsx
 const StyledButton = styled.button`
-  align-items: center;
-  line-height: 0.2;
+	align-items: center;
+	line-height: 0.2;
 
-  ${({ active }) =>
-    active &&
-    `
+	${({ active }) =>
+		active &&
+		`
     background: blue;
   `}
 `

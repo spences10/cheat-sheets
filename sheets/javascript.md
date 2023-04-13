@@ -66,8 +66,8 @@ const people = [`Scott`, `Islem`, `Tom`, `George`]
 const catsAndPeople = [...cats, ...people]
 // remove Tom
 const withoutTom = [
-  ...catsAndPeople.slice(0, 5),
-  ...catsAndPeople.slice(6),
+	...catsAndPeople.slice(0, 5),
+	...catsAndPeople.slice(6),
 ]
 ```
 
@@ -152,19 +152,19 @@ Return one new thing only: `.reduce()`
 
 ```js
 const originalArray = [
-  'Alice',
-  'Bob',
-  'Charlie',
-  'Bob',
-  'Bob',
-  'Charlie',
+	'Alice',
+	'Bob',
+	'Charlie',
+	'Bob',
+	'Bob',
+	'Charlie',
 ]
 const numberOfBobs = originalArray.reduce((accumulator, item) => {
-  if (item === 'Bob') {
-    return accumulator + 1
-  } else {
-    return accumulator
-  }
+	if (item === 'Bob') {
+		return accumulator + 1
+	} else {
+		return accumulator
+	}
 }, 0)
 console.log(numberOfBobs)
 ```
@@ -181,10 +181,10 @@ output:
 const arr = [0, 1, 2, 3, 4, 5, null, 6, 9]
 
 function addEven() {
-  return arr.reduce(
-    (acc, cur) => (cur % 2 === 0 ? acc + cur : acc),
-    0
-  )
+	return arr.reduce(
+		(acc, cur) => (cur % 2 === 0 ? acc + cur : acc),
+		0
+	)
 }
 
 addEven(arr)
@@ -194,20 +194,20 @@ addEven(arr)
 
 ```js
 function firstDuplicate(arr) {
-  // empty array to use to check incoming array against
-  let checkArray = {}
+	// empty array to use to check incoming array against
+	let checkArray = {}
 
-  // loop it
-  for (let i = 0; i < arr.length; i++) {
-    // check that array element against
-    // checkArray
-    if (checkArray[arr[i]] !== undefined)
-      // if there's no matching item then
-      return arr[i]
-    // append to the checkArray
-    else checkArray[arr[i]] = i
-  }
-  return -1
+	// loop it
+	for (let i = 0; i < arr.length; i++) {
+		// check that array element against
+		// checkArray
+		if (checkArray[arr[i]] !== undefined)
+			// if there's no matching item then
+			return arr[i]
+		// append to the checkArray
+		else checkArray[arr[i]] = i
+	}
+	return -1
 }
 ```
 
@@ -217,10 +217,10 @@ function firstDuplicate(arr) {
 const axios = require('axios')
 
 axios({
-  url: 'https://spotify-graphql-server.herokuapp.com/graphql',
-  method: 'post',
-  data: {
-    query: `
+	url: 'https://spotify-graphql-server.herokuapp.com/graphql',
+	method: 'post',
+	data: {
+		query: `
       {
         queryArtists(byName:"Andy C") {
           name
@@ -233,9 +233,9 @@ axios({
         }
       }
       `,
-  },
+	},
 }).then(result => {
-  console.log(result.data)
+	console.log(result.data)
 })
 ```
 
@@ -257,16 +257,16 @@ With JavaScript functions:
 
 ```js
 'replace vowels from string'
-  .split('a')
-  .join('')
-  .split('e')
-  .join('')
-  .split('i')
-  .join('')
-  .split('o')
-  .join('')
-  .split('u')
-  .join('')
+	.split('a')
+	.join('')
+	.split('e')
+	.join('')
+	.split('i')
+	.join('')
+	.split('o')
+	.join('')
+	.split('u')
+	.join('')
 ```
 
 Output:
@@ -285,14 +285,14 @@ The running of a function within a function:
 
 ```js
 function greeting(salutation = '') {
-  const sarcasm = () => {
-    return [...salutation]
-      .map((char, i) => char[`to${i % 2 ? 'Upper' : 'Lower'}Case`]())
-      .join('')
-  }
-  return function (name) {
-    return `${sarcasm()} ${name}`
-  }
+	const sarcasm = () => {
+		return [...salutation]
+			.map((char, i) => char[`to${i % 2 ? 'Upper' : 'Lower'}Case`]())
+			.join('')
+	}
+	return function (name) {
+		return `${sarcasm()} ${name}`
+	}
 }
 
 // run the function
@@ -309,11 +309,11 @@ Private variables:
 
 ```js
 function createGame(gameType) {
-  let score = 0
-  return function increment() {
-    score++
-    return `Your game of ${gameType} score is ${score}.`
-  }
+	let score = 0
+	return function increment() {
+		score++
+		return `Your game of ${gameType} score is ${score}.`
+	}
 }
 
 const cribbage = createGame('Cribbage')
@@ -348,22 +348,22 @@ Use a mock endpoint to test against for auth forms.
 const wait = n => new Promise(resolve => setTimeout(resolve, n))
 
 const mockFetch = url =>
-  wait(1000).then(() => ({
-    status: 200,
-    body: {
-      url: 'http://bbc.co.uk',
-    },
-  }))
+	wait(1000).then(() => ({
+		status: 200,
+		body: {
+			url: 'http://bbc.co.uk',
+		},
+	}))
 
 mockFetch(`${endpoint}`).then(response => {
-  console.log('=====================')
-  console.log(response.status)
-  console.log(form.userEmail.value)
-  console.log(form.userPassword.value)
-  console.log('=====================')
-  response.status === 200
-    ? (location = response.body.url)
-    : console.error(`incorrect`)
+	console.log('=====================')
+	console.log(response.status)
+	console.log(form.userEmail.value)
+	console.log(form.userPassword.value)
+	console.log('=====================')
+	response.status === 200
+		? (location = response.body.url)
+		: console.error(`incorrect`)
 })
 ```
 
@@ -374,7 +374,7 @@ Need to quickly grab a load of images from a page?
 ```js
 let images = document.querySelectorAll('img')
 Array.from(images).map(i => {
-  console.log(i.src)
+	console.log(i.src)
 })
 ```
 
@@ -409,19 +409,19 @@ Classic FizzBuzz loop.
 
 ```js
 for (let i = 1; i <= 100; ++i) {
-  let output = ''
-  if (i % 3 === 0) {
-    output += 'Fizz'
-  }
-  if (i % 5 === 0) {
-    output += 'Buzz'
-  }
+	let output = ''
+	if (i % 3 === 0) {
+		output += 'Fizz'
+	}
+	if (i % 5 === 0) {
+		output += 'Buzz'
+	}
 
-  if (output === '') {
-    output = i
-  }
+	if (output === '') {
+		output = i
+	}
 
-  console.log(output)
+	console.log(output)
 }
 ```
 
@@ -431,21 +431,21 @@ Instantiation patterns are ways to create something in JavaScript.
 
 ```js
 var person = function (name) {
-  var obj = Object.create(objMethods)
-  obj.name = name
-  return obj
+	var obj = Object.create(objMethods)
+	obj.name = name
+	return obj
 }
 
 var objMethods = {
-  sayHello: function () {
-    console.log(`${this.name} says hello!`)
-  },
-  changeName: function (newName) {
-    var oldName = this.name
-    this.name = newName
+	sayHello: function () {
+		console.log(`${this.name} says hello!`)
+	},
+	changeName: function (newName) {
+		var oldName = this.name
+		this.name = newName
 
-    console.log(`${oldName} has changed their name to ${this.name}`)
-  },
+		console.log(`${oldName} has changed their name to ${this.name}`)
+	},
 }
 
 // Implementation
@@ -514,9 +514,9 @@ be "expanded" in places where key-value pairs exists.
 
 ```js
 const items = [
-  { address: '123 ABC street' },
-  { isLeased: false },
-  { hasPool: true },
+	{ address: '123 ABC street' },
+	{ isLeased: false },
+	{ hasPool: true },
 ]
 
 const obj = Object.assign({}, ...items)

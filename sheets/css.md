@@ -13,9 +13,9 @@ description:
 
 ```css
 .center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 ```
 
@@ -32,18 +32,18 @@ level element.
 
 ```html
 <div class="margins">
-  <p>Pls center me!</p>
+	<p>Pls center me!</p>
 </div>
 ```
 
 ```css
 .margins {
-  /* display: flex; */
-  display: grid;
+	/* display: flex; */
+	display: grid;
 }
 
 .margins p {
-  margin: auto;
+	margin: auto;
 }
 ```
 
@@ -51,20 +51,20 @@ level element.
 
 ```html
 <div class="absolute">
-  <p>Pls center me!</p>
+	<p>Pls center me!</p>
 </div>
 ```
 
 ```css
 .absolute {
-  position: relative;
+	position: relative;
 }
 
 .absolute p {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 100%;
 }
 ```
 
@@ -72,15 +72,15 @@ level element.
 
 ```html
 <div class="flexbox">
-  <p>Pls center me!</p>
+	<p>Pls center me!</p>
 </div>
 ```
 
 ```css
 .flexbox {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 ```
 
@@ -90,15 +90,15 @@ Use either `align-items: center;` or `place-items: center;`
 
 ```html
 <div class="grid">
-  <p>Pls center me!</p>
+	<p>Pls center me!</p>
 </div>
 ```
 
 ```css
 .grid {
-  display: grid;
-  /* align-items: center; */
-  place-items: center;
+	display: grid;
+	/* align-items: center; */
+	place-items: center;
 }
 ```
 
@@ -109,8 +109,8 @@ container of a layout, use this:
 
 ```css
 .don_break_out_of_parent {
-  /* These are technically the same, but use both */
-  overflow-wrap: break-word;
-  word-wrap: break-word;
+	/* These are technically the same, but use both */
+	overflow-wrap: break-word;
+	word-wrap: break-word;
 }
 ```

@@ -4,7 +4,8 @@ createdDate: 2019-05-27
 updatedDate: 2021-01-21
 published: true
 slug: vscode
-description: VS Code is a code editor for the Microsoft Windows operating system.
+description:
+  VS Code is a code editor for the Microsoft Windows operating system.
 ---
 
 ## Show Key presses
@@ -19,8 +20,8 @@ pallet.
 
 ```json
 {
-  "key": "ctrl+alt+s ctrl+alt+c",
-  "command": "workbench.action.toggleScreencastMode"
+	"key": "ctrl+alt+s ctrl+alt+c",
+	"command": "workbench.action.toggleScreencastMode"
 }
 ```
 
@@ -29,12 +30,12 @@ with Ctrl+,).
 
 ```json
 {
-  "screencastMode.fontSize": 56,
-  "screencastMode.keyboardOverlayTimeout": 800,
-  "screencastMode.mouseIndicatorColor": "#FF0000",
-  "screencastMode.mouseIndicatorSize": 20,
-  "screencastMode.onlyKeyboardShortcuts": false,
-  "screencastMode.verticalOffset": 20
+	"screencastMode.fontSize": 56,
+	"screencastMode.keyboardOverlayTimeout": 800,
+	"screencastMode.mouseIndicatorColor": "#FF0000",
+	"screencastMode.mouseIndicatorSize": 20,
+	"screencastMode.onlyKeyboardShortcuts": false,
+	"screencastMode.verticalOffset": 20
 }
 ```
 
@@ -74,16 +75,16 @@ missing in Ubuntu VS Code:
 ```json
 // Place your key bindings in this file to override the defaults
 [
-  {
-    "key": "shift+alt+down",
-    "command": "editor.action.copyLinesDownAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "shift+alt+up",
-    "command": "editor.action.copyLinesUpAction",
-    "when": "editorTextFocus && !editorReadonly"
-  }
+	{
+		"key": "shift+alt+down",
+		"command": "editor.action.copyLinesDownAction",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "shift+alt+up",
+		"command": "editor.action.copyLinesUpAction",
+		"when": "editorTextFocus && !editorReadonly"
+	}
 ]
 ```
 
@@ -93,22 +94,22 @@ for the sidebar defaults, "explorer", "git" (scm), "debug" and
 
 ```json
 [
-  {
-    "key": "ctrl+k ctrl+e",
-    "command": "workbench.view.explorer"
-  },
-  {
-    "key": "ctrl+k ctrl+g",
-    "command": "workbench.view.scm"
-  },
-  {
-    "key": "ctrl+k ctrl+d",
-    "command": "workbench.view.debug"
-  },
-  {
-    "key": "ctrl+k ctrl+x",
-    "command": "workbench.extensions.action.showInstalledExtensions"
-  }
+	{
+		"key": "ctrl+k ctrl+e",
+		"command": "workbench.view.explorer"
+	},
+	{
+		"key": "ctrl+k ctrl+g",
+		"command": "workbench.view.scm"
+	},
+	{
+		"key": "ctrl+k ctrl+d",
+		"command": "workbench.view.debug"
+	},
+	{
+		"key": "ctrl+k ctrl+x",
+		"command": "workbench.extensions.action.showInstalledExtensions"
+	}
 ]
 ```
 
@@ -122,11 +123,11 @@ access it with `Crtl+Shift+p`.
 
 ```json
 {
-  "workbench.activityBar.visible": false,
-  "workbench.editor.showTabs": false,
-  "workbench.sideBar.location": "right",
-  "workbench.statusBar.visible": false,
-  "editor.minimap.enabled": false
+	"workbench.activityBar.visible": false,
+	"workbench.editor.showTabs": false,
+	"workbench.sideBar.location": "right",
+	"workbench.statusBar.visible": false,
+	"editor.minimap.enabled": false
 }
 ```
 

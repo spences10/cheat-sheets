@@ -1,20 +1,20 @@
 export async function GET() {
-  const posts = import.meta.globEager('../../sheets/*.md')
+	const posts = import.meta.globEager('../../sheets/*.md')
 
-  const postsList = Object.values(posts)
-  const postsMeta = postsList.map(post => {
-    return post.metadata
-  })
-  const body = render(postsMeta)
+	const postsList = Object.values(posts)
+	const postsMeta = postsList.map(post => {
+		return post.metadata
+	})
+	const body = render(postsMeta)
 
-  const headers = {
-    'Cache-Control': `max-age=0, s-max-age=${600}`,
-    'Content-Type': 'application/xml',
-  }
-  return {
-    headers,
-    body,
-  }
+	const headers = {
+		'Cache-Control': `max-age=0, s-max-age=${600}`,
+		'Content-Type': 'application/xml',
+	}
+	return {
+		headers,
+		body,
+	}
 }
 
 const render = postsMeta => `<?xml version="1.0" encoding="UTF-8" ?>
@@ -32,15 +32,15 @@ const render = postsMeta => `<?xml version="1.0" encoding="UTF-8" ?>
     <priority>0.7</priority>
   </url>
   ${postsMeta
-    .map(
-      meta => `
+		.map(
+			meta => `
   <url>
     <loc>https://cheatsheets.xyz/${meta.slug}</loc>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   `
-    )
-    .join('')}
+		)
+		.join('')}
 </urlset>
 `

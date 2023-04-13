@@ -66,4 +66,4 @@ plugin] issue on GitHub for permission errors.
 
 [`zsh-nvm`]: https://github.com/lukechilds/zsh-nvm
 [permission denied when trying to install the plugin]:
-  https://github.com/lukechilds/zsh-nvm/issues/14
+	https://github.com/lukechilds/zsh-nvm/issues/14

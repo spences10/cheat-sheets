@@ -4,7 +4,8 @@ createdDate: 2019-10-07
 updatedDate: 2019-10-07
 published: true
 slug: npx
-description: npx is a package manager for the JavaScript programming language.
+description:
+  npx is a package manager for the JavaScript programming language.
 ---
 
 npx, one off command

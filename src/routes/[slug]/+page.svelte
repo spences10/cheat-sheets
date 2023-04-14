@@ -1,34 +1,33 @@
 <script lang="ts">
 	import { page } from '$app/stores'
-	import TableOfContents from '$lib/components/table-of-contents.svelte'
-	import { ogImageUrl } from '$lib/og-image-url-build'
+	import { TableOfContents } from '$lib/components'
+	import { ogImageUrl } from '$lib/og-image-url-build.js'
+	import { get_headings, update_toc_visibility } from '$lib/utils'
 	import { format } from 'date-fns'
 	import { Head } from 'svead'
 	import { onMount } from 'svelte'
 
 	export let data
-	let { Post, metadata } = data
+
+	let { Sheet, metadata } = data
 	let created = format(new Date(metadata.createdDate), 'yyy MMM do')
 	let updated = format(new Date(metadata.updatedDate), 'yyy MMM do')
+	let url = $page.url.toString()
 
-	let headingNodeList
-	let headings: { label: string; href: string }[]
-	async function getHeadings() {
-		await headings
-	}
+	let end_of_copy: HTMLElement | null
+	let show_table_of_contents = true
+	let headings_promise: Promise<{ label: string; href: string }[]>
 
 	onMount(() => {
-		headingNodeList = document.querySelectorAll('h2')
-
-		headings = Array.from(headingNodeList).map(h2 => {
-			return {
-				label: h2.innerText,
-				href: `#${h2.id}`,
-			}
-		})
+		headings_promise = get_headings()
 	})
-	let url = $page.url.toString()
+
+	const handle_scroll = () => {
+		show_table_of_contents = update_toc_visibility(end_of_copy)
+	}
 </script>
+
+<svelte:window on:scroll={handle_scroll} />
 
 <Head
 	title={`${metadata.title} · Cheat Sheets`}
@@ -41,10 +40,14 @@
 	{url}
 />
 
-{#await getHeadings()}
+{#await headings_promise}
 	Loading...
-{:then}
-	<TableOfContents {headings} />
+{:then headings}
+	{#if show_table_of_contents}
+		<TableOfContents {headings} />
+	{/if}
+{:catch error}
+	<p>Failed to load table of contents: {error.message}</p>
 {/await}
 
 <div class="flex justify-between mb-16">
@@ -57,11 +60,16 @@
 		<a
 			class="font-semibold text-xs underline hover:no-underline"
 			href={`https://github.com/spences10/cheat-sheets/edit/main/sheets/${metadata.slug}.md`}
-			>Edit this page on GitHub</a
 		>
+			Edit this page on GitHub
+		</a>
 	</div>
 </div>
 
 <article class="mb-16 prose md:prose-lg lg:prose-xl">
-	<svelte:component this={Post} />
+	<svelte:component this={Sheet} />
 </article>
+
+<div class="flex flex-col w-full mt-10 mb-5" bind:this={end_of_copy}>
+	<div class="divider" />
+</div>

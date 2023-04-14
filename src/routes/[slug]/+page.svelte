@@ -1,67 +1,75 @@
-<script>
-  import { page } from '$app/stores'
-  import TableOfContents from '$lib/components/table-of-contents.svelte'
-  import { ogImageUrl } from '$lib/og-image-url-build'
-  import { format } from 'date-fns'
-  import { Head } from 'svead'
-  import { onMount } from 'svelte'
+<script lang="ts">
+	import { page } from '$app/stores'
+	import { TableOfContents } from '$lib/components'
+	import { ogImageUrl } from '$lib/og-image-url-build.js'
+	import { get_headings, update_toc_visibility } from '$lib/utils'
+	import { format } from 'date-fns'
+	import { Head } from 'svead'
+	import { onMount } from 'svelte'
 
-  export let data
-  let { Post, metadata } = data
-  let created = format(new Date(metadata.createdDate), 'yyy MMM do')
-  let updated = format(new Date(metadata.updatedDate), 'yyy MMM do')
+	export let data
 
-  let headingNodeList
-  let headings
-  async function getHeadings() {
-    await headings
-  }
+	let { Sheet, metadata } = data
+	let created = format(new Date(metadata.createdDate), 'yyy MMM do')
+	let updated = format(new Date(metadata.updatedDate), 'yyy MMM do')
+	let url = $page.url.toString()
 
-  onMount(() => {
-    headingNodeList = document.querySelectorAll('h2')
+	let end_of_copy: HTMLElement | null
+	let show_table_of_contents = true
+	let headings_promise: Promise<{ label: string; href: string }[]>
 
-    headings = Array.from(headingNodeList).map(h2 => {
-      return {
-        label: h2.innerText,
-        href: `#${h2.id}`,
-      }
-    })
-  })
-  let url = $page.url.toString()
+	onMount(() => {
+		headings_promise = get_headings()
+	})
+
+	const handle_scroll = () => {
+		show_table_of_contents = update_toc_visibility(end_of_copy)
+	}
 </script>
 
+<svelte:window on:scroll={handle_scroll} />
+
 <Head
-  title={`${metadata.title} · Cheat Sheets`}
-  description={`${metadata.description}`}
-  image={ogImageUrl(
-    'Scott Spence',
-    'cheatsheets.xyz',
-    metadata.title
-  )}
-  {url}
+	title={`${metadata.title} · Cheat Sheets`}
+	description={`${metadata.description}`}
+	image={ogImageUrl(
+		'Scott Spence',
+		'cheatsheets.xyz',
+		metadata.title
+	)}
+	{url}
 />
 
-{#await getHeadings()}
-  Loading...
-{:then}
-  <TableOfContents {headings} />
+{#await headings_promise}
+	Loading...
+{:then headings}
+	{#if show_table_of_contents}
+		<TableOfContents {headings} />
+	{/if}
+{:catch error}
+	<p>Failed to load table of contents: {error.message}</p>
 {/await}
 
 <div class="flex justify-between mb-16">
-  <h1 class="font-medium text-5xl">
-    {metadata.title}
-  </h1>
-  <div class="opacity-75">
-    <p class="font-semibold text-xs">Created: {created}</p>
-    <p class="font-semibold text-xs">Updated: {updated}</p>
-    <a
-      class="font-semibold text-xs underline hover:no-underline"
-      href={`https://github.com/spences10/cheat-sheets/edit/main/sheets/${metadata.slug}.md`}
-      >Edit this page on GitHub</a
-    >
-  </div>
+	<h1 class="font-medium text-5xl">
+		{metadata.title}
+	</h1>
+	<div class="opacity-75">
+		<p class="font-semibold text-xs">Created: {created}</p>
+		<p class="font-semibold text-xs">Updated: {updated}</p>
+		<a
+			class="font-semibold text-xs underline hover:no-underline"
+			href={`https://github.com/spences10/cheat-sheets/edit/main/sheets/${metadata.slug}.md`}
+		>
+			Edit this page on GitHub
+		</a>
+	</div>
 </div>
 
 <article class="mb-16 prose md:prose-lg lg:prose-xl">
-  <svelte:component this={Post} />
+	<svelte:component this={Sheet} />
 </article>
+
+<div class="flex flex-col w-full mt-10 mb-5" bind:this={end_of_copy}>
+	<div class="divider" />
+</div>

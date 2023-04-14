@@ -4,7 +4,8 @@ createdDate: 2017-05-19
 updatedDate: 2019-03-01
 published: true
 slug: npm
-description: npm is a package manager for the JavaScript programming language.
+description:
+  npm is a package manager for the JavaScript programming language.
 ---
 
 A list of terminal commands and flags to help me use `npm`

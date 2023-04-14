@@ -85,4 +85,4 @@ journalctl -ef
 <!-- Links -->
 
 [how to install a binary]:
-  https://www.cyberciti.biz/faq/install-tarballs/
+	https://www.cyberciti.biz/faq/install-tarballs/

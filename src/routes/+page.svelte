@@ -1,21 +1,22 @@
-<script>
+<script lang="ts">
 	import { author, description, name, website } from '$lib/info'
-	import { ogImageUrl } from '$lib/og-image-url-build'
-	import Fuse from 'fuse.js'
+	import { ogImageUrl } from '$lib/og-image-url-build.js'
 	import { Head } from 'svead'
 
 	export let data
 	let { sheets } = data
 
-	let options = {
-		keys: ['title'],
-		includeScore: true,
-		includeMatches: true,
-		threshold: 0.2,
-	}
-	let fuse = new Fuse([...sheets], options)
 	let query = ''
-	$: results = fuse.search(query)
+
+	$: results = sheets.filter(sheet => {
+		if (!sheet.published) {
+			return false
+		}
+		if (query === '') {
+			return true
+		}
+		return sheet.title.toLowerCase().includes(query.toLowerCase())
+	})
 </script>
 
 <Head
@@ -27,15 +28,15 @@
 
 <div class="form-control">
 	<label for="search" class="label">
-		<span id="search" class="label-text-alt"
-			>Search for a technology...</span
-		>
+		<span id="search" class="label-text-alt">
+			Search for a technology...
+		</span>
 	</label>
 	<input
 		type="text"
 		bind:value={query}
 		placeholder="Search"
-		class="input input-primary input-bordered text-xl mb-10"
+		class="input input-primary input-bordered text-xl mb-10 shadow-xl"
 	/>
 </div>
 
@@ -46,19 +47,21 @@
 		{#each sheets as sheet}
 			{#if sheet.published}
 				<li
-					class="font-medium text-3xl border border-primary rounded-2xl p-5"
+					class="font-medium text-3xl border border-primary rounded-2xl p-5 shadow-xl"
 				>
-					<a class="link" sveltekit:prefetch href={`/${sheet.slug}`}
-						>{sheet.title}</a
-					>
+					<a class="link" href={`/${sheet.slug}`}>
+						{sheet.title}
+					</a>
 				</li>
 			{/if}
 		{/each}
 	{:else}
 		{#each results as result}
-			<li class="font-medium my-5 text-4xl">
-				<a class="link" sveltekit:prefetch href={result.item.slug}>
-					{result.item.title}
+			<li
+				class="font-medium text-3xl border border-primary rounded-2xl p-5 shadow-xl"
+			>
+				<a class="link" href={result.slug}>
+					{result.title}
 				</a>
 			</li>
 		{/each}

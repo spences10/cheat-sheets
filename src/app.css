@@ -25,12 +25,10 @@ html {
 /* Scrollbar styles */
 
 /* Firefox */
-/* stylelint-disable */
 * {
 	scrollbar-width: thin;
 	scrollbar-color: hsl(var(--s)) hsl(var(--p));
 }
-/* stylelint-enable */
 
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
@@ -46,15 +44,6 @@ html {
 	background-color: hsl(var(--s));
 	border-radius: 14px;
 	border: 3px solid hsl(var(--p));
-}
-
-/* glow */
-
-.text-glow {
-	color: #000;
-	text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff,
-		0 0 42px #333, 0 0 82px #333, 0 0 92px #333, 0 0 102px #333,
-		0 0 151px #333;
 }
 
 @tailwind components;

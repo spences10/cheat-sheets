@@ -3,7 +3,7 @@
 		data-choose-theme
 		class="select select-bordered select-primary select-xs"
 	>
-		<option disabled="disabled" selected="selected">Theme</option>
+		<option disabled selected>Theme</option>
 		<option value="acid">Acid</option>
 		<option value="aqua">Aqua</option>
 		<option value="autumn">Autumn</option>

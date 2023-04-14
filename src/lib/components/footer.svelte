@@ -1,7 +1,5 @@
-<script>
-	import GitHub from '$lib/icons/git-hub.svelte'
-	import Twitter from '$lib/icons/twitter.svelte'
-	import YouTube from '$lib/icons/you-tube.svelte'
+<script lang="ts">
+	import { GitHub, Twitter, YouTube } from '$lib/icons'
 </script>
 
 <footer
@@ -19,7 +17,7 @@
 				class="link transition hover:text-secondary"
 				href="https://scottspence.com"
 				target="_blank"
-				rel="noopener"
+				rel="noopener noreferrer"
 			>
 				Scott Spence
 			</a>

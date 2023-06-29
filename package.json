@@ -34,7 +34,7 @@
 		"eslint-config-prettier": "^8.8.0",
 		"eslint-plugin-svelte3": "^4.0.0",
 		"fathom-client": "^3.5.0",
-		"mdsvex": "^0.10.6",
+		"mdsvex": "^0.11.0",
 		"postcss": "^8.4.14",
 		"postcss-load-config": "^4.0.1",
 		"prettier": "^2.8.7",

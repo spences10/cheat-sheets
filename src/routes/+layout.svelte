@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { browser } from '$app/environment'
+	import { onNavigate } from '$app/navigation'
 	import { page } from '$app/stores'
 	import {
 		PUBLIC_FATHOM_ID,
@@ -21,15 +22,29 @@
 	})
 
 	$: $page.url.pathname, browser && Fathom.trackPageview()
+
+	onNavigate(navigation => {
+		// sorry Firefox and Safari users
+		if (!(document as any).startViewTransition) return
+
+		return new Promise(resolve => {
+			;(document as any).startViewTransition(async () => {
+				resolve()
+				await navigation.complete
+			})
+		})
+	})
 </script>
 
 <div
-	class="container mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 flex-grow"
+	class="flex flex-col min-h-screen overflow-x-hidden"
 >
 	<Header />
-	<main>
+	
+	<main class="container max-w-3xl mx-auto px-4 flex-grow">
 		<slot />
 	</main>
+
+	<Footer />
 </div>
 
-<Footer />

@@ -47,7 +47,7 @@
 		{#each sheets as sheet}
 			{#if sheet.published}
 				<li
-					class="font-medium text-3xl border border-primary rounded-2xl p-5 shadow-xl"
+					class="font-medium text-3xl border border-primary rounded-2xl p-5 shadow-xl all-prose"
 				>
 					<a class="link" href={`/${sheet.slug}`}>
 						{sheet.title}
@@ -58,7 +58,7 @@
 	{:else}
 		{#each results as result}
 			<li
-				class="font-medium text-3xl border border-primary rounded-2xl p-5 shadow-xl"
+				class="font-medium text-3xl border border-primary rounded-2xl p-5 shadow-xl all-prose"
 			>
 				<a class="link" href={result.slug}>
 					{result.title}

@@ -51,7 +51,7 @@
 {/await}
 
 <div class="flex justify-between mb-16">
-	<h1 class="font-medium text-5xl">
+	<h1 class="font-bold tracking-wide text-5xl">
 		{metadata.title}
 	</h1>
 	<div class="opacity-75">
@@ -66,7 +66,7 @@
 	</div>
 </div>
 
-<article class="mb-16 prose md:prose-lg lg:prose-xl">
+<article class="mb-16 all-prose">
 	<svelte:component this={Sheet} />
 </article>
 

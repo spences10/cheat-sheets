@@ -183,7 +183,7 @@ const arr = [0, 1, 2, 3, 4, 5, null, 6, 9]
 function addEven() {
 	return arr.reduce(
 		(acc, cur) => (cur % 2 === 0 ? acc + cur : acc),
-		0
+		0,
 	)
 }
 

@@ -1,124 +1,97 @@
 {
-  "projectName": "cheat-sheets",
-  "projectOwner": "spences10",
-  "repoType": "github",
-  "repoHost": "https://github.com",
-  "files": [
-    "README.md"
-  ],
-  "imageSize": 100,
-  "commit": true,
-  "commitConvention": "none",
-  "contributors": [
-    {
-      "login": "spences10",
-      "name": "Scott Spence",
-      "avatar_url": "https://avatars.githubusercontent.com/u/234708?v=4",
-      "profile": "https://scottspence.com/",
-      "contributions": [
-        "code",
-        "doc"
-      ]
-    },
-    {
-      "login": "NickyMeuleman",
-      "name": "Nicky Meuleman",
-      "avatar_url": "https://avatars.githubusercontent.com/u/30179461?v=4",
-      "profile": "https://nickymeuleman.netlify.app/",
-      "contributions": [
-        "doc"
-      ]
-    },
-    {
-      "login": "eclectic-coding",
-      "name": "Chuck ",
-      "avatar_url": "https://avatars.githubusercontent.com/u/13651291?v=4",
-      "profile": "https://github.com/eclectic-coding",
-      "contributions": [
-        "doc"
-      ]
-    },
-    {
-      "login": "ghostdevv",
-      "name": "GHOST",
-      "avatar_url": "https://avatars.githubusercontent.com/u/47755378?v=4",
-      "profile": "https://github.com/ghostdevv",
-      "contributions": [
-        "doc"
-      ]
-    },
-    {
-      "login": "tannerdolby",
-      "name": "Tanner Dolby",
-      "avatar_url": "https://avatars.githubusercontent.com/u/48612525?v=4",
-      "profile": "https://tannerdolby.com/",
-      "contributions": [
-        "doc"
-      ]
-    },
-    {
-      "login": "marcusbarnesdeveloper",
-      "name": "marcusbarnesdeveloper",
-      "avatar_url": "https://avatars.githubusercontent.com/u/59588519?v=4",
-      "profile": "https://github.com/marcusbarnesdeveloper",
-      "contributions": [
-        "doc"
-      ]
-    },
-    {
-      "login": "anniebombanie",
-      "name": "Annie",
-      "avatar_url": "https://avatars.githubusercontent.com/u/42328163?v=4",
-      "profile": "https://github.com/anniebombanie",
-      "contributions": [
-        "doc"
-      ]
-    },
-    {
-      "login": "ddieppa",
-      "name": "Daniel",
-      "avatar_url": "https://avatars.githubusercontent.com/u/10607192?v=4",
-      "profile": "https://github.com/ddieppa",
-      "contributions": [
-        "doc"
-      ]
-    },
-    {
-      "login": "devenblake",
-      "name": "Deven Blake",
-      "avatar_url": "https://avatars.githubusercontent.com/u/26193059?v=4",
-      "profile": "http://www.trinity.moe/",
-      "contributions": [
-        "doc"
-      ]
-    },
-    {
-      "login": "jatin2003",
-      "name": "Jatin Rao",
-      "avatar_url": "https://avatars.githubusercontent.com/u/56562571?v=4",
-      "profile": "https://jatinrao.dev/",
-      "contributions": [
-        "doc"
-      ]
-    },
-    {
-      "login": "ozyx",
-      "name": "Jesse Mazzella",
-      "avatar_url": "https://avatars.githubusercontent.com/u/9259993?v=4",
-      "profile": "https://github.com/ozyx",
-      "contributions": [
-        "doc"
-      ]
-    },
-    {
-      "login": "osalvatierra",
-      "name": "Oscar Salvatierra",
-      "avatar_url": "https://avatars.githubusercontent.com/osalvatierra",
-      "profile": "https://github.com/osalvatierra",
-      "contributions": [
-        "doc"
-      ]
-    }
-  ],
-  "contributorsPerLine": 7
+	"projectName": "cheat-sheets",
+	"projectOwner": "spences10",
+	"repoType": "github",
+	"repoHost": "https://github.com",
+	"files": ["README.md"],
+	"imageSize": 100,
+	"commit": true,
+	"commitConvention": "none",
+	"contributors": [
+		{
+			"login": "spences10",
+			"name": "Scott Spence",
+			"avatar_url": "https://avatars.githubusercontent.com/u/234708?v=4",
+			"profile": "https://scottspence.com/",
+			"contributions": ["code", "doc"]
+		},
+		{
+			"login": "NickyMeuleman",
+			"name": "Nicky Meuleman",
+			"avatar_url": "https://avatars.githubusercontent.com/u/30179461?v=4",
+			"profile": "https://nickymeuleman.netlify.app/",
+			"contributions": ["doc"]
+		},
+		{
+			"login": "eclectic-coding",
+			"name": "Chuck ",
+			"avatar_url": "https://avatars.githubusercontent.com/u/13651291?v=4",
+			"profile": "https://github.com/eclectic-coding",
+			"contributions": ["doc"]
+		},
+		{
+			"login": "ghostdevv",
+			"name": "GHOST",
+			"avatar_url": "https://avatars.githubusercontent.com/u/47755378?v=4",
+			"profile": "https://github.com/ghostdevv",
+			"contributions": ["doc"]
+		},
+		{
+			"login": "tannerdolby",
+			"name": "Tanner Dolby",
+			"avatar_url": "https://avatars.githubusercontent.com/u/48612525?v=4",
+			"profile": "https://tannerdolby.com/",
+			"contributions": ["doc"]
+		},
+		{
+			"login": "marcusbarnesdeveloper",
+			"name": "marcusbarnesdeveloper",
+			"avatar_url": "https://avatars.githubusercontent.com/u/59588519?v=4",
+			"profile": "https://github.com/marcusbarnesdeveloper",
+			"contributions": ["doc"]
+		},
+		{
+			"login": "anniebombanie",
+			"name": "Annie",
+			"avatar_url": "https://avatars.githubusercontent.com/u/42328163?v=4",
+			"profile": "https://github.com/anniebombanie",
+			"contributions": ["doc"]
+		},
+		{
+			"login": "ddieppa",
+			"name": "Daniel",
+			"avatar_url": "https://avatars.githubusercontent.com/u/10607192?v=4",
+			"profile": "https://github.com/ddieppa",
+			"contributions": ["doc"]
+		},
+		{
+			"login": "devenblake",
+			"name": "Deven Blake",
+			"avatar_url": "https://avatars.githubusercontent.com/u/26193059?v=4",
+			"profile": "http://www.trinity.moe/",
+			"contributions": ["doc"]
+		},
+		{
+			"login": "jatin2003",
+			"name": "Jatin Rao",
+			"avatar_url": "https://avatars.githubusercontent.com/u/56562571?v=4",
+			"profile": "https://jatinrao.dev/",
+			"contributions": ["doc"]
+		},
+		{
+			"login": "ozyx",
+			"name": "Jesse Mazzella",
+			"avatar_url": "https://avatars.githubusercontent.com/u/9259993?v=4",
+			"profile": "https://github.com/ozyx",
+			"contributions": ["doc"]
+		},
+		{
+			"login": "osalvatierra",
+			"name": "Oscar Salvatierra",
+			"avatar_url": "https://avatars.githubusercontent.com/osalvatierra",
+			"profile": "https://github.com/osalvatierra",
+			"contributions": ["doc"]
+		}
+	],
+	"contributorsPerLine": 7
 }

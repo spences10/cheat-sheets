@@ -10,7 +10,7 @@
 	import 'prism-themes/themes/prism-night-owl.css'
 	import { onMount } from 'svelte'
 	import { themeChange } from 'theme-change'
-	import '../app.css'
+	import '../app.postcss'
 
 	onMount(() => {
 		themeChange(false)

@@ -19,7 +19,7 @@
 				{#each headings as heading (heading.href)}
 					<li class="mr-4 mb-2">
 						<a
-							class="transition hover:text-accent-focus"
+							class="transition hover:text-primary"
 							href={heading.href}
 						>
 							{heading.label}

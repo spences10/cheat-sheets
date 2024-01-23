@@ -9,6 +9,6 @@ export const load = async ({ params }) => {
 			metadata: Sheet.metadata,
 		}
 	} catch (e) {
-		throw error(404, 'Sheet not found')
+		error(404, 'Sheet not found');
 	}
 }

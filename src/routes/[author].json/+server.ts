@@ -6,5 +6,5 @@ export const GET = async ({ params }) => {
 
 	if (res.ok) return new Response(JSON.stringify(await res.json()))
 
-	throw error(500, 'Something went wrong')
+	error(500, 'Something went wrong');
 }

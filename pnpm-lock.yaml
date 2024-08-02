@@ -19,10 +19,10 @@ devDependencies:
     version: 3.1.1(svelte@5.0.0-next.203)(vite@5.3.4)
   '@tailwindcss/forms':
     specifier: ^0.5.7
-    version: 0.5.7(tailwindcss@3.4.6)
+    version: 0.5.7(tailwindcss@3.4.7)
   '@tailwindcss/typography':
     specifier: ^0.5.13
-    version: 0.5.13(tailwindcss@3.4.6)
+    version: 0.5.13(tailwindcss@3.4.7)
   '@typescript-eslint/eslint-plugin':
     specifier: ^7.13.1
     version: 7.18.0(@typescript-eslint/parser@7.18.0)(eslint@9.7.0)(typescript@5.5.3)
@@ -91,7 +91,7 @@ devDependencies:
     version: 3.8.4(postcss-load-config@6.0.1)(postcss@8.4.39)(svelte@5.0.0-next.203)
   tailwindcss:
     specifier: ^3.4.4
-    version: 3.4.6
+    version: 3.4.7
   theme-change:
     specifier: ^2.5.0
     version: 2.5.0
@@ -675,16 +675,16 @@ packages:
       - supports-color
     dev: true
 
-  /@tailwindcss/forms@0.5.7(tailwindcss@3.4.6):
+  /@tailwindcss/forms@0.5.7(tailwindcss@3.4.7):
     resolution: {integrity: sha512-QE7X69iQI+ZXwldE+rzasvbJiyV/ju1FGHH0Qn2W3FKbuYtqp8LKcy6iSw79fVUT5/Vvf+0XgLCeYVG+UV6hOw==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1'
     dependencies:
       mini-svg-data-uri: 1.4.4
-      tailwindcss: 3.4.6
+      tailwindcss: 3.4.7
     dev: true
 
-  /@tailwindcss/typography@0.5.13(tailwindcss@3.4.6):
+  /@tailwindcss/typography@0.5.13(tailwindcss@3.4.7):
     resolution: {integrity: sha512-ADGcJ8dX21dVVHIwTRgzrcunY6YY9uSlAHHGVKvkA+vLc5qLwEszvKts40lx7z0qc4clpjclwLeK5rVCV2P/uw==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders'
@@ -693,7 +693,7 @@ packages:
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       postcss-selector-parser: 6.0.10
-      tailwindcss: 3.4.6
+      tailwindcss: 3.4.7
     dev: true
 
   /@types/cookie@0.6.0:
@@ -2304,7 +2304,7 @@ packages:
     dependencies:
       lilconfig: 3.1.2
       postcss: 8.4.39
-      yaml: 2.4.5
+      yaml: 2.5.0
     dev: true
 
   /postcss-load-config@6.0.1(postcss@8.4.39):
@@ -2877,8 +2877,8 @@ packages:
       zimmerframe: 1.1.2
     dev: true
 
-  /tailwindcss@3.4.6:
-    resolution: {integrity: sha512-1uRHzPB+Vzu57ocybfZ4jh5Q3SdlH7XW23J5sQoM9LhE9eIOlzxer/3XPSsycvih3rboRsvt0QCmzSrqyOYUIA==}
+  /tailwindcss@3.4.7:
+    resolution: {integrity: sha512-rxWZbe87YJb4OcSopb7up2Ba4U82BoiSGUdoDr3Ydrg9ckxFS/YWsvhN323GMcddgU65QRy7JndC7ahhInhvlQ==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
@@ -3314,8 +3314,8 @@ packages:
     engines: {node: '>= 6'}
     dev: true
 
-  /yaml@2.4.5:
-    resolution: {integrity: sha512-aBx2bnqDzVOyNKfsysjA2ms5ZlnjSAW2eG3/L5G/CSujfjLJTJsEw1bGw8kCf04KodQWk1pxlGnZ56CRxiawmg==}
+  /yaml@2.5.0:
+    resolution: {integrity: sha512-2wWLbGbYDiSqqIKoPjar3MPgB94ErzCtrNE1FdqGuaO0pi2JGjmE8aW8TDZwzU7vuxcGRdL/4gPQwQ7hD5AMSw==}
     engines: {node: '>= 14'}
     hasBin: true
     dev: true

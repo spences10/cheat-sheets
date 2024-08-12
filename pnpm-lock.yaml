@@ -10,10 +10,10 @@ devDependencies:
     version: 1.45.2
   '@sveltejs/adapter-auto':
     specifier: ^3.2.2
-    version: 3.2.2(@sveltejs/kit@2.5.18)
+    version: 3.2.2(@sveltejs/kit@2.5.21)
   '@sveltejs/kit':
     specifier: ^2.5.17
-    version: 2.5.18(@sveltejs/vite-plugin-svelte@3.1.1)(svelte@5.0.0-next.203)(vite@5.3.4)
+    version: 2.5.21(@sveltejs/vite-plugin-svelte@3.1.1)(svelte@5.0.0-next.203)(vite@5.3.4)
   '@sveltejs/vite-plugin-svelte':
     specifier: ^3.1.1
     version: 3.1.1(svelte@5.0.0-next.203)(vite@5.3.4)
@@ -603,17 +603,17 @@ packages:
     dev: true
     optional: true
 
-  /@sveltejs/adapter-auto@3.2.2(@sveltejs/kit@2.5.18):
+  /@sveltejs/adapter-auto@3.2.2(@sveltejs/kit@2.5.21):
     resolution: {integrity: sha512-Mso5xPCA8zgcKrv+QioVlqMZkyUQ5MjDJiEPuG/Z7cV/5tmwV7LmcVWk5tZ+H0NCOV1x12AsoSpt/CwFwuVXMA==}
     peerDependencies:
       '@sveltejs/kit': ^2.0.0
     dependencies:
-      '@sveltejs/kit': 2.5.18(@sveltejs/vite-plugin-svelte@3.1.1)(svelte@5.0.0-next.203)(vite@5.3.4)
+      '@sveltejs/kit': 2.5.21(@sveltejs/vite-plugin-svelte@3.1.1)(svelte@5.0.0-next.203)(vite@5.3.4)
       import-meta-resolve: 4.1.0
     dev: true
 
-  /@sveltejs/kit@2.5.18(@sveltejs/vite-plugin-svelte@3.1.1)(svelte@5.0.0-next.203)(vite@5.3.4):
-    resolution: {integrity: sha512-+g06hvpVAnH7b4CDjhnTDgFWBKBiQJpuSmQeGYOuzbO3SC3tdYjRNlDCrafvDtKbGiT2uxY5Dn9qdEUGVZdWOQ==}
+  /@sveltejs/kit@2.5.21(@sveltejs/vite-plugin-svelte@3.1.1)(svelte@5.0.0-next.203)(vite@5.3.4):
+    resolution: {integrity: sha512-zHkaVZB5WNKVtosPhpPHLLvCdhUs3j6rRhDjRcXz9Mi7ZOeMe+xpzFkm7vs7RYQKMWDPUIfDngFDM3iGPyntMw==}
     engines: {node: '>=18.13'}
     hasBin: true
     requiresBuild: true
@@ -629,10 +629,10 @@ packages:
       esm-env: 1.0.0
       import-meta-resolve: 4.1.0
       kleur: 4.1.5
-      magic-string: 0.30.10
+      magic-string: 0.30.11
       mrmime: 2.0.0
       sade: 1.8.1
-      set-cookie-parser: 2.6.0
+      set-cookie-parser: 2.7.0
       sirv: 2.0.4
       svelte: 5.0.0-next.203
       tiny-glob: 0.2.9
@@ -2613,8 +2613,8 @@ packages:
     hasBin: true
     dev: true
 
-  /set-cookie-parser@2.6.0:
-    resolution: {integrity: sha512-RVnVQxTXuerk653XfuliOxBP81Sf0+qfQE73LIYKcyMYHG94AuH0kgrQpRDuTZnSmjpysHmzxJXKNfa6PjFhyQ==}
+  /set-cookie-parser@2.7.0:
+    resolution: {integrity: sha512-lXLOiqpkUumhRdFF3k1osNXCy9akgx/dyPZ5p8qAg9seJzXr5ZrlqZuWIMuY6ejOsVLE6flJ5/h3lsn57fQ/PQ==}
     dev: true
 
   /shebang-command@2.0.0:

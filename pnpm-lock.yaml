@@ -22,7 +22,7 @@ devDependencies:
     version: 0.5.7(tailwindcss@3.4.6)
   '@tailwindcss/typography':
     specifier: ^0.5.13
-    version: 0.5.13(tailwindcss@3.4.6)
+    version: 0.5.14(tailwindcss@3.4.6)
   '@typescript-eslint/eslint-plugin':
     specifier: ^7.13.1
     version: 7.18.0(@typescript-eslint/parser@7.18.0)(eslint@9.8.0)(typescript@5.5.3)
@@ -684,8 +684,8 @@ packages:
       tailwindcss: 3.4.6
     dev: true
 
-  /@tailwindcss/typography@0.5.13(tailwindcss@3.4.6):
-    resolution: {integrity: sha512-ADGcJ8dX21dVVHIwTRgzrcunY6YY9uSlAHHGVKvkA+vLc5qLwEszvKts40lx7z0qc4clpjclwLeK5rVCV2P/uw==}
+  /@tailwindcss/typography@0.5.14(tailwindcss@3.4.6):
+    resolution: {integrity: sha512-ZvOCjUbsJBjL9CxQBn+VEnFpouzuKhxh2dH8xMIWHILL+HfOYtlAkWcyoon8LlzE53d2Yo6YO6pahKKNW3q1YQ==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders'
     dependencies:

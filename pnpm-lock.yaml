@@ -10,7 +10,7 @@ devDependencies:
     version: 1.46.0
   '@sveltejs/adapter-auto':
     specifier: ^3.2.2
-    version: 3.2.2(@sveltejs/kit@2.5.21)
+    version: 3.2.3(@sveltejs/kit@2.5.21)
   '@sveltejs/kit':
     specifier: ^2.5.17
     version: 2.5.21(@sveltejs/vite-plugin-svelte@3.1.1)(svelte@5.0.0-next.203)(vite@5.3.4)
@@ -603,8 +603,8 @@ packages:
     dev: true
     optional: true
 
-  /@sveltejs/adapter-auto@3.2.2(@sveltejs/kit@2.5.21):
-    resolution: {integrity: sha512-Mso5xPCA8zgcKrv+QioVlqMZkyUQ5MjDJiEPuG/Z7cV/5tmwV7LmcVWk5tZ+H0NCOV1x12AsoSpt/CwFwuVXMA==}
+  /@sveltejs/adapter-auto@3.2.3(@sveltejs/kit@2.5.21):
+    resolution: {integrity: sha512-VbWzQdNuunHsqa/OqPLqdL3fpyz9tH1f5CawjeYpPcowMI7Ng727M1/Z20yK1L7vrF7L2sYDFeE8vELgUy1Ibg==}
     peerDependencies:
       '@sveltejs/kit': ^2.0.0
     dependencies:

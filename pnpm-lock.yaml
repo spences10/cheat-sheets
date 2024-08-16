@@ -19,10 +19,10 @@ devDependencies:
     version: 3.1.1(svelte@5.0.0-next.216)(vite@5.3.4)
   '@tailwindcss/forms':
     specifier: ^0.5.7
-    version: 0.5.7(tailwindcss@3.4.6)
+    version: 0.5.7(tailwindcss@3.4.10)
   '@tailwindcss/typography':
     specifier: ^0.5.13
-    version: 0.5.14(tailwindcss@3.4.6)
+    version: 0.5.14(tailwindcss@3.4.10)
   '@typescript-eslint/eslint-plugin':
     specifier: ^7.13.1
     version: 7.18.0(@typescript-eslint/parser@7.18.0)(eslint@9.8.0)(typescript@5.5.3)
@@ -91,7 +91,7 @@ devDependencies:
     version: 3.8.4(postcss-load-config@6.0.1)(postcss@8.4.41)(svelte@5.0.0-next.216)
   tailwindcss:
     specifier: ^3.4.4
-    version: 3.4.6
+    version: 3.4.10
   theme-change:
     specifier: ^2.5.0
     version: 2.5.0
@@ -675,16 +675,16 @@ packages:
       - supports-color
     dev: true
 
-  /@tailwindcss/forms@0.5.7(tailwindcss@3.4.6):
+  /@tailwindcss/forms@0.5.7(tailwindcss@3.4.10):
     resolution: {integrity: sha512-QE7X69iQI+ZXwldE+rzasvbJiyV/ju1FGHH0Qn2W3FKbuYtqp8LKcy6iSw79fVUT5/Vvf+0XgLCeYVG+UV6hOw==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1'
     dependencies:
       mini-svg-data-uri: 1.4.4
-      tailwindcss: 3.4.6
+      tailwindcss: 3.4.10
     dev: true
 
-  /@tailwindcss/typography@0.5.14(tailwindcss@3.4.6):
+  /@tailwindcss/typography@0.5.14(tailwindcss@3.4.10):
     resolution: {integrity: sha512-ZvOCjUbsJBjL9CxQBn+VEnFpouzuKhxh2dH8xMIWHILL+HfOYtlAkWcyoon8LlzE53d2Yo6YO6pahKKNW3q1YQ==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders'
@@ -693,7 +693,7 @@ packages:
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       postcss-selector-parser: 6.0.10
-      tailwindcss: 3.4.6
+      tailwindcss: 3.4.10
     dev: true
 
   /@types/cookie@0.6.0:
@@ -1593,8 +1593,8 @@ packages:
     resolution: {integrity: sha512-X8cqMLLie7KsNUDSdzeN8FYK9rEt4Dt67OsG/DNGnYTSDBG4uFAJFBnUeiV+zCVAvwFy56IjM9sH51jVaEhNxw==}
     dev: true
 
-  /foreground-child@3.2.1:
-    resolution: {integrity: sha512-PXUUyLqrR2XCWICfv6ukppP96sdFwWbNEnfEMt7jNsISjMsvaLNinAHNDYyvkyU+SZG2BTSbT5NjG+vZslfGTA==}
+  /foreground-child@3.3.0:
+    resolution: {integrity: sha512-Ld2g8rrAyMYFXBhEqMz8ZAHBi4J4uS1i/CxGMDnjyFWddMXLVcDp051DZfu+t7+ab7Wv6SMqpWmyFIj5UbfFvg==}
     engines: {node: '>=14'}
     dependencies:
       cross-spawn: 7.0.3
@@ -1660,7 +1660,7 @@ packages:
     resolution: {integrity: sha512-7Bv8RF0k6xjo7d4A/PxYLbUCfb6c+Vpd2/mB2yRDlew7Jb5hEXiCD9ibfO7wpk8i4sevK6DFny9h7EYbM3/sHg==}
     hasBin: true
     dependencies:
-      foreground-child: 3.2.1
+      foreground-child: 3.3.0
       jackspeak: 3.4.3
       minimatch: 9.0.5
       minipass: 7.1.2
@@ -2300,7 +2300,7 @@ packages:
     dependencies:
       lilconfig: 3.1.2
       postcss: 8.4.41
-      yaml: 2.4.5
+      yaml: 2.5.0
     dev: true
 
   /postcss-load-config@6.0.1(postcss@8.4.41):
@@ -2332,7 +2332,7 @@ packages:
       postcss: ^8.2.14
     dependencies:
       postcss: 8.4.41
-      postcss-selector-parser: 6.1.1
+      postcss-selector-parser: 6.1.2
     dev: true
 
   /postcss-safe-parser@6.0.0(postcss@8.4.41):
@@ -2363,6 +2363,14 @@ packages:
 
   /postcss-selector-parser@6.1.1:
     resolution: {integrity: sha512-b4dlw/9V8A71rLIDsSwVmak9z2DuBUB7CA1/wSdelNEzqsjoSPeADTWNO09lpH49Diy3/JIZ2bSPB1dI3LJCHg==}
+    engines: {node: '>=4'}
+    dependencies:
+      cssesc: 3.0.0
+      util-deprecate: 1.0.2
+    dev: true
+
+  /postcss-selector-parser@6.1.2:
+    resolution: {integrity: sha512-Q8qQfPiZ+THO/3ZrOrO0cJJKfpYCagtMUkXbnEfmgUjwXg6z/WBeOyS9APBBPCTSiDV+s4SwQGu8yFsiMRIudg==}
     engines: {node: '>=4'}
     dependencies:
       cssesc: 3.0.0
@@ -2876,8 +2884,8 @@ packages:
       zimmerframe: 1.1.2
     dev: true
 
-  /tailwindcss@3.4.6:
-    resolution: {integrity: sha512-1uRHzPB+Vzu57ocybfZ4jh5Q3SdlH7XW23J5sQoM9LhE9eIOlzxer/3XPSsycvih3rboRsvt0QCmzSrqyOYUIA==}
+  /tailwindcss@3.4.10:
+    resolution: {integrity: sha512-KWZkVPm7yJRhdu4SRSl9d4AK2wM3a50UsvgHZO7xY77NQr2V+fIrEuoDGQcbvswWvFGbS2f6e+jC/6WJm1Dl0w==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
@@ -2900,7 +2908,7 @@ packages:
       postcss-js: 4.0.1(postcss@8.4.41)
       postcss-load-config: 4.0.2(postcss@8.4.41)
       postcss-nested: 6.2.0(postcss@8.4.41)
-      postcss-selector-parser: 6.1.1
+      postcss-selector-parser: 6.1.2
       resolve: 1.22.8
       sucrase: 3.35.0
     transitivePeerDependencies:
@@ -3313,8 +3321,8 @@ packages:
     engines: {node: '>= 6'}
     dev: true
 
-  /yaml@2.4.5:
-    resolution: {integrity: sha512-aBx2bnqDzVOyNKfsysjA2ms5ZlnjSAW2eG3/L5G/CSujfjLJTJsEw1bGw8kCf04KodQWk1pxlGnZ56CRxiawmg==}
+  /yaml@2.5.0:
+    resolution: {integrity: sha512-2wWLbGbYDiSqqIKoPjar3MPgB94ErzCtrNE1FdqGuaO0pi2JGjmE8aW8TDZwzU7vuxcGRdL/4gPQwQ7hD5AMSw==}
     engines: {node: '>= 14'}
     hasBin: true
     dev: true

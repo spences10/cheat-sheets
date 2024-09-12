@@ -19,7 +19,7 @@ devDependencies:
     version: 3.1.2(svelte@5.0.0-next.242)(vite@5.4.2)
   '@tailwindcss/forms':
     specifier: ^0.5.8
-    version: 0.5.8(tailwindcss@3.4.10)
+    version: 0.5.9(tailwindcss@3.4.10)
   '@tailwindcss/typography':
     specifier: ^0.5.15
     version: 0.5.15(tailwindcss@3.4.10)
@@ -682,8 +682,8 @@ packages:
       - supports-color
     dev: true
 
-  /@tailwindcss/forms@0.5.8(tailwindcss@3.4.10):
-    resolution: {integrity: sha512-DJs7B7NPD0JH7BVvdHWNviWmunlFhuEkz7FyFxE4japOWYMLl9b1D6+Z9mivJJPWr6AEbmlPqgiFRyLwFB1SgQ==}
+  /@tailwindcss/forms@0.5.9(tailwindcss@3.4.10):
+    resolution: {integrity: sha512-tM4XVr2+UVTxXJzey9Twx48c1gcxFStqn1pQz0tRsX8o3DvxhN5oY5pvyAbUx7VTaZxpej4Zzvc6h+1RJBzpIg==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1 || >= 4.0.0-alpha.20'
     dependencies:

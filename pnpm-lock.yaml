@@ -88,7 +88,7 @@ devDependencies:
     version: 5.0.0-next.242
   svelte-check:
     specifier: ^4.0.3
-    version: 4.0.3(svelte@5.0.0-next.242)(typescript@5.6.2)
+    version: 4.0.4(svelte@5.0.0-next.242)(typescript@5.6.2)
   tailwindcss:
     specifier: ^3.4.13
     version: 3.4.13
@@ -2616,8 +2616,8 @@ packages:
     resolution: {integrity: sha512-BrS8WAvrdUs6nbXyZN/kABjLBcPFqA1QBnbpJQiRzxfdA/8XchNJmiRmcPFTElw5NA5k7AG/eYWjj91V+8+Heg==}
     dev: true
 
-  /svelte-check@4.0.3(svelte@5.0.0-next.242)(typescript@5.6.2):
-    resolution: {integrity: sha512-V2eqOEuNrPi1jGf307opR1JZ+ITP6/7R8ALKSw4Uw3NWp6GfA+fe7tYtEvZc7QHCavYKBizCK4JFwYjbuPCeXQ==}
+  /svelte-check@4.0.4(svelte@5.0.0-next.242)(typescript@5.6.2):
+    resolution: {integrity: sha512-AcHWIPuZb1mh/jKoIrww0ebBPpAvwWd1bfXCnwC2dx4OkydNMaiG//+Xnry91RJMHFH7CiE+6Y2p332DRIaOXQ==}
     engines: {node: '>= 18.0.0'}
     hasBin: true
     peerDependencies:

@@ -10,10 +10,10 @@ devDependencies:
     version: 1.47.2
   '@sveltejs/adapter-auto':
     specifier: ^3.2.5
-    version: 3.2.5(@sveltejs/kit@2.5.28)
+    version: 3.2.5(@sveltejs/kit@2.6.1)
   '@sveltejs/kit':
-    specifier: ^2.5.28
-    version: 2.5.28(@sveltejs/vite-plugin-svelte@3.1.2)(svelte@5.0.0-next.242)(vite@5.4.8)
+    specifier: ^2.6.1
+    version: 2.6.1(@sveltejs/vite-plugin-svelte@3.1.2)(svelte@5.0.0-next.242)(vite@5.4.8)
   '@sveltejs/vite-plugin-svelte':
     specifier: ^3.1.2
     version: 3.1.2(svelte@5.0.0-next.242)(vite@5.4.8)
@@ -45,8 +45,8 @@ devDependencies:
     specifier: ^9.1.0
     version: 9.1.0(eslint@9.11.1)
   eslint-plugin-svelte:
-    specifier: ^2.44.0
-    version: 2.44.0(eslint@9.11.1)(svelte@5.0.0-next.242)
+    specifier: ^2.44.1
+    version: 2.44.1(eslint@9.11.1)(svelte@5.0.0-next.242)
   fathom-client:
     specifier: ^3.7.2
     version: 3.7.2
@@ -87,8 +87,8 @@ devDependencies:
     specifier: ^5.0.0-next.1
     version: 5.0.0-next.242
   svelte-check:
-    specifier: ^4.0.3
-    version: 4.0.3(svelte@5.0.0-next.242)(typescript@5.6.2)
+    specifier: ^4.0.4
+    version: 4.0.4(svelte@5.0.0-next.242)(typescript@5.6.2)
   tailwindcss:
     specifier: ^3.4.13
     version: 3.4.13
@@ -615,17 +615,17 @@ packages:
     dev: true
     optional: true
 
-  /@sveltejs/adapter-auto@3.2.5(@sveltejs/kit@2.5.28):
+  /@sveltejs/adapter-auto@3.2.5(@sveltejs/kit@2.6.1):
     resolution: {integrity: sha512-27LR+uKccZ62lgq4N/hvyU2G+hTP9fxWEAfnZcl70HnyfAjMSsGk1z/SjAPXNCD1mVJIE7IFu3TQ8cQ/UH3c0A==}
     peerDependencies:
       '@sveltejs/kit': ^2.0.0
     dependencies:
-      '@sveltejs/kit': 2.5.28(@sveltejs/vite-plugin-svelte@3.1.2)(svelte@5.0.0-next.242)(vite@5.4.8)
+      '@sveltejs/kit': 2.6.1(@sveltejs/vite-plugin-svelte@3.1.2)(svelte@5.0.0-next.242)(vite@5.4.8)
       import-meta-resolve: 4.1.0
     dev: true
 
-  /@sveltejs/kit@2.5.28(@sveltejs/vite-plugin-svelte@3.1.2)(svelte@5.0.0-next.242)(vite@5.4.8):
-    resolution: {integrity: sha512-/O7pvFGBsQPcFa9UrW8eUC5uHTOXLsUp3SN0dY6YmRAL9nfPSrJsSJk//j5vMpinSshzUjteAFcfQTU+04Ka1w==}
+  /@sveltejs/kit@2.6.1(@sveltejs/vite-plugin-svelte@3.1.2)(svelte@5.0.0-next.242)(vite@5.4.8):
+    resolution: {integrity: sha512-QFlch3GPGZYidYhdRAub0fONw8UTguPICFHUSPxNkA/jdlU1p6C6yqq19J1QWdxIHS2El/ycDCGrHb3EAiMNqg==}
     engines: {node: '>=18.13'}
     hasBin: true
     requiresBuild: true
@@ -637,7 +637,7 @@ packages:
       '@sveltejs/vite-plugin-svelte': 3.1.2(svelte@5.0.0-next.242)(vite@5.4.8)
       '@types/cookie': 0.6.0
       cookie: 0.6.0
-      devalue: 5.0.0
+      devalue: 5.1.1
       esm-env: 1.0.0
       import-meta-resolve: 4.1.0
       kleur: 4.1.5
@@ -1267,8 +1267,8 @@ packages:
     engines: {node: '>=6'}
     dev: true
 
-  /devalue@5.0.0:
-    resolution: {integrity: sha512-gO+/OMXF7488D+u3ue+G7Y4AA3ZmUnB3eHJXmBTgNHvr4ZNzl36A0ZtG+XCRNYCkYx/bFmw4qtkoFLa+wSrwAA==}
+  /devalue@5.1.1:
+    resolution: {integrity: sha512-maua5KUiapvEwiEAe+XnlZ3Rh0GD+qI1J/nb9vrJc3muPXvcF/8gXYTWF76+5DAqHyDUtOIImEuo0YKE9mshVw==}
     dev: true
 
   /devlop@1.1.0:
@@ -1361,8 +1361,8 @@ packages:
       eslint: 9.11.1
     dev: true
 
-  /eslint-plugin-svelte@2.44.0(eslint@9.11.1)(svelte@5.0.0-next.242):
-    resolution: {integrity: sha512-wav4MOs02vBb1WjvTCYItwJCxMkuk2Z4p+K/eyjL0N/z7ahXLP+0LtQQjiKc2ezuif7GnZLbD1F3o1VHzSvdVg==}
+  /eslint-plugin-svelte@2.44.1(eslint@9.11.1)(svelte@5.0.0-next.242):
+    resolution: {integrity: sha512-w6wkoJPw1FJKFtM/2oln21rlu5+HTd2CSkkzhm32A+trNoW2EYQqTQAbDTU6k2GI/6Vh64rBHYQejqEgDld7fw==}
     engines: {node: ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: ^7.0.0 || ^8.0.0-0 || ^9.0.0-0
@@ -2616,8 +2616,8 @@ packages:
     resolution: {integrity: sha512-BrS8WAvrdUs6nbXyZN/kABjLBcPFqA1QBnbpJQiRzxfdA/8XchNJmiRmcPFTElw5NA5k7AG/eYWjj91V+8+Heg==}
     dev: true
 
-  /svelte-check@4.0.3(svelte@5.0.0-next.242)(typescript@5.6.2):
-    resolution: {integrity: sha512-V2eqOEuNrPi1jGf307opR1JZ+ITP6/7R8ALKSw4Uw3NWp6GfA+fe7tYtEvZc7QHCavYKBizCK4JFwYjbuPCeXQ==}
+  /svelte-check@4.0.4(svelte@5.0.0-next.242)(typescript@5.6.2):
+    resolution: {integrity: sha512-AcHWIPuZb1mh/jKoIrww0ebBPpAvwWd1bfXCnwC2dx4OkydNMaiG//+Xnry91RJMHFH7CiE+6Y2p332DRIaOXQ==}
     engines: {node: '>= 18.0.0'}
     hasBin: true
     peerDependencies:

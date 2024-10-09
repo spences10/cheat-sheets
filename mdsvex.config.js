@@ -1,7 +1,7 @@
 import { defineMDSveXConfig as defineConfig } from 'mdsvex'
 import autolinkHeadings from 'rehype-autolink-headings'
+import rehypeExternalLinks from 'rehype-external-links'
 import slugPlugin from 'rehype-slug'
-import remarkExternalLinks from 'remark-external-links'
 
 const config = defineConfig({
 	extensions: ['.svelte.md', '.md', '.svx'],
@@ -10,13 +10,7 @@ const config = defineConfig({
 		dashes: 'oldschool',
 	},
 
-	remarkPlugins: [
-		// external links open in a new tab
-		[
-			remarkExternalLinks,
-			{ target: '_blank', rel: 'noopener noreferrer' },
-		],
-	],
+	remarkPlugins: [],
 	rehypePlugins: [
 		slugPlugin,
 		[
@@ -24,6 +18,11 @@ const config = defineConfig({
 			{
 				behavior: 'wrap',
 			},
+		],
+		// external links open in a new tab
+		[
+			rehypeExternalLinks,
+			{ target: '_blank', rel: 'noopener noreferrer' },
 		],
 	],
 })

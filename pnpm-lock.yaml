@@ -77,9 +77,6 @@ devDependencies:
   rehype-slug:
     specifier: ^6.0.0
     version: 6.0.0
-  remark-external-links:
-    specifier: ^10.0.0
-    version: 10.0.0
   svead:
     specifier: ^0.0.4
     version: 0.0.4
@@ -2393,11 +2390,6 @@ packages:
       hast-util-heading-rank: 3.0.0
       hast-util-to-string: 3.0.0
       unist-util-visit: 5.0.0
-    dev: true
-
-  /remark-external-links@10.0.0:
-    resolution: {integrity: sha512-i0WMfyR6RT3F6Sunu8Q5mpZvHd9YLLiSio8v2+2E/9KhJ/4g/nCg2rGo5e6vpRFIwwZKGInM9kgVYUoNrCa56g==}
-    deprecated: 'Deprecated: use `rehype-external-links`'
     dev: true
 
   /resolve-from@4.0.0:

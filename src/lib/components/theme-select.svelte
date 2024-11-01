@@ -1,9 +1,25 @@
+<script lang="ts">
+	import { browser } from '$app/environment'
+
+	let theme = $state(
+		browser ? localStorage.getItem('theme') || 'light' : 'light',
+	)
+
+	const toggle_theme = () => {
+		if (!browser) return
+		theme = theme === 'dark' ? 'light' : 'dark'
+		localStorage.setItem('theme', theme)
+	}
+</script>
+
 <label class="swap swap-rotate">
-	<!-- this hidden checkbox controls the state -->
 	<input
 		type="checkbox"
-		class="theme-controller hidden"
-		value="dark"
+		class="theme-controller"
+		data-toggle-theme="dark,light"
+		data-act-class="ACTIVECLASS"
+		checked={theme === 'dark'}
+		onchange={toggle_theme}
 	/>
 
 	<!-- sun icon -->

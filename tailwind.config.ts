@@ -11,4 +11,9 @@ export default {
 	},
 
 	plugins: [typography, daisyui],
+
+	daisyui: {
+		themes: ['light', 'dark'],
+		darkTheme: 'dark',
+	},
 } satisfies Config

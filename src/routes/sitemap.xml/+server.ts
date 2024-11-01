@@ -49,7 +49,7 @@ function generateSitemapXml(sheets: Sheet[]): string {
 				<changefreq>daily</changefreq>
 				<priority>0.7</priority>
 			</url>
-			`
+			`,
 			)
 			.join('')}
 		</urlset>

@@ -476,9 +476,9 @@ document.getElementsByTagName('html')[0].style['font-size'] = '10px'
 
 <Author author="NickyMeuleman" />
 
-[Optional chaining] can not be used on `window`. It will throw an
-error when used on any undeclared root object, so no escaping the
-`typeof window == 'undefined'` check with a clever `?.`.
+[Optional chaining] can not be used on `window`. It will throw an error
+when used on any undeclared root object, so no escaping the `typeof window == 'undefined'`
+check with a clever `?.`.
 
 ## Unique Array of Values with Set and Spread Operator [ES6]
 
@@ -527,10 +527,9 @@ console.log(obj)
 <!-- Links -->
 
 [nicky meuleman]: https://twitter.com/NMeuleman
-
-NickyMeuleman [optional chaining]:
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining
+[optional chaining]:
+	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining
 [object.assign]:
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
+	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
 [spread syntax]:
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
+	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax

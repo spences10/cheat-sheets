@@ -8,13 +8,18 @@
 		bio?: string
 	}
 
-	export let author: string
-	let data: UserDetails = {
+	interface Props {
+		author: string
+	}
+
+	let { author }: Props = $props()
+
+	let data: UserDetails = $state({
 		html_url: '',
 		avatar_url: '',
 		name: '',
-	}
-	let isLoading = true
+	})
+	let isLoading = $state(true)
 
 	const getUserDetails = async (): Promise<UserDetails> => {
 		const res = await fetch(`/${author}.json`)
@@ -38,9 +43,9 @@
 {:else}
 	<p class="text-sm">Contribution by:</p>
 	<article
-		class="not-prose border border-primary shadow-lg p-4 rounded-2xl"
+		class="not-prose rounded-2xl border border-primary p-4 shadow-lg"
 	>
-		<div class="flex space-x-5 justify-evenly">
+		<div class="flex justify-evenly space-x-5">
 			<a
 				class="w-1/4"
 				href={data.html_url}
@@ -48,7 +53,7 @@
 				rel="noopener noreferrer"
 			>
 				<img
-					class="w-20 h-20 p-0 m-0 rounded-full object-cover"
+					class="m-0 h-20 w-20 rounded-full object-cover p-0"
 					src={data.avatar_url}
 					alt={data.name}
 				/>

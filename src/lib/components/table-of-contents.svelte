@@ -1,23 +1,28 @@
 <script lang="ts">
 	import { fade } from 'svelte/transition'
-	export let headings: { label: string; href: string }[] = []
+
+	interface Props {
+		headings?: { label: string; href: string }[]
+	}
+
+	let { headings = [] }: Props = $props()
 </script>
 
 {#if headings.length}
 	<aside
 		transition:fade
-		class="bg-base-100 rounded-md shadow-lg w-64 table-of-contents lg:block hidden"
+		class="table-of-contents hidden w-64 rounded-md bg-base-100 shadow-lg lg:block"
 	>
 		<div class="">
 			<h3
-				class="!font-extrabold !text-lg !mt-2 !mb-0"
+				class="!mb-0 !mt-2 !text-lg !font-extrabold"
 				id="table-of-contents"
 			>
 				Table of Contents
 			</h3>
-			<ul class="max-h-72 overflow-auto !mb-0">
+			<ul class="!mb-0 max-h-72 overflow-auto">
 				{#each headings as heading (heading.href)}
-					<li class="mr-4 mb-2">
+					<li class="mb-2 mr-4">
 						<a
 							class="transition hover:text-primary"
 							href={heading.href}

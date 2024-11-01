@@ -3,20 +3,22 @@
 	import { ogImageUrl } from '$lib/og-image-url-build.js'
 	import { Head } from 'svead'
 
-	export let data
+	let { data } = $props()
 	let { sheets } = data
 
-	let query = ''
+	let query = $state('')
 
-	$: results = sheets.filter(sheet => {
-		if (!sheet.published) {
-			return false
-		}
-		if (query === '') {
-			return true
-		}
-		return sheet.title.toLowerCase().includes(query.toLowerCase())
-	})
+	let results = $derived(
+		sheets.filter(sheet => {
+			if (!sheet.published) {
+				return false
+			}
+			if (query === '') {
+				return true
+			}
+			return sheet.title.toLowerCase().includes(query.toLowerCase())
+		}),
+	)
 </script>
 
 <Head
@@ -36,18 +38,18 @@
 		type="text"
 		bind:value={query}
 		placeholder="Search"
-		class="input input-primary input-bordered text-xl mb-10 shadow-xl"
+		class="input input-bordered input-primary mb-10 text-xl shadow-xl"
 	/>
 </div>
 
 <ul
-	class="mb-10 grid gap-5 grid-cols-1 xs:grid-cols-2 md:grid-cols-3"
+	class="xs:grid-cols-2 mb-10 grid grid-cols-1 gap-5 md:grid-cols-3"
 >
 	{#if results.length === 0}
 		{#each sheets as sheet}
 			{#if sheet.published}
 				<li
-					class="font-medium text-3xl border border-primary rounded-2xl p-5 shadow-xl all-prose"
+					class="all-prose rounded-2xl border border-primary p-5 text-3xl font-medium shadow-xl"
 				>
 					<a class="link" href={`/${sheet.slug}`}>
 						{sheet.title}
@@ -58,7 +60,7 @@
 	{:else}
 		{#each results as result}
 			<li
-				class="font-medium text-3xl border border-primary rounded-2xl p-5 shadow-xl all-prose"
+				class="all-prose rounded-2xl border border-primary p-5 text-3xl font-medium shadow-xl"
 			>
 				<a class="link" href={result.slug}>
 					{result.title}

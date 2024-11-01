@@ -1,6 +1,10 @@
-<script>
-	export let height = 25
-	export let width = 25
+<script lang="ts">
+	interface Props {
+		height?: number
+		width?: number
+	}
+
+	let { height = 25, width = 25 }: Props = $props()
 </script>
 
 <svg

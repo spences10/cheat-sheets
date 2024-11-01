@@ -8,7 +8,7 @@
 
 	<!-- sun icon -->
 	<svg
-		class="swap-on fill-primary w-6 h-6"
+		class="swap-on h-6 w-6 fill-primary"
 		xmlns="http://www.w3.org/2000/svg"
 		viewBox="0 0 24 24"
 	>
@@ -19,7 +19,7 @@
 
 	<!-- moon icon -->
 	<svg
-		class="swap-off fill-primary w-6 h-6"
+		class="swap-off h-6 w-6 fill-primary"
 		xmlns="http://www.w3.org/2000/svg"
 		viewBox="0 0 24 24"
 	>

@@ -13,6 +13,12 @@
 	import { themeChange } from 'theme-change'
 	import '../app.css'
 
+	interface Props {
+		children?: import('svelte').Snippet
+	}
+
+	let { children }: Props = $props()
+
 	onMount(() => {
 		themeChange(false)
 		Fathom.load(PUBLIC_FATHOM_ID, {
@@ -21,7 +27,9 @@
 		})
 	})
 
-	$: $page.url.pathname, browser && Fathom.trackPageview()
+	$effect(() => {
+		$page.url.pathname, browser && Fathom.trackPageview()
+	})
 
 	onNavigate(navigation => {
 		// sorry Firefox and Safari users
@@ -40,7 +48,7 @@
 	<Header />
 
 	<main class="container mx-auto max-w-3xl flex-grow px-4">
-		<slot />
+		{@render children?.()}
 	</main>
 
 	<Footer />

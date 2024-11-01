@@ -5,8 +5,8 @@ export const get_sheets = async () => {
 				const { metadata }: any = await resolver()
 				const slug = path?.split('/').pop()?.slice(0, -3) ?? null
 				return { ...metadata, slug }
-			}
-		)
+			},
+		),
 	)
 
 	return sheets

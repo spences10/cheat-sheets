@@ -3,13 +3,13 @@
 </script>
 
 <footer
-	class="footer footer-center p-10 bg-primary text-primary-content"
+	class="footer footer-center bg-primary p-10 text-primary-content"
 >
 	<div>
 		<img
 			src="profile-pic.png"
 			alt="Scott avatar"
-			class="rounded-full h-20"
+			class="h-20 rounded-full"
 		/>
 		<p class="font-bold">
 			Made with <span role="img" aria-label="red heart">❤️</span> by

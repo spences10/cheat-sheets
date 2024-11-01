@@ -2,10 +2,10 @@
 	import ThemeSelect from './theme-select.svelte'
 </script>
 
-<header class="container max-w-3xl mx-auto px-4">
-	<div class="flex justify-between mt-8 mb-12">
+<header class="container mx-auto max-w-3xl px-4">
+	<div class="mb-12 mt-8 flex justify-between">
 		<p
-			class="font-bold text-5xl hover:no-underline link link-primary"
+			class="link link-primary text-5xl font-bold hover:no-underline"
 		>
 			<a href="/">Cheat Sheets</a>
 		</p>

@@ -1,8 +1,8 @@
 const objectToQueryParams = (
-	obj: { [s: string]: unknown } | ArrayLike<unknown>
+	obj: { [s: string]: unknown } | ArrayLike<unknown>,
 ) => {
 	const params = Object.entries(obj).map(
-		([key, value]) => `${key}=${value}`
+		([key, value]) => `${key}=${value}`,
 	)
 	return '?' + params.join('&')
 }
@@ -10,7 +10,7 @@ const objectToQueryParams = (
 export const ogImageUrl = (
 	author: string,
 	website: string,
-	title: string
+	title: string,
 ) => {
 	const params = {
 		author,
@@ -19,6 +19,6 @@ export const ogImageUrl = (
 		image: `https://cheatsheets.xyz/favicon.png`,
 	}
 	return `https://image-og.now.sh/og.jpg${objectToQueryParams(
-		params
+		params,
 	)}`
 }

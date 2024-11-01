@@ -6,7 +6,10 @@
 	"printWidth": 70,
 	"arrowParens": "avoid",
 	"proseWrap": "always",
-	"plugins": ["prettier-plugin-tailwindcss"],
+	"plugins": [
+		"prettier-plugin-svelte",
+		"prettier-plugin-tailwindcss"
+	],
 	"overrides": [
 		{
 			"files": "*.svelte",

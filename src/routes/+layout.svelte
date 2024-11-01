@@ -11,7 +11,7 @@
 	import 'prism-themes/themes/prism-night-owl.css'
 	import { onMount } from 'svelte'
 	import { themeChange } from 'theme-change'
-	import '../app.postcss'
+	import '../app.css'
 
 	onMount(() => {
 		themeChange(false)
@@ -36,15 +36,12 @@
 	})
 </script>
 
-<div
-	class="flex flex-col min-h-screen overflow-x-hidden"
->
+<div class="flex min-h-screen flex-col overflow-x-hidden">
 	<Header />
-	
-	<main class="container max-w-3xl mx-auto px-4 flex-grow">
+
+	<main class="container mx-auto max-w-3xl flex-grow px-4">
 		<slot />
 	</main>
 
 	<Footer />
 </div>
-

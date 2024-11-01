@@ -1,6 +1,6 @@
 {
-	"git.enableSmartCommit": true,
-	"git.postCommitCommand": "sync",
+	// "git.enableSmartCommit": true,
+	// "git.postCommitCommand": "sync",
 	"css.validate": false,
 	"workbench.colorCustomizations": {
 		"titleBar.activeBackground": "#5d98bb",
@@ -10,6 +10,7 @@
 	},
 	"cSpell.words": [
 		"abbr",
+		"daisyui",
 		"djvu",
 		"EDIFACT",
 		"mdsvex",

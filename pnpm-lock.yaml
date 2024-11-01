@@ -12,7 +12,7 @@ devDependencies:
     specifier: ^3.0.0
     version: 3.3.1(@sveltejs/kit@2.7.4)
   '@sveltejs/kit':
-    specifier: ^2.0.0
+    specifier: ^2.5.27
     version: 2.7.4(@sveltejs/vite-plugin-svelte@4.0.0)(svelte@5.1.9)(vite@5.4.10)
   '@sveltejs/vite-plugin-svelte':
     specifier: ^4.0.0
@@ -39,7 +39,7 @@ devDependencies:
     specifier: ^9.1.0
     version: 9.1.0(eslint@9.14.0)
   eslint-plugin-svelte:
-    specifier: ^2.36.0
+    specifier: ^2.45.1
     version: 2.46.0(eslint@9.14.0)(svelte@5.1.9)
   fathom-client:
     specifier: ^3.7.2
@@ -48,8 +48,8 @@ devDependencies:
     specifier: ^15.0.0
     version: 15.11.0
   mdsvex:
-    specifier: ^0.11.2
-    version: 0.11.2(svelte@5.1.9)
+    specifier: ^0.12.0
+    version: 0.12.3(svelte@5.1.9)
   prettier:
     specifier: ^3.3.2
     version: 3.3.3
@@ -87,13 +87,13 @@ devDependencies:
     specifier: ^2.5.0
     version: 2.5.0
   typescript:
-    specifier: ^5.0.0
+    specifier: ^5.5.0
     version: 5.6.3
   typescript-eslint:
     specifier: ^8.0.0
     version: 8.12.2(eslint@9.14.0)(typescript@5.6.3)
   vite:
-    specifier: ^5.0.3
+    specifier: ^5.4.4
     version: 5.4.10
   vitest:
     specifier: ^2.0.4
@@ -1901,8 +1901,8 @@ packages:
       '@jridgewell/sourcemap-codec': 1.5.0
     dev: true
 
-  /mdsvex@0.11.2(svelte@5.1.9):
-    resolution: {integrity: sha512-Y4ab+vLvTJS88196Scb/RFNaHMHVSWw6CwfsgWIQP8f42D57iDII0/qABSu530V4pkv8s6T2nx3ds0MC1VwFLA==}
+  /mdsvex@0.12.3(svelte@5.1.9):
+    resolution: {integrity: sha512-C/uIJamjNo5PHHnR3JHqsBPoLcfUBpzRmAEB6FLMXI/s7XHOceswjDMKqSPEW2WHmYpKm0taZ3U20GSyhMridA==}
     peerDependencies:
       svelte: ^3.56.0 || ^4.0.0 || ^5.0.0-next.120
     dependencies:

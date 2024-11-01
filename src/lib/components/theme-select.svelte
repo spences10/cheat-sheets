@@ -8,8 +8,13 @@
 	const toggle_theme = () => {
 		if (!browser) return
 		theme = theme === 'light' ? 'dark' : 'light'
-		localStorage.setItem('theme', theme)
 	}
+
+	// Sync theme changes with localStorage
+	$effect(() => {
+		if (!browser) return
+		localStorage.setItem('theme', theme)
+	})
 </script>
 
 <label class="swap swap-rotate">
@@ -19,7 +24,7 @@
 		data-toggle-theme="dark,light"
 		data-act-class="ACTIVECLASS"
 		checked={theme === 'dark'}
-		onchange={toggle_theme}
+		on:change={toggle_theme}
 	/>
 
 	<!-- sun icon -->

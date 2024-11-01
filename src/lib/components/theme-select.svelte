@@ -2,7 +2,7 @@
 	import { browser } from '$app/environment'
 
 	let theme = $state(
-		browser ? localStorage.getItem('theme') || 'dark' : 'dark'
+		browser ? localStorage.getItem('theme') || 'dark' : 'dark',
 	)
 
 	const toggle_theme = () => {
@@ -24,7 +24,7 @@
 		data-toggle-theme="dark,light"
 		data-act-class="ACTIVECLASS"
 		checked={theme === 'dark'}
-		on:change={toggle_theme}
+		onchange={toggle_theme}
 	/>
 
 	<!-- sun icon -->

@@ -2,12 +2,12 @@
 	import { browser } from '$app/environment'
 
 	let theme = $state(
-		browser ? localStorage.getItem('theme') || 'light' : 'light',
+		browser ? localStorage.getItem('theme') || 'dark' : 'dark'
 	)
 
 	const toggle_theme = () => {
 		if (!browser) return
-		theme = theme === 'dark' ? 'light' : 'dark'
+		theme = theme === 'light' ? 'dark' : 'light'
 		localStorage.setItem('theme', theme)
 	}
 </script>

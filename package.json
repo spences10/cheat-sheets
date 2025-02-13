@@ -30,7 +30,7 @@
 		"fathom-client": "^3.7.2",
 		"globals": "^15.15.0",
 		"mdsvex": "^0.12.3",
-		"prettier": "^3.5.0",
+		"prettier": "^3.5.1",
 		"prettier-plugin-svelte": "^3.3.3",
 		"prettier-plugin-tailwindcss": "^0.6.11",
 		"prism-themes": "^1.9.0",

@@ -88,9 +88,9 @@ missing in Ubuntu VS Code:
 ]
 ```
 
-Shout out to [Caleb Porzio] for the suggestion of adding in shortcuts for
-the sidebar defaults, "explorer", "git" (scm), "debug" and "extensions".
-The default shortcuts are a bit inconsistent.
+Shout out to [Caleb Porzio] for the suggestion of adding in shortcuts
+for the sidebar defaults, "explorer", "git" (scm), "debug" and
+"extensions". The default shortcuts are a bit inconsistent.
 
 ```json
 [
@@ -115,8 +115,8 @@ The default shortcuts are a bit inconsistent.
 
 ## Remove the clutter
 
-Another tip from [Caleb Porzio] is removing all the clutter in the editor
-and moving the sidebar.
+Another tip from [Caleb Porzio] is removing all the clutter in the
+editor and moving the sidebar.
 
 Add these "optional" setting to the `settings.json` file, you can
 access it with `Crtl+Shift+p`.

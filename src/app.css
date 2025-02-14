@@ -1,48 +1,67 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import 'tailwindcss';
 
-html {
-	scroll-behavior: smooth;
+@layer base {
+	html {
+		scroll-behavior: smooth;
+		word-break: break-word;
+	}
+
+	::selection {
+		color: var(--color-primary-content);
+		background: var(--color-primary);
+	}
+
+	/* Scrollbar styles using modern syntax */
+	* {
+		scrollbar-width: thin;
+		scrollbar-color: var(--color-secondary) var(--color-primary) !important;
+	}
+
+	::-webkit-scrollbar-track {
+		background: var(--color-primary) !important;
+	}
+
+	::-webkit-scrollbar-thumb {
+		background-color: var(--color-secondary) !important;
+	}
 }
 
-::selection {
-	color: oklch(var(--pc));
-	background: oklch(var(--p));
+/* Custom components */
+@layer components {
+	.table-of-contents {
+		@apply fixed top-72 left-[calc(50%+400px)] z-10 my-3 max-h-[50vh] w-[310px] p-3 text-base leading-7;
+	}
+
+	.all-prose {
+		@apply prose prose-lg lg:prose-xl prose-headings:scroll-mt-16 prose-a:text-primary prose-a:transition prose-a:hover:text-accent max-w-none;
+
+		/* remove derp backticks from prose */
+		:where(code):not(:where([class~='not-prose'] *, pre *)) {
+			font-family: 'Victor Mono Variable', monospace;
+			padding: 1px 8px;
+			border-radius: var(--radius-selector);
+			font-weight: initial;
+			background-color: var(
+				--fallback-bc,
+				color-mix(
+					in oklab,
+					var(--color-base-content),
+					transparent 90%
+				)
+			);
+		}
+
+		/* Remove code markers */
+		:where(code):not(:where([class~='not-prose'] *, pre *))::before,
+		:where(code):not(:where([class~='not-prose'] *, pre *))::after {
+			content: '' !important;
+			display: none !important;
+		}
+	}
 }
 
-.table-of-contents {
-	z-index: 1;
-	position: fixed;
-	left: calc(50% + 400px);
-	top: 18rem;
-	max-height: 50vh;
-	width: 310px;
-	padding: 0.75rem;
-	margin: 0.75rem 0;
-	font-size: 1rem;
-	line-height: 1.75rem;
-}
-
-/*
-Scrollbar styles:
-  scrollbar-color Two valid colors. thumb and track
-  scrollbar-gutter padding when there's no scrollbar
-  scrollbar-width auto | thin | none
-*/
-* {
-	scrollbar-width: thin;
-	scrollbar-color: oklch(var(--s)) oklch(var(--p)) !important;
-}
-
-::-webkit-scrollbar-track {
-	background: oklch(var(--p));
-}
-
-::-webkit-scrollbar-thumb {
-	background-color: oklch(var(--s));
-}
-
-.all-prose {
-	@apply prose prose-lg lg:prose-xl prose-headings:scroll-mt-16 prose-a:text-primary prose-a:transition hover:prose-a:text-accent;
+/* Plugin configurations */
+@plugin "@tailwindcss/typography";
+@plugin "daisyui" {
+	themes: light --default, dark --prefersdark;
 }

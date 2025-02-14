@@ -3,9 +3,9 @@ const objectToQueryParams = (
 ) => {
 	const params = Object.entries(obj).map(
 		([key, value]) => `${key}=${value}`,
-	)
-	return '?' + params.join('&')
-}
+	);
+	return '?' + params.join('&');
+};
 
 export const ogImageUrl = (
 	author: string,
@@ -17,8 +17,8 @@ export const ogImageUrl = (
 		website: website || `cheatsheets.xyz`,
 		title,
 		image: `https://cheatsheets.xyz/favicon.png`,
-	}
+	};
 	return `https://image-og.now.sh/og.jpg${objectToQueryParams(
 		params,
-	)}`
-}
+	)}`;
+};

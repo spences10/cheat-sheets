@@ -1,41 +1,41 @@
 <script lang="ts">
-	import { onMount } from 'svelte'
+	import { onMount } from 'svelte';
 
 	interface UserDetails {
-		html_url: string
-		avatar_url: string
-		name: string
-		bio?: string
+		html_url: string;
+		avatar_url: string;
+		name: string;
+		bio?: string;
 	}
 
 	interface Props {
-		author: string
+		author: string;
 	}
 
-	let { author }: Props = $props()
+	let { author }: Props = $props();
 
 	let data: UserDetails = $state({
 		html_url: '',
 		avatar_url: '',
 		name: '',
-	})
-	let isLoading = $state(true)
+	});
+	let isLoading = $state(true);
 
 	const getUserDetails = async (): Promise<UserDetails> => {
-		const res = await fetch(`/${author}.json`)
-		return await res.json()
-	}
+		const res = await fetch(`/${author}.json`);
+		return await res.json();
+	};
 
 	onMount(async () => {
 		try {
-			data = await getUserDetails()
-			isLoading = false
+			data = await getUserDetails();
+			isLoading = false;
 		} catch (error) {
-			console.error(error)
+			console.error(error);
 			// handle error
-			isLoading = false
+			isLoading = false;
 		}
-	})
+	});
 </script>
 
 {#if isLoading}
@@ -43,7 +43,7 @@
 {:else}
 	<p class="text-sm">Contribution by:</p>
 	<article
-		class="not-prose rounded-2xl border border-primary p-4 shadow-lg"
+		class="not-prose border-primary rounded-2xl border p-4 shadow-lg"
 	>
 		<div class="flex justify-evenly space-x-5">
 			<a

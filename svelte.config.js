@@ -1,9 +1,9 @@
-import adapter from '@sveltejs/adapter-auto'
-import { vitePreprocess } from '@sveltejs/vite-plugin-svelte'
-import { mdsvex } from 'mdsvex'
-import autolinkHeadings from 'rehype-autolink-headings'
-import rehypeExternalLinks from 'rehype-external-links'
-import slugPlugin from 'rehype-slug'
+import adapter from '@sveltejs/adapter-auto';
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
+import { mdsvex } from 'mdsvex';
+import autolinkHeadings from 'rehype-autolink-headings';
+import rehypeExternalLinks from 'rehype-external-links';
+import slugPlugin from 'rehype-slug';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -39,6 +39,6 @@ const config = {
 	},
 
 	extensions: ['.svelte', '.md'],
-}
+};
 
-export default config
+export default config;

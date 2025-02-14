@@ -1,33 +1,33 @@
-import { get_sheets } from '$lib/get-sheets'
+import { get_sheets } from '$lib/get-sheets';
 
 interface Sheet {
-	title: string
-	createdDate: string
-	updatedDate: string
-	published: boolean
-	slug: string
-	description: string
+	title: string;
+	createdDate: string;
+	updatedDate: string;
+	published: boolean;
+	slug: string;
+	description: string;
 }
 
 export async function GET() {
-	const sheets = await get_sheets()
+	const sheets = await get_sheets();
 
-	const sheetsList: Sheet[] = sheets.map(sheet => ({
+	const sheetsList: Sheet[] = sheets.map((sheet) => ({
 		title: sheet.title,
 		createdDate: sheet.createdDate,
 		updatedDate: sheet.updatedDate,
 		published: sheet.published,
 		slug: sheet.slug,
 		description: sheet.description,
-	}))
-	const body = generateSitemapXml(sheetsList)
+	}));
+	const body = generateSitemapXml(sheetsList);
 
 	const headers = {
 		'Cache-Control': `max-age=0, s-max-age=${600}`,
 		'Content-Type': 'application/xml',
-	}
+	};
 
-	return new Response(body, { headers })
+	return new Response(body, { headers });
 }
 
 function generateSitemapXml(sheets: Sheet[]): string {
@@ -53,5 +53,5 @@ function generateSitemapXml(sheets: Sheet[]): string {
 			)
 			.join('')}
 		</urlset>
-	`
+	`;
 }

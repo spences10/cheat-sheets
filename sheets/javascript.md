@@ -18,18 +18,18 @@ description:
 Edit a web page, set the design mode to on.
 
 ```js
-document.designMode = 'on'
+document.designMode = 'on';
 // make edits, then
-document.designMode = 'off'
+document.designMode = 'off';
 ```
 
 ## Copy an array
 
 ```js
 // initial array
-const cats = [`Darcy`, `Leo`, `Boris`]
+const cats = [`Darcy`, `Leo`, `Boris`];
 // copy array
-const copyCats = [...cats]
+const copyCats = [...cats];
 ```
 
 output:
@@ -42,11 +42,11 @@ output:
 
 ```js
 // array 1
-const cats = [`Darcy`, `Leo`, `Boris`]
+const cats = [`Darcy`, `Leo`, `Boris`];
 // array 2
-const people = [`Scott`, `Islem`, `Tom`, `George`]
+const people = [`Scott`, `Islem`, `Tom`, `George`];
 // all
-const catsAndPeople = [...cats, ...people]
+const catsAndPeople = [...cats, ...people];
 ```
 
 output:
@@ -59,16 +59,16 @@ output:
 
 ```js
 // array 1
-const cats = [`Darcy`, `Leo`, `Boris`]
+const cats = [`Darcy`, `Leo`, `Boris`];
 // array 2
-const people = [`Scott`, `Islem`, `Tom`, `George`]
+const people = [`Scott`, `Islem`, `Tom`, `George`];
 // all
-const catsAndPeople = [...cats, ...people]
+const catsAndPeople = [...cats, ...people];
 // remove Tom
 const withoutTom = [
 	...catsAndPeople.slice(0, 5),
 	...catsAndPeople.slice(6),
-]
+];
 ```
 
 Tom is left out of the new array party, sorry Tom
@@ -85,9 +85,9 @@ So, `.reverse()` will mutate the original array so it's a good idea to
 make a new array.
 
 ```js
-const cats = [`Darcy`, `Leo`, `Boris`]
+const cats = [`Darcy`, `Leo`, `Boris`];
 // reverse array
-const reverseCatNames = [...cats].reverse()
+const reverseCatNames = [...cats].reverse();
 ```
 
 output:
@@ -105,7 +105,7 @@ There's a `.reverse()` method for arrays, so if you split your sting
 into an array then you'll be able to reverse it.
 
 ```js
-'racecar'.split('').reverse().join('')
+'racecar'.split('').reverse().join('');
 ```
 
 output:
@@ -119,9 +119,9 @@ racecar
 Return one new entry for every existing entry: `.map()`
 
 ```js
-const originalArray = [1, 2, 3]
-const newArray = originalArray.map(item => item * 2)
-console.log(newArray)
+const originalArray = [1, 2, 3];
+const newArray = originalArray.map((item) => item * 2);
+console.log(newArray);
 ```
 
 output:
@@ -135,9 +135,9 @@ output:
 Return a new array with only some of the existing entries: `.filter()`
 
 ```js
-const originalArray = [1, 9, 4, 2, 42]
-const newArray = originalArray.filter(item => item > 5)
-console.log(newArray)
+const originalArray = [1, 9, 4, 2, 42];
+const newArray = originalArray.filter((item) => item > 5);
+console.log(newArray);
 ```
 
 output:
@@ -158,15 +158,15 @@ const originalArray = [
 	'Bob',
 	'Bob',
 	'Charlie',
-]
+];
 const numberOfBobs = originalArray.reduce((accumulator, item) => {
 	if (item === 'Bob') {
-		return accumulator + 1
+		return accumulator + 1;
 	} else {
-		return accumulator
+		return accumulator;
 	}
-}, 0)
-console.log(numberOfBobs)
+}, 0);
+console.log(numberOfBobs);
 ```
 
 output:
@@ -178,16 +178,16 @@ output:
 ## Sum all even numbers from array
 
 ```js
-const arr = [0, 1, 2, 3, 4, 5, null, 6, 9]
+const arr = [0, 1, 2, 3, 4, 5, null, 6, 9];
 
 function addEven() {
 	return arr.reduce(
 		(acc, cur) => (cur % 2 === 0 ? acc + cur : acc),
 		0,
-	)
+	);
 }
 
-addEven(arr)
+addEven(arr);
 ```
 
 ## Return the first duplicate number
@@ -195,7 +195,7 @@ addEven(arr)
 ```js
 function firstDuplicate(arr) {
 	// empty array to use to check incoming array against
-	let checkArray = {}
+	let checkArray = {};
 
 	// loop it
 	for (let i = 0; i < arr.length; i++) {
@@ -203,18 +203,18 @@ function firstDuplicate(arr) {
 		// checkArray
 		if (checkArray[arr[i]] !== undefined)
 			// if there's no matching item then
-			return arr[i]
+			return arr[i];
 		// append to the checkArray
-		else checkArray[arr[i]] = i
+		else checkArray[arr[i]] = i;
 	}
-	return -1
+	return -1;
 }
 ```
 
 ## Async await with axios and GraphQL
 
 ```js
-const axios = require('axios')
+const axios = require('axios');
 
 axios({
 	url: 'https://spotify-graphql-server.herokuapp.com/graphql',
@@ -234,9 +234,9 @@ axios({
       }
       `,
 	},
-}).then(result => {
-	console.log(result.data)
-})
+}).then((result) => {
+	console.log(result.data);
+});
 ```
 
 ## Remove vowels from string
@@ -244,7 +244,7 @@ axios({
 Use a regular expression:
 
 ```js
-'replace vowels from string'.replace(/[aeiou]/gi, '')
+'replace vowels from string'.replace(/[aeiou]/gi, '');
 ```
 
 Output:
@@ -266,7 +266,7 @@ With JavaScript functions:
 	.split('o')
 	.join('')
 	.split('u')
-	.join('')
+	.join('');
 ```
 
 Output:
@@ -288,44 +288,44 @@ function greeting(salutation = '') {
 	const sarcasm = () => {
 		return [...salutation]
 			.map((char, i) => char[`to${i % 2 ? 'Upper' : 'Lower'}Case`]())
-			.join('')
-	}
+			.join('');
+	};
 	return function (name) {
-		return `${sarcasm()} ${name}`
-	}
+		return `${sarcasm()} ${name}`;
+	};
 }
 
 // run the function
-const sayHiya = greeting('Hiiiya')
-const sayHello = greeting('Hellooo')
+const sayHiya = greeting('Hiiiya');
+const sayHello = greeting('Hellooo');
 
 // now the function is closed but we can still
 // access the variables inside it
-console.log(sayHiya('scott'))
-console.log(sayHello('margret'))
+console.log(sayHiya('scott'));
+console.log(sayHello('margret'));
 ```
 
 Private variables:
 
 ```js
 function createGame(gameType) {
-	let score = 0
+	let score = 0;
 	return function increment() {
-		score++
-		return `Your game of ${gameType} score is ${score}.`
-	}
+		score++;
+		return `Your game of ${gameType} score is ${score}.`;
+	};
 }
 
-const cribbage = createGame('Cribbage')
-const bridge = createGame('Bridge')
+const cribbage = createGame('Cribbage');
+const bridge = createGame('Bridge');
 
-console.log(cribbage())
-console.log(cribbage())
-console.log(cribbage())
-console.log(cribbage())
-console.log(bridge())
-console.log(bridge())
-console.log(cribbage())
+console.log(cribbage());
+console.log(cribbage());
+console.log(cribbage());
+console.log(cribbage());
+console.log(bridge());
+console.log(bridge());
+console.log(cribbage());
 ```
 
 Output:
@@ -345,26 +345,26 @@ Your game of Cribbage score is 5.
 Use a mock endpoint to test against for auth forms.
 
 ```js
-const wait = n => new Promise(resolve => setTimeout(resolve, n))
+const wait = (n) => new Promise((resolve) => setTimeout(resolve, n));
 
-const mockFetch = url =>
+const mockFetch = (url) =>
 	wait(1000).then(() => ({
 		status: 200,
 		body: {
 			url: 'http://bbc.co.uk',
 		},
-	}))
+	}));
 
-mockFetch(`${endpoint}`).then(response => {
-	console.log('=====================')
-	console.log(response.status)
-	console.log(form.userEmail.value)
-	console.log(form.userPassword.value)
-	console.log('=====================')
+mockFetch(`${endpoint}`).then((response) => {
+	console.log('=====================');
+	console.log(response.status);
+	console.log(form.userEmail.value);
+	console.log(form.userPassword.value);
+	console.log('=====================');
 	response.status === 200
 		? (location = response.body.url)
-		: console.error(`incorrect`)
-})
+		: console.error(`incorrect`);
+});
 ```
 
 ## List all image URLs from a web page
@@ -372,10 +372,10 @@ mockFetch(`${endpoint}`).then(response => {
 Need to quickly grab a load of images from a page?
 
 ```js
-let images = document.querySelectorAll('img')
-Array.from(images).map(i => {
-	console.log(i.src)
-})
+let images = document.querySelectorAll('img');
+Array.from(images).map((i) => {
+	console.log(i.src);
+});
 ```
 
 ## `<div>` cannot appear as a descendant of `<p>`
@@ -383,7 +383,7 @@ Array.from(images).map(i => {
 If you're looking for where this is happening, in console you can use:
 
 ```js
-document.querySelectorAll(' p * div ')
+document.querySelectorAll(' p * div ');
 ```
 
 ## Truncate a string
@@ -392,15 +392,15 @@ Shorten a string! Define the start and the end of the string you want
 to return:
 
 ```js
-const myString = 'ABCDEFG'
-const myTruncatedString = myString.substring(0, 3)
+const myString = 'ABCDEFG';
+const myTruncatedString = myString.substring(0, 3);
 // The value of myTruncatedString is "ABC"
 ```
 
 ## Current year one liner
 
 ```js
-const copyrightYear = new Date().getFullYear()
+const copyrightYear = new Date().getFullYear();
 ```
 
 ## Fizz Buzz
@@ -409,19 +409,19 @@ Classic FizzBuzz loop.
 
 ```js
 for (let i = 1; i <= 100; ++i) {
-	let output = ''
+	let output = '';
 	if (i % 3 === 0) {
-		output += 'Fizz'
+		output += 'Fizz';
 	}
 	if (i % 5 === 0) {
-		output += 'Buzz'
+		output += 'Buzz';
 	}
 
 	if (output === '') {
-		output = i
+		output = i;
 	}
 
-	console.log(output)
+	console.log(output);
 }
 ```
 
@@ -431,28 +431,28 @@ Instantiation patterns are ways to create something in JavaScript.
 
 ```js
 var person = function (name) {
-	var obj = Object.create(objMethods)
-	obj.name = name
-	return obj
-}
+	var obj = Object.create(objMethods);
+	obj.name = name;
+	return obj;
+};
 
 var objMethods = {
 	sayHello: function () {
-		console.log(`${this.name} says hello!`)
+		console.log(`${this.name} says hello!`);
 	},
 	changeName: function (newName) {
-		var oldName = this.name
-		this.name = newName
+		var oldName = this.name;
+		this.name = newName;
 
-		console.log(`${oldName} has changed their name to ${this.name}`)
+		console.log(`${oldName} has changed their name to ${this.name}`);
 	},
-}
+};
 
 // Implementation
-var person1 = person('Austin')
-person1.sayHello()
-person1.changeName('Derek')
-person1.sayHello()
+var person1 = person('Austin');
+person1.sayHello();
+person1.changeName('Derek');
+person1.sayHello();
 ```
 
 Output:
@@ -469,16 +469,16 @@ Want to change the font size on a page? Here you can target the while
 document, but could change `html` with `p`, `span` whatever.
 
 ```javascript
-document.getElementsByTagName('html')[0].style['font-size'] = '10px'
+document.getElementsByTagName('html')[0].style['font-size'] = '10px';
 ```
 
 ## Checking for `window`
 
 <Author author="NickyMeuleman" />
 
-[Optional chaining] can not be used on `window`. It will throw an error
-when used on any undeclared root object, so no escaping the `typeof window == 'undefined'`
-check with a clever `?.`.
+[Optional chaining] can not be used on `window`. It will throw an
+error when used on any undeclared root object, so no escaping the
+`typeof window == 'undefined'` check with a clever `?.`.
 
 ## Unique Array of Values with Set and Spread Operator [ES6]
 
@@ -489,13 +489,13 @@ equality (`===`) to check values & each value may only occur once. We
 use the spread operator to convert the Set object into an array.
 
 ```js
-const numArr = [1, 1, 1, 2, 3]
+const numArr = [1, 1, 1, 2, 3];
 // (5) [1, 1, 1, 2, 3]
 
-const uniqueNumSet = new Set(numArr)
+const uniqueNumSet = new Set(numArr);
 // Set(3) {1, 2, 3}
 
-const uniqueNumArr = [...new Set(numArr)]
+const uniqueNumArr = [...new Set(numArr)];
 // (3) [1, 2, 3]
 ```
 
@@ -517,10 +517,10 @@ const items = [
 	{ address: '123 ABC street' },
 	{ isLeased: false },
 	{ hasPool: true },
-]
+];
 
-const obj = Object.assign({}, ...items)
-console.log(obj)
+const obj = Object.assign({}, ...items);
+console.log(obj);
 // { "address": "123 ABC street", "isLeased": false, "hasPool": true }
 ```
 

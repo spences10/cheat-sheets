@@ -6,8 +6,8 @@ export const update_toc_visibility = (
 		window.scrollY >=
 		(end_of_copy?.offsetTop ?? -Infinity) + offset
 	) {
-		return false
+		return false;
 	} else {
-		return true
+		return true;
 	}
-}
+};

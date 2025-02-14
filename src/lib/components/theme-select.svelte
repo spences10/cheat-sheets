@@ -1,20 +1,20 @@
 <script lang="ts">
-	import { browser } from '$app/environment'
+	import { browser } from '$app/environment';
 
 	let theme = $state(
 		browser ? localStorage.getItem('theme') || 'dark' : 'dark',
-	)
+	);
 
 	const toggle_theme = () => {
-		if (!browser) return
-		theme = theme === 'light' ? 'dark' : 'light'
-	}
+		if (!browser) return;
+		theme = theme === 'light' ? 'dark' : 'light';
+	};
 
 	// Sync theme changes with localStorage
 	$effect(() => {
-		if (!browser) return
-		localStorage.setItem('theme', theme)
-	})
+		if (!browser) return;
+		localStorage.setItem('theme', theme);
+	});
 </script>
 
 <label class="swap swap-rotate">
@@ -29,7 +29,7 @@
 
 	<!-- sun icon -->
 	<svg
-		class="swap-on h-6 w-6 fill-primary"
+		class="swap-on fill-primary h-6 w-6"
 		xmlns="http://www.w3.org/2000/svg"
 		viewBox="0 0 24 24"
 	>
@@ -40,7 +40,7 @@
 
 	<!-- moon icon -->
 	<svg
-		class="swap-off h-6 w-6 fill-primary"
+		class="swap-off fill-primary h-6 w-6"
 		xmlns="http://www.w3.org/2000/svg"
 		viewBox="0 0 24 24"
 	>

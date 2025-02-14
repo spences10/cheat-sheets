@@ -1,33 +1,33 @@
 <script lang="ts">
-	import { page } from '$app/stores'
-	import { TableOfContents } from '$lib/components'
-	import { ogImageUrl } from '$lib/og-image-url-build.js'
-	import { get_headings, update_toc_visibility } from '$lib/utils'
-	import { format } from 'date-fns'
-	import { Head } from 'svead'
+	import { page } from '$app/stores';
+	import { TableOfContents } from '$lib/components';
+	import { ogImageUrl } from '$lib/og-image-url-build.js';
+	import { get_headings, update_toc_visibility } from '$lib/utils';
+	import { format } from 'date-fns';
+	import { Head } from 'svead';
 
-	let { data } = $props()
+	let { data } = $props();
 
-	let { Sheet, metadata } = data
-	let created = format(new Date(metadata.createdDate), 'yyy MMM do')
-	let updated = format(new Date(metadata.updatedDate), 'yyy MMM do')
-	let url = $page.url.toString()
+	let { Sheet, metadata } = data;
+	let created = format(new Date(metadata.createdDate), 'yyy MMM do');
+	let updated = format(new Date(metadata.updatedDate), 'yyy MMM do');
+	let url = $page.url.toString();
 
-	let end_of_copy: HTMLElement | null = $state(null)
-	let show_table_of_contents = $state(true)
+	let end_of_copy: HTMLElement | null = $state(null);
+	let show_table_of_contents = $state(true);
 	let headings_promise:
 		| Promise<{ label: string; href: string }[]>
-		| undefined = $state(undefined)
+		| undefined = $state(undefined);
 
 	$effect(() => {
-		headings_promise = get_headings().then(headings => {
-			return headings
-		})
-	})
+		headings_promise = get_headings().then((headings) => {
+			return headings;
+		});
+	});
 
 	const handle_scroll = () => {
-		show_table_of_contents = update_toc_visibility(end_of_copy)
-	}
+		show_table_of_contents = update_toc_visibility(end_of_copy);
+	};
 </script>
 
 <svelte:window onscroll={handle_scroll} />
@@ -75,6 +75,6 @@
 	<Sheet />
 </article>
 
-<div class="mb-5 mt-10 flex w-full flex-col" bind:this={end_of_copy}>
+<div class="mt-10 mb-5 flex w-full flex-col" bind:this={end_of_copy}>
 	<div class="divider"></div>
 </div>

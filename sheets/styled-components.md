@@ -30,5 +30,5 @@ const StyledButton = styled.button`
 		`
     background: blue;
   `}
-`
+`;
 ```

@@ -114,8 +114,8 @@ source ~/.config/fish/config.fish
 
 ## List out added aliases
 
-I found this [handy function] on Stack Overflow which will list out your
-functions:
+I found this [handy function] on Stack Overflow which will list out
+your functions:
 
 ```bash
 function aliases --description "list all fish aliases";for f in (functions);functions $f | grep \'alias;end;end;

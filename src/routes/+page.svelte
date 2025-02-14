@@ -1,24 +1,24 @@
 <script lang="ts">
-	import { author, description, name, website } from '$lib/info'
-	import { ogImageUrl } from '$lib/og-image-url-build.js'
-	import { Head } from 'svead'
+	import { author, description, name, website } from '$lib/info';
+	import { ogImageUrl } from '$lib/og-image-url-build.js';
+	import { Head } from 'svead';
 
-	let { data } = $props()
-	let { sheets } = data
+	let { data } = $props();
+	let { sheets } = data;
 
-	let query = $state('')
+	let query = $state('');
 
 	let results = $derived(
-		sheets.filter(sheet => {
+		sheets.filter((sheet) => {
 			if (!sheet.published) {
-				return false
+				return false;
 			}
 			if (query === '') {
-				return true
+				return true;
 			}
-			return sheet.title.toLowerCase().includes(query.toLowerCase())
+			return sheet.title.toLowerCase().includes(query.toLowerCase());
 		}),
-	)
+	);
 </script>
 
 <Head
@@ -49,7 +49,7 @@
 		{#each sheets as sheet}
 			{#if sheet.published}
 				<li
-					class="all-prose rounded-2xl border border-primary p-5 text-3xl font-medium shadow-xl"
+					class="all-prose border-primary rounded-2xl border p-5 text-3xl font-medium shadow-xl"
 				>
 					<a class="link" href={`/${sheet.slug}`}>
 						{sheet.title}
@@ -60,7 +60,7 @@
 	{:else}
 		{#each results as result}
 			<li
-				class="all-prose rounded-2xl border border-primary p-5 text-3xl font-medium shadow-xl"
+				class="all-prose border-primary rounded-2xl border p-5 text-3xl font-medium shadow-xl"
 			>
 				<a class="link" href={result.slug}>
 					{result.title}

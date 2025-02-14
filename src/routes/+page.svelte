@@ -51,7 +51,7 @@
 >
 	{#each filtered_sheets as sheet}
 		<li
-			class="all-prose border-primary rounded-2xl border p-5 text-3xl font-medium shadow-xl"
+			class="all-prose border-primary rounded-2xl border p-5 text-xl font-medium shadow-xl"
 		>
 			<a class="link" href={`/${sheet.slug}`}>
 				{sheet.title}

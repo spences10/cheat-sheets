@@ -1,24 +1,27 @@
 <script lang="ts">
 	import { author, description, name, website } from '$lib/info';
-	import { ogImageUrl } from '$lib/og-image-url-build.js';
+	import { ogImageUrl } from '$lib/og-image-url-build';
 	import { Head } from 'svead';
+
+	interface Sheet {
+		title: string;
+		slug: string;
+		published: boolean;
+	}
 
 	let { data } = $props();
 	let { sheets } = data;
 
 	let query = $state('');
+	let filtered_sheets = $state<Sheet[]>([]);
 
-	let results = $derived(
-		sheets.filter((sheet) => {
-			if (!sheet.published) {
-				return false;
-			}
-			if (query === '') {
-				return true;
-			}
+	$effect(() => {
+		filtered_sheets = sheets.filter((sheet) => {
+			if (!sheet.published) return false;
+			if (query === '') return true;
 			return sheet.title.toLowerCase().includes(query.toLowerCase());
-		}),
-	);
+		});
+	});
 </script>
 
 <Head
@@ -28,44 +31,31 @@
 	url={website}
 />
 
-<div class="form-control">
-	<label for="search" class="label">
-		<span id="search" class="label-text-alt">
+<fieldset>
+	<div class="flex flex-col">
+		<label for="search" class="label-text mb-2 text-sm">
 			Search for a technology...
-		</span>
-	</label>
-	<input
-		type="text"
-		bind:value={query}
-		placeholder="Search"
-		class="input input-bordered input-primary mb-10 text-xl shadow-xl"
-	/>
-</div>
+		</label>
+		<input
+			id="search"
+			type="text"
+			bind:value={query}
+			placeholder="Search"
+			class="input input-bordered input-lg input-primary rounded-box mb-10 w-full text-xl shadow-xl"
+		/>
+	</div>
+</fieldset>
 
 <ul
 	class="xs:grid-cols-2 mb-10 grid grid-cols-1 gap-5 md:grid-cols-3"
 >
-	{#if results.length === 0}
-		{#each sheets as sheet}
-			{#if sheet.published}
-				<li
-					class="all-prose border-primary rounded-2xl border p-5 text-3xl font-medium shadow-xl"
-				>
-					<a class="link" href={`/${sheet.slug}`}>
-						{sheet.title}
-					</a>
-				</li>
-			{/if}
-		{/each}
-	{:else}
-		{#each results as result}
-			<li
-				class="all-prose border-primary rounded-2xl border p-5 text-3xl font-medium shadow-xl"
-			>
-				<a class="link" href={result.slug}>
-					{result.title}
-				</a>
-			</li>
-		{/each}
-	{/if}
+	{#each filtered_sheets as sheet}
+		<li
+			class="all-prose border-primary rounded-2xl border p-5 text-3xl font-medium shadow-xl"
+		>
+			<a class="link" href={`/${sheet.slug}`}>
+				{sheet.title}
+			</a>
+		</li>
+	{/each}
 </ul>

@@ -28,7 +28,7 @@
 	});
 
 	$effect(() => {
-		$page.url.pathname, browser && Fathom.trackPageview();
+		page.url.pathname, browser && Fathom.trackPageview();
 	});
 
 	onNavigate((navigation) => {

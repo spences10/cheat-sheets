@@ -31,7 +31,7 @@
 		"date-fns": "^4.1.0",
 		"eslint": "^9.21.0",
 		"eslint-config-prettier": "^10.0.1",
-		"eslint-plugin-svelte": "^2.46.1",
+		"eslint-plugin-svelte": "^3.0.0",
 		"fathom-client": "^3.7.2",
 		"globals": "^16.0.0",
 		"jsdom": "^26.0.0",

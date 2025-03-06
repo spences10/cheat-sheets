@@ -19,12 +19,12 @@
 	"devDependencies": {
 		"@eslint/compat": "^1.2.7",
 		"@eslint/js": "^9.21.0",
-		"@playwright/test": "^1.50.1",
+		"@playwright/test": "^1.51.0",
 		"@sveltejs/adapter-auto": "^4.0.0",
 		"@sveltejs/kit": "^2.18.0",
 		"@sveltejs/vite-plugin-svelte": "^5.0.3",
 		"@tailwindcss/typography": "^0.5.16",
-		"@tailwindcss/vite": "^4.0.10",
+		"@tailwindcss/vite": "^4.0.11",
 		"@testing-library/jest-dom": "^6.6.3",
 		"@testing-library/svelte": "^5.2.7",
 		"daisyui": "5.0.0",
@@ -45,14 +45,14 @@
 		"rehype-slug": "^6.0.0",
 		"remark-external-links": "^10.0.0",
 		"svead": "^0.0.4",
-		"svelte": "^5.22.4",
-		"svelte-check": "^4.1.4",
-		"tailwindcss": "^4.0.10",
+		"svelte": "^5.22.5",
+		"svelte-check": "^4.1.5",
+		"tailwindcss": "^4.0.11",
 		"theme-change": "^2.5.0",
 		"typescript": "^5.8.2",
 		"typescript-eslint": "^8.26.0",
 		"vite": "^6.2.0",
-		"vitest": "^3.0.7"
+		"vitest": "^3.0.8"
 	},
 	"pnpm": {
 		"onlyBuiltDependencies": [

@@ -27,7 +27,7 @@
 		"@tailwindcss/vite": "^4.0.14",
 		"@testing-library/jest-dom": "^6.6.3",
 		"@testing-library/svelte": "^5.2.7",
-		"daisyui": "5.0.6",
+		"daisyui": "5.0.9",
 		"date-fns": "^4.1.0",
 		"eslint": "^9.22.0",
 		"eslint-config-prettier": "^10.1.1",

@@ -27,7 +27,7 @@
 		"@tailwindcss/vite": "^4.1.4",
 		"@testing-library/jest-dom": "^6.6.3",
 		"@testing-library/svelte": "^5.2.7",
-		"daisyui": "5.0.20",
+		"daisyui": "5.0.23",
 		"date-fns": "^4.1.0",
 		"eslint": "^9.24.0",
 		"eslint-config-prettier": "^10.1.2",
@@ -51,7 +51,7 @@
 		"theme-change": "^2.5.0",
 		"typescript": "^5.8.3",
 		"typescript-eslint": "^8.30.1",
-		"vite": "^6.2.6",
+		"vite": "^6.3.0",
 		"vitest": "^3.1.1"
 	},
 	"pnpm": {

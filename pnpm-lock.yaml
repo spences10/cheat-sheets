@@ -39,8 +39,8 @@ importers:
         specifier: ^5.2.7
         version: 5.2.7(svelte@5.27.2)(vite@6.3.1(jiti@2.4.2)(lightningcss@1.29.2))(vitest@3.1.1(jiti@2.4.2)(jsdom@26.1.0)(lightningcss@1.29.2))
       daisyui:
-        specifier: 5.0.25
-        version: 5.0.25
+        specifier: 5.0.27
+        version: 5.0.27
       date-fns:
         specifier: ^4.1.0
         version: 4.1.0
@@ -1241,8 +1241,8 @@ packages:
     resolution: {integrity: sha512-9+vem03dMXG7gDmZ62uqmRiMRNtinIZ9ZyuF6BdxzfOD+FdN5hretzynkn0ReS2DO2GSw76RWHs0UmJPI2zUjw==}
     engines: {node: '>=18'}
 
-  daisyui@5.0.25:
-    resolution: {integrity: sha512-ETVQGxhwR8CIzPvJKKIKbQcOni9o2Dh9ODvy2aqNePo11lKRXkT7ugWldjNbqSTTr/jtHnQKMPau0AraRXSRKw==}
+  daisyui@5.0.27:
+    resolution: {integrity: sha512-XrpqgfpGaZJvTPg9pS9Rq6xbYpmMnR0a7AKqyVPZceJzjAs5HH3rfkRkiuGin0+KC2Adnu+WLHU7UDxAtCMyAw==}
 
   data-uri-to-buffer@2.0.2:
     resolution: {integrity: sha512-ND9qDTLc6diwj+Xe5cdAgVTbLVdXbtxTJRXRhli8Mowuaan+0EJOtdqJ0QCHNSSPyoXGx9HX2/VMnKeC34AChA==}
@@ -3309,7 +3309,7 @@ snapshots:
       '@asamuzakjp/css-color': 2.8.3
       rrweb-cssom: 0.8.0
 
-  daisyui@5.0.25: {}
+  daisyui@5.0.27: {}
 
   data-uri-to-buffer@2.0.2: {}
 

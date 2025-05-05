@@ -17,19 +17,19 @@
 		"test:e2e": "playwright test"
 	},
 	"devDependencies": {
-		"@eslint/compat": "^1.2.8",
-		"@eslint/js": "^9.25.1",
+		"@eslint/compat": "^1.2.9",
+		"@eslint/js": "^9.26.0",
 		"@playwright/test": "^1.52.0",
-		"@sveltejs/adapter-cloudflare": "^7.0.1",
-		"@sveltejs/kit": "^2.20.7",
+		"@sveltejs/adapter-cloudflare": "^7.0.2",
+		"@sveltejs/kit": "^2.20.8",
 		"@sveltejs/vite-plugin-svelte": "^5.0.3",
 		"@tailwindcss/typography": "^0.5.16",
 		"@tailwindcss/vite": "^4.1.5",
 		"@testing-library/jest-dom": "^6.6.3",
 		"@testing-library/svelte": "^5.2.7",
-		"daisyui": "5.0.32",
+		"daisyui": "5.0.35",
 		"date-fns": "^4.1.0",
-		"eslint": "^9.25.1",
+		"eslint": "^9.26.0",
 		"eslint-config-prettier": "^10.1.2",
 		"eslint-plugin-svelte": "^3.5.1",
 		"fathom-client": "^3.7.2",
@@ -46,13 +46,13 @@
 		"remark-external-links": "^10.0.0",
 		"svead": "^0.0.4",
 		"svelte": "^5.28.2",
-		"svelte-check": "^4.1.6",
+		"svelte-check": "^4.1.7",
 		"tailwindcss": "^4.1.5",
 		"theme-change": "^2.5.0",
 		"typescript": "^5.8.3",
-		"typescript-eslint": "^8.31.1",
-		"vite": "^6.3.4",
-		"vitest": "^3.1.2"
+		"typescript-eslint": "^8.32.0",
+		"vite": "^6.3.5",
+		"vitest": "^3.1.3"
 	},
 	"pnpm": {
 		"onlyBuiltDependencies": [

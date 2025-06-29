@@ -28,7 +28,7 @@
 	});
 
 	$effect(() => {
-		page.url.pathname, browser && Fathom.trackPageview();
+		(page.url.pathname, browser && Fathom.trackPageview());
 	});
 
 	onNavigate((navigation) => {
@@ -44,11 +44,28 @@
 	});
 </script>
 
-<div class="flex min-h-screen flex-col overflow-x-hidden">
-	<Header />
+<div class="flex min-h-screen flex-col">
+	<!-- Simple navbar without mobile menu -->
+	<div class="navbar bg-base-100 sticky top-0 z-50 shadow-lg">
+		<div class="navbar-start">
+			<a href="/" class="btn btn-ghost text-xl font-bold">
+				<span
+					class="from-primary to-secondary bg-gradient-to-r bg-clip-text text-transparent"
+				>
+					Cheat Sheets
+				</span>
+			</a>
+		</div>
+		<div class="navbar-end">
+			<Header />
+		</div>
+	</div>
 
-	<main class="container mx-auto max-w-3xl flex-grow px-4">
-		{@render children?.()}
+	<!-- Main content -->
+	<main class="bg-base-200 min-h-screen flex-grow">
+		<div class="container mx-auto max-w-3xl p-4 lg:p-6">
+			{@render children?.()}
+		</div>
 	</main>
 
 	<Footer />

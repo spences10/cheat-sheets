@@ -2,9 +2,7 @@
 	import { GitHub, Twitter, YouTube } from '$lib/icons';
 </script>
 
-<footer
-	class="footer footer-center bg-base-300 text-base-content mt-16 p-10"
->
+<footer class="footer footer-center text-base-content mt-16 p-10">
 	<aside class="grid-flow-col items-center">
 		<div class="avatar">
 			<div
@@ -42,21 +40,27 @@
 				href="https://twitter.com/spences10"
 				class="btn btn-ghost btn-circle hover:btn-primary transition-colors"
 			>
-				<Twitter />
+				<Twitter
+					class="hover:text-primary-content transition-colors"
+				/>
 			</a>
 			<a
 				aria-label="GitHub"
 				href="https://github.com/spences10"
 				class="btn btn-ghost btn-circle hover:btn-primary transition-colors"
 			>
-				<GitHub />
+				<GitHub
+					class="hover:text-primary-content transition-colors"
+				/>
 			</a>
 			<a
 				aria-label="YouTube"
 				href="https://ss10/yt"
 				class="btn btn-ghost btn-circle hover:btn-primary transition-colors"
 			>
-				<YouTube />
+				<YouTube
+					class="hover:text-primary-content transition-colors"
+				/>
 			</a>
 		</div>
 	</nav>

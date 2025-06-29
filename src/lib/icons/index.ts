@@ -1,3 +1,11 @@
+export { default as Alert } from './alert.svelte';
+export { default as Arrow } from './arrow.svelte';
+export { default as Chevron } from './chevron.svelte';
 export { default as GitHub } from './git-hub.svelte';
+export { default as Info } from './info.svelte';
+export { default as Menu } from './menu.svelte';
+export { default as Moon } from './moon.svelte';
+export { default as Search } from './search.svelte';
+export { default as Sun } from './sun.svelte';
 export { default as Twitter } from './twitter.svelte';
 export { default as YouTube } from './you-tube.svelte';

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { Search } from '$lib/icons';
 	import { author, description, name, website } from '$lib/info';
 	import { ogImageUrl } from '$lib/og-image-url-build';
 	import { Head } from 'svead';
@@ -44,20 +45,8 @@
 <div class="card bg-base-100 mb-6 shadow-xl">
 	<div class="card-body">
 		<h2 class="card-title mb-4 text-xl lg:text-2xl">
-			<svg
-				class="h-5 w-5 lg:h-6 lg:w-6"
-				fill="none"
-				stroke="currentColor"
-				viewBox="0 0 24 24"
-			>
-				<path
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					stroke-width="2"
-					d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-				></path>
-			</svg>
-			Find Your Technology
+			<Search size={20} class="lg:h-6 lg:w-6" />
+			Find a technology
 		</h2>
 		<div class="form-control">
 			<input

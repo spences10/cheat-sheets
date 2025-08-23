@@ -18,7 +18,7 @@
 	},
 	"devDependencies": {
 		"@eslint/compat": "^1.3.2",
-		"@eslint/js": "^9.33.0",
+		"@eslint/js": "^9.34.0",
 		"@playwright/test": "^1.55.0",
 		"@sveltejs/adapter-cloudflare": "^7.2.2",
 		"@sveltejs/kit": "^2.36.1",
@@ -29,7 +29,7 @@
 		"@testing-library/svelte": "^5.2.8",
 		"daisyui": "5.0.50",
 		"date-fns": "^4.1.0",
-		"eslint": "^9.33.0",
+		"eslint": "^9.34.0",
 		"eslint-config-prettier": "^10.1.8",
 		"eslint-plugin-svelte": "^3.11.0",
 		"fathom-client": "^3.7.2",

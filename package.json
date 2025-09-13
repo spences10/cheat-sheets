@@ -34,7 +34,7 @@
 		"eslint-plugin-svelte": "^3.11.0",
 		"fathom-client": "^3.7.2",
 		"globals": "^16.3.0",
-		"jsdom": "^26.1.0",
+		"jsdom": "^27.0.0",
 		"mdsvex": "^0.12.5",
 		"prettier": "^3.6.2",
 		"prettier-plugin-svelte": "^3.4.0",

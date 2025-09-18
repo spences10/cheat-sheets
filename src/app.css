@@ -1,9 +1,42 @@
 @import 'tailwindcss';
 
+@import '@fontsource/inter-tight/900.css';
+@import '@fontsource/inter-tight/700.css';
+@import '@fontsource-variable/space-grotesk';
+@import '@fontsource/space-mono/400.css';
+@import '@fontsource/space-mono/700.css';
+
 @layer base {
 	html {
 		scroll-behavior: smooth;
 		word-break: break-word;
+		font-family:
+			'Space Grotesk Variable', 'SF Mono', Monaco, Consolas, monospace;
+	}
+
+	/* Font family utilities */
+	.font-display {
+		font-family: 'Inter Tight', Arial, Helvetica, sans-serif;
+		font-weight: 900;
+	}
+
+	.font-display-bold {
+		font-family: 'Inter Tight', Arial, Helvetica, sans-serif;
+		font-weight: 700;
+	}
+
+	.font-body {
+		font-family:
+			'Space Grotesk Variable',
+			-apple-system,
+			BlinkMacSystemFont,
+			'Segoe UI',
+			Roboto,
+			sans-serif;
+	}
+
+	.font-mono {
+		font-family: 'Space Mono', 'SF Mono', Monaco, Consolas, monospace;
 	}
 
 	::selection {

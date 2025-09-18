@@ -69,7 +69,7 @@
 	>
 		<div class="flex-1">
 			<h1
-				class="mb-4 -skew-x-2 transform text-5xl font-black tracking-wider uppercase lg:text-7xl"
+				class="font-display mb-4 -skew-x-2 transform text-5xl tracking-wider uppercase lg:text-7xl"
 			>
 				{metadata.title}
 			</h1>

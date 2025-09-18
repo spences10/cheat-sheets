@@ -39,12 +39,12 @@
 
 	<div class="relative z-10 text-center">
 		<h1
-			class="text-warning-content mb-4 -skew-x-3 transform text-6xl font-black tracking-wider uppercase lg:text-8xl"
+			class="text-warning-content font-display mb-4 -skew-x-3 transform text-6xl tracking-wider uppercase lg:text-8xl"
 		>
 			⚡ CHEAT
 		</h1>
 		<h1
-			class="text-warning-content mb-6 skew-x-3 transform text-6xl font-black tracking-wider uppercase lg:text-8xl"
+			class="text-warning-content font-display mb-6 skew-x-3 transform text-6xl tracking-wider uppercase lg:text-8xl"
 		>
 			SHEETS ⚡
 		</h1>
@@ -59,7 +59,7 @@
 <!-- Neu-brutalist Search Section -->
 <div class="brutal-card bg-secondary mb-8 p-6">
 	<h2
-		class="text-secondary-content mb-4 -skew-x-2 transform text-3xl font-black uppercase"
+		class="text-secondary-content font-display mb-4 -skew-x-2 transform text-3xl uppercase"
 	>
 		<Search size={32} class="mr-2 inline" />
 		&gt;&gt; FIND TECH &lt;&lt;
@@ -79,7 +79,7 @@
 <div class="mb-8">
 	<div class="mb-6 flex items-center justify-between">
 		<h2
-			class="-skew-x-2 transform text-4xl font-black tracking-wide uppercase"
+			class="font-display -skew-x-2 transform text-4xl tracking-wide uppercase"
 		>
 			CHEAT SHEETS
 		</h2>

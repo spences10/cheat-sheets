@@ -15,7 +15,7 @@
 	>
 		<div class="p-4">
 			<h3
-				class="!mt-0 !mb-4 border-b-2 border-black pb-2 text-xl font-black tracking-wide uppercase"
+				class="font-display !mt-0 !mb-4 border-b-2 border-black pb-2 text-xl tracking-wide uppercase"
 				id="table-of-contents"
 			>
 				CONTENTS

@@ -55,7 +55,7 @@
 			<div class="navbar-start">
 				<a
 					href="/"
-					class="brutal-btn btn btn-ghost text-primary-content hover:text-primary-content text-2xl font-black"
+					class="btn btn-ghost text-primary-content hover:text-primary-content font-display text-2xl"
 				>
 					<span class="-skew-x-6 transform tracking-wider uppercase">
 						⚡ Cheat Sheets

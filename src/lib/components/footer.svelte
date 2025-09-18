@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { GitHub, Twitter, YouTube } from '$lib/icons';
+	import { Bluesky, GitHub, YouTube } from '$lib/icons';
 </script>
 
 <footer class="brutal-card bg-neutral text-neutral-content mt-16 p-8">
@@ -34,11 +34,11 @@
 		<!-- Social links -->
 		<div class="flex justify-center gap-4">
 			<a
-				aria-label="Twitter"
-				href="https://twitter.com/spences10"
+				aria-label="Bluesky"
+				href="https://bsky.app/profile/scottspence.dev"
 				class="brutal-card bg-info text-info-content hover:bg-primary hover:text-primary-content p-3"
 			>
-				<Twitter size={24} />
+				<Bluesky />
 			</a>
 			<a
 				aria-label="GitHub"

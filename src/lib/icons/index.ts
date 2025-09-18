@@ -1,5 +1,6 @@
 export { default as Alert } from './alert.svelte';
 export { default as Arrow } from './arrow.svelte';
+export { default as Bluesky } from './bluesky.svelte';
 export { default as Chevron } from './chevron.svelte';
 export { default as GitHub } from './git-hub.svelte';
 export { default as Info } from './info.svelte';

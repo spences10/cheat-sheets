@@ -62,6 +62,136 @@
 
 /* Plugin configurations */
 @plugin "@tailwindcss/typography";
+/* DaisyUI v5 theme variables for neu-brutalist light */
+[data-theme='neu-brutalist-light'] {
+	--color-base-100: oklch(97% 0.02 250);
+	--color-base-200: oklch(93% 0.03 250);
+	--color-base-300: oklch(90% 0.04 250);
+	--color-base-content: oklch(18% 0.03 250);
+	--color-primary: oklch(70% 0.24 30);
+	--color-primary-content: oklch(99% 0.01 30);
+	--color-secondary: oklch(72% 0.23 320);
+	--color-secondary-content: oklch(99% 0.01 320);
+	--color-accent: oklch(78% 0.23 110);
+	--color-accent-content: oklch(10% 0.02 110);
+	--color-neutral: oklch(35% 0.03 250);
+	--color-neutral-content: oklch(98% 0.01 250);
+	--color-info: oklch(70% 0.2 220);
+	--color-info-content: oklch(98% 0.01 220);
+	--color-success: oklch(65% 0.25 140);
+	--color-success-content: oklch(98% 0.01 140);
+	--color-warning: oklch(85% 0.25 95);
+	--color-warning-content: oklch(20% 0.05 95);
+	--color-error: oklch(60% 0.3 30);
+	--color-error-content: oklch(98% 0.01 30);
+	--radius-selector: 0rem;
+	--radius-field: 0rem;
+	--radius-box: 0.25rem;
+	--size-selector: 0.25rem;
+	--size-field: 0.25rem;
+	--border: 2px;
+	--depth: 1;
+	--noise: 0;
+}
+
+/* DaisyUI v5 theme variables for neu-brutalist dark */
+[data-theme='neu-brutalist-dark'] {
+	--color-base-100: oklch(15% 0.03 250);
+	--color-base-200: oklch(20% 0.03 250);
+	--color-base-300: oklch(25% 0.03 250);
+	--color-base-content: oklch(95% 0.02 250);
+	--color-primary: oklch(75% 0.28 30);
+	--color-primary-content: oklch(10% 0.02 30);
+	--color-secondary: oklch(78% 0.28 320);
+	--color-secondary-content: oklch(10% 0.02 320);
+	--color-accent: oklch(80% 0.25 110);
+	--color-accent-content: oklch(15% 0.03 110);
+	--color-neutral: oklch(35% 0.03 250);
+	--color-neutral-content: oklch(95% 0.02 250);
+	--color-info: oklch(75% 0.22 220);
+	--color-info-content: oklch(10% 0.02 220);
+	--color-success: oklch(70% 0.25 140);
+	--color-success-content: oklch(10% 0.02 140);
+	--color-warning: oklch(85% 0.25 85);
+	--color-warning-content: oklch(15% 0.03 85);
+	--color-error: oklch(65% 0.3 25);
+	--color-error-content: oklch(10% 0.02 25);
+	--radius-selector: 0rem;
+	--radius-field: 0rem;
+	--radius-box: 0.25rem;
+	--size-selector: 0.25rem;
+	--size-field: 0.25rem;
+	--border: 2px;
+	--depth: 1;
+	--noise: 0;
+}
+
+/* Neu-brutalist animations */
+@keyframes glitch {
+	0%,
+	100% {
+		transform: translate(0);
+	}
+	10% {
+		transform: translate(-2px, 2px);
+	}
+	20% {
+		transform: translate(2px, -2px);
+	}
+	30% {
+		transform: translate(-2px, -2px);
+	}
+	40% {
+		transform: translate(2px, 2px);
+	}
+}
+
+@keyframes brutal-bounce {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.05) rotate(1deg);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+/* Neu-brutalist component styles */
+.brutal-card {
+	border: 3px solid #000;
+	box-shadow: 8px 8px 0 0 #000;
+	transform: rotate(0.5deg);
+	transition: all 0.2s ease-out;
+}
+
+.brutal-card:hover {
+	transform: rotate(-0.5deg) translateY(-4px);
+	box-shadow: 12px 12px 0 0 #000;
+}
+
+.brutal-btn {
+	border: 3px solid #000;
+	box-shadow: 4px 4px 0 0 #000;
+	transform: skew(-2deg);
+	transition: all 0.2s ease-out;
+}
+
+.brutal-btn:hover {
+	transform: skew(2deg) translateX(-2px) translateY(-2px);
+	box-shadow: 6px 6px 0 0 #000;
+}
+
+.brutal-btn:active {
+	transform: skew(2deg) translateX(2px) translateY(2px);
+	box-shadow: 2px 2px 0 0 #000;
+}
+
 @plugin "daisyui" {
-	themes: light --default, dark --prefersdark;
+	themes:
+		'neu-brutalist-light' --default,
+		'neu-brutalist-dark' --prefersdark,
+		light,
+		dark;
 }

@@ -45,26 +45,47 @@
 </script>
 
 <div class="flex min-h-screen flex-col">
-	<!-- Simple navbar without mobile menu -->
-	<div class="navbar bg-base-100 sticky top-0 z-50 shadow-lg">
-		<div class="navbar-start">
-			<a href="/" class="btn btn-ghost text-xl font-bold">
-				<span
-					class="from-primary to-secondary bg-gradient-to-r bg-clip-text text-transparent"
+	<!-- Neu-brutalist navbar -->
+	<header
+		class="bg-base-100 sticky top-0 z-50 border-b-4 border-black"
+	>
+		<nav
+			class="navbar brutal-card bg-primary !transform-none !border-0 !shadow-none"
+		>
+			<div class="navbar-start">
+				<a
+					href="/"
+					class="brutal-btn btn btn-ghost text-primary-content hover:text-primary-content text-2xl font-black"
 				>
-					Cheat Sheets
-				</span>
-			</a>
-		</div>
-		<div class="navbar-end">
-			<Header />
-		</div>
-	</div>
+					<span class="-skew-x-6 transform tracking-wider uppercase">
+						⚡ Cheat Sheets
+					</span>
+				</a>
+			</div>
+			<div class="navbar-end">
+				<div
+					class="brutal-btn btn btn-secondary text-secondary-content hover:text-secondary-content font-bold"
+				>
+					<Header />
+				</div>
+			</div>
+		</nav>
+	</header>
 
-	<!-- Main content -->
-	<main class="bg-base-200 min-h-screen flex-grow">
-		<div class="container mx-auto max-w-3xl p-4 lg:p-6">
-			{@render children?.()}
+	<!-- Main content with neu-brutalist styling -->
+	<main class="bg-base-100 relative min-h-screen flex-grow">
+		<!-- Background pattern -->
+		<div class="absolute inset-0 opacity-5">
+			<div
+				class="h-full w-full"
+				style="background-image: repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(0,0,0,0.1) 35px, rgba(0,0,0,0.1) 70px);"
+			></div>
+		</div>
+
+		<div class="relative z-10 container mx-auto max-w-4xl p-6 lg:p-8">
+			<div class="brutal-card bg-base-200 p-8 lg:p-12">
+				{@render children?.()}
+			</div>
 		</div>
 	</main>
 

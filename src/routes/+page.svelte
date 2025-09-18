@@ -25,60 +25,83 @@
 	url={website}
 />
 
-<!-- Hero Section -->
+<!-- Neu-brutalist Hero Section -->
 <div
-	class="hero from-primary to-secondary text-primary-content mb-6 rounded-2xl bg-gradient-to-br shadow-2xl"
+	class="brutal-card bg-warning relative mb-8 overflow-hidden p-8 lg:p-12"
 >
-	<div class="hero-content py-12 text-center lg:py-16">
-		<div class="max-w-lg">
-			<h1 class="mb-4 text-3xl font-bold lg:text-5xl">
-				Cheat Sheets
-			</h1>
-			<p class="text-lg opacity-80 lg:text-xl">
-				Quick reference guides for developers
-			</p>
-		</div>
+	<!-- Background shapes -->
+	<div
+		class="bg-error absolute top-4 right-4 h-16 w-16 rotate-45 transform"
+	></div>
+	<div
+		class="bg-success absolute bottom-4 left-4 h-12 w-12 -rotate-12 transform"
+	></div>
+
+	<div class="relative z-10 text-center">
+		<h1
+			class="text-warning-content mb-4 -skew-x-3 transform text-6xl font-black tracking-wider uppercase lg:text-8xl"
+		>
+			⚡ CHEAT
+		</h1>
+		<h1
+			class="text-warning-content mb-6 skew-x-3 transform text-6xl font-black tracking-wider uppercase lg:text-8xl"
+		>
+			SHEETS ⚡
+		</h1>
+		<p
+			class="text-warning-content text-2xl font-bold tracking-wide uppercase lg:text-3xl"
+		>
+			&gt;&gt; Quick Dev References &lt;&lt;
+		</p>
 	</div>
 </div>
 
-<!-- Search Section -->
-<div class="card bg-base-100 mb-6 shadow-xl">
-	<div class="card-body">
-		<h2 class="card-title mb-4 text-xl lg:text-2xl">
-			<Search size={20} class="lg:h-6 lg:w-6" />
-			Find a technology
-		</h2>
-		<div class="form-control">
-			<input
-				id="search"
-				type="text"
-				bind:value={query}
-				placeholder="Search for a technology..."
-				class="input input-bordered input-primary w-full"
-			/>
-		</div>
+<!-- Neu-brutalist Search Section -->
+<div class="brutal-card bg-secondary mb-8 p-6">
+	<h2
+		class="text-secondary-content mb-4 -skew-x-2 transform text-3xl font-black uppercase"
+	>
+		<Search size={32} class="mr-2 inline" />
+		&gt;&gt; FIND TECH &lt;&lt;
+	</h2>
+	<div class="form-control">
+		<input
+			id="search"
+			type="text"
+			bind:value={query}
+			placeholder="TYPE TO SEARCH..."
+			class="brutal-btn input input-lg bg-base-100 text-base-content placeholder:text-base-content/50 w-full !transform-none border-4 border-black font-bold uppercase"
+		/>
 	</div>
 </div>
 
-<!-- Results Section -->
+<!-- Neu-brutalist Results Section -->
 <div class="mb-8">
 	<div class="mb-6 flex items-center justify-between">
-		<h2 class="text-3xl font-bold">Cheat Sheets</h2>
-		<div class="badge badge-secondary badge-lg">
-			{filtered_sheets.length} sheet{filtered_sheets.length !== 1
-				? 's'
+		<h2
+			class="-skew-x-2 transform text-4xl font-black tracking-wide uppercase"
+		>
+			CHEAT SHEETS
+		</h2>
+		<div
+			class="brutal-btn bg-info text-info-content !transform-none px-4 py-2 font-black"
+		>
+			{filtered_sheets.length} SHEET{filtered_sheets.length !== 1
+				? 'S'
 				: ''}
 		</div>
 	</div>
 
 	<div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-		{#each filtered_sheets as sheet}
+		{#each filtered_sheets as sheet (sheet.slug)}
 			<a
 				href={`/${sheet.slug}`}
-				class="card bg-base-100 cursor-pointer shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+				class="brutal-card bg-accent hover:bg-accent/90 group cursor-pointer transition-all duration-300"
 			>
-				<div class="card-body">
-					<h3 class="card-title text-xl">
+				<div class="p-6">
+					<h3
+						class="text-accent-content transform text-2xl font-black tracking-wide uppercase group-hover:skew-x-1"
+					>
 						{sheet.title}
 					</h3>
 				</div>

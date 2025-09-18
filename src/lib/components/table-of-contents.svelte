@@ -11,20 +11,20 @@
 {#if headings.length}
 	<aside
 		transition:fade
-		class="table-of-contents bg-base-100 hidden w-64 rounded-md shadow-lg lg:block"
+		class="table-of-contents brutal-card bg-base-200 text-base-content"
 	>
-		<div class="">
+		<div class="p-4">
 			<h3
-				class="!mt-2 !mb-0 !text-lg !font-extrabold"
+				class="font-display !mt-0 !mb-4 border-b-2 border-black pb-2 text-xl tracking-wide uppercase"
 				id="table-of-contents"
 			>
-				Table of Contents
+				CONTENTS
 			</h3>
-			<ul class="!mb-0 max-h-72 overflow-auto">
+			<ul class="!mb-0 max-h-72 space-y-1 overflow-auto">
 				{#each headings as heading (heading.href)}
-					<li class="mr-4 mb-2">
+					<li>
 						<a
-							class="hover:text-primary transition"
+							class="bg-base-100 text-base-content hover:bg-accent hover:text-accent-content block border-l-4 border-black p-2 text-sm font-bold"
 							href={heading.href}
 						>
 							{heading.label}

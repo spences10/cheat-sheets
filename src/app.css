@@ -29,7 +29,7 @@
 /* Custom components */
 @layer components {
 	.table-of-contents {
-		@apply fixed top-72 left-[calc(50%+400px)] z-10 my-3 max-h-[50vh] w-[310px] p-3 text-base leading-7;
+		@apply fixed top-72 left-[calc(50%+500px)] z-10 my-3 max-h-[50vh] w-[310px] p-3 text-base leading-7;
 	}
 
 	.all-prose {
@@ -158,34 +158,29 @@
 	}
 }
 
-/* Neu-brutalist component styles */
+/* Neu-brutalist component styles - Static and bold */
 .brutal-card {
 	border: 3px solid #000;
 	box-shadow: 8px 8px 0 0 #000;
-	transform: rotate(0.5deg);
-	transition: all 0.2s ease-out;
-}
-
-.brutal-card:hover {
-	transform: rotate(-0.5deg) translateY(-4px);
-	box-shadow: 12px 12px 0 0 #000;
 }
 
 .brutal-btn {
 	border: 3px solid #000;
 	box-shadow: 4px 4px 0 0 #000;
-	transform: skew(-2deg);
-	transition: all 0.2s ease-out;
 }
 
-.brutal-btn:hover {
-	transform: skew(2deg) translateX(-2px) translateY(-2px);
-	box-shadow: 6px 6px 0 0 #000;
+/* Special accent transforms - use very sparingly for visual interest */
+.brutal-accent {
+	transform: rotate(0.5deg);
 }
 
-.brutal-btn:active {
-	transform: skew(2deg) translateX(2px) translateY(2px);
-	box-shadow: 2px 2px 0 0 #000;
+.brutal-skew {
+	transform: skew(-1deg);
+}
+
+/* Subtle text effects */
+.brutal-title-skew {
+	transform: skew(-0.5deg);
 }
 
 @plugin "daisyui" {

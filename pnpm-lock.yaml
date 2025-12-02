@@ -67,7 +67,7 @@ importers:
         version: 3.7.2
       globals:
         specifier: ^16.4.0
-        version: 16.4.0
+        version: 16.5.0
       jsdom:
         specifier: ^27.0.0
         version: 27.0.0(postcss@8.5.6)
@@ -100,7 +100,7 @@ importers:
         version: 10.0.0
       svead:
         specifier: ^0.0.15
-        version: 0.0.15(svelte@5.39.11)
+        version: 0.0.15(svelte@5.45.3)
       svelte:
         specifier: ^5.39.11
         version: 5.45.3
@@ -1578,8 +1578,8 @@ packages:
     resolution: {integrity: sha512-oahGvuMGQlPw/ivIYBjVSrWAfWLBeku5tpPE2fOPLi+WHffIWbuh2tCjhyQhTBPMf5E9jDEH4FOmTYgYwbKwtQ==}
     engines: {node: '>=18'}
 
-  globals@16.4.0:
-    resolution: {integrity: sha512-ob/2LcVVaVGCYN+r14cnwnoDPUufjiYgSqRhiFD0Q1iI4Odora5RE8Iv1D24hAz5oMophRGkGz+yuvQmmUMnMw==}
+  globals@16.5.0:
+    resolution: {integrity: sha512-c/c15i26VrJ4IRt5Z89DnIzCGDn9EcebibhAOjw5ibqEHsE1wLUgkPn9RDmNcUKyU87GeaL633nyJ+pplFR2ZQ==}
     engines: {node: '>=18'}
 
   graceful-fs@4.2.11:
@@ -3685,7 +3685,7 @@ snapshots:
       '@jridgewell/sourcemap-codec': 1.5.5
       eslint: 9.37.0(jiti@2.6.1)
       esutils: 2.0.3
-      globals: 16.4.0
+      globals: 16.5.0
       known-css-properties: 0.37.0
       postcss: 8.5.6
       postcss-load-config: 3.1.4(postcss@8.5.6)
@@ -3857,7 +3857,7 @@ snapshots:
 
   globals@14.0.0: {}
 
-  globals@16.4.0: {}
+  globals@16.5.0: {}
 
   graceful-fs@4.2.11: {}
 
@@ -4431,10 +4431,10 @@ snapshots:
     dependencies:
       has-flag: 4.0.0
 
-  svead@0.0.15(svelte@5.39.11):
+  svead@0.0.15(svelte@5.45.3):
     dependencies:
       schema-dts: 1.1.5
-      svelte: 5.39.11
+      svelte: 5.45.3
 
   svelte-check@4.3.3(picomatch@4.0.2)(svelte@5.45.3)(typescript@5.9.3):
     dependencies:

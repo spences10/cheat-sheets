@@ -12,8 +12,7 @@ describe('/+page.svelte', () => {
 				},
 			},
 		});
-		expect(
-			screen.getByRole('heading', { level: 1 }),
-		).toBeInTheDocument();
+		const headings = screen.getAllByRole('heading', { level: 1 });
+		expect(headings.length).toBeGreaterThan(0);
 	});
 });

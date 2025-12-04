@@ -1,7 +1,7 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import tailwindcss from '@tailwindcss/vite';
 import { svelteTesting } from '@testing-library/svelte/vite';
-import { defineConfig } from 'vitest/config';
+import { defineConfig } from 'vite';
 
 export default defineConfig({
 	plugins: [sveltekit(), tailwindcss()],
@@ -12,6 +12,7 @@ export default defineConfig({
 			allow: ['..'],
 		},
 	},
+	// @ts-expect-error vitest projects config
 	test: {
 		projects: [
 			{

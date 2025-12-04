@@ -23,7 +23,7 @@
 	});
 </script>
 
-<label class="swap swap-rotate btn btn-ghost btn-circle">
+<label class="swap swap-rotate">
 	<input
 		type="checkbox"
 		class="theme-controller"

@@ -1,10 +1,10 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import tailwindcss from '@tailwindcss/vite';
 import { svelteTesting } from '@testing-library/svelte/vite';
-import { defineConfig } from 'vite';
+import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
-	plugins: [sveltekit(), tailwindcss()],
+	plugins: [sveltekit(), tailwindcss()] as never,
 	server: {
 		fs: {
 			// Allow serving files from one level up to the project root
@@ -12,12 +12,11 @@ export default defineConfig({
 			allow: ['..'],
 		},
 	},
-	// @ts-expect-error vitest projects config
 	test: {
 		projects: [
 			{
 				extends: './vite.config.ts',
-				plugins: [svelteTesting()],
+				plugins: [svelteTesting()] as never,
 				test: {
 					name: 'client',
 					environment: 'jsdom',

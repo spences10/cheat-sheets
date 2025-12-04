@@ -5,7 +5,7 @@
 	import { Head } from 'svead';
 
 	let { data } = $props();
-	let { sheets } = data;
+	let sheets = $derived(data.sheets);
 
 	let query = $state('');
 
@@ -19,10 +19,16 @@
 </script>
 
 <Head
-	title={`Home · ${name}`}
-	{description}
-	image={ogImageUrl(author, 'cheatsheets.xyz', 'Cheat Sheets')}
-	url={website}
+	seo_config={{
+		title: `Home · ${name}`,
+		description,
+		open_graph_image: ogImageUrl(
+			author,
+			'cheatsheets.xyz',
+			'Cheat Sheets',
+		),
+		url: website,
+	}}
 />
 
 <!-- Neu-brutalist Hero Section -->

@@ -9,10 +9,15 @@
 
 	let { data } = $props();
 
-	let { Sheet, metadata } = data;
-	let created = format(new Date(metadata.createdDate), 'yyy MMM do');
-	let updated = format(new Date(metadata.updatedDate), 'yyy MMM do');
-	let url = page.url.toString();
+	let Sheet = $derived(data.Sheet);
+	let metadata = $derived(data.metadata);
+	let created = $derived(
+		format(new Date(metadata.createdDate), 'yyy MMM do'),
+	);
+	let updated = $derived(
+		format(new Date(metadata.updatedDate), 'yyy MMM do'),
+	);
+	let url = $derived(page.url.toString());
 
 	let end_of_copy: HTMLElement | null = $state(null);
 	let show_table_of_contents = $state(true);
@@ -32,14 +37,16 @@
 <svelte:window onscroll={handle_scroll} />
 
 <Head
-	title={`${metadata.title} · Cheat Sheets`}
-	description={`${metadata.description}`}
-	image={ogImageUrl(
-		'Scott Spence',
-		'cheatsheets.xyz',
-		metadata.title,
-	)}
-	{url}
+	seo_config={{
+		title: `${metadata.title} · Cheat Sheets`,
+		description: metadata.description,
+		open_graph_image: ogImageUrl(
+			'Scott Spence',
+			'cheatsheets.xyz',
+			metadata.title,
+		),
+		url,
+	}}
 />
 
 {#if headings_promise}
